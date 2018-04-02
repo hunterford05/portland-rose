@@ -8,33 +8,54 @@
 
 #import "DemosViewController.h"
 
+NSString * const TITLE = @"Demos";
+NSString * const NAMES_DEMO = @"Puffin View,Raccoon View";
+NSString * const REUSE_IDENTIFIER_CELL_DEMO = @"DemoCell";
+
 @interface DemosViewController ()
 
 @end
 
-@implementation DemosViewController
-
-NSString * const TITLE = @"Demos";
+@implementation DemosViewController{
+  NSArray * namesDemo;
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   
   [self setTitle:TITLE];
+  namesDemo = [NSArray arrayWithArray: [NAMES_DEMO componentsSeparatedByString:@","]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  NSString * scene;
+  NSString * sid;
+  NSInteger row;
+  
+  row = indexPath.row;
+  scene = [namesDemo[row] stringByReplacingOccurrencesOfString:@" " withString:@""];
+  sid = [NSString stringWithFormat:@"FromDemosTo%@Demo", scene];
+  
+  [self performSegueWithIdentifier:sid sender:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  NSInteger row;
+  UITableViewCell * cell;
+  
+  row = indexPath.row;
+  cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER_CELL_DEMO];
+  cell.textLabel.text = namesDemo[row];
+  
+  return cell;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  return [namesDemo count];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
+}
 
 @end
