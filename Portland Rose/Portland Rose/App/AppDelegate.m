@@ -14,9 +14,20 @@
 
 @implementation AppDelegate
 
+NSString * const NAME_STORYBOARD_DEMO = @"Demo";
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  
+  UIStoryboard * sb;
+  UIViewController * vc;
+  
+  // Use the DEMO storyboard by default
+  sb = [UIStoryboard storyboardWithName: NAME_STORYBOARD_DEMO bundle:nil];
+  vc = [sb instantiateInitialViewController];
+  [self.window setRootViewController:vc];
+  [self.window makeKeyAndVisible];
+  
   return YES;
 }
 
