@@ -8,15 +8,20 @@
 
 #import "DemosViewController.h"
 
-NSString * const TITLE = @"Demos";
-NSString * const NAMES_DEMO = @"Puffin View,Raccoon View";
+/// Comma-seperated list of demo views. IMPORTANT: These names must correspond to a valid segue identifier with the convention `"FromDemosTo<NAME_OF_DEMO>"`. For example, if `"Puffins Demo"` is part of the `NAMES_DEMO` list, this view controller will assume that there is a segue with the identifier `"FromDemosToPuffinsDemo"`.
+NSString * const NAMES_DEMO = @"";
+/// Reuse identifier for the demo table cell
 NSString * const REUSE_IDENTIFIER_CELL_DEMO = @"DemoCell";
+/// Demos View Controller scene title
+NSString * const TITLE = @"Demos";
+
 
 @interface DemosViewController ()
 
 @end
 
 @implementation DemosViewController{
+  /// Array of demo names.
   NSArray * namesDemo;
 }
 
@@ -24,8 +29,15 @@ NSString * const REUSE_IDENTIFIER_CELL_DEMO = @"DemoCell";
   [super viewDidLoad];
   
   [self setTitle:TITLE];
-  namesDemo = [NSArray arrayWithArray: [NAMES_DEMO componentsSeparatedByString:@","]];
+  
+  if ([NAMES_DEMO isEqualToString:@""]){
+    namesDemo = @[];
+  } else {
+    namesDemo = [NSArray arrayWithArray: [NAMES_DEMO componentsSeparatedByString:@","]];
+  }
 }
+
+#pragma mark - <UITableViewDelegate>
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   NSString * scene;
@@ -34,9 +46,15 @@ NSString * const REUSE_IDENTIFIER_CELL_DEMO = @"DemoCell";
   
   row = indexPath.row;
   scene = [namesDemo[row] stringByReplacingOccurrencesOfString:@" " withString:@""];
-  sid = [NSString stringWithFormat:@"FromDemosTo%@Demo", scene];
+  sid = [NSString stringWithFormat:@"FromDemosTo%@", scene];
   
   [self performSegueWithIdentifier:sid sender:self];
+}
+
+# pragma mark - <UITableViewDataSource>
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,10 +70,6 @@ NSString * const REUSE_IDENTIFIER_CELL_DEMO = @"DemoCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
   return [namesDemo count];
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return 1;
 }
 
 @end
