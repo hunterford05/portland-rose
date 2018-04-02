@@ -58,10 +58,7 @@
 		5A445F0B20729AAE009497B0 /* Portland Rose */ = {
 			isa = PBXGroup;
 			children = (
-				5A445F0C20729AAE009497B0 /* AppDelegate.h */,
-				5A445F0D20729AAE009497B0 /* AppDelegate.m */,
-				5A445F0F20729AAE009497B0 /* ViewController.h */,
-				5A445F1020729AAE009497B0 /* ViewController.m */,
+				5A445F2620729F48009497B0 /* App */,
 				5A445F1220729AAE009497B0 /* Main.storyboard */,
 				5A445F1520729AAF009497B0 /* Assets.xcassets */,
 				5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */,
@@ -69,6 +66,41 @@
 				5A445F1B20729AAF009497B0 /* main.m */,
 			);
 			path = "Portland Rose";
+			sourceTree = "<group>";
+		};
+		5A445F2320729F1E009497B0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A445F0F20729AAE009497B0 /* ViewController.h */,
+				5A445F1020729AAE009497B0 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5A445F2420729F25009497B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A445F2520729F2E009497B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A445F2620729F48009497B0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5A445F0C20729AAE009497B0 /* AppDelegate.h */,
+				5A445F0D20729AAE009497B0 /* AppDelegate.m */,
+				5A445F2320729F1E009497B0 /* Controllers */,
+				5A445F2520729F2E009497B0 /* Models */,
+				5A445F2420729F25009497B0 /* Views */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
