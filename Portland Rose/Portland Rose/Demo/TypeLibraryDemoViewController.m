@@ -27,8 +27,12 @@ NSString * const REUSE_IDENTIFIER_CELL_FONT = @"FontCell";
 }
 
 - (void)loadFonts {
+  _typeLibrary = [TypeLibrary sharedTypeLibrary];
   _fonts = @[
-             @[@"Demo", [UIFont fontWithName:@"ArialRoundedMTBold" size:32.0]]
+             @[@"Body", _typeLibrary.fontBody],
+             @[@"Headline", _typeLibrary.fontHeadline],
+             @[@"Subtitle", _typeLibrary.fontSubtitle],
+             @[@"Title", _typeLibrary.fontTitle]
              ];
 }
 
@@ -47,10 +51,12 @@ NSString * const REUSE_IDENTIFIER_CELL_FONT = @"FontCell";
   
   index = indexPath.row;
   cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER_CELL_FONT forIndexPath:indexPath];
-  font = _fonts[index][1];
   title = _fonts[index][0];
+  font = _fonts[index][1];
   
   [cell.textLabel setFont: font];
+  [cell.textLabel setText: title];
+  
   return cell;
 }
 
