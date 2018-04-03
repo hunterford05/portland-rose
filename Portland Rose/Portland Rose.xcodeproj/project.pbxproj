@@ -19,6 +19,7 @@
 		5AF738CB2073D7CB00B8E75C /* PaletteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CA2073D7CB00B8E75C /* PaletteDemoViewController.m */; };
 		5AF738CE2073D8E100B8E75C /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CD2073D8E100B8E75C /* Palette.m */; };
 		5AF738D12073FB1100B8E75C /* TypeLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738D02073FB1100B8E75C /* TypeLibrary.m */; };
+		5AF738D32073FD6700B8E75C /* TypeLibraryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738D22073FD6700B8E75C /* TypeLibraryDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		5AF738CD2073D8E100B8E75C /* Palette.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
 		5AF738CF2073FB1100B8E75C /* TypeLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeLibrary.h; sourceTree = "<group>"; };
 		5AF738D02073FB1100B8E75C /* TypeLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeLibrary.m; sourceTree = "<group>"; };
+		5AF738D22073FD6700B8E75C /* TypeLibraryDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeLibraryDemoViewController.m; sourceTree = "<group>"; };
+		5AF738D42073FD6E00B8E75C /* TypeLibraryDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeLibraryDemoViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +133,12 @@
 			isa = PBXGroup;
 			children = (
 				5A445F272072B790009497B0 /* Demo.storyboard */,
-				5AF738C92073D7CB00B8E75C /* PaletteDemoViewController.h */,
-				5AF738CA2073D7CB00B8E75C /* PaletteDemoViewController.m */,
 				5A4ABF352072C36400349DBB /* DemosViewController.h */,
 				5A4ABF362072C36400349DBB /* DemosViewController.m */,
+				5AF738C92073D7CB00B8E75C /* PaletteDemoViewController.h */,
+				5AF738CA2073D7CB00B8E75C /* PaletteDemoViewController.m */,
+				5AF738D42073FD6E00B8E75C /* TypeLibraryDemoViewController.h */,
+				5AF738D22073FD6700B8E75C /* TypeLibraryDemoViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			files = (
 				5A445F1120729AAE009497B0 /* ViewController.m in Sources */,
 				5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */,
+				5AF738D32073FD6700B8E75C /* TypeLibraryDemoViewController.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
 				5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */,
 				5A4ABF372072C36400349DBB /* DemosViewController.m in Sources */,

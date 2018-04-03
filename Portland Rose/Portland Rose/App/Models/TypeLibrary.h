@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TypeLibrary : NSObject
+
+/// Singleton `TypeLibrary` instance
++ (id) sharedTypeLibrary;
+
+@property UIFont * fontBody;
+@property UIFont * fontHeadline;
+@property UIFont * fontSubtitle;
+@property UIFont * fontTitle;
 
 @end
