@@ -8,91 +8,61 @@
 
 #import "PaletteDemoViewController.h"
 
+
+NSString * const NAME_COLOR_BACKGROUND = @"Background";
+NSString * const NAME_COLOR_PRIMARY = @"Primary";
+NSString * const NAME_COLOR_SECONDARY = @"Secondary";
+NSString * const NAME_COLOR_TEXT = @"Text";
+NSString * const NAME_COLOR_TEXT_LOUD = @"Text (Loud)";
+
+NSString * const REUSE_IDENTIFIER_CELL_COLOR = @"ColorCell";
+
 @interface PaletteDemoViewController ()
+
+@property NSArray * colors;
+@property Palette * palette;
 
 @end
 
 @implementation PaletteDemoViewController
 
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  [super viewDidLoad];
+  [self loadColors];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadColors {
+  _palette = [Palette sharedPalette];
+  _colors = @[
+              @[NAME_COLOR_PRIMARY, _palette.colorPrimary],
+              @[NAME_COLOR_SECONDARY, _palette.colorSecondary],
+              @[NAME_COLOR_BACKGROUND, _palette.colorBackground],
+              @[NAME_COLOR_TEXT, _palette.colorText],
+              @[NAME_COLOR_TEXT_LOUD, _palette.colorTextLoud]
+              ];
 }
 
-#pragma mark - Table view data source
+#pragma mark - <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+  return [_colors count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+  return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER_CELL_COLOR forIndexPath:indexPath];
+  UIColor * color = _colors[indexPath.section][1];
+  [cell.contentView setBackgroundColor:color];
+  return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+  return _colors[section][0];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
