@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 IB_DESIGNABLE
 
-@interface ActionButtonView : UIView
+@interface ActionButtonView : UIControl
 
 @property IBInspectable UIColor * colorLabel;
 @property IBInspectable UIColor * colorBackgroundFirst;

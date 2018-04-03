@@ -105,6 +105,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello, Pufflavík!"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchUp:" destination="fNM-3U-tFr" eventType="touchUpInside" id="eE9-Py-Gyx"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,6 +117,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k4t-Ia-L0D"/>
                     </view>
+                    <connections>
+                        <outlet property="btn" destination="xNM-7Y-nRB" id="kom-M1-h24"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcN-90-hd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

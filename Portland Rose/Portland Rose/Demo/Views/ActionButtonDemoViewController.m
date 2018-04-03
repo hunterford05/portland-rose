@@ -7,8 +7,10 @@
 //
 
 #import "ActionButtonDemoViewController.h"
+#import "ActionButtonView.h"
 
 @interface ActionButtonDemoViewController ()
+@property (weak, nonatomic) IBOutlet ActionButtonView *btn;
 
 @end
 
@@ -23,6 +25,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)touchUp:(id)sender {
+  NSLog(@"Touchup!");
+}
+
 
 
 @end
