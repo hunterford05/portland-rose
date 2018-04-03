@@ -18,6 +18,7 @@
 		5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738C72073D41B00B8E75C /* UIColor+Hex.m */; };
 		5AF738CB2073D7CB00B8E75C /* PaletteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CA2073D7CB00B8E75C /* PaletteDemoViewController.m */; };
 		5AF738CE2073D8E100B8E75C /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CD2073D8E100B8E75C /* Palette.m */; };
+		5AF738D12073FB1100B8E75C /* TypeLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738D02073FB1100B8E75C /* TypeLibrary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		5AF738CA2073D7CB00B8E75C /* PaletteDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteDemoViewController.m; sourceTree = "<group>"; };
 		5AF738CC2073D8E100B8E75C /* Palette.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Palette.h; sourceTree = "<group>"; };
 		5AF738CD2073D8E100B8E75C /* Palette.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
+		5AF738CF2073FB1100B8E75C /* TypeLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeLibrary.h; sourceTree = "<group>"; };
+		5AF738D02073FB1100B8E75C /* TypeLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeLibrary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 			children = (
 				5AF738CC2073D8E100B8E75C /* Palette.h */,
 				5AF738CD2073D8E100B8E75C /* Palette.m */,
+				5AF738CF2073FB1100B8E75C /* TypeLibrary.h */,
+				5AF738D02073FB1100B8E75C /* TypeLibrary.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				5A4ABF372072C36400349DBB /* DemosViewController.m in Sources */,
 				5AF738CE2073D8E100B8E75C /* Palette.m in Sources */,
 				5AF738CB2073D7CB00B8E75C /* PaletteDemoViewController.m in Sources */,
+				5AF738D12073FB1100B8E75C /* TypeLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
