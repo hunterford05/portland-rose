@@ -26,7 +26,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)touchUp:(id)sender {
-  NSLog(@"Touchup!");
 }
 
 

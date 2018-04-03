@@ -16,6 +16,10 @@ NSString * const NAME_NIB = @"ActionButtonView";
 CGFloat const OPACITY_SHADOW = 0.59;
 /// Offset (horizontal and vertical) of the button's shadow
 CGFloat const OFFSET_SHADOW = 3.0;
+/// Opacity for button background on touch event
+CGFloat const OPACITY_BACKGROUND_ON_TOUCH = 0.92;
+/// Opacity for button label on touch event
+CGFloat const OPACITY_LABEL_ON_TOUCH = 0.84;
 /// Radius of the button's shadow
 CGFloat const RADIUS_SHADOW = 12.0;
 /// Padding, as a multiple of the font size, between the top edge of the button and the text
@@ -75,6 +79,21 @@ NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 /// Calculate the button's intrinsic size
 - (CGSize) intrinsicContentSize{
   return [self calculateSize];
+}
+
+- (BOOL) beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
+  [super beginTrackingWithTouch:touch withEvent:event];
+  
+  _labelViewText.alpha = OPACITY_LABEL_ON_TOUCH;
+  _viewBackground.alpha = OPACITY_BACKGROUND_ON_TOUCH;
+  return YES;
+}
+
+- (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
+  [super endTrackingWithTouch:touch withEvent:event];
+  
+  _labelViewText.alpha = 1;
+  _viewBackground.alpha = 1;
 }
 
 /// Refresh the button's appearance
