@@ -27,6 +27,9 @@ NSString * const REUSE_IDENTIFIER_CELL_FONT = @"FontCell";
 }
 
 - (void)loadFonts {
+  _fonts = @[
+             @[@"Demo", [UIFont fontWithName:@"ArialRoundedMTBold" size:32.0]]
+             ];
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -36,8 +39,17 @@ NSString * const REUSE_IDENTIFIER_CELL_FONT = @"FontCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER_CELL_FONT forIndexPath:indexPath];
-  UIFont * font = _fonts[indexPath.row][1];
+  
+  UITableViewCell *cell;
+  NSString * title;
+  UIFont * font;
+  NSInteger index;
+  
+  index = indexPath.row;
+  cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER_CELL_FONT forIndexPath:indexPath];
+  font = _fonts[index][1];
+  title = _fonts[index][0];
+  
   [cell.textLabel setFont: font];
   return cell;
 }
