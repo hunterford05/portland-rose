@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+IB_DESIGNABLE
 
 @interface ActionButtonView : UIView
+
+@property IBInspectable UIColor * colorLabel;
+@property IBInspectable UIColor * colorBackgroundFirst;
+@property IBInspectable UIColor * colorBackgroundSecond;
+@property (nonatomic) IBInspectable NSString * text;
 
 @end

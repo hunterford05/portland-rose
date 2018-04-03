@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,6 +47,7 @@
                     <connections>
                         <segue destination="6ye-x8-TAY" kind="show" identifier="FromDemosToPaletteDemo" id="cpV-tL-zLT"/>
                         <segue destination="20X-Dw-hrX" kind="show" identifier="FromDemosToTypeLibraryDemo" id="xZb-pt-RqJ"/>
+                        <segue destination="fNM-3U-tFr" kind="show" identifier="FromDemosToActionButtonViewDemo" id="Yrh-L7-5sg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,6 +90,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QwX-6S-PUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="550" y="883"/>
+        </scene>
+        <!--Action Button Demo View Controller-->
+        <scene sceneID="EKi-q0-Tar">
+            <objects>
+                <viewController id="fNM-3U-tFr" customClass="ActionButtonDemoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jME-iZ-eLn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-7Y-nRB" customClass="ActionButtonView">
+                                <rect key="frame" x="123.5" y="277" width="128" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello, Pufflavík!"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xNM-7Y-nRB" firstAttribute="centerX" secondItem="jME-iZ-eLn" secondAttribute="centerX" id="E76-fc-zLr"/>
+                            <constraint firstItem="xNM-7Y-nRB" firstAttribute="centerY" secondItem="jME-iZ-eLn" secondAttribute="centerY" id="Nyi-S0-hTo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k4t-Ia-L0D"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcN-90-hd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="883"/>
         </scene>
         <!--Palette Demo View Controller-->
         <scene sceneID="8GC-OQ-rFe">
