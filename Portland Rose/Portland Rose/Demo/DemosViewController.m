@@ -9,7 +9,7 @@
 #import "DemosViewController.h"
 
 /// Comma-seperated list of demo views. IMPORTANT: These names must correspond to a valid segue identifier with the convention `"FromDemosTo<NAME_OF_DEMO>"`. For example, if `"Puffins Demo"` is part of the `NAMES_DEMO` list, this view controller will assume that there is a segue with the identifier `"FromDemosToPuffinsDemo"`.
-NSString * const NAMES_DEMO = @"";
+NSString * const NAMES_DEMO = @"Palette Demo";
 /// Reuse identifier for the demo table cell
 NSString * const REUSE_IDENTIFIER_CELL_DEMO = @"DemoCell";
 /// Demos View Controller scene title
@@ -18,12 +18,12 @@ NSString * const TITLE = @"Demos";
 
 @interface DemosViewController ()
 
+/// Array of demo names.
+@property NSArray * namesDemo;
+
 @end
 
-@implementation DemosViewController{
-  /// Array of demo names.
-  NSArray * namesDemo;
-}
+@implementation DemosViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -31,9 +31,9 @@ NSString * const TITLE = @"Demos";
   [self setTitle:TITLE];
   
   if ([NAMES_DEMO isEqualToString:@""]){
-    namesDemo = @[];
+    _namesDemo = @[];
   } else {
-    namesDemo = [NSArray arrayWithArray: [NAMES_DEMO componentsSeparatedByString:@","]];
+    _namesDemo = [NSArray arrayWithArray: [NAMES_DEMO componentsSeparatedByString:@","]];
   }
 }
 
@@ -45,7 +45,7 @@ NSString * const TITLE = @"Demos";
   NSInteger row;
   
   row = indexPath.row;
-  scene = [namesDemo[row] stringByReplacingOccurrencesOfString:@" " withString:@""];
+  scene = [_namesDemo[row] stringByReplacingOccurrencesOfString:@" " withString:@""];
   sid = [NSString stringWithFormat:@"FromDemosTo%@", scene];
   
   [self performSegueWithIdentifier:sid sender:self];
@@ -63,13 +63,13 @@ NSString * const TITLE = @"Demos";
   
   row = indexPath.row;
   cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER_CELL_DEMO];
-  cell.textLabel.text = namesDemo[row];
+  cell.textLabel.text = _namesDemo[row];
   
   return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-  return [namesDemo count];
+  return [_namesDemo count];
 }
 
 @end
