@@ -14,9 +14,13 @@
 /// Singleton `TypeLibrary` instance
 + (id) sharedTypeLibrary;
 
+/// Font for body text
 @property UIFont * fontBody;
+/// Font for headline text
 @property UIFont * fontHeadline;
+/// Font for subtitle text
 @property UIFont * fontSubtitle;
+/// Font for title text
 @property UIFont * fontTitle;
 
 @end
