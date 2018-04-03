@@ -12,10 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionButtonView">
             <connections>
-                <outlet property="background" destination="4BF-vs-gCd" id="9vM-Zw-4JM"/>
-                <outlet property="label" destination="DwF-kr-wgS" id="bMc-BZ-7AG"/>
-                <outlet property="shadow" destination="usO-Kb-yzR" id="Tvj-zi-hxw"/>
+                <outlet property="labelViewText" destination="DwF-kr-wgS" id="LqY-9R-Yvx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="cWC-h5-w5v"/>
+                <outlet property="viewBackground" destination="4BF-vs-gCd" id="1ur-F8-eXd"/>
+                <outlet property="viewShadow" destination="usO-Kb-yzR" id="ZTo-vd-e5e"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
