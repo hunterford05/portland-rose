@@ -22,55 +22,54 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="334" height="104"/>
+            <rect key="frame" x="0.0" y="0.0" width="334" height="135"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-Iw-E4n">
-                    <rect key="frame" x="0.0" y="0.0" width="334" height="92"/>
+                    <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AB7-en-hE7" userLabel="Leading Spacer">
-                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="92"/>
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" id="7fa-dq-7iZ"/>
-                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="92" id="7tf-nV-ozt"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB6-aB-Ocw">
-                            <rect key="frame" x="49" y="23" width="46" height="46"/>
-                            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iB6-aB-Ocw">
+                            <rect key="frame" x="46" y="0.0" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="iB6-aB-Ocw" secondAttribute="height" multiplier="1:1" id="TlS-jz-93p"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="8" minY="10" maxX="8" maxY="6"/>
+                            <state key="normal" image="icon-compass-50"/>
                             <connections>
                                 <action selector="handleTap:" destination="-1" eventType="touchUpInside" id="Ssz-k5-VRx"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-ol-SRn">
-                            <rect key="frame" x="144" y="23" width="46" height="46"/>
-                            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcj-ol-SRn">
+                            <rect key="frame" x="142" y="0.0" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="vcj-ol-SRn" secondAttribute="height" multiplier="1:1" id="yPt-XX-tOr"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="8" minY="10" maxX="8" maxY="6"/>
+                            <state key="normal" image="icon-pin-50"/>
                             <connections>
                                 <action selector="handleTap:" destination="-1" eventType="touchUpInside" id="cVX-n4-ZND"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q83-DU-V8Q">
-                            <rect key="frame" x="239" y="23" width="46" height="46"/>
-                            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q83-DU-V8Q">
+                            <rect key="frame" x="238" y="0.0" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Q83-DU-V8Q" secondAttribute="height" multiplier="1:1" id="8BR-1A-OZY"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
+                            <inset key="imageEdgeInsets" minX="8" minY="10" maxX="8" maxY="6"/>
+                            <state key="normal" image="icon-happy-50"/>
                             <connections>
                                 <action selector="handleTap:" destination="-1" eventType="touchUpInside" id="cB9-yh-Qmb"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDn-1s-ryw" userLabel="Trailing Spacer">
-                            <rect key="frame" x="334" y="0.0" width="0.0" height="92"/>
+                            <rect key="frame" x="334" y="0.0" width="0.0" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" id="Hgp-Ge-mkF"/>
@@ -79,6 +78,10 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="sDn-1s-ryw" firstAttribute="height" secondItem="AB7-en-hE7" secondAttribute="height" id="7ca-h1-Osh"/>
+                        <constraint firstItem="vcj-ol-SRn" firstAttribute="height" secondItem="iB6-aB-Ocw" secondAttribute="height" id="HEU-NU-1JL"/>
+                        <constraint firstItem="Q83-DU-V8Q" firstAttribute="height" secondItem="iB6-aB-Ocw" secondAttribute="height" id="keS-1O-HSt"/>
+                        <constraint firstItem="sDn-1s-ryw" firstAttribute="height" secondItem="AB7-en-hE7" secondAttribute="height" id="rns-5y-uPv"/>
+                        <constraint firstItem="iB6-aB-Ocw" firstAttribute="height" secondItem="AB7-en-hE7" secondAttribute="height" id="xCb-wx-QW1"/>
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-O3-ufy" userLabel="Divider">
@@ -89,7 +92,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4Z-nU-JOR" userLabel="Highlight">
-                    <rect key="frame" x="49" y="-1" width="46" height="4.5"/>
+                    <rect key="frame" x="46" y="-1" width="50" height="5"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="J4Z-nU-JOR" secondAttribute="height" multiplier="113:11" id="bgx-O6-3nZ"/>
@@ -109,7 +112,12 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-169" y="-269"/>
+            <point key="canvasLocation" x="-169" y="-253.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon-compass-50" width="50" height="49"/>
+        <image name="icon-happy-50" width="50" height="50"/>
+        <image name="icon-pin-50" width="50" height="50"/>
+    </resources>
 </document>

@@ -12,8 +12,8 @@
 /// Name of XIB file
 static NSString * const NAME_NIB = @"TabBarView";
 static CGFloat const OPACITY_SHADOW_HIGHLIGHT = 0.5;
-static CGFloat const OFFSET_SHADOW_HIGHTLIGHT = 5.0;
-static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
+static CGFloat const OFFSET_SHADOW_HIGHTLIGHT = 2.5;
+static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 2.5;
 
 @interface TabBarView()
 
@@ -93,7 +93,7 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
   lh.shouldRasterize = true;
   lh.rasterizationScale = UIScreen.mainScreen.scale;
   
-  // Populate `_buttons` array
+  // Populate `_buttons` array and configure buttons
   NSUInteger nBtns;
   UIButton * btn;
   nBtns = _viewStack.arrangedSubviews.count - 2;
@@ -104,7 +104,7 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
     _buttons[btn.tag] = btn;
   }
   
-  // Populate `_constraintsHighlight` array
+  // Populate `_constraintsHighlight` array and configure constraints
   NSLayoutConstraint * c;
   _constraintsHighlight = [[NSMutableArray alloc] initWithCapacity: nBtns];
   for (int i = 0; i < nBtns; i++){
@@ -120,7 +120,7 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
 }
 
 - (void) refresh {
-  
+
 }
 
 - (IBAction)handleTap:(UIButton *)sender {
@@ -129,11 +129,19 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
 }
 
 - (void) setSelectedIndex:(NSUInteger) selectedIndex{
+  Palette * palette;
+  
+  palette = [Palette sharedPalette];
   _selectedIndex = selectedIndex;
   for (NSLayoutConstraint * c in _constraintsHighlight){
     [c setPriority:UILayoutPriorityDefaultLow];
   }
+  for (UIButton * b in _buttons){
+    [b setTintColor: palette.colorText];
+  }
   [_constraintsHighlight[selectedIndex] setPriority:UILayoutPriorityDefaultHigh];
+  [_buttons[selectedIndex] setTintColor:palette.colorPrimary];
+  
   [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
