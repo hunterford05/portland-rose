@@ -34,6 +34,7 @@ NSString * const HEX_WHITE = @"#FFFFFF";
     _colorPrimary = [UIColor colorWithHexString:HEX_FROLY];
     _colorSecondary = [UIColor colorWithHexString:HEX_THULIAN_PINK];
     _colorText = [UIColor colorWithHexString: HEX_COMET];
+    _colorTextInverted = [UIColor colorWithHexString: HEX_WHITE];
     _colorTextLoud = [UIColor colorWithHexString:HEX_BLACK];
   }
   return self;

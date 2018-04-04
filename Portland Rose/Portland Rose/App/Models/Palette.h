@@ -23,6 +23,8 @@
 @property UIColor * colorSecondary;
 /// Default text color
 @property UIColor * colorText;
+/// Inverted text color (for light backgrounds)
+@property UIColor * colorTextInverted;
 /// Loud (emphasized) text color
 @property UIColor * colorTextLoud;
 

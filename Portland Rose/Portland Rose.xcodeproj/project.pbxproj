@@ -20,6 +20,9 @@
 		5AF738CE2073D8E100B8E75C /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CD2073D8E100B8E75C /* Palette.m */; };
 		5AF738D12073FB1100B8E75C /* TypeLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738D02073FB1100B8E75C /* TypeLibrary.m */; };
 		5AF738D32073FD6700B8E75C /* TypeLibraryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738D22073FD6700B8E75C /* TypeLibraryDemoViewController.m */; };
+		5AF738D9207408EC00B8E75C /* ActionButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF738D8207408EC00B8E75C /* ActionButtonView.xib */; };
+		5AF738DC207408F600B8E75C /* ActionButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738DB207408F600B8E75C /* ActionButtonView.m */; };
+		5AF738DF20740F0B00B8E75C /* ActionButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738DE20740F0B00B8E75C /* ActionButtonDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,11 @@
 		5AF738D02073FB1100B8E75C /* TypeLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeLibrary.m; sourceTree = "<group>"; };
 		5AF738D22073FD6700B8E75C /* TypeLibraryDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeLibraryDemoViewController.m; sourceTree = "<group>"; };
 		5AF738D42073FD6E00B8E75C /* TypeLibraryDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeLibraryDemoViewController.h; sourceTree = "<group>"; };
+		5AF738D8207408EC00B8E75C /* ActionButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionButtonView.xib; sourceTree = "<group>"; };
+		5AF738DA207408F600B8E75C /* ActionButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionButtonView.h; sourceTree = "<group>"; };
+		5AF738DB207408F600B8E75C /* ActionButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionButtonView.m; sourceTree = "<group>"; };
+		5AF738DD20740F0B00B8E75C /* ActionButtonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ActionButtonDemoViewController.h; path = "Portland Rose/Demo/Views/ActionButtonDemoViewController.h"; sourceTree = SOURCE_ROOT; };
+		5AF738DE20740F0B00B8E75C /* ActionButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ActionButtonDemoViewController.m; path = "Portland Rose/Demo/Views/ActionButtonDemoViewController.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,9 @@
 		5A445F2420729F25009497B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AF738D8207408EC00B8E75C /* ActionButtonView.xib */,
+				5AF738DA207408F600B8E75C /* ActionButtonView.h */,
+				5AF738DB207408F600B8E75C /* ActionButtonView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,13 +143,11 @@
 		5A445F2A2072B7A7009497B0 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5AF738E120740F3000B8E75C /* Models */,
+				5AF738E020740F2100B8E75C /* Views */,
 				5A445F272072B790009497B0 /* Demo.storyboard */,
 				5A4ABF352072C36400349DBB /* DemosViewController.h */,
 				5A4ABF362072C36400349DBB /* DemosViewController.m */,
-				5AF738C92073D7CB00B8E75C /* PaletteDemoViewController.h */,
-				5AF738CA2073D7CB00B8E75C /* PaletteDemoViewController.m */,
-				5AF738D42073FD6E00B8E75C /* TypeLibraryDemoViewController.h */,
-				5AF738D22073FD6700B8E75C /* TypeLibraryDemoViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -151,6 +160,26 @@
 			);
 			name = Helpers;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5AF738E020740F2100B8E75C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AF738DD20740F0B00B8E75C /* ActionButtonDemoViewController.h */,
+				5AF738DE20740F0B00B8E75C /* ActionButtonDemoViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AF738E120740F3000B8E75C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AF738C92073D7CB00B8E75C /* PaletteDemoViewController.h */,
+				5AF738CA2073D7CB00B8E75C /* PaletteDemoViewController.m */,
+				5AF738D42073FD6E00B8E75C /* TypeLibraryDemoViewController.h */,
+				5AF738D22073FD6700B8E75C /* TypeLibraryDemoViewController.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A445F1920729AAF009497B0 /* LaunchScreen.storyboard in Resources */,
+				5AF738D9207408EC00B8E75C /* ActionButtonView.xib in Resources */,
 				5A445F1620729AAF009497B0 /* Assets.xcassets in Resources */,
 				5A445F1420729AAE009497B0 /* Main.storyboard in Resources */,
 				5A445F292072B790009497B0 /* Demo.storyboard in Resources */,
@@ -226,12 +256,14 @@
 			files = (
 				5A445F1120729AAE009497B0 /* ViewController.m in Sources */,
 				5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */,
+				5AF738DF20740F0B00B8E75C /* ActionButtonDemoViewController.m in Sources */,
 				5AF738D32073FD6700B8E75C /* TypeLibraryDemoViewController.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
 				5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */,
 				5A4ABF372072C36400349DBB /* DemosViewController.m in Sources */,
 				5AF738CE2073D8E100B8E75C /* Palette.m in Sources */,
 				5AF738CB2073D7CB00B8E75C /* PaletteDemoViewController.m in Sources */,
+				5AF738DC207408F600B8E75C /* ActionButtonView.m in Sources */,
 				5AF738D12073FB1100B8E75C /* TypeLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

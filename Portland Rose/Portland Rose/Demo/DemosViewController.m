@@ -9,7 +9,7 @@
 #import "DemosViewController.h"
 
 /// Comma-seperated list of demo views. IMPORTANT: These names must correspond to a valid segue identifier with the convention `"FromDemosTo<NAME_OF_DEMO>"`. For example, if `"Puffins Demo"` is part of the `NAMES_DEMO` list, this view controller will assume that there is a segue with the identifier `"FromDemosToPuffinsDemo"`.
-NSString * const NAMES_DEMO = @"Palette Demo,Type Library Demo";
+NSString * const NAMES_DEMO = @"Action Button View Demo, Palette Demo,Type Library Demo";
 /// Reuse identifier for the demo table cell
 NSString * const REUSE_IDENTIFIER_CELL_DEMO = @"DemoCell";
 /// Demos View Controller scene title
