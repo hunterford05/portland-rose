@@ -20,6 +20,7 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIView *viewHighlight;
 @property (weak, nonatomic) IBOutlet UIStackView *viewStack;
+@property (weak, nonatomic) IBOutlet UIView *viewDividerTop;
 
 
 
@@ -69,6 +70,9 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
   CAGradientLayer * grad;
   
   palette = [Palette sharedPalette];
+  
+  // Configure divider bar color
+  [_viewDividerTop setBackgroundColor: palette.colorDivider];
 
   // Configure highlight bar gradient
   grad = [CAGradientLayer layer];

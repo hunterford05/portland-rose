@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBarView">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="inV-sl-MGI"/>
+                <outlet property="viewDividerTop" destination="kSx-O3-ufy" id="oyE-ok-zlf"/>
                 <outlet property="viewHighlight" destination="J4Z-nU-JOR" id="ph0-Aa-0EB"/>
                 <outlet property="viewStack" destination="8Wc-Iw-E4n" id="x7b-t0-lXx"/>
             </connections>
@@ -80,8 +81,15 @@
                         <constraint firstItem="sDn-1s-ryw" firstAttribute="height" secondItem="AB7-en-hE7" secondAttribute="height" id="7ca-h1-Osh"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-O3-ufy" userLabel="Divider">
+                    <rect key="frame" x="0.0" y="-1" width="334" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="y1J-St-dKt"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4Z-nU-JOR" userLabel="Highlight">
-                    <rect key="frame" x="49" y="0.0" width="46" height="4.5"/>
+                    <rect key="frame" x="49" y="-1" width="46" height="4.5"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="J4Z-nU-JOR" secondAttribute="height" multiplier="113:11" id="bgx-O6-3nZ"/>
@@ -89,11 +97,14 @@
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="J4Z-nU-JOR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5vw-p8-xzC"/>
+                <constraint firstItem="J4Z-nU-JOR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-1" id="5vw-p8-xzC"/>
                 <constraint firstItem="8Wc-Iw-E4n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FGg-vo-hNZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Wc-Iw-E4n" secondAttribute="trailing" id="KIO-aS-ndy"/>
+                <constraint firstItem="kSx-O3-ufy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RB1-Cp-sts"/>
                 <constraint firstItem="J4Z-nU-JOR" firstAttribute="width" secondItem="iB6-aB-Ocw" secondAttribute="height" id="Uj5-sS-wr2"/>
                 <constraint firstItem="J4Z-nU-JOR" firstAttribute="centerX" secondItem="iB6-aB-Ocw" secondAttribute="centerX" placeholder="YES" id="YC8-cJ-Fjf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kSx-O3-ufy" secondAttribute="trailing" id="eQM-6V-MQi"/>
+                <constraint firstItem="kSx-O3-ufy" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="top" id="g80-Fv-1q5"/>
                 <constraint firstItem="8Wc-Iw-E4n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iYY-xu-0bB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
