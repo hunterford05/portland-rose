@@ -213,19 +213,26 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lSD-53-ADi">
             <objects>
-                <tabBarController id="RdI-Lc-zT3" sceneMemberID="viewController">
+                <tabBarController id="RdI-Lc-zT3" customClass="PORTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ySh-U8-nPb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="viewTabBar" destination="XU7-l2-84N" id="YP1-z9-gWv"/>
                         <segue destination="LQu-RB-8dQ" kind="relationship" relationship="viewControllers" id="I79-pU-FgV"/>
                         <segue destination="MzE-GR-deM" kind="relationship" relationship="viewControllers" id="hun-Bz-p8X"/>
                         <segue destination="EV7-pg-DEr" kind="relationship" relationship="viewControllers" id="4FU-Ai-kvV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Yu-IG-RRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="XU7-l2-84N" customClass="TabBarView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="fsG-uM-eBN"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1862" y="883"/>
         </scene>
