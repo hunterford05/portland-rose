@@ -19,6 +19,12 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIView *viewHighlight;
+@property (weak, nonatomic) IBOutlet UIStackView *viewStack;
+
+
+
+@property NSMutableArray * constraintsHighlight;
+@property NSMutableArray * buttons;
 
 @end
 
@@ -83,8 +89,29 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
   lh.shouldRasterize = true;
   lh.rasterizationScale = UIScreen.mainScreen.scale;
   
+  // Populate `_buttons` array
+  NSUInteger nBtns;
+  UIButton * btn;
+  nBtns = _viewStack.arrangedSubviews.count - 2;
+  _buttons = [[NSMutableArray alloc] initWithCapacity:nBtns];
+  for (int i = 1; i <= nBtns; i++){
+    btn = _viewStack.arrangedSubviews[i];
+    btn.tag = i - 1;
+    _buttons[btn.tag] = btn;
+  }
+  
+  // Populate `_constraintsHighlight` array
+  NSLayoutConstraint * c;
+  _constraintsHighlight = [[NSMutableArray alloc] initWithCapacity: nBtns];
+  for (int i = 0; i < nBtns; i++){
+    c = [NSLayoutConstraint constraintWithItem:_viewHighlight attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_buttons[i] attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
+    [c setPriority:UILayoutPriorityDefaultLow];
+    [c setActive: YES];
+    _constraintsHighlight[i] = c;
+  }
+  
   // Configure data properties
-  _selectedIndex = 0;
+  [self setSelectedIndex:0];
   
 }
 
@@ -99,6 +126,10 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
 
 - (void) setSelectedIndex:(NSUInteger) selectedIndex{
   _selectedIndex = selectedIndex;
+  for (NSLayoutConstraint * c in _constraintsHighlight){
+    [c setPriority:UILayoutPriorityDefaultLow];
+  }
+  [_constraintsHighlight[selectedIndex] setPriority:UILayoutPriorityDefaultHigh];
   [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
