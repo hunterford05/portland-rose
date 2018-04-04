@@ -10,6 +10,7 @@
 
 
 static NSString * const NAME_COLOR_BACKGROUND = @"Background";
+static NSString * const NAME_COLOR_DIVIDER = @"Divider";
 static NSString * const NAME_COLOR_PRIMARY = @"Primary";
 static NSString * const NAME_COLOR_SECONDARY = @"Secondary";
 static NSString * const NAME_COLOR_TEXT = @"Text";
@@ -38,6 +39,7 @@ static NSString * const REUSE_IDENTIFIER_CELL_COLOR = @"ColorCell";
               @[NAME_COLOR_PRIMARY, _palette.colorPrimary],
               @[NAME_COLOR_SECONDARY, _palette.colorSecondary],
               @[NAME_COLOR_BACKGROUND, _palette.colorBackground],
+              @[NAME_COLOR_DIVIDER, _palette.colorDivider],
               @[NAME_COLOR_TEXT, _palette.colorText],
               @[NAME_COLOR_TEXT_LOUD, _palette.colorTextLoud]
               ];
