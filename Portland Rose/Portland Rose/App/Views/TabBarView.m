@@ -11,6 +11,9 @@
 
 /// Name of XIB file
 static NSString * const NAME_NIB = @"TabBarView";
+static CGFloat const OPACITY_SHADOW_HIGHLIGHT = 0.5;
+static CGFloat const OFFSET_SHADOW_HIGHTLIGHT = 5.0;
+static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
 
 @interface TabBarView()
 
@@ -57,10 +60,30 @@ static NSString * const NAME_NIB = @"TabBarView";
 
 - (void) nibDidLoad{
   Palette * palette;
-  
-  // Configure colors
+  CAGradientLayer * grad;
+
   palette = [Palette sharedPalette];
-  [_viewHighlight setBackgroundColor: palette.colorSecondary];
+
+  // Configure highlight bar gradient
+  grad = [CAGradientLayer layer];
+  grad.frame = _viewHighlight.bounds;
+  grad.colors = @[(id)palette.colorPrimary.CGColor, (id)palette.colorSecondary.CGColor];
+  grad.startPoint = CGPointMake(0,0);
+  grad.endPoint = CGPointMake(1,1);
+  [_viewHighlight.layer insertSublayer:grad atIndex:0];
+  
+  // Configure highlight bar shadow
+  CGFloat o = OFFSET_SHADOW_HIGHTLIGHT;
+  CALayer * lh = _viewHighlight.layer;
+  lh.shadowColor = palette.colorPrimary.CGColor;
+  lh.shadowOffset = CGSizeMake(o, o) ;
+  lh.shadowRadius = RADIUS_SHADOW_HIGHLIGHT;
+  lh.shadowOpacity = OPACITY_SHADOW_HIGHLIGHT;
+  lh.shadowPath = [UIBezierPath bezierPathWithRect: _viewHighlight.bounds].CGPath;
+  lh.shouldRasterize = true;
+  lh.rasterizationScale = UIScreen.mainScreen.scale;
+  
+  
 }
 
 - (void) refresh {
