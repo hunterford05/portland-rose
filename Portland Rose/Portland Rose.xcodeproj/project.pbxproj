@@ -15,6 +15,7 @@
 		5A445F1C20729AAF009497B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F1B20729AAF009497B0 /* main.m */; };
 		5A445F292072B790009497B0 /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F272072B790009497B0 /* Demo.storyboard */; };
 		5A4ABF372072C36400349DBB /* DemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ABF362072C36400349DBB /* DemosViewController.m */; };
+		5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA949182075589B00060FE8 /* PORTabBarController.m */; };
 		5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738C72073D41B00B8E75C /* UIColor+Hex.m */; };
 		5AF738CB2073D7CB00B8E75C /* PaletteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CA2073D7CB00B8E75C /* PaletteDemoViewController.m */; };
 		5AF738CE2073D8E100B8E75C /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CD2073D8E100B8E75C /* Palette.m */; };
@@ -39,6 +40,8 @@
 		5A445F282072B790009497B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Demo.storyboard; sourceTree = "<group>"; };
 		5A4ABF352072C36400349DBB /* DemosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DemosViewController.h; path = "Portland Rose/Demo/DemosViewController.h"; sourceTree = SOURCE_ROOT; };
 		5A4ABF362072C36400349DBB /* DemosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DemosViewController.m; path = "Portland Rose/Demo/DemosViewController.m"; sourceTree = SOURCE_ROOT; };
+		5AA949172075589B00060FE8 /* PORTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORTabBarController.h; sourceTree = "<group>"; };
+		5AA949182075589B00060FE8 /* PORTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORTabBarController.m; sourceTree = "<group>"; };
 		5AF738C62073D41B00B8E75C /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		5AF738C72073D41B00B8E75C /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		5AF738C92073D7CB00B8E75C /* PaletteDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteDemoViewController.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 		5A445F2320729F1E009497B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5AA949172075589B00060FE8 /* PORTabBarController.h */,
+				5AA949182075589B00060FE8 /* PORTabBarController.m */,
 				5A445F0F20729AAE009497B0 /* ViewController.h */,
 				5A445F1020729AAE009497B0 /* ViewController.m */,
 			);
@@ -259,6 +264,7 @@
 				5AF738DF20740F0B00B8E75C /* ActionButtonDemoViewController.m in Sources */,
 				5AF738D32073FD6700B8E75C /* TypeLibraryDemoViewController.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
+				5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */,
 				5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */,
 				5A4ABF372072C36400349DBB /* DemosViewController.m in Sources */,
 				5AF738CE2073D8E100B8E75C /* Palette.m in Sources */,
