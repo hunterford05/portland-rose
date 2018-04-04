@@ -17,6 +17,8 @@
 
 /// Default background color
 @property UIColor * colorBackground;
+/// Color for dividers
+@property UIColor * colorDivider;
 /// Primary color
 @property UIColor * colorPrimary;
 /// Secondary color
