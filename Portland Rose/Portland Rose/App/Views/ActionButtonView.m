@@ -11,23 +11,23 @@
 #import "TypeLibrary.h"
 
 /// Name of XIB file
-NSString * const NAME_NIB = @"ActionButtonView";
+static NSString * const NAME_NIB = @"ActionButtonView";
 /// Opacity of the button's shadow
-CGFloat const OPACITY_SHADOW = 0.59;
+static CGFloat const OPACITY_SHADOW = 0.59;
 /// Offset (horizontal and vertical) of the button's shadow
-CGFloat const OFFSET_SHADOW = 3.0;
+static CGFloat const OFFSET_SHADOW = 3.0;
 /// Opacity for button background on touch event
-CGFloat const OPACITY_BACKGROUND_ON_TOUCH = 0.92;
+static CGFloat const OPACITY_BACKGROUND_ON_TOUCH = 0.92;
 /// Opacity for button label on touch event
-CGFloat const OPACITY_LABEL_ON_TOUCH = 0.84;
+static CGFloat const OPACITY_LABEL_ON_TOUCH = 0.84;
 /// Radius of the button's shadow
-CGFloat const RADIUS_SHADOW = 12.0;
+static CGFloat const RADIUS_SHADOW = 12.0;
 /// Padding, as a multiple of the font size, between the top edge of the button and the text
-CGFloat const PADDING_TOP = 1.0;
+static CGFloat const PADDING_TOP = 1.0;
 /// Padding, as a multiple of the font size, between the leading (left) edge of the button and the text
-CGFloat const PADDING_LEADING = 2.0;
+static CGFloat const PADDING_LEADING = 2.0;
 /// Default button text
-NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
+static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 
 @interface ActionButtonView()
 
