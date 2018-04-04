@@ -9,13 +9,13 @@
 #import "PaletteDemoViewController.h"
 
 
-NSString * const NAME_COLOR_BACKGROUND = @"Background";
-NSString * const NAME_COLOR_PRIMARY = @"Primary";
-NSString * const NAME_COLOR_SECONDARY = @"Secondary";
-NSString * const NAME_COLOR_TEXT = @"Text";
-NSString * const NAME_COLOR_TEXT_LOUD = @"Text (Loud)";
+static NSString * const NAME_COLOR_BACKGROUND = @"Background";
+static NSString * const NAME_COLOR_PRIMARY = @"Primary";
+static NSString * const NAME_COLOR_SECONDARY = @"Secondary";
+static NSString * const NAME_COLOR_TEXT = @"Text";
+static NSString * const NAME_COLOR_TEXT_LOUD = @"Text (Loud)";
 
-NSString * const REUSE_IDENTIFIER_CELL_COLOR = @"ColorCell";
+static NSString * const REUSE_IDENTIFIER_CELL_COLOR = @"ColorCell";
 
 @interface PaletteDemoViewController ()
 

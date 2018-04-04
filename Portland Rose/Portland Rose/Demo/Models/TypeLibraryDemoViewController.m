@@ -9,7 +9,7 @@
 #import "TypeLibraryDemoViewController.h"
 
 
-NSString * const REUSE_IDENTIFIER_CELL_FONT = @"FontCell";
+static NSString * const REUSE_IDENTIFIER_CELL_FONT = @"FontCell";
 
 @interface TypeLibraryDemoViewController ()
 

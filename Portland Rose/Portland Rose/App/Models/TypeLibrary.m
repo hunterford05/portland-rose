@@ -10,22 +10,22 @@
 
 
 /// Font name for body text
-NSString * const FONT_NAME_BODY = @"ArialRoundedMTBold";
+static NSString * const FONT_NAME_BODY = @"ArialRoundedMTBold";
 /// Font name for headline text
-NSString * const FONT_NAME_HEADLINE = FONT_NAME_BODY;
+static NSString * const FONT_NAME_HEADLINE = FONT_NAME_BODY;
 /// Font name for subtitle text
-NSString * const FONT_NAME_SUBTITLE = FONT_NAME_BODY;
+static NSString * const FONT_NAME_SUBTITLE = FONT_NAME_BODY;
 /// Font name for title text
-NSString * const FONT_NAME_TITLE = FONT_NAME_BODY;
+static NSString * const FONT_NAME_TITLE = FONT_NAME_BODY;
 
 /// Font size for body text
-CGFloat const FONT_SIZE_BODY = 24.0 / 2;
+static CGFloat const FONT_SIZE_BODY = 24.0 / 2;
 /// Font size for headline text
-CGFloat const FONT_SIZE_HEADLINE = 32.0 / 2;
+static CGFloat const FONT_SIZE_HEADLINE = 32.0 / 2;
 /// Font size for subtitle text
-CGFloat const FONT_SIZE_SUBTITLE = 40.0 / 2;
+static CGFloat const FONT_SIZE_SUBTITLE = 40.0 / 2;
 /// Font size for title text
-CGFloat const FONT_SIZE_TITLE = 64.0 / 2;
+static CGFloat const FONT_SIZE_TITLE = 64.0 / 2;
 
 @implementation TypeLibrary
 
