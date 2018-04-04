@@ -7,6 +7,7 @@
 //
 
 #import "TabBarView.h"
+#import "Palette.h"
 
 /// Name of XIB file
 static NSString * const NAME_NIB = @"TabBarView";
@@ -14,6 +15,7 @@ static NSString * const NAME_NIB = @"TabBarView";
 @interface TabBarView()
 
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UIView *viewHighlight;
 
 @end
 
@@ -54,7 +56,11 @@ static NSString * const NAME_NIB = @"TabBarView";
 }
 
 - (void) nibDidLoad{
+  Palette * palette;
   
+  // Configure colors
+  palette = [Palette sharedPalette];
+  [_viewHighlight setBackgroundColor: palette.colorSecondary];
 }
 
 - (void) refresh {
