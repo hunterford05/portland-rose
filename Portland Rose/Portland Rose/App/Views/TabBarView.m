@@ -11,9 +11,10 @@
 
 /// Name of XIB file
 static NSString * const NAME_NIB = @"TabBarView";
-static CGFloat const OPACITY_SHADOW_HIGHLIGHT = 0.5;
 static CGFloat const OFFSET_SHADOW_HIGHTLIGHT = 2.5;
+static CGFloat const OPACITY_SHADOW_HIGHLIGHT = 0.5;
 static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 2.5;
+static CGFloat const DURATION_ANIMATION_SELECTION = 0.2;
 
 @interface TabBarView()
 
@@ -132,6 +133,8 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 2.5;
   Palette * palette;
   
   palette = [Palette sharedPalette];
+  
+  [_view layoutIfNeeded];
   _selectedIndex = selectedIndex;
   for (NSLayoutConstraint * c in _constraintsHighlight){
     [c setPriority:UILayoutPriorityDefaultLow];
@@ -141,6 +144,11 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 2.5;
   }
   [_constraintsHighlight[selectedIndex] setPriority:UILayoutPriorityDefaultHigh];
   [_buttons[selectedIndex] setTintColor:palette.colorPrimary];
+  
+  [UIView animateWithDuration:DURATION_ANIMATION_SELECTION
+                   animations:^{
+                     [self.view layoutIfNeeded];
+                   }];
   
   [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
