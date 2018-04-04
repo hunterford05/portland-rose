@@ -8,6 +8,7 @@
 
 #import "TabBarView.h"
 
+/// Name of XIB file
 static NSString * const NAME_NIB = @"TabBarView";
 
 @interface TabBarView()

@@ -12,20 +12,19 @@
 @interface PORTabBarController ()
 
 @property (strong, nonatomic) IBOutlet TabBarView *viewTabBar;
+@property (weak, nonatomic) IBOutlet UITabBar *viewUITabBar;
 
 @end
 
 @implementation PORTabBarController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  CGRect frameTabBar;
-  
-  frameTabBar = _viewTabBar.frame;
-  frameTabBar.size.width = self.view.frame.size.width;
-  _viewTabBar.frame = frameTabBar;
-  
+  [super viewDidLoad];  
   [self.view addSubview: _viewTabBar];
+}
+
+- (void) viewDidLayoutSubviews{
+  [_viewTabBar setFrame: _viewUITabBar.frame];
 }
 
 - (void)didReceiveMemoryWarning {

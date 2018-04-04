@@ -100,7 +100,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-7Y-nRB" customClass="ActionButtonView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-7Y-nRB" customClass="ActionButtonView">
                                 <rect key="frame" x="123.5" y="277" width="128" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -214,13 +214,14 @@
         <scene sceneID="lSD-53-ADi">
             <objects>
                 <tabBarController id="RdI-Lc-zT3" customClass="PORTabBarController" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ySh-U8-nPb">
+                    <tabBar key="tabBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ySh-U8-nPb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <outlet property="viewTabBar" destination="XU7-l2-84N" id="YP1-z9-gWv"/>
+                        <outlet property="viewUITabBar" destination="ySh-U8-nPb" id="VE5-yX-tgb"/>
                         <segue destination="LQu-RB-8dQ" kind="relationship" relationship="viewControllers" id="I79-pU-FgV"/>
                         <segue destination="MzE-GR-deM" kind="relationship" relationship="viewControllers" id="hun-Bz-p8X"/>
                         <segue destination="EV7-pg-DEr" kind="relationship" relationship="viewControllers" id="4FU-Ai-kvV"/>
@@ -228,7 +229,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Yu-IG-RRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="XU7-l2-84N" customClass="TabBarView">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="200"/>
+                    <rect key="frame" x="0.0" y="0.0" width="374" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="fsG-uM-eBN"/>
