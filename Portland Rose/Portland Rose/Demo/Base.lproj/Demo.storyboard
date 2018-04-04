@@ -233,6 +233,9 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="fsG-uM-eBN"/>
+                    <connections>
+                        <action selector="handleTabBarValueChanged:" destination="RdI-Lc-zT3" eventType="valueChanged" id="M7m-Qh-RfC"/>
+                    </connections>
                 </view>
             </objects>
             <point key="canvasLocation" x="1862" y="883"/>

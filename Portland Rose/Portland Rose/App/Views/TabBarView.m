@@ -61,7 +61,7 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
 - (void) nibDidLoad{
   Palette * palette;
   CAGradientLayer * grad;
-
+  
   palette = [Palette sharedPalette];
 
   // Configure highlight bar gradient
@@ -83,12 +83,25 @@ static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 5.0;
   lh.shouldRasterize = true;
   lh.rasterizationScale = UIScreen.mainScreen.scale;
   
+  // Configure data properties
+  _selectedIndex = 0;
   
 }
 
 - (void) refresh {
   
 }
+
+- (IBAction)handleTap:(UIButton *)sender {
+  NSInteger index = sender.tag;
+  [self setSelectedIndex: index];
+}
+
+- (void) setSelectedIndex:(NSUInteger) selectedIndex{
+  _selectedIndex = selectedIndex;
+  [self sendActionsForControlEvents:UIControlEventValueChanged];
+}
+
 
 
 @end

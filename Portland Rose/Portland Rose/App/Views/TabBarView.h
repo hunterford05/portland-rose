@@ -11,4 +11,6 @@ IB_DESIGNABLE
 
 @interface TabBarView : UIControl
 
+@property (nonatomic) NSUInteger selectedIndex;
+
 @end
