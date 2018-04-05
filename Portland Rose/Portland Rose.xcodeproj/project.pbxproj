@@ -75,6 +75,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A3A99FB2076A6FB00191EEF /* ActionButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				5AF738DA207408F600B8E75C /* ActionButtonView.h */,
+				5AF738DB207408F600B8E75C /* ActionButtonView.m */,
+				5AF738D8207408EC00B8E75C /* ActionButtonView.xib */,
+			);
+			path = ActionButtonView;
+			sourceTree = "<group>";
+		};
+		5A3A99FC2076A70900191EEF /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				5AA9491C20755A6000060FE8 /* TabBarView.h */,
+				5AA9491D20755A6000060FE8 /* TabBarView.m */,
+				5AA9491F20755A6D00060FE8 /* TabBarView.xib */,
+			);
+			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		5A3A99FD2076A87500191EEF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5A445F1A20729AAF009497B0 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		5A445F0020729AAD009497B0 = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +123,13 @@
 			isa = PBXGroup;
 			children = (
 				5A445F2620729F48009497B0 /* App */,
-				5A445F2A2072B7A7009497B0 /* Demo */,
-				5A445F1220729AAE009497B0 /* Main.storyboard */,
+				5A445F0C20729AAE009497B0 /* AppDelegate.h */,
+				5A445F0D20729AAE009497B0 /* AppDelegate.m */,
 				5A445F1520729AAF009497B0 /* Assets.xcassets */,
-				5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */,
-				5A445F1A20729AAF009497B0 /* Info.plist */,
 				5A445F1B20729AAF009497B0 /* main.m */,
+				5A445F1220729AAE009497B0 /* Main.storyboard */,
+				5A445F2A2072B7A7009497B0 /* Demo */,
+				5A3A99FD2076A87500191EEF /* Config */,
 			);
 			path = "Portland Rose";
 			sourceTree = "<group>";
@@ -119,12 +148,9 @@
 		5A445F2420729F25009497B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AF738DA207408F600B8E75C /* ActionButtonView.h */,
-				5AF738DB207408F600B8E75C /* ActionButtonView.m */,
-				5AF738D8207408EC00B8E75C /* ActionButtonView.xib */,
-				5AA9491C20755A6000060FE8 /* TabBarView.h */,
-				5AA9491D20755A6000060FE8 /* TabBarView.m */,
-				5AA9491F20755A6D00060FE8 /* TabBarView.xib */,
+				5A3A99FB2076A6FB00191EEF /* ActionButtonView */,
+				5A3A99FC2076A70900191EEF /* TabBarView */,
+				5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,10 +169,8 @@
 		5A445F2620729F48009497B0 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				5AF738C52073D3E400B8E75C /* Helpers */,
-				5A445F0C20729AAE009497B0 /* AppDelegate.h */,
-				5A445F0D20729AAE009497B0 /* AppDelegate.m */,
 				5A445F2320729F1E009497B0 /* Controllers */,
+				5AF738C52073D3E400B8E75C /* Helpers */,
 				5A445F2520729F2E009497B0 /* Models */,
 				5A445F2420729F25009497B0 /* Views */,
 			);
@@ -429,7 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Portland Rose/Info.plist";
+				INFOPLIST_FILE = "Portland Rose/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -446,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Portland Rose/Info.plist";
+				INFOPLIST_FILE = "Portland Rose/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
