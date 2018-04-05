@@ -52,6 +52,74 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 `Config` contains app configuration and build files, such as `info.plist`.
 
+
+# Models
+
+## Palette
+
+The `Palette` model stores Portland Rose's custom colors. These colors are organized by function (e.g. color for dividers) rather than by visual color (e.g. "red"). 
+
+* **Background Color** — `colorBackground` contains the default background color used for the app's scenes and content views.
+* **Divider Color** — `colorDivider` is the default color for the thin divider lines between views.
+* **Primary Color** — `colorPrimary` is the primary theme color for 'branded' elements and prominent controls.
+* **Secondary Color** — `colorSecondary` is a variant of `colorPrimary` used along with the former in gradients.
+* **Text Color** — `colorText` is the default color of application text.
+* **Text Color (Inverted)** — `colorTextInverted` is the default color for text displayed on a dark color background.
+* **Text Color (Loud)** — `colorTextLoud` is the default color for emphasized text.
+
+### Usage
+
+1. Import `"Palette.h"`
+2. create a pointer to the shared `Palette` singleton: `Palette * palette = Palette.sharedPalette;`
+3. Access the palette's colors like this: `UIColor * color = palette.colorText;`.
+
+### Customization
+
+**Adding New Colors**
+
+To add a new color by hex value and update one or more of the palette's color properties to use that new color:
+
+1. Add the new color's hex value as a `static NSString *` in `Palette.m`
+  ```
+  // Palette.m
+  static NSString * const HEX_NEW_COLOR = @"EAEAEA";
+  ```
+2. update the `init` function to set one or more of the palette's color properties equal to the new color:
+  ```
+  - (id) init {
+    if (self = [super init]){
+      // ...
+      _colorText = [UIColor colorWithHexString: HEX_NEW_COLOR];
+    }
+    return self;
+  }
+  ```
+
+**Adding New Palette Color Properties**
+
+Let's say you want to add a new palette color for all warning text. Here's how you would go about it:
+
+1. Update `Palette.h` 
+  ```
+  // Palette.h
+  // ...
+  @interface Palette : NSObject
+  // ...
+  @property UIColor * colorTextWarning;
+  // ...
+  ```
+2. Update `init`:
+  ```
+  // Palette.m
+  - (id) init {
+    if (self = [super init]){
+      // ...
+      _colorTextWarning = [UIColor colorWithHexString: HEX_THULIAN_PINK];
+    }
+    return self;
+  }
+  ```
+
 # Views
 
 ## TabBarView
