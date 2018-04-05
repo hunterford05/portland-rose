@@ -120,6 +120,21 @@ Let's say you want to add a new palette color for all warning text. Here's how y
   }
   ```
 
+## TypeLibrary
+
+The `TypeLibrary` model organizes the application's fonts by function.
+
+* **Body Font** — `fontBody` is the default font for body text.
+* **Headline Font** — `fontHeadline` is the default font for headline text, viz. a title that is placed among body text (cf. the title of a book as it appears on the title page and the title of a chapter as it appears on a page alongside regular text).
+* **Subtitle Font** — `fontSubtitle` is the default font for subtitle text, e.g. the author's name on the title page of a book or a "Part One" page.
+* **Title Font** — `fontTitle` is the default font for title text, e.g. the title of a book as it appears on the title page.
+
+### Usage
+
+1. Import `"TypeLibrary.h"`
+2. Create a pointer to the shared `TypeLibrary` singleton: `TypeLibrary * typeLibrary = TypeLibrary.sharedTypeLibrary;`
+3. Access the tpe library's fonts like this: `UIFont * font = typeLibrary.fontBody;`.
+
 # Views
 
 ## TabBarView
