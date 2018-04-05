@@ -58,12 +58,12 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 `TabBarView` renders a custom tab bar control that can be used with a `UITabBarController`. 
 
-![](docs/figs/1804051558)
+![](docs/figs/1804051558.png)
 
 ### Usage
 
 1. in the storyboard, drag a `UIView` onto the bar above a tab bar controller scene.
-  ![](docs/figs/1804051533.jpg)
+  ![](docs/figs/1804051533.png)
 2. Set the `UIView`'s class to `TabBarView`.
 3. Create reference outlets in the tab bar controller `.m` file for this `TabBarView` *as well as* for the built-in `UITabBar` .
 4. In the tab bar controller's `viewDidLoad` method, add the `TabBarView` as a subview.
