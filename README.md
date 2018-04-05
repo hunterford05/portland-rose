@@ -70,8 +70,14 @@ The `Palette` model stores Portland Rose's custom colors. These colors are organ
 ### Usage
 
 1. Import `"Palette.h"`
-2. create a pointer to the shared `Palette` singleton: `Palette * palette = Palette.sharedPalette;`
-3. Access the palette's colors like this: `UIColor * color = palette.colorText;`.
+2. create a pointer to the shared `Palette` singleton: 
+```objective-c
+Palette * palette = Palette.sharedPalette;
+```
+3. Access the palette's colors like this: 
+```objective-c
+UIColor * color = palette.colorText;
+```
 
 ### Customization
 
@@ -80,12 +86,12 @@ The `Palette` model stores Portland Rose's custom colors. These colors are organ
 To add a new color by hex value and update one or more of the palette's color properties to use that new color:
 
 1. Add the new color's hex value as a `static NSString *` in `Palette.m`
-  ```
+  ```objective-c
   // Palette.m
   static NSString * const HEX_NEW_COLOR = @"EAEAEA";
   ```
-2. update the `init` function to set one or more of the palette's color properties equal to the new color:
-  ```
+2. Update the `init` function to set one or more of the palette's color properties equal to the new color:
+  ```objective-c
   - (id) init {
     if (self = [super init]){
       // ...
@@ -100,7 +106,7 @@ To add a new color by hex value and update one or more of the palette's color pr
 Let's say you want to add a new palette color for all warning text. Here's how you would go about it:
 
 1. Update `Palette.h` 
-  ```
+  ```objective-c
   // Palette.h
   // ...
   @interface Palette : NSObject
@@ -109,7 +115,7 @@ Let's say you want to add a new palette color for all warning text. Here's how y
   // ...
   ```
 2. Update `init`:
-  ```
+  ```objective-c
   // Palette.m
   - (id) init {
     if (self = [super init]){
@@ -132,8 +138,14 @@ The `TypeLibrary` model organizes the application's fonts by function.
 ### Usage
 
 1. Import `"TypeLibrary.h"`
-2. Create a pointer to the shared `TypeLibrary` singleton: `TypeLibrary * typeLibrary = TypeLibrary.sharedTypeLibrary;`
-3. Access the tpe library's fonts like this: `UIFont * font = typeLibrary.fontBody;`.
+2. Create a pointer to the shared `TypeLibrary` singleton: 
+```objective-c
+TypeLibrary * typeLibrary = TypeLibrary.sharedTypeLibrary;
+```
+3. Access the tpe library's fonts like this: 
+```objective-c
+UIFont * font = typeLibrary.fontBody;
+```
 
 # Views
 
@@ -150,14 +162,14 @@ The `TypeLibrary` model organizes the application's fonts by function.
 2. Set the `UIView`'s class to `TabBarView`.
 3. Create reference outlets in the tab bar controller `.m` file for this `TabBarView` *as well as* for the built-in `UITabBar` .
 4. In the tab bar controller's `viewDidLoad` method, add the `TabBarView` as a subview.
-  ```
+  ```objective-c
   - (void) viewDidLoad {
     // ...
    [self.view addSubview: customTabBarView];
   }
   ```
 5. In the tab bar controller's `viewDidLayoutSubviews` method, set the `TabBarView`'s frame equal to the `UITabBar`'s frame.
-  ```
+  ```objective-c
   - (void) viewDidLayoutSubviews { 
     // ...
     [self.customTabBarView setFrame: self.systemTabBarView.frame];
@@ -165,7 +177,7 @@ The `TypeLibrary` model organizes the application's fonts by function.
   ``` 
 6. In the storyboard, set the `UITabBar`'s `Hidden` property to `YES`.
 7. drag the `TabBarView`'s "Value Changed" event to an action outlet in the tab bar controller. There, set the tab bar controller's `selectedIndex` property to equal the `TabBarView`'s `selectedIndex` property. 
-  ```
+  ```objective-c
   - (IBAction) handleTabBarSelectedIndexChange: (TabBarView *) tabBarView  {
     self.selectedIndex = tabBarView.selectedIndex;
   }
@@ -180,5 +192,5 @@ The `TypeLibrary` model organizes the application's fonts by function.
 
 **Adding A Button**
 
-1. In `TabBarView.xib`, copy and paste one of the button views; *This ensures that the necessary constraints are copied as well.* 
+1. In `TabBarView.xib`, copy and paste one of the button views; *this ensures that the necessary constraints are copied as well.* 
 2. Follow the steps above for changing the new button's image.
