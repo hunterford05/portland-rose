@@ -40,7 +40,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="iB6-aB-Ocw" secondAttribute="height" multiplier="1:1" id="TlS-jz-93p"/>
                             </constraints>
-                            <inset key="imageEdgeInsets" minX="8" minY="10" maxX="8" maxY="6"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                             <state key="normal" image="icon-compass-50"/>
                             <connections>
                                 <action selector="handleTap:" destination="-1" eventType="touchUpInside" id="Ssz-k5-VRx"/>
@@ -51,7 +51,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="vcj-ol-SRn" secondAttribute="height" multiplier="1:1" id="yPt-XX-tOr"/>
                             </constraints>
-                            <inset key="imageEdgeInsets" minX="8" minY="10" maxX="8" maxY="6"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                             <state key="normal" image="icon-pin-50"/>
                             <connections>
                                 <action selector="handleTap:" destination="-1" eventType="touchUpInside" id="cVX-n4-ZND"/>
@@ -62,7 +62,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Q83-DU-V8Q" secondAttribute="height" multiplier="1:1" id="8BR-1A-OZY"/>
                             </constraints>
-                            <inset key="imageEdgeInsets" minX="8" minY="10" maxX="8" maxY="6"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                             <state key="normal" image="icon-happy-50"/>
                             <connections>
                                 <action selector="handleTap:" destination="-1" eventType="touchUpInside" id="cB9-yh-Qmb"/>
