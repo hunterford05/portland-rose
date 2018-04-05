@@ -57,7 +57,15 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 ## Palette
 
-The `Palette` model stores Portland Rose's custom colors. These colors are organized by function rather than by color.
+The `Palette` model stores Portland Rose's custom colors. These colors are organized by function (e.g. color for dividers) rather than by visual color (e.g. "red"). 
+
+* **Background Color** — `colorBackground` contains the default background color used for the app's scenes and content views.
+* **Divider Color** — `colorDivider` is the default color for the thin divider lines between views.
+* **Primary Color** — `colorPrimary` is the primary theme color for 'branded' elements and prominent controls.
+* **Secondary Color** — `colorSecondary` is a variant of `colorPrimary` used along with the former in gradients.
+* **Text Color** — `colorText` is the default color of application text.
+* **Text Color (Inverted)** — `colorTextInverted` is the default color for text displayed on a dark color background.
+* **Text Color (Loud)** — `colorTextLoud` is the default color for emphasized text.
 
 ### Usage
 
