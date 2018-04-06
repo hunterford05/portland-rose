@@ -7,11 +7,11 @@
 //
 
 #import "PORTabBarController.h"
-#import "TabBarView.h"
+#import "PORTabBarView.h"
 
 @interface PORTabBarController ()
 
-@property (strong, nonatomic) IBOutlet TabBarView *viewTabBar;
+@property (strong, nonatomic) IBOutlet PORTabBarView *viewTabBar;
 @property (weak, nonatomic) IBOutlet UITabBar *viewUITabBar;
 
 @end

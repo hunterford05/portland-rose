@@ -1,12 +1,12 @@
 //
-//  DemosViewController.m
+//  PORDemosViewController.m
 //  Portland Rose
 //
 //  Created by Hunter Ford on 02/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "DemosViewController.h"
+#import "PORDemosViewController.h"
 
 /// Comma-seperated list of demo views. IMPORTANT: These names must correspond to a valid segue identifier with the convention `"FromDemosTo<NAME_OF_DEMO>"`. For example, if `"Puffins Demo"` is part of the `NAMES_DEMO` list, this view controller will assume that there is a segue with the identifier `"FromDemosToPuffinsDemo"`.
 static NSString * const NAMES_DEMO = @"Action Button View Demo, Palette Demo,POR Tab Bar Controller Demo, Type Library Demo";
@@ -16,14 +16,14 @@ static NSString * const REUSE_IDENTIFIER_CELL_DEMO = @"DemoCell";
 static NSString * const TITLE = @"Demos";
 
 
-@interface DemosViewController ()
+@interface PORDemosViewController ()
 
 /// Array of demo names.
 @property NSArray * namesDemo;
 
 @end
 
-@implementation DemosViewController
+@implementation PORDemosViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];

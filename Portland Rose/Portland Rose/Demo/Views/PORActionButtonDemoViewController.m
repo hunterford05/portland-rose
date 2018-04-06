@@ -1,20 +1,20 @@
 //
-//  ActionButtonDemoViewController.m
+//  PORActionButtonDemoViewController.m
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "ActionButtonDemoViewController.h"
-#import "ActionButtonView.h"
+#import "PORActionButtonDemoViewController.h"
+#import "PORActionButtonView.h"
 
-@interface ActionButtonDemoViewController ()
-@property (weak, nonatomic) IBOutlet ActionButtonView *btn;
+@interface PORActionButtonDemoViewController ()
+@property (weak, nonatomic) IBOutlet PORActionButtonView *btn;
 
 @end
 
-@implementation ActionButtonDemoViewController
+@implementation PORActionButtonDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

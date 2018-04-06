@@ -1,24 +1,24 @@
 //
-//  TypeLibraryDemoViewController.m
+//  PORTypeLibraryDemoViewController.m
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "TypeLibraryDemoViewController.h"
+#import "PORTypeLibraryDemoViewController.h"
 
 
 static NSString * const REUSE_IDENTIFIER_CELL_FONT = @"FontCell";
 
-@interface TypeLibraryDemoViewController ()
+@interface PORTypeLibraryDemoViewController ()
 
 @property NSArray * fonts;
-@property TypeLibrary * typeLibrary;
+@property PORTypeLibrary * typeLibrary;
 
 @end
 
-@implementation TypeLibraryDemoViewController
+@implementation PORTypeLibraryDemoViewController
 
 
 - (void)viewDidLoad {
@@ -27,7 +27,7 @@ static NSString * const REUSE_IDENTIFIER_CELL_FONT = @"FontCell";
 }
 
 - (void)loadFonts {
-  _typeLibrary = [TypeLibrary sharedTypeLibrary];
+  _typeLibrary = [PORTypeLibrary sharedTypeLibrary];
   _fonts = @[
              @[@"Body", _typeLibrary.fontBody],
              @[@"Headline", _typeLibrary.fontHeadline],

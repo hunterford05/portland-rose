@@ -1,5 +1,5 @@
 //
-//  ActionButtonDemoViewController.h
+//  PORActionButtonDemoViewController.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActionButtonDemoViewController : UIViewController
+@interface PORActionButtonDemoViewController : UIViewController
 
 @end

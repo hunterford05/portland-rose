@@ -1,5 +1,5 @@
 //
-//  DemosViewController.h
+//  PORDemosViewController.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 02/04/2018.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DemosViewController : UITableViewController
+@interface PORDemosViewController : UITableViewController
 
 @end

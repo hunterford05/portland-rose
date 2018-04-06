@@ -1,5 +1,5 @@
 //
-//  Palette.h
+//  PORPalette.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "UIColor+Hex.h"
 
-@interface Palette : NSObject
+@interface PORPalette : NSObject
 
 /// Shared singleton `Palette` instance
 + (id) sharedPalette;
