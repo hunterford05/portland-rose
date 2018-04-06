@@ -166,13 +166,13 @@
 		5A445F2620729F48009497B0 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				5A445F1520729AAF009497B0 /* Assets.xcassets */,
 				5A445F2320729F1E009497B0 /* Controllers */,
 				5AF738C52073D3E400B8E75C /* Helpers */,
 				5A445F2520729F2E009497B0 /* Models */,
 				5A445F2420729F25009497B0 /* Views */,
 				5A445F0C20729AAE009497B0 /* AppDelegate.h */,
 				5A445F0D20729AAE009497B0 /* AppDelegate.m */,
-				5A445F1520729AAF009497B0 /* Assets.xcassets */,
 				5A445F1B20729AAF009497B0 /* main.m */,
 				5A445F1220729AAE009497B0 /* Main.storyboard */,
 			);
