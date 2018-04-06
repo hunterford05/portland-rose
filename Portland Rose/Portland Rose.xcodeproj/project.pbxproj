@@ -15,6 +15,7 @@
 		5A445F1C20729AAF009497B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F1B20729AAF009497B0 /* main.m */; };
 		5A445F292072B790009497B0 /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F272072B790009497B0 /* Demo.storyboard */; };
 		5A4ABF372072C36400349DBB /* PORDemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ABF362072C36400349DBB /* PORDemosViewController.m */; };
+		5A7D9A312077FCA300EF6D73 /* DemoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */; };
 		5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA949182075589B00060FE8 /* PORTabBarController.m */; };
 		5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9491D20755A6000060FE8 /* PORTabBarView.m */; };
 		5AA9492020755A6D00060FE8 /* PORTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA9491F20755A6D00060FE8 /* PORTabBarView.xib */; };
@@ -42,6 +43,7 @@
 		5A445F282072B790009497B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Demo.storyboard; sourceTree = "<group>"; };
 		5A4ABF352072C36400349DBB /* PORDemosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PORDemosViewController.h; path = "Portland Rose/Demo/PORDemosViewController.h"; sourceTree = SOURCE_ROOT; };
 		5A4ABF362072C36400349DBB /* PORDemosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PORDemosViewController.m; path = "Portland Rose/Demo/PORDemosViewController.m"; sourceTree = SOURCE_ROOT; };
+		5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DemoAssets.xcassets; sourceTree = "<group>"; };
 		5AA949172075589B00060FE8 /* PORTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORTabBarController.h; sourceTree = "<group>"; };
 		5AA949182075589B00060FE8 /* PORTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORTabBarController.m; sourceTree = "<group>"; };
 		5AA9491C20755A6000060FE8 /* PORTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORTabBarView.h; sourceTree = "<group>"; };
@@ -123,11 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				5A445F2620729F48009497B0 /* App */,
-				5A445F0C20729AAE009497B0 /* AppDelegate.h */,
-				5A445F0D20729AAE009497B0 /* AppDelegate.m */,
-				5A445F1520729AAF009497B0 /* Assets.xcassets */,
-				5A445F1B20729AAF009497B0 /* main.m */,
-				5A445F1220729AAE009497B0 /* Main.storyboard */,
 				5A445F2A2072B7A7009497B0 /* Demo */,
 				5A3A99FD2076A87500191EEF /* Config */,
 			);
@@ -173,6 +170,11 @@
 				5AF738C52073D3E400B8E75C /* Helpers */,
 				5A445F2520729F2E009497B0 /* Models */,
 				5A445F2420729F25009497B0 /* Views */,
+				5A445F0C20729AAE009497B0 /* AppDelegate.h */,
+				5A445F0D20729AAE009497B0 /* AppDelegate.m */,
+				5A445F1520729AAF009497B0 /* Assets.xcassets */,
+				5A445F1B20729AAF009497B0 /* main.m */,
+				5A445F1220729AAE009497B0 /* Main.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -180,6 +182,7 @@
 		5A445F2A2072B7A7009497B0 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */,
 				5AF738E120740F3000B8E75C /* Models */,
 				5AF738E020740F2100B8E75C /* Views */,
 				5A445F272072B790009497B0 /* Demo.storyboard */,
@@ -282,6 +285,7 @@
 				5A445F1620729AAF009497B0 /* Assets.xcassets in Resources */,
 				5A445F1420729AAE009497B0 /* Main.storyboard in Resources */,
 				5A445F292072B790009497B0 /* Demo.storyboard in Resources */,
+				5A7D9A312077FCA300EF6D73 /* DemoAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
