@@ -250,12 +250,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxa-oE-BvH" customClass="PORImageCardView">
-                                <rect key="frame" x="67" y="181" width="240" height="240"/>
+                                <rect key="frame" x="37" y="151" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="57x-1o-5VH"/>
-                                    <constraint firstAttribute="height" constant="240" id="KT4-Qo-Rg7"/>
+                                    <constraint firstAttribute="width" constant="300" id="57x-1o-5VH"/>
+                                    <constraint firstAttribute="height" constant="300" id="KT4-Qo-Rg7"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="image-lg-0"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusBlur">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="offsetYBlur">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -317,4 +329,7 @@
             <point key="canvasLocation" x="826" y="-600"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image-lg-0" width="2000" height="1333"/>
+    </resources>
 </document>
