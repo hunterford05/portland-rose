@@ -1,12 +1,12 @@
 //
-//  TypeLibrary.m
+//  PORTypeLibrary.m
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "TypeLibrary.h"
+#import "PORTypeLibrary.h"
 
 
 /// Font name for body text
@@ -27,11 +27,11 @@ static CGFloat const FONT_SIZE_SUBTITLE = 40.0 / 2;
 /// Font size for title text
 static CGFloat const FONT_SIZE_TITLE = 64.0 / 2;
 
-@implementation TypeLibrary
+@implementation PORTypeLibrary
 
-/// Shared singleton `Palette` instance
+/// Shared singleton `TypeLibrary` instance
 + (id) sharedTypeLibrary {
-  static TypeLibrary *sharedTypeLibrary = nil;
+  static PORTypeLibrary *sharedTypeLibrary = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     sharedTypeLibrary = [[self alloc] init];

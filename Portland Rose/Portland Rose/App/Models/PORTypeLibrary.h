@@ -1,5 +1,5 @@
 //
-//  TypeLibrary.h
+//  PORTypeLibrary.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface TypeLibrary : NSObject
+@interface PORTypeLibrary : NSObject
 
 /// Singleton `TypeLibrary` instance
 + (id) sharedTypeLibrary;

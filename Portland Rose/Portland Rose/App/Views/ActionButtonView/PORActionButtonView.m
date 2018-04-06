@@ -1,17 +1,17 @@
 //
-//  ActionButtonView.m
+//  PORActionButtonView.m
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "ActionButtonView.h"
-#import "Palette.h"
-#import "TypeLibrary.h"
+#import "PORActionButtonView.h"
+#import "PORPalette.h"
+#import "PORTypeLibrary.h"
 
 /// Name of XIB file
-static NSString * const NAME_NIB = @"ActionButtonView";
+static NSString * const NAME_NIB = @"PORActionButtonView";
 /// Opacity of the button's shadow
 static CGFloat const OPACITY_SHADOW = 0.59;
 /// Offset (horizontal and vertical) of the button's shadow
@@ -29,7 +29,7 @@ static CGFloat const PADDING_LEADING = 2.0;
 /// Default button text
 static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 
-@interface ActionButtonView()
+@interface PORActionButtonView()
 
 @property (weak, nonatomic) IBOutlet UILabel *labelViewText;
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -39,7 +39,7 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 
 @end
 
-@implementation ActionButtonView
+@implementation PORActionButtonView
 
 
 - (instancetype) initWithCoder:(NSCoder *)aDecoder{
@@ -126,17 +126,17 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 
 /// Perform initial setup once the XIB file has been loaded
 - (void) nibDidLoad{
-  Palette * palette;
+  PORPalette * palette;
   
   // Configure colors
-  palette = [Palette sharedPalette];
+  palette = [PORPalette sharedPalette];
   _colorLabel = palette.colorTextInverted;
   _colorBackgroundFirst = palette.colorPrimary;
   _colorBackgroundSecond = palette.colorSecondary;
   
   // Configure label text
   [self setText: TEXT_PLACEHOLDER];
-  [_labelViewText setFont:[TypeLibrary.sharedTypeLibrary fontBody]];
+  [_labelViewText setFont:[PORTypeLibrary.sharedTypeLibrary fontBody]];
 }
 
 - (void) setText:(NSString *)text{

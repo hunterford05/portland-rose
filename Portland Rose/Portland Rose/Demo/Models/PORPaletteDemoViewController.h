@@ -1,5 +1,5 @@
 //
-//  TypeLibraryDemoViewController.h
+//  PORPaletteDemoViewController.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TypeLibrary.h"
+#import "PORPalette.h"
 
-@interface TypeLibraryDemoViewController : UITableViewController
+@interface PORPaletteDemoViewController : UITableViewController
 
 @end

@@ -1,22 +1,22 @@
 //
-//  TabBarView.m
+//  PORTabBarView.m
 //  Portland Rose
 //
 //  Created by Hunter Ford on 04/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "TabBarView.h"
-#import "Palette.h"
+#import "PORTabBarView.h"
+#import "PORPalette.h"
 
 /// Name of XIB file
-static NSString * const NAME_NIB = @"TabBarView";
+static NSString * const NAME_NIB = @"PORTabBarView";
 static CGFloat const OFFSET_SHADOW_HIGHTLIGHT = 2.5;
 static CGFloat const OPACITY_SHADOW_HIGHLIGHT = 0.5;
 static CGFloat const RADIUS_SHADOW_HIGHLIGHT = 2.5;
 static CGFloat const DURATION_ANIMATION_SELECTION = 0.2;
 
-@interface TabBarView()
+@interface PORTabBarView()
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIView *viewHighlight;
@@ -30,7 +30,7 @@ static CGFloat const DURATION_ANIMATION_SELECTION = 0.2;
 
 @end
 
-@implementation TabBarView
+@implementation PORTabBarView
 
 - (instancetype) initWithCoder:(NSCoder *)aDecoder{
   self = [super initWithCoder:aDecoder];
@@ -67,10 +67,10 @@ static CGFloat const DURATION_ANIMATION_SELECTION = 0.2;
 }
 
 - (void) nibDidLoad{
-  Palette * palette;
+  PORPalette * palette;
   CAGradientLayer * grad;
   
-  palette = [Palette sharedPalette];
+  palette = [PORPalette sharedPalette];
   
   // Configure divider bar color
   [_viewDividerTop setBackgroundColor: palette.colorDivider];
@@ -130,9 +130,9 @@ static CGFloat const DURATION_ANIMATION_SELECTION = 0.2;
 }
 
 - (void) setSelectedIndex:(NSUInteger) selectedIndex{
-  Palette * palette;
+  PORPalette * palette;
   
-  palette = [Palette sharedPalette];
+  palette = [PORPalette sharedPalette];
   
   [_view layoutIfNeeded];
   _selectedIndex = selectedIndex;

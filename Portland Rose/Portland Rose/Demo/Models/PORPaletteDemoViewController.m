@@ -1,12 +1,12 @@
 //
-//  PaletteDemoViewController.m
+//  PORPaletteDemoViewController.m
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "PaletteDemoViewController.h"
+#import "PORPaletteDemoViewController.h"
 
 
 static NSString * const NAME_COLOR_BACKGROUND = @"Background";
@@ -18,14 +18,14 @@ static NSString * const NAME_COLOR_TEXT_LOUD = @"Text (Loud)";
 
 static NSString * const REUSE_IDENTIFIER_CELL_COLOR = @"ColorCell";
 
-@interface PaletteDemoViewController ()
+@interface PORPaletteDemoViewController ()
 
 @property NSArray * colors;
-@property Palette * palette;
+@property PORPalette * palette;
 
 @end
 
-@implementation PaletteDemoViewController
+@implementation PORPaletteDemoViewController
 
 
 - (void)viewDidLoad {
@@ -34,7 +34,7 @@ static NSString * const REUSE_IDENTIFIER_CELL_COLOR = @"ColorCell";
 }
 
 - (void)loadColors {
-  _palette = [Palette sharedPalette];
+  _palette = [PORPalette sharedPalette];
   _colors = @[
               @[NAME_COLOR_PRIMARY, _palette.colorPrimary],
               @[NAME_COLOR_SECONDARY, _palette.colorSecondary],

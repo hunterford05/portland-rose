@@ -1,5 +1,5 @@
 //
-//  ActionButtonView.h
+//  PORActionButtonView.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 IB_DESIGNABLE
 
-@interface ActionButtonView : UIControl
+@interface PORActionButtonView : UIControl
 
 @property IBInspectable UIColor * colorLabel;
 @property IBInspectable UIColor * colorBackgroundFirst;

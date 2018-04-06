@@ -23,8 +23,8 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 |-- demo
 |   |-- Models
 |   |-- Views
-|   |-- DemosViewController.h
-|   |-- DemosViewController.m
+|   |-- PORDemosViewController.h
+|   |-- PORDemosViewController.m
 |   |-- Demo.storyboard
 |-- Config
 |   |-- Info.plist
@@ -45,7 +45,7 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 * **Views** — The `Views` subdirectory contains view controller classes designed to demo specific view classes.
 * **Models** — The `Models` subdirectory contains view controller classes designed to demo model classes.
-* **DemosViewController.m** and **DemosViewController.h** — These are the source files for the demo index scene.
+* **PORDemosViewController.m** and **PORDemosViewController.h** — These are the source files for the demo index scene.
 * **Demo.storyboard** — `Demo.storyboard` is the interface builder for demo view controllers.
 
 ### Config
@@ -57,7 +57,7 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 ## Palette
 
-The `Palette` model stores Portland Rose's custom colors. These colors are organized by function (e.g. color for dividers) rather than by visual color (e.g. "red"). 
+The `PORPalette` model stores Portland Rose's custom colors. These colors are organized by function (e.g. color for dividers) rather than by visual color (e.g. "red"). 
 
 * **Background Color** — `colorBackground` contains the default background color used for the app's scenes and content views.
 * **Divider Color** — `colorDivider` is the default color for the thin divider lines between views.
@@ -69,15 +69,15 @@ The `Palette` model stores Portland Rose's custom colors. These colors are organ
 
 ### Usage
 
-1. Import `"Palette.h"`
-2. create a pointer to the shared `Palette` singleton: 
-```objective-c
-Palette * palette = Palette.sharedPalette;
-```
+1. Import `"PORPalette.h"`
+2. create a pointer to the shared `PORPalette` singleton: 
+  ```objective-c
+  PORPalette * palette = PORPalette.sharedPalette;
+  ```
 3. Access the palette's colors like this: 
-```objective-c
-UIColor * color = palette.colorText;
-```
+  ```objective-c
+  UIColor * color = palette.colorText;
+  ```
 
 ### Customization
 
@@ -85,9 +85,9 @@ UIColor * color = palette.colorText;
 
 To add a new color by hex value and update one or more of the palette's color properties to use that new color:
 
-1. Add the new color's hex value as a `static NSString *` in `Palette.m`
+1. Add the new color's hex value as a `static NSString *` in `PORPalette.m`
   ```objective-c
-  // Palette.m
+  // PORPalette.m
   static NSString * const HEX_NEW_COLOR = @"EAEAEA";
   ```
 2. Update the `init` function to set one or more of the palette's color properties equal to the new color:
@@ -105,18 +105,18 @@ To add a new color by hex value and update one or more of the palette's color pr
 
 Let's say you want to add a new palette color for all warning text. Here's how you would go about it:
 
-1. Update `Palette.h` 
+1. Update `PORPalette.h` 
   ```objective-c
-  // Palette.h
+  // PORPalette.h
   // ...
-  @interface Palette : NSObject
+  @interface PORPalette : NSObject
   // ...
   @property UIColor * colorTextWarning;
   // ...
   ```
 2. Update `init`:
   ```objective-c
-  // Palette.m
+  // PORPalette.m
   - (id) init {
     if (self = [super init]){
       // ...
@@ -128,7 +128,7 @@ Let's say you want to add a new palette color for all warning text. Here's how y
 
 ## TypeLibrary
 
-The `TypeLibrary` model organizes the application's fonts by function.
+The `PORTypeLibrary` model organizes the application's fonts by function.
 
 * **Body Font** — `fontBody` is the default font for body text.
 * **Headline Font** — `fontHeadline` is the default font for headline text, viz. a title that is placed among body text (cf. the title of a book as it appears on the title page and the title of a chapter as it appears on a page alongside regular text).
@@ -137,21 +137,21 @@ The `TypeLibrary` model organizes the application's fonts by function.
 
 ### Usage
 
-1. Import `"TypeLibrary.h"`
-2. Create a pointer to the shared `TypeLibrary` singleton: 
-```objective-c
-TypeLibrary * typeLibrary = TypeLibrary.sharedTypeLibrary;
-```
-3. Access the tpe library's fonts like this: 
-```objective-c
-UIFont * font = typeLibrary.fontBody;
-```
+1. Import `"PORTypeLibrary.h"`
+2. Create a pointer to the shared `PORTypeLibrary` singleton: 
+  ```objective-c
+  PORTypeLibrary * typeLibrary = PORTypeLibrary.sharedTypeLibrary;
+  ```
+3. Access the the library's fonts like this: 
+  ```objective-c
+  UIFont * font = typeLibrary.fontBody;
+  ```
 
 # Views
 
 ## TabBarView
 
-`TabBarView` renders a custom tab bar control that can be used with a `UITabBarController`. 
+`PORTabBarView` renders a custom tab bar control that can be used with a `UITabBarController`. 
 
 ![](docs/figs/1804051558.png)
 
@@ -159,16 +159,16 @@ UIFont * font = typeLibrary.fontBody;
 
 1. in the storyboard, drag a `UIView` onto the bar above a tab bar controller scene.
   ![](docs/figs/1804051533.png)
-2. Set the `UIView`'s class to `TabBarView`.
-3. Create reference outlets in the tab bar controller `.m` file for this `TabBarView` *as well as* for the built-in `UITabBar` .
-4. In the tab bar controller's `viewDidLoad` method, add the `TabBarView` as a subview.
+2. Set the `UIView`'s class to `PORTabBarView`.
+3. Create reference outlets in the tab bar controller `.m` file for this `PORTabBarView` *as well as* for the built-in `UITabBar` .
+4. In the tab bar controller's `viewDidLoad` method, add the `PORTabBarView` as a subview.
   ```objective-c
   - (void) viewDidLoad {
     // ...
    [self.view addSubview: customTabBarView];
   }
   ```
-5. In the tab bar controller's `viewDidLayoutSubviews` method, set the `TabBarView`'s frame equal to the `UITabBar`'s frame.
+5. In the tab bar controller's `viewDidLayoutSubviews` method, set the `PORTabBarView`'s frame equal to the `UITabBar`'s frame.
   ```objective-c
   - (void) viewDidLayoutSubviews { 
     // ...
@@ -176,9 +176,9 @@ UIFont * font = typeLibrary.fontBody;
   } 
   ``` 
 6. In the storyboard, set the `UITabBar`'s `Hidden` property to `YES`.
-7. drag the `TabBarView`'s "Value Changed" event to an action outlet in the tab bar controller. There, set the tab bar controller's `selectedIndex` property to equal the `TabBarView`'s `selectedIndex` property. 
+7. drag the `PORTabBarView`'s "Value Changed" event to an action outlet in the tab bar controller. There, set the tab bar controller's `selectedIndex` property to equal the `PORTabBarView`'s `selectedIndex` property. 
   ```objective-c
-  - (IBAction) handleTabBarSelectedIndexChange: (TabBarView *) tabBarView  {
+  - (IBAction) handleTabBarSelectedIndexChange: (PORTabBarView *) tabBarView  {
     self.selectedIndex = tabBarView.selectedIndex;
   }
   ```
@@ -188,9 +188,9 @@ UIFont * font = typeLibrary.fontBody;
 **Changing A Button Image**
 
 1. Add a new icon image to `Assets.xcassets`. It must be 100px in size and have an `@2x` suffix.
-2. In `TabBarView.xib`, change the image of the corresponding button
+2. In `PORTabBarView.xib`, change the image of the corresponding button
 
 **Adding A Button**
 
-1. In `TabBarView.xib`, copy and paste one of the button views; *this ensures that the necessary constraints are copied as well.* 
+1. In `PORTabBarView.xib`, copy and paste one of the button views; *this ensures that the necessary constraints are copied as well.* 
 2. Follow the steps above for changing the new button's image.

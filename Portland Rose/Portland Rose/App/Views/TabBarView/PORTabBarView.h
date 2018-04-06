@@ -1,5 +1,5 @@
 //
-//  TabBarView.h
+//  PORTabBarView.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 04/04/2018.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 IB_DESIGNABLE
 
-@interface TabBarView : UIControl
+@interface PORTabBarView : UIControl
 
 @property (nonatomic) NSUInteger selectedIndex;
 
