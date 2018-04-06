@@ -45,7 +45,7 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 * **Views** — The `Views` subdirectory contains view controller classes designed to demo specific view classes.
 * **Models** — The `Models` subdirectory contains view controller classes designed to demo model classes.
-* **DemosViewController.m** and **DemosViewController.h** — These are the source files for the demo index scene.
+* **PORDemosViewController.m** and **PORDemosViewController.h** — These are the source files for the demo index scene.
 * **Demo.storyboard** — `Demo.storyboard` is the interface builder for demo view controllers.
 
 ### Config
@@ -142,7 +142,7 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
   ```objective-c
   PORTypeLibrary * typeLibrary = PORTypeLibrary.sharedTypeLibrary;
   ```
-3. Access the tpe library's fonts like this: 
+3. Access the the library's fonts like this: 
   ```objective-c
   UIFont * font = typeLibrary.fontBody;
   ```
