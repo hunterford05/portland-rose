@@ -21,6 +21,7 @@
 		5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA949182075589B00060FE8 /* PORTabBarController.m */; };
 		5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9491D20755A6000060FE8 /* PORTabBarView.m */; };
 		5AA9492020755A6D00060FE8 /* PORTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA9491F20755A6D00060FE8 /* PORTabBarView.xib */; };
+		5AC2A8F0207BD556003B2AD5 /* PORImageCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */; };
 		5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738C72073D41B00B8E75C /* UIColor+Hex.m */; };
 		5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CA2073D7CB00B8E75C /* PORPaletteDemoViewController.m */; };
 		5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CD2073D8E100B8E75C /* PORPalette.m */; };
@@ -54,6 +55,8 @@
 		5AA9491C20755A6000060FE8 /* PORTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORTabBarView.h; sourceTree = "<group>"; };
 		5AA9491D20755A6000060FE8 /* PORTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORTabBarView.m; sourceTree = "<group>"; };
 		5AA9491F20755A6D00060FE8 /* PORTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORTabBarView.xib; sourceTree = "<group>"; };
+		5AC2A8EE207BD556003B2AD5 /* PORImageCarouselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselView.h; sourceTree = "<group>"; };
+		5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselView.m; sourceTree = "<group>"; };
 		5AF738C62073D41B00B8E75C /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		5AF738C72073D41B00B8E75C /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		5AF738C92073D7CB00B8E75C /* PORPaletteDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORPaletteDemoViewController.h; sourceTree = "<group>"; };
@@ -151,6 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				5A7D9A322077FFB100EF6D73 /* ImageCardView */,
+				5AC2A8F1207BD55C003B2AD5 /* ImageCarouselView */,
+				5AC2A8EE207BD556003B2AD5 /* PORImageCarouselView.h */,
+				5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */,
 				5A3A99FB2076A6FB00191EEF /* ActionButtonView */,
 				5A3A99FC2076A70900191EEF /* TabBarView */,
 				5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */,
@@ -206,6 +212,14 @@
 				5A7D9A332077FFE300EF6D73 /* PORImageCardView.xib */,
 			);
 			path = ImageCardView;
+			sourceTree = "<group>";
+		};
+		5AC2A8F1207BD55C003B2AD5 /* ImageCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ImageCarouselView;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		5AF738C52073D3E400B8E75C /* Helpers */ = {
@@ -315,6 +329,7 @@
 			files = (
 				5A445F1120729AAE009497B0 /* ViewController.m in Sources */,
 				5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */,
+				5AC2A8F0207BD556003B2AD5 /* PORImageCarouselView.m in Sources */,
 				5A7D9A372077FFF800EF6D73 /* PORImageCardView.m in Sources */,
 				5AF738DF20740F0B00B8E75C /* PORActionButtonDemoViewController.m in Sources */,
 				5AF738D32073FD6700B8E75C /* PORTypeLibraryDemoViewController.m in Sources */,
