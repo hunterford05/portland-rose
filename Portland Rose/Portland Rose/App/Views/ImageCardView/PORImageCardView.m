@@ -79,6 +79,7 @@ static CGFloat const RADIUS_CORNER = 10.0;
 
 - (void) nibDidLoad {
   [self setRadiusBlur: RADIUS_BLUR];
+  [self setOffsetYBlur: OFFSET_Y_BLUR];
   [self setRadiusCorner: RADIUS_CORNER];
 }
 
