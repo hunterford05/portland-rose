@@ -283,10 +283,10 @@
             </objects>
             <point key="canvasLocation" x="2517.5999999999999" y="882.90854572713647"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Carousel Demo View Controller-->
         <scene sceneID="JPc-ZT-SYz">
             <objects>
-                <viewController id="UJV-wZ-3Zi" sceneMemberID="viewController">
+                <viewController id="UJV-wZ-3Zi" customClass="PORImageCarouselDemoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IdK-Sj-khi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,6 +310,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c7g-9e-Wgj"/>
                     </view>
+                    <connections>
+                        <outlet property="viewContainerCarousel" destination="ZIq-RD-ODC" id="uCN-eY-9To"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwt-MQ-6XZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -368,7 +371,7 @@
                     <view key="view" contentMode="scaleToFill" id="gcd-E8-qYY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0gt-V0-SCt"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5x-1j-A0j" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -64,8 +64,10 @@ static CGFloat const RADIUS_CORNER = 10.0;
 }
 
 - (void) setImage:(UIImage *)image {
+  _image = image;
   [_viewImage setImage:image];
   [_viewShadowImage setImage: image];
+  [self setNeedsDisplay];
 }
 
 - (void) loadNib {

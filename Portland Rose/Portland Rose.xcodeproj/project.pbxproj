@@ -24,6 +24,7 @@
 		5AC2A8F0207BD556003B2AD5 /* PORImageCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */; };
 		5AC2A8F5207BE8FF003B2AD5 /* PORImageCarouselImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8F3207BE8FF003B2AD5 /* PORImageCarouselImageView.m */; };
 		5AC2A8F6207BE8FF003B2AD5 /* PORImageCarouselImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */; };
+		5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */; };
 		5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738C72073D41B00B8E75C /* UIColor+Hex.m */; };
 		5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CA2073D7CB00B8E75C /* PORPaletteDemoViewController.m */; };
 		5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CD2073D8E100B8E75C /* PORPalette.m */; };
@@ -62,6 +63,8 @@
 		5AC2A8F2207BE8FF003B2AD5 /* PORImageCarouselImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselImageView.h; sourceTree = "<group>"; };
 		5AC2A8F3207BE8FF003B2AD5 /* PORImageCarouselImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselImageView.m; sourceTree = "<group>"; };
 		5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORImageCarouselImageView.xib; sourceTree = "<group>"; };
+		5AC2A8FA207BEB65003B2AD5 /* PORImageCarouselDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselDemoViewController.h; sourceTree = "<group>"; };
+		5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselDemoViewController.m; sourceTree = "<group>"; };
 		5AF738C62073D41B00B8E75C /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		5AF738C72073D41B00B8E75C /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		5AF738C92073D7CB00B8E75C /* PORPaletteDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORPaletteDemoViewController.h; sourceTree = "<group>"; };
@@ -75,8 +78,8 @@
 		5AF738D8207408EC00B8E75C /* PORActionButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORActionButtonView.xib; sourceTree = "<group>"; };
 		5AF738DA207408F600B8E75C /* PORActionButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORActionButtonView.h; sourceTree = "<group>"; };
 		5AF738DB207408F600B8E75C /* PORActionButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORActionButtonView.m; sourceTree = "<group>"; };
-		5AF738DD20740F0B00B8E75C /* PORActionButtonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PORActionButtonDemoViewController.h; path = "Portland Rose/Demo/Views/PORActionButtonDemoViewController.h"; sourceTree = SOURCE_ROOT; };
-		5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PORActionButtonDemoViewController.m; path = "Portland Rose/Demo/Views/PORActionButtonDemoViewController.m"; sourceTree = SOURCE_ROOT; };
+		5AF738DD20740F0B00B8E75C /* PORActionButtonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PORActionButtonDemoViewController.h; path = "Portland Rose/Demo/Views/ActionButton/PORActionButtonDemoViewController.h"; sourceTree = SOURCE_ROOT; };
+		5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PORActionButtonDemoViewController.m; path = "Portland Rose/Demo/Views/ActionButton/PORActionButtonDemoViewController.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +164,6 @@
 				5A7D9A322077FFB100EF6D73 /* ImageCardView */,
 				5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */,
 				5AC2A8F1207BD55C003B2AD5 /* ImageCarouselView */,
-				5AC2A8EE207BD556003B2AD5 /* PORImageCarouselView.h */,
-				5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */,
 				5A3A99FB2076A6FB00191EEF /* ActionButtonView */,
 				5A3A99FC2076A70900191EEF /* TabBarView */,
 				5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */,
@@ -223,6 +224,8 @@
 		5AC2A8F1207BD55C003B2AD5 /* ImageCarouselView */ = {
 			isa = PBXGroup;
 			children = (
+				5AC2A8EE207BD556003B2AD5 /* PORImageCarouselView.h */,
+				5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */,
 			);
 			name = ImageCarouselView;
 			path = "New Group";
@@ -238,6 +241,24 @@
 			path = ImageCarouselImageView;
 			sourceTree = "<group>";
 		};
+		5AC2A8F8207BEB2C003B2AD5 /* ActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				5AF738DD20740F0B00B8E75C /* PORActionButtonDemoViewController.h */,
+				5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */,
+			);
+			path = ActionButton;
+			sourceTree = "<group>";
+		};
+		5AC2A8F9207BEB36003B2AD5 /* ImageCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				5AC2A8FA207BEB65003B2AD5 /* PORImageCarouselDemoViewController.h */,
+				5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */,
+			);
+			path = ImageCarousel;
+			sourceTree = "<group>";
+		};
 		5AF738C52073D3E400B8E75C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +272,8 @@
 		5AF738E020740F2100B8E75C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AF738DD20740F0B00B8E75C /* PORActionButtonDemoViewController.h */,
-				5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */,
+				5AC2A8F8207BEB2C003B2AD5 /* ActionButton */,
+				5AC2A8F9207BEB36003B2AD5 /* ImageCarousel */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -356,6 +377,7 @@
 				5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */,
 				5A4ABF372072C36400349DBB /* PORDemosViewController.m in Sources */,
 				5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */,
+				5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */,
 				5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */,
 				5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */,
 				5AF738DC207408F600B8E75C /* PORActionButtonView.m in Sources */,

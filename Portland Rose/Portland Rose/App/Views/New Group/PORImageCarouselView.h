@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PORImageCarouselImageView.h"
 
-@interface PORImageCarouselView : UIPageViewController
+IB_DESIGNABLE
+
+@interface PORImageCarouselView : UIPageViewController <UIPageViewControllerDataSource>
+
+@property (nonatomic) NSMutableArray * images;
 
 @end

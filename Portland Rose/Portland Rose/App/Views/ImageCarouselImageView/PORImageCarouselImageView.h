@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PORImageCardView.h"
 
-@interface PORImageCarouselImageView : UIPageViewController
+@interface PORImageCarouselImageView : UIViewController
+
+@property NSUInteger index;
+@property (nonatomic) IBInspectable UIImage * image;
 
 @end

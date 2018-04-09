@@ -1,22 +1,57 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PORImageCarouselImageView">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="fzm-Go-i6C"/>
+                <outlet property="viewImageCard" destination="fQI-oC-SLA" id="DPM-cv-dzq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQI-oC-SLA" customClass="PORImageCardView">
+                    <rect key="frame" x="40" y="185.5" width="295" height="295"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fQI-oC-SLA" secondAttribute="height" multiplier="1:1" id="u0s-BX-UAG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radiusBlur">
+                            <real key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="offsetYBlur">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                            <real key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="image-lg-0"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="fQI-oC-SLA" secondAttribute="trailing" constant="40" id="Kwa-Ge-wgx"/>
+                <constraint firstItem="fQI-oC-SLA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="URj-He-NBB"/>
+                <constraint firstItem="fQI-oC-SLA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="f6T-6O-c5L"/>
+                <constraint firstItem="fQI-oC-SLA" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="40" id="y8g-1z-R2L"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>
     </objects>
+    <resources>
+        <image name="image-lg-0" width="2000" height="1333"/>
+    </resources>
 </document>
