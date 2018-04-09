@@ -22,6 +22,8 @@
 		5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9491D20755A6000060FE8 /* PORTabBarView.m */; };
 		5AA9492020755A6D00060FE8 /* PORTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA9491F20755A6D00060FE8 /* PORTabBarView.xib */; };
 		5AC2A8F0207BD556003B2AD5 /* PORImageCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */; };
+		5AC2A8F5207BE8FF003B2AD5 /* PORImageCarouselImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8F3207BE8FF003B2AD5 /* PORImageCarouselImageView.m */; };
+		5AC2A8F6207BE8FF003B2AD5 /* PORImageCarouselImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */; };
 		5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738C72073D41B00B8E75C /* UIColor+Hex.m */; };
 		5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CA2073D7CB00B8E75C /* PORPaletteDemoViewController.m */; };
 		5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CD2073D8E100B8E75C /* PORPalette.m */; };
@@ -57,6 +59,9 @@
 		5AA9491F20755A6D00060FE8 /* PORTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORTabBarView.xib; sourceTree = "<group>"; };
 		5AC2A8EE207BD556003B2AD5 /* PORImageCarouselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselView.h; sourceTree = "<group>"; };
 		5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselView.m; sourceTree = "<group>"; };
+		5AC2A8F2207BE8FF003B2AD5 /* PORImageCarouselImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselImageView.h; sourceTree = "<group>"; };
+		5AC2A8F3207BE8FF003B2AD5 /* PORImageCarouselImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselImageView.m; sourceTree = "<group>"; };
+		5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORImageCarouselImageView.xib; sourceTree = "<group>"; };
 		5AF738C62073D41B00B8E75C /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		5AF738C72073D41B00B8E75C /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		5AF738C92073D7CB00B8E75C /* PORPaletteDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORPaletteDemoViewController.h; sourceTree = "<group>"; };
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7D9A322077FFB100EF6D73 /* ImageCardView */,
+				5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */,
 				5AC2A8F1207BD55C003B2AD5 /* ImageCarouselView */,
 				5AC2A8EE207BD556003B2AD5 /* PORImageCarouselView.h */,
 				5AC2A8EF207BD556003B2AD5 /* PORImageCarouselView.m */,
@@ -220,6 +226,16 @@
 			);
 			name = ImageCarouselView;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */ = {
+			isa = PBXGroup;
+			children = (
+				5AC2A8F2207BE8FF003B2AD5 /* PORImageCarouselImageView.h */,
+				5AC2A8F3207BE8FF003B2AD5 /* PORImageCarouselImageView.m */,
+				5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */,
+			);
+			path = ImageCarouselImageView;
 			sourceTree = "<group>";
 		};
 		5AF738C52073D3E400B8E75C /* Helpers */ = {
@@ -315,6 +331,7 @@
 				5A445F1620729AAF009497B0 /* Assets.xcassets in Resources */,
 				5A445F1420729AAE009497B0 /* Main.storyboard in Resources */,
 				5A445F292072B790009497B0 /* Demo.storyboard in Resources */,
+				5AC2A8F6207BE8FF003B2AD5 /* PORImageCarouselImageView.xib in Resources */,
 				5A7D9A342077FFE300EF6D73 /* PORImageCardView.xib in Resources */,
 				5A7D9A312077FCA300EF6D73 /* DemoAssets.xcassets in Resources */,
 			);
@@ -333,6 +350,7 @@
 				5A7D9A372077FFF800EF6D73 /* PORImageCardView.m in Sources */,
 				5AF738DF20740F0B00B8E75C /* PORActionButtonDemoViewController.m in Sources */,
 				5AF738D32073FD6700B8E75C /* PORTypeLibraryDemoViewController.m in Sources */,
+				5AC2A8F5207BE8FF003B2AD5 /* PORImageCarouselImageView.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
 				5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */,
 				5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */,
