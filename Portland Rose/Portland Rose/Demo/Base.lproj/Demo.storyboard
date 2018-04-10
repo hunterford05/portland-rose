@@ -338,7 +338,17 @@
                     <view key="view" contentMode="scaleToFill" id="CNb-e0-ru4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-Xv-4cL" customClass="PORFloatingActionButtonView">
+                                <rect key="frame" x="199" y="505" width="128" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E2k-EV-jC4" firstAttribute="trailing" secondItem="pTF-Xv-4cL" secondAttribute="trailing" constant="48" id="GwY-Gz-gcc"/>
+                            <constraint firstItem="E2k-EV-jC4" firstAttribute="bottom" secondItem="pTF-Xv-4cL" secondAttribute="bottom" constant="48" id="RkK-Rr-VC4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="E2k-EV-jC4"/>
                     </view>
                 </viewController>

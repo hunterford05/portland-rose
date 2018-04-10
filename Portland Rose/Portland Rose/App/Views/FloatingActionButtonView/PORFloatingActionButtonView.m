@@ -1,17 +1,17 @@
 //
-//  PORActionButtonView.m
+//  PORFloatingActionButtonView.m
 //  Portland Rose
 //
 //  Created by Hunter Ford on 03/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "PORActionButtonView.h"
+#import "PORFloatingActionButtonView.h"
 #import "PORPalette.h"
 #import "PORTypeLibrary.h"
 
 /// Name of XIB file
-static NSString * const NAME_NIB = @"PORActionButtonView";
+static NSString * const NAME_NIB = @"PORFloatingActionButtonView";
 /// Opacity of the button's shadow
 static CGFloat const OPACITY_SHADOW = 0.59;
 /// Offset (horizontal and vertical) of the button's shadow
@@ -27,11 +27,9 @@ static CGFloat const PADDING_TOP = 1.0;
 /// Padding, as a multiple of the font size, between the leading (left) edge of the button and the text
 static CGFloat const PADDING_LEADING = 2.0;
 /// Default button text
-static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 
-@interface PORActionButtonView()
+@interface PORFloatingActionButtonView()
 
-@property (weak, nonatomic) IBOutlet UILabel *labelViewText;
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIView *viewBackground;
 @property (weak, nonatomic) IBOutlet UIView *viewShadow;
@@ -39,8 +37,9 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 
 @end
 
-@implementation PORActionButtonView
+@implementation PORFloatingActionButtonView
 
+#pragma mark - lifecycle
 
 - (instancetype) initWithCoder:(NSCoder *)aDecoder{
   self = [super initWithCoder:aDecoder];
@@ -68,6 +67,8 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
   [self refresh];
 }
 
+#pragma mark - helpers
+
 /// Initialize the main view from a XIB file
 - (void) loadNib{
   [[NSBundle bundleForClass:self.class] loadNibNamed:NAME_NIB owner:self options:nil];
@@ -78,13 +79,12 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 
 /// Calculate the button's intrinsic size
 - (CGSize) intrinsicContentSize{
-  return [self calculateSize];
+  return CGSizeMake(128, 128);
 }
 
 - (BOOL) beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
   [super beginTrackingWithTouch:touch withEvent:event];
   
-  _labelViewText.alpha = OPACITY_LABEL_ON_TOUCH;
   _viewBackground.alpha = OPACITY_BACKGROUND_ON_TOUCH;
   return YES;
 }
@@ -92,7 +92,6 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 - (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
   [super endTrackingWithTouch:touch withEvent:event];
   
-  _labelViewText.alpha = 1;
   _viewBackground.alpha = 1;
 }
 
@@ -101,9 +100,6 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
   CGFloat cornerRadius;
   
   cornerRadius = _view.frame.size.height / 2;
-  
-  // Update label
-  [_labelViewText setTextColor:_colorLabel];
   
   // Update shadow view
   _viewShadow.layer.shadowColor = _colorBackgroundSecond.CGColor;
@@ -128,7 +124,6 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 - (void) nibDidLoad{
   PORPalette * palette;
   
-  // Set background color
   [self setBackgroundColor:UIColor.clearColor];
   
   // Configure colors
@@ -137,31 +132,9 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
   _colorBackgroundFirst = palette.colorPrimary;
   _colorBackgroundSecond = palette.colorSecondary;
   
-  // Configure label text
-  [self setText: TEXT_PLACEHOLDER];
-  [_labelViewText setFont:[PORTypeLibrary.sharedTypeLibrary fontBody]];
+  // Configure
 }
 
-- (void) setText:(NSString *)text{
-  _text = text;
-  [_labelViewText setText:_text];
-  [self updateSize];
-}
-
-/// Calculate the intrinsic size of the button based on the size of its text label
-- (CGSize) calculateSize {
-  CGSize labelSize;
-  CGFloat height;
-  CGFloat width;
-  CGFloat fontSize;
-  
-  labelSize = [_labelViewText.text sizeWithAttributes:@{NSFontAttributeName: _labelViewText.font}];
-  fontSize = _labelViewText.font.pointSize;
-  height = labelSize.height + fontSize * PADDING_TOP * 2;
-  width = labelSize.width + fontSize * PADDING_LEADING * 2;
-  
-  return CGSizeMake(width, height);
-}
 
 /// Update the button's size
 - (void) updateSize{

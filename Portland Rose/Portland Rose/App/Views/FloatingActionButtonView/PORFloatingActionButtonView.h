@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 IB_DESIGNABLE
 
-@interface PORActionButtonView : UIControl
+@interface PORFloatingActionButtonView : UIControl
 
 @property IBInspectable UIColor * colorLabel;
 @property IBInspectable UIColor * colorBackgroundFirst;
 @property IBInspectable UIColor * colorBackgroundSecond;
-@property (nonatomic) IBInspectable NSString * text;
 
 @end
-
