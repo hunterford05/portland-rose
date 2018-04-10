@@ -11,7 +11,9 @@
 
 @interface PORImageCarouselImageView : UIViewController
 
-@property NSUInteger index;
+/// Image to display
 @property (nonatomic) IBInspectable UIImage * image;
+/// This view's index in its parent `PORImageCarouselView`
+@property NSUInteger index;
 
 @end

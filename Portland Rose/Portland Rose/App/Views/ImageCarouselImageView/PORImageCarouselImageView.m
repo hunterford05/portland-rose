@@ -12,14 +12,18 @@
 static NSString * const NAME_NIB = @"PORImageCarouselImageView";
 
 @interface PORImageCarouselImageView ()
-@property (weak, nonatomic) IBOutlet PORImageCardView *viewImageCard;
 
+/// `PORImageCardView` instance
+@property (weak, nonatomic) IBOutlet PORImageCardView *viewImageCard;
 
 @end
 
 @implementation PORImageCarouselImageView
 
+#pragma mark - lifecycle
+
 - (instancetype) init {
+  // Always use the given NIB
   return  [super initWithNibName: NAME_NIB bundle: [NSBundle bundleForClass:self.class]];
 }
 
@@ -27,6 +31,5 @@ static NSString * const NAME_NIB = @"PORImageCarouselImageView";
   [super viewDidLoad];
   [_viewImageCard setImage: _image];
 }
-
 
 @end

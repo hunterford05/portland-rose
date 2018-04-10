@@ -10,23 +10,33 @@
 
 /// Name of NIB file
 static NSString * const NAME_NIB = @"PORImageCardView";
-
-static CGFloat const RADIUS_BLUR = 50.0;
+/// Default blur vertical offset
 static CGFloat const OFFSET_Y_BLUR = 10.0;
+/// Default blur radius
+static CGFloat const RADIUS_BLUR = 50.0;
+/// Default image card corner radius
 static CGFloat const RADIUS_CORNER = 10.0;
 
 @interface PORImageCardView()
 
-@property (weak, nonatomic) IBOutlet UIImageView *viewImage;
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIImageView *viewShadowImage;
-@property (weak, nonatomic) IBOutlet UIVisualEffectView *viewBlur;
+/// Constraint for the blur's vertical position (offset)
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBlurCenterY;
+/// Constraint for the blur's width (radius)
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBlurWidth;
+/// Main view
+@property (strong, nonatomic) IBOutlet UIView *view;
+/// UIVisualEffectView for blurring the shadow image
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *viewBlur;
+/// The displayed image
+@property (weak, nonatomic) IBOutlet UIImageView *viewImage;
+/// The shadow image, which is blurred behind a UIVisualEffectView
+@property (weak, nonatomic) IBOutlet UIImageView *viewShadowImage;
 
 @end
 
 @implementation PORImageCardView
+
+#pragma mark - lifecycle
 
 - (instancetype) initWithCoder:(NSCoder *)aDecoder{
   self = [super initWithCoder:aDecoder];
@@ -43,6 +53,13 @@ static CGFloat const RADIUS_CORNER = 10.0;
   }
   return self;
 }
+
+- (void)drawRect:(CGRect)rect{
+  [self updateBlur];
+  [super drawRect:rect];
+}
+
+#pragma mark - getters / setters
 
 - (void) setRadiusBlur:(CGFloat)radiusBlur {
   _radiusBlur = radiusBlur;
@@ -70,6 +87,11 @@ static CGFloat const RADIUS_CORNER = 10.0;
   [self setNeedsDisplay];
 }
 
+# pragma mark - helpers
+
+/**
+ * Load the main view from a NIB file and add it as a subview
+ */
 - (void) loadNib {
   [[NSBundle bundleForClass:self.class] loadNibNamed:NAME_NIB owner:self options:nil];
   [_view setFrame: self.bounds];
@@ -77,18 +99,19 @@ static CGFloat const RADIUS_CORNER = 10.0;
   [self nibDidLoad];
 }
 
+/**
+ * Configure subviews. Called after the NIB loads.
+ */
 - (void) nibDidLoad {
   [self setRadiusBlur: RADIUS_BLUR];
   [self setOffsetYBlur: OFFSET_Y_BLUR];
   [self setRadiusCorner: RADIUS_CORNER];
 }
 
-- (void)drawRect:(CGRect)rect{
-  [self updateBlur];
-  [super drawRect:rect];
-}
 
-/// Configure blur effect view
+/**
+ * Configure blur effect view
+ */
 - (void) updateBlur {
   
   // mask opacity

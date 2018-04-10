@@ -13,6 +13,7 @@ IB_DESIGNABLE
 
 @interface PORImageCarouselView : UIPageViewController <UIPageViewControllerDataSource>
 
+/// Array of images to display in the carousel
 @property (nonatomic) NSMutableArray * images;
 
 @end

@@ -14,35 +14,44 @@
 
 @implementation PORImageCarouselView
 
+#pragma mark - lifecycle
+
 - (instancetype) initWithCoder:(NSCoder *)coder{
+  // Always initialize with the correct settings (e.g. scroll transition)
   return [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation: UIPageViewControllerNavigationOrientationHorizontal options: nil];
 }
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
+#pragma mark - getters / setters
+
+- (void) setImages:(NSMutableArray *)images {
+  // Update `_images`
+  _images = images;
   
+  // Display the new first image and reset the data source
+  PORImageCarouselImageView * iv = [self viewAtIndex:0];
+  [self setViewControllers:@[iv] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+  self.dataSource = self;
 }
 
+#pragma mark - helpers
+
+/**
+ * Returns a `PORImageCarouselImageView` whose image is `_images[index]`
+ * and whose `index` is `index`
+ */
 - (PORImageCarouselImageView *) viewAtIndex: (NSUInteger) index{
   
+  // Handle index out of bounds
   if (index > _images.count - 1){
     return nil;
   }
   
+  // Initialize, configure, and return the `PORImageCarouselImageView` instance
   PORImageCarouselImageView * iciv;
   iciv = [[PORImageCarouselImageView alloc] init];
   [iciv setImage: _images[index]];
   [iciv setIndex:index];
-  
   return iciv;
-}
-
-- (void) setImages:(NSMutableArray *)images {
-  _images = images;
-  
-  PORImageCarouselImageView * iv = [self viewAtIndex:0];
-  [self setViewControllers:@[iv] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-  self.dataSource = self;
 }
 
 #pragma mark - UIPageControllerDataSource
