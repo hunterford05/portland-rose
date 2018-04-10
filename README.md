@@ -159,12 +159,12 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
    a storyboard interface builder.
 2. Select the `UIView` instance and Set the `UIView`'s class to 
    `PORImageCardView` in the Identity Inspector 
-   ![](1804091339.png)
+   ![](docs/figs/1804091339.png)
 3. Set the `PORImageCardView`'s "Image" property in the Attributesi
    Inspector, or set the image at runtime by creating a reference
    outlet for the `PORImageCardView` instance and calling 
    `setImage:`
-   ![](1804091340.png)
+   ![](docs/figs/1804091340.png)
 
 ### Customization
 
@@ -183,10 +183,10 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 ### Usage
 
 1. First, drag a container view onto the interface builder
-   ![](1804091345.png)
+   ![](docs/figs/1804091345.png)
 2. Next, set its child view controller's class to 
    `PORImageCarouselView` 
-   ![](1804091347.png)
+   ![](docs/figs/1804091347.png)
 3. Create a reference outlet for the **container view**, e.g:
    ```objective-c
    @property (weak, nonatomic) IBOutlet UIView *container;
