@@ -51,11 +51,12 @@
                         <segue destination="RdI-Lc-zT3" kind="show" identifier="FromDemosToTabBarControllerDemo" id="qVe-de-KRR"/>
                         <segue destination="Eoj-MR-fv5" kind="show" identifier="FromDemosToImageCardViewDemo" id="yL1-97-k7M"/>
                         <segue destination="UJV-wZ-3Zi" kind="show" identifier="FromDemosToImageCarouselViewDemo" id="sRd-TT-TSs"/>
+                        <segue destination="M0W-Qd-mSn" kind="show" identifier="FromDemosToFloatingActionButtonViewDemo" id="tZT-Nt-Wpg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="107"/>
+            <point key="canvasLocation" x="1534" y="-238"/>
         </scene>
         <!--Type Library Demo View Controller-->
         <scene sceneID="PcT-rN-24c">
@@ -300,7 +301,7 @@
                                     <segue destination="4Rw-hT-NuU" kind="embed" id="wxs-ov-kT2"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0t-68-bhB" customClass="PORActionButtonView">
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="q0t-68-bhB" customClass="PORActionButtonView">
                                 <rect key="frame" x="123" y="533" width="128" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -329,6 +330,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwt-MQ-6XZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3184.8000000000002" y="882.90854572713647"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w4o-Bb-tHG">
+            <objects>
+                <viewController id="M0W-Qd-mSn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CNb-e0-ru4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="E2k-EV-jC4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oos-X8-TkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="883"/>
         </scene>
         <!--Palette Demo View Controller-->
         <scene sceneID="8GC-OQ-rFe">
@@ -374,7 +390,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvc-eQ-61J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="-600"/>
+            <point key="canvasLocation" x="1534" y="-959"/>
         </scene>
         <!--Image Carousel View-->
         <scene sceneID="XFc-9Z-hxg">
