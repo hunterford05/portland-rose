@@ -48,12 +48,14 @@
                         <segue destination="6ye-x8-TAY" kind="show" identifier="FromDemosToPaletteDemo" id="cpV-tL-zLT"/>
                         <segue destination="20X-Dw-hrX" kind="show" identifier="FromDemosToTypeLibraryDemo" id="xZb-pt-RqJ"/>
                         <segue destination="fNM-3U-tFr" kind="show" identifier="FromDemosToActionButtonViewDemo" id="Yrh-L7-5sg"/>
-                        <segue destination="RdI-Lc-zT3" kind="show" identifier="FromDemosToPORTabBarControllerDemo" id="qVe-de-KRR"/>
+                        <segue destination="RdI-Lc-zT3" kind="show" identifier="FromDemosToTabBarControllerDemo" id="qVe-de-KRR"/>
+                        <segue destination="Eoj-MR-fv5" kind="show" identifier="FromDemosToImageCardViewDemo" id="yL1-97-k7M"/>
+                        <segue destination="UJV-wZ-3Zi" kind="show" identifier="FromDemosToImageCarouselViewDemo" id="sRd-TT-TSs"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884" y="107"/>
+            <point key="canvasLocation" x="1535" y="107"/>
         </scene>
         <!--Type Library Demo View Controller-->
         <scene sceneID="PcT-rN-24c">
@@ -240,6 +242,94 @@
             </objects>
             <point key="canvasLocation" x="1862" y="883"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hsR-Ay-Bsw">
+            <objects>
+                <viewController id="Eoj-MR-fv5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZAW-wa-WXa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxa-oE-BvH" customClass="PORImageCardView">
+                                <rect key="frame" x="37" y="151" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="57x-1o-5VH"/>
+                                    <constraint firstAttribute="height" constant="300" id="KT4-Qo-Rg7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="image-lg-0"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusBlur">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="offsetYBlur">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jxa-oE-BvH" firstAttribute="centerY" secondItem="ZAW-wa-WXa" secondAttribute="centerY" id="d9G-j5-nsG"/>
+                            <constraint firstItem="Jxa-oE-BvH" firstAttribute="centerX" secondItem="ZAW-wa-WXa" secondAttribute="centerX" id="fqp-nf-ADn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T8a-m9-Yky"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZ7-cl-z2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2517.5999999999999" y="882.90854572713647"/>
+        </scene>
+        <!--Image Carousel Demo View Controller-->
+        <scene sceneID="JPc-ZT-SYz">
+            <objects>
+                <viewController id="UJV-wZ-3Zi" customClass="PORImageCarouselDemoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IdK-Sj-khi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIq-RD-ODC">
+                                <rect key="frame" x="0.0" y="101" width="375" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Z5J-qw-g6D"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="4Rw-hT-NuU" kind="embed" id="wxs-ov-kT2"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0t-68-bhB" customClass="PORActionButtonView">
+                                <rect key="frame" x="123" y="533" width="128" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Add Images"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchUpInsideButton:" destination="UJV-wZ-3Zi" eventType="touchUpInside" id="JyH-KG-l35"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q0t-68-bhB" firstAttribute="centerX" secondItem="IdK-Sj-khi" secondAttribute="centerX" id="97Y-aq-0OJ"/>
+                            <constraint firstItem="ZIq-RD-ODC" firstAttribute="centerX" secondItem="IdK-Sj-khi" secondAttribute="centerX" id="T3Z-Fs-Xq1"/>
+                            <constraint firstItem="ZIq-RD-ODC" firstAttribute="leading" secondItem="c7g-9e-Wgj" secondAttribute="leading" id="ZqB-Zd-qdn"/>
+                            <constraint firstItem="c7g-9e-Wgj" firstAttribute="trailing" secondItem="ZIq-RD-ODC" secondAttribute="trailing" id="gro-M3-Q43"/>
+                            <constraint firstItem="ZIq-RD-ODC" firstAttribute="centerY" secondItem="IdK-Sj-khi" secondAttribute="centerY" id="rlc-Ua-cek"/>
+                            <constraint firstItem="c7g-9e-Wgj" firstAttribute="bottom" secondItem="q0t-68-bhB" secondAttribute="bottom" constant="20" id="uyp-OV-nBp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c7g-9e-Wgj"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewContainerCarousel" destination="ZIq-RD-ODC" id="uCN-eY-9To"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iwt-MQ-6XZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3184.8000000000002" y="882.90854572713647"/>
+        </scene>
         <!--Palette Demo View Controller-->
         <scene sceneID="8GC-OQ-rFe">
             <objects>
@@ -284,7 +374,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvc-eQ-61J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="-600"/>
+            <point key="canvasLocation" x="1535" y="-600"/>
+        </scene>
+        <!--Image Carousel View-->
+        <scene sceneID="XFc-9Z-hxg">
+            <objects>
+                <viewController id="4Rw-hT-NuU" customClass="PORImageCarouselView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gcd-E8-qYY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0gt-V0-SCt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5x-1j-A0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3185" y="1533"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image-lg-0" width="2000" height="1333"/>
+    </resources>
 </document>

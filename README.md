@@ -149,6 +149,69 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 
 # Views
 
+## ImageCardView
+
+`PORImageCardView` displays a single image on an attractive card. 
+
+### Usage
+
+1. First, create a `UIview` instance either in a `.xib` file or in
+   a storyboard interface builder.
+2. Select the `UIView` instance and Set the `UIView`'s class to 
+   `PORImageCardView` in the Identity Inspector 
+   ![](docs/figs/1804091339.png)
+3. Set the `PORImageCardView`'s "Image" property in the Attributesi
+   Inspector, or set the image at runtime by creating a reference
+   outlet for the `PORImageCardView` instance and calling 
+   `setImage:`
+   ![](docs/figs/1804091340.png)
+
+### Customization
+
+`PORImageCardView` can be customized either programmatically or via the interface builder. `PORImageCardView` can be customized in these ways:
+
+* **Blur Radius** — `setRadiusBlur:` sets the image card's shadow
+  radius
+* **Blur Offset (Y)** — `setOffsetYBlur:` sets the vertical offset of the image card's shadow 
+* **Corner Radius** — `setRadiusCorner:` sets the image card's corner radius
+
+
+## ImageCarouselView
+
+`PORImageCarouselView` renders a horizontal carousel containing image cards (see `PORImageCardView`). 
+
+### Usage
+
+1. First, drag a container view onto the interface builder
+   ![](docs/figs/1804091345.png)
+2. Next, set its child view controller's class to 
+   `PORImageCarouselView` 
+   ![](docs/figs/1804091347.png)
+3. Create a reference outlet for the **container view**, e.g:
+   ```objective-c
+   @property (weak, nonatomic) IBOutlet UIView *container;
+   ```
+4. create a reference to the `PORImageCarouselView` by accessing
+   the view controller's `childViewControllers` property, e.g:
+   ```objective-c
+   // ExampleViewController.m
+   // ...
+   - (void) viewDidLoad{
+     [super viewDidLoad];
+     PORImageCarouselView * carousel = self.view.childViewControllers.firstObject;
+   }
+   ```
+5. Set the carousel's image(s) by calling `setImages:`, e.g:
+   ```
+   // ExampleViewController.m
+   // ...
+   - (void) viewDidLoad{
+     // ...
+     NSMutableArray * imgs = (NSMutableArray *) @[[UIImage imageNamed: @"example"]];
+     [carousel setImages: imgs];
+   }
+   ```
+
 ## TabBarView
 
 `PORTabBarView` renders a custom tab bar control that can be used with a `UITabBarController`. 
