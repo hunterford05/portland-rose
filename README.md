@@ -149,6 +149,46 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 
 # Views
 
+## ActionButtonView
+
+`PORActionButtonView` renders a text button with a colored background and drop shadow.
+
+### Usage
+
+1. First, drag a `UIView` to the interface builder.
+   ![](docs/figs/1804091632.png)
+2. set the view's *position* constraints (do not set size constraints, as 
+   `PORActionButtonView` uses intrinsic size).
+   ![](docs/figs/Screen\ Shot\ 2018-04-10\ at\ 16.33.36.png)
+3. Set the view's class to `PORActionButtonView`.
+   ![](docs/figs/Screen\ Shot\ 2018-04-10\ at\ 16.35.22.png)
+4. To handle user taps, create an outlet for the "Touch Up Inside" event
+
+### Customization
+
+
+`PORActionButtonView` can be customized programmatically or via the interface builder.
+
+* **Background Color One** — `colorBackgroundOne` sets the first background gradient color
+* **Background Color Two** — `colorbackgroundTwo` sets the second background gradient color
+* **Label Color** — `colorLabel` sets the color of the button's label
+* **text** — `text` sets the button's label text
+
+## Floating Action Button View
+
+`PORFloatingActionButtonView` renders a button with an icon image and a 1:1 aspect ratio.
+
+### Usage
+
+`PORFloatingActionButtonView` can be customized programmatically or via the interface builder.
+
+* **Background Color One** — `colorBackgroundOne` sets the first background gradient color
+* **Background Color Two** — `colorbackgroundTwo` sets the second background gradient color
+* **Label Color** — `colorLabel` sets the color of the button's label
+* **Tint Color** — `colorTint` sets the tint color of the button's image
+* **Image** — `image` is the image to be displayed.
+* **radius** — `radius` sets the button's intrinsic size
+
 ## ImageCardView
 
 `PORImageCardView` displays a single image on an attractive card. 

@@ -31,16 +31,12 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
 
 @interface PORActionButtonView()
 
-@property (weak, nonatomic) IBOutlet UILabel *labelViewText;
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIView *viewBackground;
-@property (weak, nonatomic) IBOutlet UIView *viewShadow;
-
-
 @end
 
 @implementation PORActionButtonView
 
+
+#pragma mark - lifecycle
 
 - (instancetype) initWithCoder:(NSCoder *)aDecoder{
   self = [super initWithCoder:aDecoder];
@@ -68,6 +64,29 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
   [self refresh];
 }
 
+- (CGSize) intrinsicContentSize{
+  return [self calculateSize];
+}
+
+# pragma mark - events
+
+- (BOOL) beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
+  [super beginTrackingWithTouch:touch withEvent:event];
+  
+  _viewLabelText.alpha = OPACITY_LABEL_ON_TOUCH;
+  _viewBackground.alpha = OPACITY_BACKGROUND_ON_TOUCH;
+  return YES;
+}
+
+- (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
+  [super endTrackingWithTouch:touch withEvent:event];
+  
+  _viewLabelText.alpha = 1;
+  _viewBackground.alpha = 1;
+}
+
+# pragma mark - helpers
+
 /// Initialize the main view from a XIB file
 - (void) loadNib{
   [[NSBundle bundleForClass:self.class] loadNibNamed:NAME_NIB owner:self options:nil];
@@ -76,36 +95,19 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
   [self nibDidLoad];
 }
 
-/// Calculate the button's intrinsic size
-- (CGSize) intrinsicContentSize{
-  return [self calculateSize];
-}
-
-- (BOOL) beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
-  [super beginTrackingWithTouch:touch withEvent:event];
-  
-  _labelViewText.alpha = OPACITY_LABEL_ON_TOUCH;
-  _viewBackground.alpha = OPACITY_BACKGROUND_ON_TOUCH;
-  return YES;
-}
-
-- (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
-  [super endTrackingWithTouch:touch withEvent:event];
-  
-  _labelViewText.alpha = 1;
-  _viewBackground.alpha = 1;
-}
-
 /// Refresh the button's appearance
 - (void) refresh{
   CGFloat cornerRadius;
-  
   cornerRadius = _view.frame.size.height / 2;
+
+  // Set background color
+  [self setBackgroundColor:UIColor.clearColor];
   
   // Update label
-  [_labelViewText setTextColor:_colorLabel];
+  [_viewLabelText setTextColor:_colorLabel];
   
   // Update shadow view
+  _viewShadow.frame = _view.bounds;
   _viewShadow.layer.shadowColor = _colorBackgroundSecond.CGColor;
   _viewShadow.layer.shadowOffset = CGSizeMake(OFFSET_SHADOW, OFFSET_SHADOW);
   _viewShadow.layer.shadowRadius = RADIUS_SHADOW;
@@ -136,12 +138,12 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
   
   // Configure label text
   [self setText: TEXT_PLACEHOLDER];
-  [_labelViewText setFont:[PORTypeLibrary.sharedTypeLibrary fontBody]];
+  [_viewLabelText setFont:[PORTypeLibrary.sharedTypeLibrary fontBody]];
 }
 
 - (void) setText:(NSString *)text{
   _text = text;
-  [_labelViewText setText:_text];
+  [_viewLabelText setText:_text];
   [self updateSize];
 }
 
@@ -152,8 +154,8 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
   CGFloat width;
   CGFloat fontSize;
   
-  labelSize = [_labelViewText.text sizeWithAttributes:@{NSFontAttributeName: _labelViewText.font}];
-  fontSize = _labelViewText.font.pointSize;
+  labelSize = [_viewLabelText.text sizeWithAttributes:@{NSFontAttributeName: _viewLabelText.font}];
+  fontSize = _viewLabelText.font.pointSize;
   height = labelSize.height + fontSize * PADDING_TOP * 2;
   width = labelSize.width + fontSize * PADDING_LEADING * 2;
   

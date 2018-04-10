@@ -51,11 +51,12 @@
                         <segue destination="RdI-Lc-zT3" kind="show" identifier="FromDemosToTabBarControllerDemo" id="qVe-de-KRR"/>
                         <segue destination="Eoj-MR-fv5" kind="show" identifier="FromDemosToImageCardViewDemo" id="yL1-97-k7M"/>
                         <segue destination="UJV-wZ-3Zi" kind="show" identifier="FromDemosToImageCarouselViewDemo" id="sRd-TT-TSs"/>
+                        <segue destination="M0W-Qd-mSn" kind="show" identifier="FromDemosToFloatingActionButtonViewDemo" id="tZT-Nt-Wpg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="107"/>
+            <point key="canvasLocation" x="1534" y="-238"/>
         </scene>
         <!--Type Library Demo View Controller-->
         <scene sceneID="PcT-rN-24c">
@@ -102,11 +103,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-7Y-nRB" customClass="PORActionButtonView">
-                                <rect key="frame" x="123.5" y="277" width="128" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-7Y-nRB" customClass="PORActionButtonView">
+                                <rect key="frame" x="123" y="283" width="129" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello, Pufflavík!"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello, Puffins!"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="touchUp:" destination="fNM-3U-tFr" eventType="touchUpInside" id="eE9-Py-Gyx"/>
@@ -301,7 +302,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0t-68-bhB" customClass="PORActionButtonView">
-                                <rect key="frame" x="123" y="533" width="128" height="50"/>
+                                <rect key="frame" x="128.5" y="545" width="117" height="38"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Add Images"/>
@@ -329,6 +330,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwt-MQ-6XZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3184.8000000000002" y="882.90854572713647"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w4o-Bb-tHG">
+            <objects>
+                <viewController id="M0W-Qd-mSn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CNb-e0-ru4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-Xv-4cL" customClass="PORFloatingActionButtonView">
+                                <rect key="frame" x="263" y="491" width="64" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon-pin-50"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E2k-EV-jC4" firstAttribute="trailing" secondItem="pTF-Xv-4cL" secondAttribute="trailing" constant="48" id="GwY-Gz-gcc"/>
+                            <constraint firstItem="E2k-EV-jC4" firstAttribute="bottom" secondItem="pTF-Xv-4cL" secondAttribute="bottom" constant="48" id="RkK-Rr-VC4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E2k-EV-jC4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oos-X8-TkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="883"/>
         </scene>
         <!--Palette Demo View Controller-->
         <scene sceneID="8GC-OQ-rFe">
@@ -374,7 +406,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvc-eQ-61J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="-600"/>
+            <point key="canvasLocation" x="1534" y="-959"/>
         </scene>
         <!--Image Carousel View-->
         <scene sceneID="XFc-9Z-hxg">
@@ -392,6 +424,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-pin-50" width="50" height="50"/>
         <image name="image-lg-0" width="2000" height="1333"/>
     </resources>
 </document>

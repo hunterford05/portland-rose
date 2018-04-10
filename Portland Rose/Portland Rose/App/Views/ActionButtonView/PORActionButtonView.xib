@@ -12,9 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PORActionButtonView">
             <connections>
-                <outlet property="labelViewText" destination="DwF-kr-wgS" id="LqY-9R-Yvx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="cWC-h5-w5v"/>
                 <outlet property="viewBackground" destination="4BF-vs-gCd" id="1ur-F8-eXd"/>
+                <outlet property="viewLabelText" destination="DwF-kr-wgS" id="LqY-9R-Yvx"/>
                 <outlet property="viewShadow" destination="usO-Kb-yzR" id="ZTo-vd-e5e"/>
             </connections>
         </placeholder>
@@ -39,13 +39,13 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="DwF-kr-wgS" firstAttribute="centerY" secondItem="4BF-vs-gCd" secondAttribute="centerY" id="6ZP-wf-L1F"/>
-                        <constraint firstAttribute="height" constant="50" id="LCz-0o-9ux"/>
-                        <constraint firstAttribute="width" constant="128" id="TCf-hC-ks9"/>
+                        <constraint firstAttribute="height" constant="50" placeholder="YES" id="LCz-0o-9ux"/>
+                        <constraint firstAttribute="width" constant="128" placeholder="YES" id="TCf-hC-ks9"/>
                         <constraint firstItem="DwF-kr-wgS" firstAttribute="centerX" secondItem="4BF-vs-gCd" secondAttribute="centerX" id="gG6-8I-Snj"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="usO-Kb-yzR" firstAttribute="width" secondItem="4BF-vs-gCd" secondAttribute="width" id="Joy-UY-Wgl"/>
                 <constraint firstAttribute="trailing" secondItem="4BF-vs-gCd" secondAttribute="trailing" id="bpu-yJ-ysm"/>
