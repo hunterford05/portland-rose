@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PORImageCarouselView.h"
+#import "PORActionButtonView.h"
 
 @interface PORImageCarouselDemoViewController : UIViewController
 

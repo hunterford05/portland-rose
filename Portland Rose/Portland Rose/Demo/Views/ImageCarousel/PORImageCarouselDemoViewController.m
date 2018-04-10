@@ -10,6 +10,8 @@
 
 /// Names of demo images
 static NSString * const NAMES_IMAGES = @"image-lg-0,image-lg-1,image-lg-2";
+/// Name of initial demo image
+static NSString * const NAME_IMAGE_INITIAL = @"image-lg-1";
 
 @interface PORImageCarouselDemoViewController ()
 @property (weak, nonatomic) IBOutlet UIView *viewContainerCarousel;
@@ -21,6 +23,11 @@ static NSString * const NAMES_IMAGES = @"image-lg-0,image-lg-1,image-lg-2";
 - (void)viewDidLoad {
   [super viewDidLoad];
   _viewImageCarousel = self.childViewControllers.firstObject;
+  [_viewImageCarousel setImages: (NSMutableArray *)@[[UIImage imageNamed:NAME_IMAGE_INITIAL]]];
+}
+
+
+- (IBAction)touchUpInsideButton:(PORActionButtonView *)sender {
   [self loadImages];
 }
 

@@ -42,11 +42,6 @@
   
   PORImageCarouselImageView * iv = [self viewAtIndex:0];
   [self setViewControllers:@[iv] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-  
-  [self addChildViewController:iv];
-  [iv.view setFrame: self.view.bounds];
-  [self.view addSubview: iv.view];
-  [iv didMoveToParentViewController:self];
   self.dataSource = self;
 }
 
