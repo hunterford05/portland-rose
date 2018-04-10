@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PORActionButtonView.h"
 IB_DESIGNABLE
 
-@interface PORFloatingActionButtonView : UIControl
+@interface PORFloatingActionButtonView : PORActionButtonView
 
 @property IBInspectable UIColor * colorTint;
-@property IBInspectable UIColor * colorBackgroundFirst;
-@property IBInspectable UIColor * colorBackgroundSecond;
 @property IBInspectable UIImage * image;
 @property IBInspectable CGFloat radius;
 

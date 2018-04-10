@@ -12,9 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PORActionButtonView">
             <connections>
-                <outlet property="labelViewText" destination="DwF-kr-wgS" id="LqY-9R-Yvx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="cWC-h5-w5v"/>
                 <outlet property="viewBackground" destination="4BF-vs-gCd" id="1ur-F8-eXd"/>
+                <outlet property="viewLabelText" destination="DwF-kr-wgS" id="LqY-9R-Yvx"/>
                 <outlet property="viewShadow" destination="usO-Kb-yzR" id="ZTo-vd-e5e"/>
             </connections>
         </placeholder>

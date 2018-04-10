@@ -26,7 +26,6 @@
 		5AC2A8F6207BE8FF003B2AD5 /* PORImageCarouselImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */; };
 		5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */; };
 		5AD02B0C207D3FB800E48C9B /* PORFloatingActionButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD02B09207D3FB800E48C9B /* PORFloatingActionButtonView.m */; };
-		5AD02B0D207D3FB800E48C9B /* PORFloatingActionButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD02B0A207D3FB800E48C9B /* PORFloatingActionButtonView.xib */; };
 		5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738C72073D41B00B8E75C /* UIColor+Hex.m */; };
 		5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CA2073D7CB00B8E75C /* PORPaletteDemoViewController.m */; };
 		5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CD2073D8E100B8E75C /* PORPalette.m */; };
@@ -68,7 +67,6 @@
 		5AC2A8FA207BEB65003B2AD5 /* PORImageCarouselDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselDemoViewController.h; sourceTree = "<group>"; };
 		5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselDemoViewController.m; sourceTree = "<group>"; };
 		5AD02B09207D3FB800E48C9B /* PORFloatingActionButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORFloatingActionButtonView.m; sourceTree = "<group>"; };
-		5AD02B0A207D3FB800E48C9B /* PORFloatingActionButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PORFloatingActionButtonView.xib; sourceTree = "<group>"; };
 		5AD02B0B207D3FB800E48C9B /* PORFloatingActionButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORFloatingActionButtonView.h; sourceTree = "<group>"; };
 		5AF738C62073D41B00B8E75C /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		5AF738C72073D41B00B8E75C /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 			children = (
 				5AD02B0B207D3FB800E48C9B /* PORFloatingActionButtonView.h */,
 				5AD02B09207D3FB800E48C9B /* PORFloatingActionButtonView.m */,
-				5AD02B0A207D3FB800E48C9B /* PORFloatingActionButtonView.xib */,
 			);
 			path = FloatingActionButtonView;
 			sourceTree = "<group>";
@@ -366,7 +363,6 @@
 				5A445F1920729AAF009497B0 /* LaunchScreen.storyboard in Resources */,
 				5AF738D9207408EC00B8E75C /* PORActionButtonView.xib in Resources */,
 				5A445F1620729AAF009497B0 /* Assets.xcassets in Resources */,
-				5AD02B0D207D3FB800E48C9B /* PORFloatingActionButtonView.xib in Resources */,
 				5A445F1420729AAE009497B0 /* Main.storyboard in Resources */,
 				5A445F292072B790009497B0 /* Demo.storyboard in Resources */,
 				5AC2A8F6207BE8FF003B2AD5 /* PORImageCarouselImageView.xib in Resources */,
