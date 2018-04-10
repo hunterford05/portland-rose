@@ -103,11 +103,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-7Y-nRB" customClass="PORActionButtonView">
-                                <rect key="frame" x="123.5" y="277" width="128" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNM-7Y-nRB" customClass="PORActionButtonView">
+                                <rect key="frame" x="123" y="283" width="129" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello, Pufflavík!"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello, Puffins!"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="touchUp:" destination="fNM-3U-tFr" eventType="touchUpInside" id="eE9-Py-Gyx"/>
@@ -301,8 +301,8 @@
                                     <segue destination="4Rw-hT-NuU" kind="embed" id="wxs-ov-kT2"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="q0t-68-bhB" customClass="PORActionButtonView">
-                                <rect key="frame" x="123" y="533" width="128" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0t-68-bhB" customClass="PORActionButtonView">
+                                <rect key="frame" x="128.5" y="545" width="117" height="38"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Add Images"/>
@@ -340,8 +340,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-Xv-4cL" customClass="PORFloatingActionButtonView">
-                                <rect key="frame" x="199" y="505" width="128" height="50"/>
+                                <rect key="frame" x="245" y="473" width="82" height="82"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon-pin-50"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTint">
+                                        <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -418,6 +427,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-pin-50" width="50" height="50"/>
         <image name="image-lg-0" width="2000" height="1333"/>
     </resources>
 </document>

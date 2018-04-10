@@ -106,6 +106,7 @@ static NSString * const TEXT_PLACEHOLDER = @"Hello, Puffins!";
   [_labelViewText setTextColor:_colorLabel];
   
   // Update shadow view
+  _viewShadow.frame = _view.bounds;
   _viewShadow.layer.shadowColor = _colorBackgroundSecond.CGColor;
   _viewShadow.layer.shadowOffset = CGSizeMake(OFFSET_SHADOW, OFFSET_SHADOW);
   _viewShadow.layer.shadowRadius = RADIUS_SHADOW;

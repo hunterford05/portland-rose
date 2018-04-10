@@ -18,22 +18,17 @@ static CGFloat const OPACITY_SHADOW = 0.59;
 static CGFloat const OFFSET_SHADOW = 3.0;
 /// Opacity for button background on touch event
 static CGFloat const OPACITY_BACKGROUND_ON_TOUCH = 0.92;
-/// Opacity for button label on touch event
-static CGFloat const OPACITY_LABEL_ON_TOUCH = 0.84;
 /// Radius of the button's shadow
 static CGFloat const RADIUS_SHADOW = 12.0;
-/// Padding, as a multiple of the font size, between the top edge of the button and the text
-static CGFloat const PADDING_TOP = 1.0;
-/// Padding, as a multiple of the font size, between the leading (left) edge of the button and the text
-static CGFloat const PADDING_LEADING = 2.0;
-/// Default button text
+
+static CGFloat const RADIUS = 32.0;
 
 @interface PORFloatingActionButtonView()
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UIView *viewBackground;
+@property (weak, nonatomic) IBOutlet UIImageView *viewImage;
 @property (weak, nonatomic) IBOutlet UIView *viewShadow;
-
 
 @end
 
@@ -79,7 +74,7 @@ static CGFloat const PADDING_LEADING = 2.0;
 
 /// Calculate the button's intrinsic size
 - (CGSize) intrinsicContentSize{
-  return CGSizeMake(128, 128);
+  return CGSizeMake(_radius * 2, _radius * 2);
 }
 
 - (BOOL) beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event{
@@ -99,9 +94,13 @@ static CGFloat const PADDING_LEADING = 2.0;
 - (void) refresh{
   CGFloat cornerRadius;
   
+  [self setBackgroundColor:UIColor.clearColor];
+  
+  // Update corner radius
   cornerRadius = _view.frame.size.height / 2;
   
   // Update shadow view
+  _viewShadow.frame = _view.bounds;
   _viewShadow.layer.shadowColor = _colorBackgroundSecond.CGColor;
   _viewShadow.layer.shadowOffset = CGSizeMake(OFFSET_SHADOW, OFFSET_SHADOW);
   _viewShadow.layer.shadowRadius = RADIUS_SHADOW;
@@ -118,21 +117,25 @@ static CGFloat const PADDING_LEADING = 2.0;
   grad.endPoint = CGPointMake(1,1);
   [_viewBackground.layer insertSublayer:grad atIndex:0];
   _viewBackground.layer.cornerRadius = cornerRadius;
+  
+  // Update image view
+  [_viewImage setImage: _image];
+  [_viewImage setTintColor: _colorTint];
 }
 
 /// Perform initial setup once the XIB file has been loaded
 - (void) nibDidLoad{
   PORPalette * palette;
   
-  [self setBackgroundColor:UIColor.clearColor];
-  
   // Configure colors
   palette = [PORPalette sharedPalette];
-  _colorLabel = palette.colorTextInverted;
+  _colorTint = palette.colorTextInverted;
   _colorBackgroundFirst = palette.colorPrimary;
   _colorBackgroundSecond = palette.colorSecondary;
   
-  // Configure
+  // Configure radius
+  _radius = RADIUS;
+  [self invalidateIntrinsicContentSize];
 }
 
 

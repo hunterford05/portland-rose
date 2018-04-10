@@ -39,8 +39,8 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="DwF-kr-wgS" firstAttribute="centerY" secondItem="4BF-vs-gCd" secondAttribute="centerY" id="6ZP-wf-L1F"/>
-                        <constraint firstAttribute="height" constant="50" id="LCz-0o-9ux"/>
-                        <constraint firstAttribute="width" constant="128" id="TCf-hC-ks9"/>
+                        <constraint firstAttribute="height" constant="50" placeholder="YES" id="LCz-0o-9ux"/>
+                        <constraint firstAttribute="width" constant="128" placeholder="YES" id="TCf-hC-ks9"/>
                         <constraint firstItem="DwF-kr-wgS" firstAttribute="centerX" secondItem="4BF-vs-gCd" secondAttribute="centerX" id="gG6-8I-Snj"/>
                     </constraints>
                 </view>

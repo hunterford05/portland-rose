@@ -11,8 +11,10 @@ IB_DESIGNABLE
 
 @interface PORFloatingActionButtonView : UIControl
 
-@property IBInspectable UIColor * colorLabel;
+@property IBInspectable UIColor * colorTint;
 @property IBInspectable UIColor * colorBackgroundFirst;
 @property IBInspectable UIColor * colorBackgroundSecond;
+@property IBInspectable UIImage * image;
+@property IBInspectable CGFloat radius;
 
 @end
