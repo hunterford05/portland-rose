@@ -27,10 +27,20 @@
   [self.contentView layoutSubviews];
 }
 
+- (void) layoutSubviews{
+  [super layoutSubviews];
+  [_viewItinerarySummary setFrame:self.contentView.bounds];
+}
+
 #pragma mark - helpers
 
 - (void) setUp {
-  _viewItinerarySummary = [[PORItinerarySummaryView alloc] initWithFrame: self.contentView.bounds];
+  CGRect frame;
+  
+  frame = self.contentView.bounds;
+  _viewItinerarySummary.clipsToBounds = YES;
+//  frame.size.height = 550.0;
+  _viewItinerarySummary = [[PORItinerarySummaryView alloc] initWithFrame: frame];
   [_viewItinerarySummary layoutSubviews];
   [self.contentView addSubview:_viewItinerarySummary];
   [self setUpConstraints];
