@@ -18,6 +18,7 @@
 		5A5676EB207E8710002656F8 /* PORItinerarySummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676EA207E8710002656F8 /* PORItinerarySummaryView.m */; };
 		5A5676F1207E8778002656F8 /* PORImageCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676F0207E8777002656F8 /* PORImageCarouselView.m */; };
 		5A5676F3207E87B8002656F8 /* PORItinerarySummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5676F2207E87B8002656F8 /* PORItinerarySummaryView.xib */; };
+		5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676FE207EB46E002656F8 /* PORItinerarySummaryCellView.m */; };
 		5A7D9A312077FCA300EF6D73 /* DemoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */; };
 		5A7D9A342077FFE300EF6D73 /* PORImageCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D9A332077FFE300EF6D73 /* PORImageCardView.xib */; };
 		5A7D9A372077FFF800EF6D73 /* PORImageCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D9A362077FFF800EF6D73 /* PORImageCardView.m */; };
@@ -57,6 +58,8 @@
 		5A5676EF207E8777002656F8 /* PORImageCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselView.h; sourceTree = "<group>"; };
 		5A5676F0207E8777002656F8 /* PORImageCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselView.m; sourceTree = "<group>"; };
 		5A5676F2207E87B8002656F8 /* PORItinerarySummaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORItinerarySummaryView.xib; sourceTree = "<group>"; };
+		5A5676FE207EB46E002656F8 /* PORItinerarySummaryCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORItinerarySummaryCellView.m; sourceTree = "<group>"; };
+		5A5676FF207EB46E002656F8 /* PORItinerarySummaryCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryCellView.h; sourceTree = "<group>"; };
 		5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DemoAssets.xcassets; sourceTree = "<group>"; };
 		5A7D9A332077FFE300EF6D73 /* PORImageCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORImageCardView.xib; sourceTree = "<group>"; };
 		5A7D9A352077FFF800EF6D73 /* PORImageCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCardView.h; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 				5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */,
 				5A5676EE207E8777002656F8 /* ImageCarouselView */,
 				5A5676EC207E8721002656F8 /* ItinerarySummaryView */,
+				5A5676FD207EB46E002656F8 /* ItinerarySummaryCellView */,
 				5A3A99FC2076A70900191EEF /* TabBarView */,
 				5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */,
 			);
@@ -238,6 +242,15 @@
 				5A5676F0207E8777002656F8 /* PORImageCarouselView.m */,
 			);
 			path = ImageCarouselView;
+			sourceTree = "<group>";
+		};
+		5A5676FD207EB46E002656F8 /* ItinerarySummaryCellView */ = {
+			isa = PBXGroup;
+			children = (
+				5A5676FF207EB46E002656F8 /* PORItinerarySummaryCellView.h */,
+				5A5676FE207EB46E002656F8 /* PORItinerarySummaryCellView.m */,
+			);
+			path = ItinerarySummaryCellView;
 			sourceTree = "<group>";
 		};
 		5A7D9A322077FFB100EF6D73 /* ImageCardView */ = {
@@ -411,6 +424,7 @@
 				5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */,
 				5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */,
 				5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */,
+				5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */,
 				5AF738DC207408F600B8E75C /* PORActionButtonView.m in Sources */,
 				5AF738D12073FB1100B8E75C /* PORTypeLibrary.m in Sources */,
 			);
