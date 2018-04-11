@@ -29,5 +29,7 @@
 @property UIColor * colorTextInverted;
 /// Loud (emphasized) text color
 @property UIColor * colorTextLoud;
+/// Muted (soft) text color
+@property UIColor * colorTextMuted;
 
 @end

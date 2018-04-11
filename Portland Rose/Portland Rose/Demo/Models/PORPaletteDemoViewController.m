@@ -15,6 +15,7 @@ static NSString * const NAME_COLOR_PRIMARY = @"Primary";
 static NSString * const NAME_COLOR_SECONDARY = @"Secondary";
 static NSString * const NAME_COLOR_TEXT = @"Text";
 static NSString * const NAME_COLOR_TEXT_LOUD = @"Text (Loud)";
+static NSString * const NAME_COLOR_TEXT_MUTED = @"Text (Muted)";
 
 static NSString * const REUSE_IDENTIFIER_CELL_COLOR = @"ColorCell";
 
@@ -41,7 +42,8 @@ static NSString * const REUSE_IDENTIFIER_CELL_COLOR = @"ColorCell";
               @[NAME_COLOR_BACKGROUND, _palette.colorBackground],
               @[NAME_COLOR_DIVIDER, _palette.colorDivider],
               @[NAME_COLOR_TEXT, _palette.colorText],
-              @[NAME_COLOR_TEXT_LOUD, _palette.colorTextLoud]
+              @[NAME_COLOR_TEXT_LOUD, _palette.colorTextLoud],
+              @[NAME_COLOR_TEXT_MUTED, _palette.colorTextMuted]
               ];
 }
 
