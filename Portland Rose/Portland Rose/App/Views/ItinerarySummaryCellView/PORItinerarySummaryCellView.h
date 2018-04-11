@@ -15,5 +15,7 @@ IB_DESIGNABLE
 
 /// Table cell index
 @property NSUInteger index;
+// Itinerary summary view
+@property PORItinerarySummaryView * viewItinerarySummary;
 
 @end
