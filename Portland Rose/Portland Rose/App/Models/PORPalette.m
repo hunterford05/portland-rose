@@ -38,6 +38,7 @@ static CGFloat const OPACITY_FAINT = 0.25;
     _colorText = [UIColor colorWithHexString: HEX_COMET];
     _colorTextInverted = [UIColor colorWithHexString: HEX_WHITE];
     _colorTextLoud = [UIColor colorWithHexString:HEX_BLACK];
+    _colorTextMuted = [UIColor colorWithHexString: HEX_COMET alpha:OPACITY_FAINT];
   }
   return self;
 }
