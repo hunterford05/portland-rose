@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PORImageCardView.h"
+#import "PORPalette.h"
+#import "PORTypeLibrary.h"
+
 IB_DESIGNABLE
 
 @interface PORItinerarySummaryView : UIView
