@@ -15,4 +15,15 @@ IB_DESIGNABLE
 
 @interface PORItinerarySummaryView : UIView
 
+/// Itineray cost (dollars, lower bound)
+@property (nonatomic) IBInspectable NSUInteger costLower;
+/// Itinerary cost (dollars, upper bound)
+@property (nonatomic) IBInspectable NSUInteger costUpper;
+/// Itinerary duration (minutes)
+@property (nonatomic) IBInspectable NSUInteger duration;
+/// Itinerary image
+@property (nonatomic) IBInspectable UIImage * image;
+/// Itineray title
+@property (nonatomic) IBInspectable NSString * title;
+
 @end

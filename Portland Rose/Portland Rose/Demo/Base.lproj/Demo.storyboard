@@ -375,16 +375,28 @@
                         <sections>
                             <tableViewSection id="QZF-ni-WEa">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItinerarySummaryCell" rowHeight="495" id="ayP-Kh-Dz5">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="495"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItinerarySummaryCell" rowHeight="515" id="ayP-Kh-Dz5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="515"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayP-Kh-Dz5" id="T3K-hR-ODa">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="494.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="514.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apw-W3-deM" customClass="PORItinerarySummaryView">
-                                                    <rect key="frame" x="16" y="11" width="343" height="473"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="493"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Puffin Watching Picnic In Snæfellsness"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="costLower">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="costUpper">
+                                                            <integer key="value" value="55"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                            <integer key="value" value="300"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
