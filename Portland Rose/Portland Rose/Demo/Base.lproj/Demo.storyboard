@@ -368,17 +368,17 @@
         <scene sceneID="0Lr-k9-ntj">
             <objects>
                 <tableViewController id="cfq-lj-ElT" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="txa-wt-UvJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="txa-wt-UvJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection id="QZF-ni-WEa">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItinerarySummaryCell" rowHeight="515" id="ayP-Kh-Dz5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItinerarySummaryCell" rowHeight="515" id="ayP-Kh-Dz5">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="515"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayP-Kh-Dz5" id="T3K-hR-ODa">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayP-Kh-Dz5" id="T3K-hR-ODa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="514.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -386,7 +386,6 @@
                                                     <rect key="frame" x="16" y="11" width="343" height="493"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Puffin Watching Picnic In Snæfellsness"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="costLower">
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
@@ -396,6 +395,7 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                                             <integer key="value" value="300"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Puffin Watching Picnic In Snæfellsness"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -404,6 +404,38 @@
                                                 <constraint firstItem="apw-W3-deM" firstAttribute="top" secondItem="T3K-hR-ODa" secondAttribute="topMargin" id="JNq-I1-dbK"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="apw-W3-deM" secondAttribute="bottom" id="hBk-uK-Y7U"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="apw-W3-deM" secondAttribute="trailing" id="q4B-qC-ZFt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItinerarySummaryCell" rowHeight="515" id="F9O-zi-M6B">
+                                        <rect key="frame" x="0.0" y="515" width="375" height="515"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F9O-zi-M6B" id="0Dt-eQ-ASR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="514.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="493" translatesAutoresizingMaskIntoConstraints="NO" id="2yF-tx-yi6" customClass="PORItinerarySummaryView">
+                                                    <rect key="frame" x="16" y="11" width="343" height="493"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="costLower">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="costUpper">
+                                                            <integer key="value" value="55"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                            <integer key="value" value="300"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="image-lg-0"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Puffin Watching Party"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2yF-tx-yi6" secondAttribute="trailing" id="eLH-0E-wNV"/>
+                                                <constraint firstItem="2yF-tx-yi6" firstAttribute="top" secondItem="0Dt-eQ-ASR" secondAttribute="topMargin" id="gxB-u7-c1z"/>
+                                                <constraint firstItem="2yF-tx-yi6" firstAttribute="leading" secondItem="0Dt-eQ-ASR" secondAttribute="leadingMargin" id="poq-IQ-bxa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

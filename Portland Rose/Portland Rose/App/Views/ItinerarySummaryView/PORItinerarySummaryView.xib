@@ -14,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PORItinerarySummaryView">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="Ezm-hq-uGf"/>
+                <outlet property="viewButtonShowItinerary" destination="7SZ-hl-VCi" id="JZW-Hh-4Xh"/>
                 <outlet property="viewCardImage" destination="D3o-Vu-1Nw" id="OeD-ow-9G6"/>
                 <outlet property="viewLabelCost" destination="ot1-Ha-bFS" id="913-7F-H2k"/>
                 <outlet property="viewLabelDuration" destination="iGe-3c-wF7" id="liB-xa-JJ4"/>
@@ -45,7 +46,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hjz-bs-Irj">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="hjz-bs-Irj">
                     <rect key="frame" x="32" y="349" width="285" height="110"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puffin Watching Picnic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ff-5k-iCJ">
@@ -100,12 +101,12 @@
             <constraints>
                 <constraint firstItem="D3o-Vu-1Nw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="3V4-4e-Eyd"/>
                 <constraint firstItem="hjz-bs-Irj" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GTK-8T-V7S"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hjz-bs-Irj" secondAttribute="bottom" constant="32" id="Hmg-nl-3Ex"/>
                 <constraint firstItem="hjz-bs-Irj" firstAttribute="top" secondItem="D3o-Vu-1Nw" secondAttribute="bottom" constant="32" id="Pfh-Ax-gBg"/>
                 <constraint firstItem="D3o-Vu-1Nw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="hK6-lw-xSu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hjz-bs-Irj" secondAttribute="trailing" constant="32" id="i8S-Cc-t97"/>
                 <constraint firstItem="hjz-bs-Irj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="ntS-kr-y39"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="D3o-Vu-1Nw" secondAttribute="trailing" constant="32" id="xsC-8W-Axs"/>
-                <constraint firstAttribute="bottom" secondItem="hjz-bs-Irj" secondAttribute="bottom" constant="32" id="xwf-wE-lQG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

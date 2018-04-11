@@ -10,6 +10,7 @@
 #import "PORImageCardView.h"
 #import "PORPalette.h"
 #import "PORTypeLibrary.h"
+#import "PORActionButtonView.h"
 
 IB_DESIGNABLE
 
@@ -25,5 +26,8 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable UIImage * image;
 /// Itineray title
 @property (nonatomic) IBInspectable NSString * title;
+/// Show itinerary button
+@property (weak, nonatomic) IBOutlet PORActionButtonView *viewButtonShowItinerary;
+
 
 @end
