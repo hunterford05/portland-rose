@@ -66,6 +66,7 @@ The `PORPalette` model stores Portland Rose's custom colors. These colors are or
 * **Text Color** — `colorText` is the default color of application text.
 * **Text Color (Inverted)** — `colorTextInverted` is the default color for text displayed on a dark color background.
 * **Text Color (Loud)** — `colorTextLoud` is the default color for emphasized text.
+* **Text Color (Muted)** — `colorTextMuted` is the default color for subtle text.
 
 ### Usage
 
