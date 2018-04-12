@@ -22,6 +22,8 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable NSUInteger costUpper;
 /// Itinerary duration (minutes)
 @property (nonatomic) IBInspectable NSUInteger duration;
+/// Itinerary icons
+@property (nonatomic) IBInspectable NSMutableArray * icons;
 /// Itinerary image
 @property (nonatomic) IBInspectable UIImage * image;
 /// Itineray title

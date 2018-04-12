@@ -35,6 +35,8 @@ static NSString * const NAME_NIB = @"PORItinerarySummaryView";
 @property (weak, nonatomic) IBOutlet UILabel *viewLabelTitle;
 /// Stack view showing itinerary summary icons, cost, etc.
 @property (weak, nonatomic) IBOutlet UIStackView *viewStackDashboard;
+/// Stack view showing summary icons
+@property (weak, nonatomic) IBOutlet UIStackView *viewStackDashboardIcons;
 
 @end
 
@@ -69,6 +71,11 @@ static NSString * const NAME_NIB = @"PORItinerarySummaryView";
 - (void) setDuration:(NSUInteger) duration{
   _duration = duration;
   [_viewLabelDuration setText: [self formattedDuration]];
+}
+
+- (void) setIcons:(NSMutableArray *) icons{
+  _icons = icons;
+  [self updateIcons];
 }
 
 - (void) setImage:(UIImage *) image{
@@ -144,6 +151,33 @@ static NSString * const NAME_NIB = @"PORItinerarySummaryView";
     v.tintColor = palette.colorText;
   }
   
+}
+
+/**
+ * Update the interary dashboard's icons
+ */
+- (void) updateIcons{
+  UIImageView * icon;
+  PORPalette * palette;
+  
+  palette = PORPalette.sharedPalette;
+  
+  // If there are no icons to show, hide the stack view
+  _viewStackDashboardIcons.hidden = _icons.count == 0;
+  
+  // Remove old icons
+  for (UIView * av in _viewStackDashboardIcons.arrangedSubviews){
+    [NSLayoutConstraint deactivateConstraints: av.constraints];
+    [av removeFromSuperview];
+  }
+  
+  // Add and configure new ones
+  for (UIImage * img in _icons){
+    icon = [[UIImageView alloc] initWithImage:img];
+    [icon addConstraint: [NSLayoutConstraint constraintWithItem:icon attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:icon attribute: NSLayoutAttributeWidth multiplier:1 constant:0]];
+    [icon setTintColor: palette.colorText];
+    [_viewStackDashboardIcons addArrangedSubview:icon];
+  }
 }
 
 @end

@@ -19,7 +19,8 @@
                 <outlet property="viewLabelCost" destination="ot1-Ha-bFS" id="913-7F-H2k"/>
                 <outlet property="viewLabelDuration" destination="iGe-3c-wF7" id="liB-xa-JJ4"/>
                 <outlet property="viewLabelTitle" destination="8Ff-5k-iCJ" id="uLP-Va-IwX"/>
-                <outlet property="viewStackDashboard" destination="PPf-kc-ERS" id="c48-Kx-Q0B"/>
+                <outlet property="viewStackDashboard" destination="PPf-kc-ERS" id="Akf-9O-0yZ"/>
+                <outlet property="viewStackDashboardIcons" destination="Q87-5j-lh8" id="hSh-Wk-Fwk"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -55,9 +56,12 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PPf-kc-ERS">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PPf-kc-ERS">
                             <rect key="frame" x="88.5" y="32" width="146.5" height="18"/>
                             <subviews>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q87-5j-lh8">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="18"/>
+                                </stackView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-clock-50" translatesAutoresizingMaskIntoConstraints="NO" id="B5d-K7-pFG">
                                     <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
                                     <constraints>
@@ -84,6 +88,7 @@
                                 </label>
                             </subviews>
                             <constraints>
+                                <constraint firstItem="Q87-5j-lh8" firstAttribute="height" secondItem="PPf-kc-ERS" secondAttribute="height" id="LJP-bv-P4C"/>
                                 <constraint firstAttribute="height" constant="18" id="fHN-yH-5wX"/>
                             </constraints>
                         </stackView>
