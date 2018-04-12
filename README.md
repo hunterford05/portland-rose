@@ -298,3 +298,62 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 
 1. In `PORTabBarView.xib`, copy and paste one of the button views; *this ensures that the necessary constraints are copied as well.* 
 2. Follow the steps above for changing the new button's image.
+
+## ItinerarySummaryCellView
+
+`PORItinerarySummaryCellView` is a subclass of `UITableCellView`. It is responsible for rendering a single `PORItinerarySummaryView` and for notifying its delegate of user interactions with the same.
+
+### Usage
+
+Follow the same steps you would follow to use any other custom `UITableCellView` subclass, then:
+
+1. Ensure that the table view uses **[self-sizing table view cells](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html)**.
+2. Set the table view's `tableView:cellForRowAtIndexPath:` method:
+   ```objective-c
+   ((PORItinerarySummaryCellView *) cell).index = indexPath.row;
+   ``` 
+3. Add the `<PORItinerarySummaryCellViewDelegate>` protocol to the table view:
+   ```objective-c
+   // ExampleTableView.h
+   @interface @interface ExampleTableView : UITableViewController <PORItinerarySummaryCellViewDelegate>
+   @end
+   ```
+   and implement its methods:
+   ```objective-c
+   // ExampleTableView.m
+   //...
+   - (void) didSelectItineraryAtIndex:(NSUInteger)index{
+     NSLog(@"Did select itinerary #%lu", (unsigned long) index);
+   }
+   //...
+   ```
+
+### Customization
+
+To customize the cell's `PORItinerarySummaryView` appearance, update its parent table view's `tableView:cellForItemAtIndexPath:` method:
+
+```objective-c
+PORItinerarySummaryView * isv = ((PorItinerarySummaryCellView *) cell).viewItinerarySummary;
+isv.title = @"Puffin Watching Picnic";
+```
+
+For a list of customiziation options, see the documentation for `PORItinerarySummaryView`.
+
+## ItinerarySummaryView
+
+The `PORItinerarySummaryView` renders a summary of a date itinerary.
+
+### Usage
+
+A `PORItinerarySummaryView` can be instantiated either via the interface builder or programmatically.
+
+### Customization
+
+These attributes may be customized:
+
+* **Cost (Lower Bound)** — `costLower` is the lower bound of the itinerary's total cost estimate
+* **cost (upper bound)** — `costUpper` is the upper bound of the itinerary's total cost estimate
+* **Duration** — `curation` is the estimated itinerary duration *in minutes*.
+* **icson** — `icons` is an array of icon images to display
+* **Image** — `image` is the itinerary's primary image
+* **Title** — `title` is the itinerary title
