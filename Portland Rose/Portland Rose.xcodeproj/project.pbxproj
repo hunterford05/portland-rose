@@ -198,10 +198,6 @@
 				5A7B6B88207FD77200C99AA0 /* PORItinerary.m */,
 				5A7B6B84207FD67700C99AA0 /* PORLocation.h */,
 				5A7B6B85207FD67700C99AA0 /* PORLocation.m */,
-				5AF738CC2073D8E100B8E75C /* PORPalette.h */,
-				5AF738CD2073D8E100B8E75C /* PORPalette.m */,
-				5AF738CF2073FB1100B8E75C /* PORTypeLibrary.h */,
-				5AF738D02073FB1100B8E75C /* PORTypeLibrary.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +292,10 @@
 			children = (
 				5AF738C62073D41B00B8E75C /* UIColor+Hex.h */,
 				5AF738C72073D41B00B8E75C /* UIColor+Hex.m */,
+				5AF738CC2073D8E100B8E75C /* PORPalette.h */,
+				5AF738CD2073D8E100B8E75C /* PORPalette.m */,
+				5AF738CF2073FB1100B8E75C /* PORTypeLibrary.h */,
+				5AF738D02073FB1100B8E75C /* PORTypeLibrary.m */,
 			);
 			name = Helpers;
 			path = "New Group";
