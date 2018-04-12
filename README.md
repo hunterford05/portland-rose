@@ -55,6 +55,39 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 # Models
 
+## Activity
+
+* **Amount (minimum estimate)** — `amountMin` is the minimum estimated price for the activity.
+* **Amount (Maximum Estimate)** — `amountMax` is the maximum estimated price for the activity.
+* **Icon** – `icon` is an icon used to represent the activity.
+* **title** — `title` is a descriptive title for the activity.
+* **Location** — `location` is the activity's general location. See `PORLocation` documentation.
+
+## Badge
+
+Badges provide an at-a-glance summary of an itinerary.
+
+* **Icon** — `icon` is the badge's visual representation.
+* **Title** — `title` is the name of the badge.
+
+## Itinerary
+
+* **Activities** — `activities` is a list of all activities that are a part of this itinerary. See `PORActivity` for more information.
+* **badges** — `badges` is a list of all badges associated with this itinerary. See `PORBadge` for more information.
+* **Cost (Lower Estimate)** — `costLower` is the lower estimate for the itinerary's total cost.
+* **Cost (Upper Estimate)** — `costUpper` is the upper estimate for the itinerary's total cost. 
+* **duration** — `duration` is the duration estimate for the itinerary *in minutes*.
+* **Main Image** — `imageMain` is the primary image associated with the itinerary. 
+* **Secondary Images** – `imagesSecondary` is a list of secondary images associated with the itinerary.
+* **Title** — `title` is this itinerary's display title. 
+
+
+## Location
+
+* **Title** — `title` is the name of the location, e.g. "Puffin Cafe" or "505 College Street".
+
+# Helpers
+
 ## Palette
 
 The `PORPalette` model stores Portland Rose's custom colors. These colors are organized by function (e.g. color for dividers) rather than by visual color (e.g. "red"). 
@@ -147,7 +180,6 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
   ```objective-c
   UIFont * font = typeLibrary.fontBody;
   ```
-
 # Views
 
 ## ActionButtonView
