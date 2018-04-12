@@ -23,6 +23,10 @@
 		5A7B6B86207FD67700C99AA0 /* PORLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B85207FD67700C99AA0 /* PORLocation.m */; };
 		5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B88207FD77200C99AA0 /* PORItinerary.m */; };
 		5A7B6B8C207FD88E00C99AA0 /* PORBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B8B207FD88E00C99AA0 /* PORBadge.m */; };
+		5A7B6B96207FEF6A00C99AA0 /* PORItinerary+Mocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B95207FEF6A00C99AA0 /* PORItinerary+Mocks.m */; };
+		5A7B6B9C207FF67E00C99AA0 /* PORBadge+Mocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B9B207FF67E00C99AA0 /* PORBadge+Mocks.m */; };
+		5A7B6B9F207FF6E700C99AA0 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B9E207FF6E700C99AA0 /* NSString+Random.m */; };
+		5A7B6BA3207FF9C100C99AA0 /* NSNumber+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6BA2207FF9C100C99AA0 /* NSNumber+Random.m */; };
 		5A7D9A312077FCA300EF6D73 /* DemoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */; };
 		5A7D9A342077FFE300EF6D73 /* PORImageCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D9A332077FFE300EF6D73 /* PORImageCardView.xib */; };
 		5A7D9A372077FFF800EF6D73 /* PORImageCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D9A362077FFF800EF6D73 /* PORImageCardView.m */; };
@@ -73,6 +77,14 @@
 		5A7B6B88207FD77200C99AA0 /* PORItinerary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItinerary.m; sourceTree = "<group>"; };
 		5A7B6B8A207FD88E00C99AA0 /* PORBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORBadge.h; sourceTree = "<group>"; };
 		5A7B6B8B207FD88E00C99AA0 /* PORBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORBadge.m; sourceTree = "<group>"; };
+		5A7B6B94207FEF6A00C99AA0 /* PORItinerary+Mocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PORItinerary+Mocks.h"; sourceTree = "<group>"; };
+		5A7B6B95207FEF6A00C99AA0 /* PORItinerary+Mocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PORItinerary+Mocks.m"; sourceTree = "<group>"; };
+		5A7B6B9A207FF67E00C99AA0 /* PORBadge+Mocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PORBadge+Mocks.h"; sourceTree = "<group>"; };
+		5A7B6B9B207FF67E00C99AA0 /* PORBadge+Mocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PORBadge+Mocks.m"; sourceTree = "<group>"; };
+		5A7B6B9D207FF6E700C99AA0 /* NSString+Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Random.h"; sourceTree = "<group>"; };
+		5A7B6B9E207FF6E700C99AA0 /* NSString+Random.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Random.m"; sourceTree = "<group>"; };
+		5A7B6BA1207FF9C100C99AA0 /* NSNumber+Random.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Random.h"; sourceTree = "<group>"; };
+		5A7B6BA2207FF9C100C99AA0 /* NSNumber+Random.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Random.m"; sourceTree = "<group>"; };
 		5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DemoAssets.xcassets; sourceTree = "<group>"; };
 		5A7D9A332077FFE300EF6D73 /* PORImageCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORImageCardView.xib; sourceTree = "<group>"; };
 		5A7D9A352077FFF800EF6D73 /* PORImageCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCardView.h; sourceTree = "<group>"; };
@@ -190,7 +202,6 @@
 				5A3A99FB2076A6FB00191EEF /* ActionButtonView */,
 				5AD02B08207D3FB800E48C9B /* FloatingActionButtonView */,
 				5A7D9A322077FFB100EF6D73 /* ImageCardView */,
-				5A5676E5207E827B002656F8 /* ImageCarouselView */,
 				5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */,
 				5A5676EE207E8777002656F8 /* ImageCarouselView */,
 				5A5676EC207E8721002656F8 /* ItinerarySummaryView */,
@@ -236,7 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */,
+				5A7B6BA0207FF70E00C99AA0 /* Mocks */,
 				5AF738E120740F3000B8E75C /* Models */,
+				5A7B6B90207FEE9B00C99AA0 /* Helpers */,
 				5AF738E020740F2100B8E75C /* Views */,
 				5A445F272072B790009497B0 /* Demo.storyboard */,
 				5A4ABF352072C36400349DBB /* PORDemosViewController.h */,
@@ -280,6 +293,28 @@
 				5A7B6B81207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m */,
 			);
 			path = ItinerarySummary;
+			sourceTree = "<group>";
+		};
+		5A7B6B90207FEE9B00C99AA0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5A7B6B9D207FF6E700C99AA0 /* NSString+Random.h */,
+				5A7B6B9E207FF6E700C99AA0 /* NSString+Random.m */,
+				5A7B6BA1207FF9C100C99AA0 /* NSNumber+Random.h */,
+				5A7B6BA2207FF9C100C99AA0 /* NSNumber+Random.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5A7B6BA0207FF70E00C99AA0 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5A7B6B9A207FF67E00C99AA0 /* PORBadge+Mocks.h */,
+				5A7B6B9B207FF67E00C99AA0 /* PORBadge+Mocks.m */,
+				5A7B6B94207FEF6A00C99AA0 /* PORItinerary+Mocks.h */,
+				5A7B6B95207FEF6A00C99AA0 /* PORItinerary+Mocks.m */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		5A7D9A322077FFB100EF6D73 /* ImageCardView */ = {
@@ -441,9 +476,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7B6B9F207FF6E700C99AA0 /* NSString+Random.m in Sources */,
 				5A445F1120729AAE009497B0 /* ViewController.m in Sources */,
 				5A7B6B82207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m in Sources */,
 				5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */,
+				5A7B6B96207FEF6A00C99AA0 /* PORItinerary+Mocks.m in Sources */,
 				5A7D9A372077FFF800EF6D73 /* PORImageCardView.m in Sources */,
 				5AD02B0C207D3FB800E48C9B /* PORFloatingActionButtonView.m in Sources */,
 				5AF738DF20740F0B00B8E75C /* PORActionButtonDemoViewController.m in Sources */,
@@ -457,12 +494,14 @@
 				5A4ABF372072C36400349DBB /* PORDemosViewController.m in Sources */,
 				5A5676EB207E8710002656F8 /* PORItinerarySummaryView.m in Sources */,
 				5A9333BF207D690B003F7217 /* PORActivity.m in Sources */,
+				5A7B6B9C207FF67E00C99AA0 /* PORBadge+Mocks.m in Sources */,
 				5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */,
 				5A7B6B8C207FD88E00C99AA0 /* PORBadge.m in Sources */,
 				5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */,
 				5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */,
 				5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */,
 				5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */,
+				5A7B6BA3207FF9C100C99AA0 /* NSNumber+Random.m in Sources */,
 				5AF738DC207408F600B8E75C /* PORActionButtonView.m in Sources */,
 				5A7B6B86207FD67700C99AA0 /* PORLocation.m in Sources */,
 				5AF738D12073FB1100B8E75C /* PORTypeLibrary.m in Sources */,

@@ -18,7 +18,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
 /// Array of UIImages for itinerary
 @property NSMutableArray * icons;
 /// Demo itinerary
-@property PORItinerary * itinerary;
+@property NSArray <PORItinerary *> * itineraries;
 
 @end
 
@@ -45,15 +45,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
 }
 
 - (void) loadItinerary {
-  _itinerary = [[PORItinerary alloc] init];
-  _itinerary.title = @"Puffin Watching Picnic In Snæfellsness";
-  _itinerary.duration = 505;
-  _itinerary.costLower = 0;
-  _itinerary.costUpper = 55;
-  _itinerary.imageMain = [UIImage imageNamed:@"image-lg-0"];
-  _itinerary.badges = @[
-                        [[PORBadge alloc] initWithIcon: _icons.firstObject andTitle:@"Forest"]
-                        ];
+  _itineraries = [PORItinerary mocks: 5];
 }
 
 #pragma mark - events
@@ -78,7 +70,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
   index = indexPath.row;
   cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL];
   iCell = (PORItinerarySummaryCellView *) cell;
-  [iCell setItinerary: _itinerary];
+  [iCell setItinerary: _itineraries[index]];
   [iCell setIndex:index];
   [iCell setDelegate: self];
   
@@ -86,7 +78,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [_itineraries count];
 }
 
 @end

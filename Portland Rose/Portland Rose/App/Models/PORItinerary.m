@@ -15,7 +15,9 @@
   
   a = [[NSMutableArray alloc] init];
   for (PORBadge * b in _badges){
-    [a addObject: b.icon];
+    if (b.icon){
+      [a addObject: b.icon];
+    }
   }
   
   return [[NSArray alloc] initWithArray: a];
