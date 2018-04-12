@@ -21,6 +21,8 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 |   |-- Assets.xcassets
 |   |-- Main.storyboard
 |-- demo
+|   |-- Helpers
+|   |-- Mocks
 |   |-- Models
 |   |-- Views
 |   |-- PORDemosViewController.h
@@ -43,8 +45,10 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 `Demo` contains view controllers and other components used to demo application components outside of the context of the app itself.
 
-* **Views** — The `Views` subdirectory contains view controller classes designed to demo specific view classes.
+* **Helpers** - the `Helpers`subdirectory contains helper classes used for testing purposes
+* **Mocks** - The `Mocks` subdirectory contains categories used to generate randomized instances of models for testing purposes
 * **Models** — The `Models` subdirectory contains view controller classes designed to demo model classes.
+* **Views** — The `Views` subdirectory contains view controller classes designed to demo specific view classes.
 * **PORDemosViewController.m** and **PORDemosViewController.h** — These are the source files for the demo index scene.
 * **Demo.storyboard** — `Demo.storyboard` is the interface builder for demo view controllers.
 
@@ -365,11 +369,9 @@ Follow the same steps you would follow to use any other custom `UITableCellView`
 To customize the cell's `PORItinerarySummaryView` appearance, update its parent table view's `tableView:cellForItemAtIndexPath:` method:
 
 ```objective-c
-PORItinerarySummaryView * isv = ((PorItinerarySummaryCellView *) cell).viewItinerarySummary;
-isv.title = @"Puffin Watching Picnic";
+PORItinerary * itinerary = [[PORItinerary alloc] init];
+PORItinerarySummaryView * isv = ((PorItinerarySummaryCellView *) cell).itinerary = itinerary;
 ```
-
-For a list of customiziation options, see the documentation for `PORItinerarySummaryView`.
 
 ## ItinerarySummaryView
 
