@@ -7,14 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PORLocation.h"
+#import <UIKit/UIKit.h>
 
 @interface PORActivity : NSObject
 
-/// Activity title
-@property NSString * title;
 /// Minimum price estimate (cents)
 @property NSUInteger amountMin;
 /// Maximum price estimate (cents)
 @property NSUInteger amountMax;
+/// Activity icon
+@property UIImage * icon;
+/// Activity title
+@property NSString * title;
+/// Location
+@property PORLocation * location;
 
 @end
