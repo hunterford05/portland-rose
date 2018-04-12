@@ -19,11 +19,12 @@ IB_DESIGNABLE
 
 @interface PORItinerarySummaryCellView : UITableViewCell
 
+// Table cell delegate
+@property id <PORItinerarySummaryCellViewDelegate> delegate;
 /// Table cell index
 @property NSUInteger index;
 // Itinerary summary view
 @property PORItinerarySummaryView * viewItinerarySummary;
-// Table cell delegate
-@property id <PORItinerarySummaryCellViewDelegate> delegate;
+
 
 @end

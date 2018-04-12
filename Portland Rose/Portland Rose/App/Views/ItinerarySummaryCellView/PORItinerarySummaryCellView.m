@@ -29,6 +29,7 @@
 
 - (void) layoutSubviews{
   [super layoutSubviews];
+  // Update the itinerary summary view's frame
   [_viewItinerarySummary setFrame:self.contentView.bounds];
 }
 
@@ -42,18 +43,25 @@
 
 #pragma mark - helpers
 
+/**
+ * Perform initial setup
+ */
 - (void) setUp {
-  CGRect frame;
-  
-  frame = self.contentView.bounds;
-  _viewItinerarySummary.clipsToBounds = YES;
-  _viewItinerarySummary = [[PORItinerarySummaryView alloc] initWithFrame: frame];
+  // Initialize itinerary summary view
+  _viewItinerarySummary = [[PORItinerarySummaryView alloc] initWithFrame: self.contentView.bounds];
+  // Add button target / action
   [_viewItinerarySummary.viewButtonShowItinerary addTarget:self action:@selector(touchUpInsideShowItineraryButton:) forControlEvents:UIControlEventTouchUpInside];
+  // Lay out the itinerary summary view
   [_viewItinerarySummary layoutSubviews];
+  // Add the itinerary summary view as a subview
   [self.contentView addSubview:_viewItinerarySummary];
   [self setUpConstraints];
 }
 
+/**
+ * Set up constraints. The cell should grow / shrink to match the size of its
+ * itinerary summary view.
+ */
 - (void) setUpConstraints {
   NSLayoutConstraint * bottom;
   UIView * c;
@@ -62,10 +70,8 @@
   NSLayoutConstraint * top;
   NSLayoutConstraint * trailing;
 
-  
   i = (UIView *) _viewItinerarySummary;
   c = self.contentView;
-  
   
   bottom = [NSLayoutConstraint constraintWithItem: i attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:c attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
   leading = [NSLayoutConstraint constraintWithItem: i attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:c attribute:NSLayoutAttributeLeading multiplier:1 constant:0];

@@ -120,11 +120,17 @@ static NSString * const NAME_NIB = @"PORItinerarySummaryView";
   }
 }
 
+/**
+ * Load the nib file
+ */
 - (void) loadNib {
   [[NSBundle bundleForClass:self.class] loadNibNamed:NAME_NIB owner:self options:nil];
   [self nibDidLoad];
 }
 
+/**
+ * Perform initial setup after the nib loads
+ */
 - (void) nibDidLoad {
   PORPalette * palette;
   PORTypeLibrary * typeLibrary;
