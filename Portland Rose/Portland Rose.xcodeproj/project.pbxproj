@@ -20,9 +20,13 @@
 		5A5676F3207E87B8002656F8 /* PORItinerarySummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5676F2207E87B8002656F8 /* PORItinerarySummaryView.xib */; };
 		5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676FE207EB46E002656F8 /* PORItinerarySummaryCellView.m */; };
 		5A7B6B82207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B81207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m */; };
+		5A7B6B86207FD67700C99AA0 /* PORLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B85207FD67700C99AA0 /* PORLocation.m */; };
+		5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B88207FD77200C99AA0 /* PORItinerary.m */; };
+		5A7B6B8C207FD88E00C99AA0 /* PORBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B8B207FD88E00C99AA0 /* PORBadge.m */; };
 		5A7D9A312077FCA300EF6D73 /* DemoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */; };
 		5A7D9A342077FFE300EF6D73 /* PORImageCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D9A332077FFE300EF6D73 /* PORImageCardView.xib */; };
 		5A7D9A372077FFF800EF6D73 /* PORImageCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D9A362077FFF800EF6D73 /* PORImageCardView.m */; };
+		5A9333BF207D690B003F7217 /* PORActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9333BE207D690B003F7217 /* PORActivity.m */; };
 		5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA949182075589B00060FE8 /* PORTabBarController.m */; };
 		5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9491D20755A6000060FE8 /* PORTabBarView.m */; };
 		5AA9492020755A6D00060FE8 /* PORTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA9491F20755A6D00060FE8 /* PORTabBarView.xib */; };
@@ -63,10 +67,18 @@
 		5A5676FF207EB46E002656F8 /* PORItinerarySummaryCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryCellView.h; sourceTree = "<group>"; };
 		5A7B6B80207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryDemoViewController.h; sourceTree = "<group>"; };
 		5A7B6B81207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItinerarySummaryDemoViewController.m; sourceTree = "<group>"; };
+		5A7B6B84207FD67700C99AA0 /* PORLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLocation.h; sourceTree = "<group>"; };
+		5A7B6B85207FD67700C99AA0 /* PORLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORLocation.m; sourceTree = "<group>"; };
+		5A7B6B87207FD77200C99AA0 /* PORItinerary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItinerary.h; sourceTree = "<group>"; };
+		5A7B6B88207FD77200C99AA0 /* PORItinerary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItinerary.m; sourceTree = "<group>"; };
+		5A7B6B8A207FD88E00C99AA0 /* PORBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORBadge.h; sourceTree = "<group>"; };
+		5A7B6B8B207FD88E00C99AA0 /* PORBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORBadge.m; sourceTree = "<group>"; };
 		5A7D9A302077FCA300EF6D73 /* DemoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DemoAssets.xcassets; sourceTree = "<group>"; };
 		5A7D9A332077FFE300EF6D73 /* PORImageCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORImageCardView.xib; sourceTree = "<group>"; };
 		5A7D9A352077FFF800EF6D73 /* PORImageCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCardView.h; sourceTree = "<group>"; };
 		5A7D9A362077FFF800EF6D73 /* PORImageCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCardView.m; sourceTree = "<group>"; };
+		5A9333BD207D690B003F7217 /* PORActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORActivity.h; sourceTree = "<group>"; };
+		5A9333BE207D690B003F7217 /* PORActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORActivity.m; sourceTree = "<group>"; };
 		5AA949172075589B00060FE8 /* PORTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORTabBarController.h; sourceTree = "<group>"; };
 		5AA949182075589B00060FE8 /* PORTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORTabBarController.m; sourceTree = "<group>"; };
 		5AA9491C20755A6000060FE8 /* PORTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORTabBarView.h; sourceTree = "<group>"; };
@@ -178,6 +190,7 @@
 				5A3A99FB2076A6FB00191EEF /* ActionButtonView */,
 				5AD02B08207D3FB800E48C9B /* FloatingActionButtonView */,
 				5A7D9A322077FFB100EF6D73 /* ImageCardView */,
+				5A5676E5207E827B002656F8 /* ImageCarouselView */,
 				5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */,
 				5A5676EE207E8777002656F8 /* ImageCarouselView */,
 				5A5676EC207E8721002656F8 /* ItinerarySummaryView */,
@@ -191,10 +204,14 @@
 		5A445F2520729F2E009497B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5AF738CC2073D8E100B8E75C /* PORPalette.h */,
-				5AF738CD2073D8E100B8E75C /* PORPalette.m */,
-				5AF738CF2073FB1100B8E75C /* PORTypeLibrary.h */,
-				5AF738D02073FB1100B8E75C /* PORTypeLibrary.m */,
+				5A9333BD207D690B003F7217 /* PORActivity.h */,
+				5A9333BE207D690B003F7217 /* PORActivity.m */,
+				5A7B6B8A207FD88E00C99AA0 /* PORBadge.h */,
+				5A7B6B8B207FD88E00C99AA0 /* PORBadge.m */,
+				5A7B6B87207FD77200C99AA0 /* PORItinerary.h */,
+				5A7B6B88207FD77200C99AA0 /* PORItinerary.m */,
+				5A7B6B84207FD67700C99AA0 /* PORLocation.h */,
+				5A7B6B85207FD67700C99AA0 /* PORLocation.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +334,10 @@
 			children = (
 				5AF738C62073D41B00B8E75C /* UIColor+Hex.h */,
 				5AF738C72073D41B00B8E75C /* UIColor+Hex.m */,
+				5AF738CC2073D8E100B8E75C /* PORPalette.h */,
+				5AF738CD2073D8E100B8E75C /* PORPalette.m */,
+				5AF738CF2073FB1100B8E75C /* PORTypeLibrary.h */,
+				5AF738D02073FB1100B8E75C /* PORTypeLibrary.m */,
 			);
 			name = Helpers;
 			path = "New Group";
@@ -429,17 +450,21 @@
 				5AF738D32073FD6700B8E75C /* PORTypeLibraryDemoViewController.m in Sources */,
 				5A5676F1207E8778002656F8 /* PORImageCarouselView.m in Sources */,
 				5AC2A8F5207BE8FF003B2AD5 /* PORImageCarouselImageView.m in Sources */,
+				5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
 				5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */,
 				5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */,
 				5A4ABF372072C36400349DBB /* PORDemosViewController.m in Sources */,
 				5A5676EB207E8710002656F8 /* PORItinerarySummaryView.m in Sources */,
+				5A9333BF207D690B003F7217 /* PORActivity.m in Sources */,
 				5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */,
+				5A7B6B8C207FD88E00C99AA0 /* PORBadge.m in Sources */,
 				5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */,
 				5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */,
 				5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */,
 				5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */,
 				5AF738DC207408F600B8E75C /* PORActionButtonView.m in Sources */,
+				5A7B6B86207FD67700C99AA0 /* PORLocation.m in Sources */,
 				5AF738D12073FB1100B8E75C /* PORTypeLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
