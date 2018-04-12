@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PORBadge.h"
+#import "PORItinerary.h"
 #import "PORItinerarySummaryCellView.h"
 
 @interface PORItinerarySummaryDemoViewController : UITableViewController <PORItinerarySummaryCellViewDelegate>

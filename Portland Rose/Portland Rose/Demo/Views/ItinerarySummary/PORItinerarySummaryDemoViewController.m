@@ -17,6 +17,8 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
 
 /// Array of UIImages for itinerary
 @property NSMutableArray * icons;
+/// Demo itinerary
+@property PORItinerary * itinerary;
 
 @end
 
@@ -27,6 +29,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self loadIcons];
+  [self loadItinerary];
 }
 
 #pragma mark - helpers
@@ -39,6 +42,18 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
     [a addObject:[UIImage imageNamed:name]];
   }
   _icons = a;
+}
+
+- (void) loadItinerary {
+  _itinerary = [[PORItinerary alloc] init];
+  _itinerary.title = @"Puffin Watching Picnic In Snæfellsness";
+  _itinerary.duration = 505;
+  _itinerary.costLower = 0;
+  _itinerary.costUpper = 55;
+  _itinerary.imageMain = [UIImage imageNamed:@"image-lg-0"];
+  _itinerary.badges = @[
+                        [[PORBadge alloc] initWithIcon: _icons.firstObject andTitle:@"Forest"]
+                        ];
 }
 
 #pragma mark - events
@@ -63,7 +78,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
   index = indexPath.row;
   cell = [tableView dequeueReusableCellWithIdentifier:REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL];
   iCell = (PORItinerarySummaryCellView *) cell;
-  [iCell.viewItinerarySummary setIcons: _icons];
+  [iCell setItinerary: _itinerary];
   [iCell setIndex:index];
   [iCell setDelegate: self];
   

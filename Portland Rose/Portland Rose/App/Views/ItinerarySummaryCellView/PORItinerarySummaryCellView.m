@@ -33,6 +33,20 @@
   [_viewItinerarySummary setFrame:self.contentView.bounds];
 }
 
+#pragma mark - setters
+
+- (void) setItinerary:(PORItinerary *)itinerary{
+  _itinerary = itinerary;
+  if (_viewItinerarySummary){
+    _viewItinerarySummary.title = itinerary.title;
+    _viewItinerarySummary.costLower = itinerary.costLower;
+    _viewItinerarySummary.costUpper = itinerary.costUpper;
+    _viewItinerarySummary.duration = itinerary.duration;
+    _viewItinerarySummary.image = itinerary.imageMain;
+    _viewItinerarySummary.icons = [[NSMutableArray alloc] initWithArray:[itinerary badgeIcons]];
+  }
+}
+
 #pragma mark - events
 
 - (void) touchUpInsideShowItineraryButton: (id) sender {

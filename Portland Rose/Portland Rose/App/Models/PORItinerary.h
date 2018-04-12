@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PORActivity.h"
+#import "PORBadge.h"
 #import <UIKit/UIKit.h>
 
 @interface PORItinerary : NSObject

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PORItinerary.h"
 #import "PORItinerarySummaryView.h"
+
 
 IB_DESIGNABLE
 
@@ -23,6 +25,8 @@ IB_DESIGNABLE
 @property id <PORItinerarySummaryCellViewDelegate> delegate;
 /// Table cell index
 @property NSUInteger index;
+/// Itinerary
+@property (nonatomic) PORItinerary * itinerary;
 // Itinerary summary view
 @property PORItinerarySummaryView * viewItinerarySummary;
 
