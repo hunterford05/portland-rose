@@ -52,6 +52,7 @@
                         <segue destination="Eoj-MR-fv5" kind="show" identifier="FromDemosToImageCardViewDemo" id="yL1-97-k7M"/>
                         <segue destination="UJV-wZ-3Zi" kind="show" identifier="FromDemosToImageCarouselViewDemo" id="sRd-TT-TSs"/>
                         <segue destination="M0W-Qd-mSn" kind="show" identifier="FromDemosToFloatingActionButtonViewDemo" id="tZT-Nt-Wpg"/>
+                        <segue destination="cfq-lj-ElT" kind="show" identifier="FromDemosToItinerarySummaryViewDemo" id="RC2-jJ-Kcq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -361,6 +362,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oos-X8-TkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3862" y="883"/>
+        </scene>
+        <!--Itinerary Summary Demo View Controller-->
+        <scene sceneID="0Lr-k9-ntj">
+            <objects>
+                <tableViewController id="cfq-lj-ElT" customClass="PORItinerarySummaryDemoViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="800" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="txa-wt-UvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="ItinerarySummaryCell" id="ayP-Kh-Dz5" customClass="PORItinerarySummaryCellView">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ayP-Kh-Dz5" id="T3K-hR-ODa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="cfq-lj-ElT" id="HQZ-jo-wUu"/>
+                            <outlet property="delegate" destination="cfq-lj-ElT" id="76M-5V-61f"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MTj-Xn-Su9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4533.6000000000004" y="882.90854572713647"/>
         </scene>
         <!--Palette Demo View Controller-->
         <scene sceneID="8GC-OQ-rFe">

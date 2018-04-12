@@ -10,4 +10,17 @@
 
 @implementation PORItinerary
 
+- (NSArray *) badgeIcons{
+  NSMutableArray * a;
+  
+  a = [[NSMutableArray alloc] init];
+  for (PORBadge * b in _badges){
+    if (b.icon){
+      [a addObject: b.icon];
+    }
+  }
+  
+  return [[NSArray alloc] initWithArray: a];
+}
+
 @end
