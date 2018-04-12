@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "PORItinerarySummaryCellView.h"
 
-@interface PORItinerarySummaryDemoViewController : UITableViewController
+@interface PORItinerarySummaryDemoViewController : UITableViewController <PORItinerarySummaryCellViewDelegate>
 
 @end

@@ -43,7 +43,11 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
 
 #pragma mark - events
 
+#pragma mark - <PORItinerarySummaryCellViewDelegate>
 
+- (void) didSelectItineraryAtIndex:(NSUInteger)index{
+  NSLog(@"Did select itinerary #%lu", (unsigned long) index);
+}
 
 #pragma mark - <UITableViewDataSource>
 
@@ -61,6 +65,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_SUMMARY_CELL = @"ItinerarySum
   iCell = (PORItinerarySummaryCellView *) cell;
   [iCell.viewItinerarySummary setIcons: _icons];
   [iCell setIndex:index];
+  [iCell setDelegate: self];
   
   return cell;
 }

@@ -32,6 +32,14 @@
   [_viewItinerarySummary setFrame:self.contentView.bounds];
 }
 
+#pragma mark - events
+
+- (void) touchUpInsideShowItineraryButton: (id) sender {
+  if (_delegate){
+    [_delegate didSelectItineraryAtIndex:_index];
+  }
+}
+
 #pragma mark - helpers
 
 - (void) setUp {
@@ -39,8 +47,8 @@
   
   frame = self.contentView.bounds;
   _viewItinerarySummary.clipsToBounds = YES;
-//  frame.size.height = 550.0;
   _viewItinerarySummary = [[PORItinerarySummaryView alloc] initWithFrame: frame];
+  [_viewItinerarySummary.viewButtonShowItinerary addTarget:self action:@selector(touchUpInsideShowItineraryButton:) forControlEvents:UIControlEventTouchUpInside];
   [_viewItinerarySummary layoutSubviews];
   [self.contentView addSubview:_viewItinerarySummary];
   [self setUpConstraints];
