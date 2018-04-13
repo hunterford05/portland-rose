@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5A0DCCCE208038F6000FCAAC /* PORActivityCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCCCD208038F6000FCAAC /* PORActivityCellDemoViewController.m */; };
+		5A0DCCD220803AFF000FCAAC /* PORActivityCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCCD120803AFF000FCAAC /* PORActivityCellView.m */; };
+		5A0DCCD420803BC1000FCAAC /* PORActivityCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCCD320803BC1000FCAAC /* PORActivityCellView.xib */; };
+		5A0DCCD8208048A9000FCAAC /* PORLabeledIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCCD7208048A9000FCAAC /* PORLabeledIconView.m */; };
+		5A0DCCDA208048B8000FCAAC /* PORLabeledIconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCCD9208048B8000FCAAC /* PORLabeledIconView.xib */; };
 		5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F0D20729AAE009497B0 /* AppDelegate.m */; };
 		5A445F1120729AAE009497B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F1020729AAE009497B0 /* ViewController.m */; };
 		5A445F1420729AAE009497B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F1220729AAE009497B0 /* Main.storyboard */; };
@@ -52,6 +56,12 @@
 /* Begin PBXFileReference section */
 		5A0DCCCC208038F6000FCAAC /* PORActivityCellDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORActivityCellDemoViewController.h; sourceTree = "<group>"; };
 		5A0DCCCD208038F6000FCAAC /* PORActivityCellDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORActivityCellDemoViewController.m; sourceTree = "<group>"; };
+		5A0DCCD020803AFF000FCAAC /* PORActivityCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORActivityCellView.h; sourceTree = "<group>"; };
+		5A0DCCD120803AFF000FCAAC /* PORActivityCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORActivityCellView.m; sourceTree = "<group>"; };
+		5A0DCCD320803BC1000FCAAC /* PORActivityCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORActivityCellView.xib; sourceTree = "<group>"; };
+		5A0DCCD6208048A9000FCAAC /* PORLabeledIconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLabeledIconView.h; sourceTree = "<group>"; };
+		5A0DCCD7208048A9000FCAAC /* PORLabeledIconView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORLabeledIconView.m; sourceTree = "<group>"; };
+		5A0DCCD9208048B8000FCAAC /* PORLabeledIconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORLabeledIconView.xib; sourceTree = "<group>"; };
 		5A445F0920729AAE009497B0 /* Portland Rose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Portland Rose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A445F0C20729AAE009497B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A445F0D20729AAE009497B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +153,26 @@
 			path = ActivityCell;
 			sourceTree = "<group>";
 		};
+		5A0DCCCF208039EB000FCAAC /* ActivityCellView */ = {
+			isa = PBXGroup;
+			children = (
+				5A0DCCD020803AFF000FCAAC /* PORActivityCellView.h */,
+				5A0DCCD120803AFF000FCAAC /* PORActivityCellView.m */,
+				5A0DCCD320803BC1000FCAAC /* PORActivityCellView.xib */,
+			);
+			path = ActivityCellView;
+			sourceTree = "<group>";
+		};
+		5A0DCCD52080485E000FCAAC /* LabeledIconView */ = {
+			isa = PBXGroup;
+			children = (
+				5A0DCCD6208048A9000FCAAC /* PORLabeledIconView.h */,
+				5A0DCCD7208048A9000FCAAC /* PORLabeledIconView.m */,
+				5A0DCCD9208048B8000FCAAC /* PORLabeledIconView.xib */,
+			);
+			path = LabeledIconView;
+			sourceTree = "<group>";
+		};
 		5A3A99FB2076A6FB00191EEF /* ActionButtonView */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,12 +242,14 @@
 			isa = PBXGroup;
 			children = (
 				5A3A99FB2076A6FB00191EEF /* ActionButtonView */,
+				5A0DCCCF208039EB000FCAAC /* ActivityCellView */,
 				5AD02B08207D3FB800E48C9B /* FloatingActionButtonView */,
 				5A7D9A322077FFB100EF6D73 /* ImageCardView */,
 				5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */,
 				5A5676EE207E8777002656F8 /* ImageCarouselView */,
 				5A5676EC207E8721002656F8 /* ItinerarySummaryView */,
 				5A5676FD207EB46E002656F8 /* ItinerarySummaryCellView */,
+				5A0DCCD52080485E000FCAAC /* LabeledIconView */,
 				5A3A99FC2076A70900191EEF /* TabBarView */,
 				5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */,
 			);
@@ -477,6 +509,8 @@
 				5A445F1420729AAE009497B0 /* Main.storyboard in Resources */,
 				5A445F292072B790009497B0 /* Demo.storyboard in Resources */,
 				5AC2A8F6207BE8FF003B2AD5 /* PORImageCarouselImageView.xib in Resources */,
+				5A0DCCD420803BC1000FCAAC /* PORActivityCellView.xib in Resources */,
+				5A0DCCDA208048B8000FCAAC /* PORLabeledIconView.xib in Resources */,
 				5A7D9A342077FFE300EF6D73 /* PORImageCardView.xib in Resources */,
 				5A7D9A312077FCA300EF6D73 /* DemoAssets.xcassets in Resources */,
 			);
@@ -502,6 +536,8 @@
 				5AC2A8F5207BE8FF003B2AD5 /* PORImageCarouselImageView.m in Sources */,
 				5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
+				5A0DCCD8208048A9000FCAAC /* PORLabeledIconView.m in Sources */,
+				5A0DCCD220803AFF000FCAAC /* PORActivityCellView.m in Sources */,
 				5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */,
 				5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */,
 				5A4ABF372072C36400349DBB /* PORDemosViewController.m in Sources */,

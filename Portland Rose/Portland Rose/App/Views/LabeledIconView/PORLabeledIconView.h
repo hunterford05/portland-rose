@@ -1,5 +1,5 @@
 //
-//  PORActivityCellDemoViewController.h
+//  PORLabeledIconView.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 12/04/2018.
@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PORActivityCellView.h"
+#import "PORPalette.h"
+#import "PORTypeLibrary.h"
 
-@interface PORActivityCellDemoViewController : UITableViewController
+IB_DESIGNABLE
+
+@interface PORLabeledIconView : UIView
 
 @end

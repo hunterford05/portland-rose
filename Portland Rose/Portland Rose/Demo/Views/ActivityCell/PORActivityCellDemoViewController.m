@@ -8,6 +8,9 @@
 
 #import "PORActivityCellDemoViewController.h"
 
+/// Number of activities to display
+static NSUInteger const COUNT_ROWS = 5;
+
 @interface PORActivityCellDemoViewController ()
 
 @end
@@ -18,16 +21,25 @@
     [super viewDidLoad];
 }
 
-#pragma mark - Table view data source
+#pragma mark - <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  UITableViewCell * cell;
+  
+  cell = [tableView dequeueReusableCellWithIdentifier:[PORActivityCellView reuseIdentifier]];
+  if (!cell){
+    [tableView registerNib:[UINib nibWithNibName: [PORActivityCellView nibName] bundle: nil] forCellReuseIdentifier:[PORActivityCellView reuseIdentifier]];
+    cell = [tableView dequeueReusableCellWithIdentifier:[PORActivityCellView reuseIdentifier]];
+  }
+  return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return COUNT_ROWS;
 }
 
 @end
