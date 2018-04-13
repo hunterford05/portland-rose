@@ -115,7 +115,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xNM-7Y-nRB" firstAttribute="centerX" secondItem="jME-iZ-eLn" secondAttribute="centerX" id="E76-fc-zLr"/>
                             <constraint firstItem="xNM-7Y-nRB" firstAttribute="centerY" secondItem="jME-iZ-eLn" secondAttribute="centerY" id="Nyi-S0-hTo"/>
@@ -254,7 +254,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxa-oE-BvH" customClass="PORImageCardView">
                                 <rect key="frame" x="37" y="151" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="57x-1o-5VH"/>
                                     <constraint firstAttribute="height" constant="300" id="KT4-Qo-Rg7"/>
@@ -273,7 +273,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jxa-oE-BvH" firstAttribute="centerY" secondItem="ZAW-wa-WXa" secondAttribute="centerY" id="d9G-j5-nsG"/>
                             <constraint firstItem="Jxa-oE-BvH" firstAttribute="centerX" secondItem="ZAW-wa-WXa" secondAttribute="centerX" id="fqp-nf-ADn"/>
@@ -313,7 +313,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="q0t-68-bhB" firstAttribute="centerX" secondItem="IdK-Sj-khi" secondAttribute="centerX" id="97Y-aq-0OJ"/>
                             <constraint firstItem="ZIq-RD-ODC" firstAttribute="centerX" secondItem="IdK-Sj-khi" secondAttribute="centerX" id="T3Z-Fs-Xq1"/>

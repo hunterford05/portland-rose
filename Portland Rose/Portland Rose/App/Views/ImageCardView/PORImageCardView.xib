@@ -44,6 +44,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="82" height="81"/>
                 </imageView>
             </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="yrM-ap-HJf" firstAttribute="height" secondItem="n1n-4I-cvz" secondAttribute="height" constant="2" id="DpW-Le-hbj"/>
                 <constraint firstItem="yrM-ap-HJf" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="N2t-dI-h9f"/>
