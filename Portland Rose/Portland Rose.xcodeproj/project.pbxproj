@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0DCCCE208038F6000FCAAC /* PORActivityCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCCCD208038F6000FCAAC /* PORActivityCellDemoViewController.m */; };
 		5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F0D20729AAE009497B0 /* AppDelegate.m */; };
 		5A445F1120729AAE009497B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F1020729AAE009497B0 /* ViewController.m */; };
 		5A445F1420729AAE009497B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F1220729AAE009497B0 /* Main.storyboard */; };
@@ -49,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A0DCCCC208038F6000FCAAC /* PORActivityCellDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORActivityCellDemoViewController.h; sourceTree = "<group>"; };
+		5A0DCCCD208038F6000FCAAC /* PORActivityCellDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORActivityCellDemoViewController.m; sourceTree = "<group>"; };
 		5A445F0920729AAE009497B0 /* Portland Rose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Portland Rose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A445F0C20729AAE009497B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A445F0D20729AAE009497B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0DCCCB208038D0000FCAAC /* ActivityCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A0DCCCC208038F6000FCAAC /* PORActivityCellDemoViewController.h */,
+				5A0DCCCD208038F6000FCAAC /* PORActivityCellDemoViewController.m */,
+			);
+			path = ActivityCell;
+			sourceTree = "<group>";
+		};
 		5A3A99FB2076A6FB00191EEF /* ActionButtonView */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				5AC2A8F8207BEB2C003B2AD5 /* ActionButton */,
+				5A0DCCCB208038D0000FCAAC /* ActivityCell */,
 				5AC2A8F9207BEB36003B2AD5 /* ImageCarousel */,
 				5A7B6B83207FB1B600C99AA0 /* ItinerarySummary */,
 			);
@@ -502,6 +515,7 @@
 				5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */,
 				5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */,
 				5A7B6BA3207FF9C100C99AA0 /* NSNumber+Random.m in Sources */,
+				5A0DCCCE208038F6000FCAAC /* PORActivityCellDemoViewController.m in Sources */,
 				5AF738DC207408F600B8E75C /* PORActionButtonView.m in Sources */,
 				5A7B6B86207FD67700C99AA0 /* PORLocation.m in Sources */,
 				5AF738D12073FB1100B8E75C /* PORTypeLibrary.m in Sources */,
