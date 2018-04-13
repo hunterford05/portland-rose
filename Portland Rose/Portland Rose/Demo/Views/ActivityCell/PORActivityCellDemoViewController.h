@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PORActivityCellView.h"
+#import "PORActivity+Mocks.h"
 
 @interface PORActivityCellDemoViewController : UITableViewController
 

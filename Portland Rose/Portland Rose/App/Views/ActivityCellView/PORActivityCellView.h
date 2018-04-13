@@ -6,11 +6,15 @@
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "PORActivity.h"
 #import "PORPalette.h"
+#import "PORLabeledIconView.h"
 #import "PORTypeLibrary.h"
+#import <UIKit/UIKit.h>
 
 @interface PORActivityCellView : UITableViewCell
+
+@property (nonatomic) PORActivity * activity;
 
 + (NSString *) reuseIdentifier;
 + (NSString *) nibName;

@@ -13,12 +13,15 @@ static NSUInteger const COUNT_ROWS = 5;
 
 @interface PORActivityCellDemoViewController ()
 
+@property NSArray<PORActivity *> * activities;
+
 @end
 
 @implementation PORActivityCellDemoViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  _activities = [PORActivity mocks: COUNT_ROWS];
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -35,11 +38,16 @@ static NSUInteger const COUNT_ROWS = 5;
     [tableView registerNib:[UINib nibWithNibName: [PORActivityCellView nibName] bundle: nil] forCellReuseIdentifier:[PORActivityCellView reuseIdentifier]];
     cell = [tableView dequeueReusableCellWithIdentifier:[PORActivityCellView reuseIdentifier]];
   }
+  [((PORActivityCellView *) cell) setActivity: _activities[indexPath.row]];
   return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+  [((PORActivityCellView *) cell) setActivity: _activities[indexPath.row]];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return COUNT_ROWS;
+    return [_activities count];
 }
 
 @end

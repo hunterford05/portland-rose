@@ -17,12 +17,6 @@ static NSString * const NAME_NIB = @"PORLabeledIconView";
 @property (weak, nonatomic) IBOutlet UILabel *viewLabel;
 @property (weak, nonatomic) IBOutlet UIStackView *viewStack;
 
-@property IBInspectable UIColor * color;
-@property IBInspectable NSString * text;
-@property IBInspectable UIImage * icon;
-@property IBInspectable CGFloat spacingStack;
-@property UIFont * font;
-
 @end
 
 @implementation PORLabeledIconView
@@ -51,6 +45,12 @@ static NSString * const NAME_NIB = @"PORLabeledIconView";
   [self refresh];
 }
 
+#pragma mark - setters
+
+- (void)setText:(NSString *)text{
+  _text = text;
+  [self refresh];
+}
 
 #pragma mark - helpers
 
@@ -80,6 +80,8 @@ static NSString * const NAME_NIB = @"PORLabeledIconView";
 }
 
 - (void) refresh{
+  [self setHidden: [self shouldBeHidden]];
+  
   [_viewLabel setText: _text];
   [_viewLabel setTextColor: _color];
   [_viewLabel setFont: _font];
@@ -88,6 +90,13 @@ static NSString * const NAME_NIB = @"PORLabeledIconView";
   [_viewIcon setTintColor:_color];
   
   [_viewStack setSpacing: _spacingStack];
+}
+
+- (BOOL) shouldBeHidden {
+  NSCharacterSet *set;
+  
+  set = [NSCharacterSet whitespaceCharacterSet];
+  return  (!_text || [[_text stringByTrimmingCharactersInSet: set] length] == 0);
 }
 
 @end

@@ -14,4 +14,10 @@ IB_DESIGNABLE
 
 @interface PORLabeledIconView : UIView
 
+@property IBInspectable UIColor * color;
+@property (nonatomic) IBInspectable NSString * text;
+@property IBInspectable UIImage * icon;
+@property IBInspectable CGFloat spacingStack;
+@property UIFont * font;
+
 @end
