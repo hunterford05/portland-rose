@@ -152,6 +152,9 @@ static NSString * const NAME_NIB = @"PORItinerarySummaryView";
   [_viewLabelCost setFont: typeLibrary.fontBody];
   [_viewLabelDuration setFont: typeLibrary.fontBody];
   
+  // Configure background
+  [self.view setBackgroundColor: palette.colorBackground];
+  
   // Configure icon tints
   for (UIView * v in _viewStackDashboard.arrangedSubviews) {
     v.tintColor = palette.colorText;

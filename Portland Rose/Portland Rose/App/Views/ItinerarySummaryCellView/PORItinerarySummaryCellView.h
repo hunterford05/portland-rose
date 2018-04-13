@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PORItinerary.h"
 #import "PORItinerarySummaryView.h"
+#import "PORPalette.h"
 
 
 IB_DESIGNABLE

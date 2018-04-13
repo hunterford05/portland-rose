@@ -103,6 +103,7 @@ static CGFloat const RADIUS_CORNER = 10.0;
  * Configure subviews. Called after the NIB loads.
  */
 - (void) nibDidLoad {
+  [self setBackgroundColor: [UIColor clearColor]];
   [self setRadiusBlur: RADIUS_BLUR];
   [self setOffsetYBlur: OFFSET_Y_BLUR];
   [self setRadiusCorner: RADIUS_CORNER];

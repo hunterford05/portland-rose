@@ -61,6 +61,14 @@
  * Perform initial setup
  */
 - (void) setUp {
+  PORPalette * palette;
+  
+  // Initialize palette
+  palette = [PORPalette sharedPalette];
+  
+  // Configure background
+  [self.contentView setBackgroundColor: palette.colorBackground];
+  
   // Initialize itinerary summary view
   _viewItinerarySummary = [[PORItinerarySummaryView alloc] initWithFrame: self.contentView.bounds];
   // Add button target / action

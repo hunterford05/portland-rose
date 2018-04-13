@@ -42,6 +42,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="fQI-oC-SLA" secondAttribute="trailing" constant="40" id="Kwa-Ge-wgx"/>
                 <constraint firstItem="fQI-oC-SLA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="URj-He-NBB"/>
