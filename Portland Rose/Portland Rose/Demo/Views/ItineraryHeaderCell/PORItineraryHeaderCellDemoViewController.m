@@ -13,7 +13,6 @@ static NSUInteger const COUNT_ROWS = 1;
 @interface PORItineraryHeaderCellDemoViewController ()
 
 @property NSArray <PORItinerary *> * itineraries;
-@property PORImageCarouselView * viewCarousel;
 
 @end
 
@@ -22,8 +21,6 @@ static NSUInteger const COUNT_ROWS = 1;
 - (void)viewDidLoad {
   [super viewDidLoad];
   _itineraries = [PORItinerary mocks: COUNT_ROWS];
-  _viewCarousel = [[PORImageCarouselView alloc] init];
-  [self addChildViewController: _viewCarousel];
 }
 
 
@@ -42,7 +39,6 @@ static NSUInteger const COUNT_ROWS = 1;
     cell = [tableView dequeueReusableCellWithIdentifier: [PORItineraryHeaderCellView reuseIdentifier]];
   }
   
-  [((PORItineraryHeaderCellView *) cell) setViewImageCarousel:_viewCarousel];
   [((PORItineraryHeaderCellView *) cell) setItinerary: _itineraries[indexPath.row]];
   
   return cell;

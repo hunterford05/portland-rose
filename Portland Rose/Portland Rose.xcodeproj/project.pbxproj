@@ -22,7 +22,6 @@
 		5A4ABF372072C36400349DBB /* PORDemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ABF362072C36400349DBB /* PORDemosViewController.m */; };
 		5A54E723208139EE00C32356 /* PORActivity+Mocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54E722208139EE00C32356 /* PORActivity+Mocks.m */; };
 		5A5676EB207E8710002656F8 /* PORItinerarySummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676EA207E8710002656F8 /* PORItinerarySummaryView.m */; };
-		5A5676F1207E8778002656F8 /* PORImageCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676F0207E8777002656F8 /* PORImageCarouselView.m */; };
 		5A5676F3207E87B8002656F8 /* PORItinerarySummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5676F2207E87B8002656F8 /* PORItinerarySummaryView.xib */; };
 		5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676FE207EB46E002656F8 /* PORItinerarySummaryCellView.m */; };
 		5A5933012087D106003A1751 /* PORItineraryHeaderCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5932FF2087D106003A1751 /* PORItineraryHeaderCellView.m */; };
@@ -43,8 +42,8 @@
 		5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA949182075589B00060FE8 /* PORTabBarController.m */; };
 		5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA9491D20755A6000060FE8 /* PORTabBarView.m */; };
 		5AA9492020755A6D00060FE8 /* PORTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA9491F20755A6D00060FE8 /* PORTabBarView.xib */; };
-		5AC2A8F5207BE8FF003B2AD5 /* PORImageCarouselImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8F3207BE8FF003B2AD5 /* PORImageCarouselImageView.m */; };
-		5AC2A8F6207BE8FF003B2AD5 /* PORImageCarouselImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */; };
+		5AB7EAF92087F7D10087B7DB /* PORImageCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7EAF82087F7D10087B7DB /* PORImageCarouselView.m */; };
+		5AB7EAFB2087F82C0087B7DB /* PORImageCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7EAFA2087F82C0087B7DB /* PORImageCarouselView.xib */; };
 		5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */; };
 		5AD02B0C207D3FB800E48C9B /* PORFloatingActionButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD02B09207D3FB800E48C9B /* PORFloatingActionButtonView.m */; };
 		5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738C72073D41B00B8E75C /* UIColor+Hex.m */; };
@@ -83,8 +82,6 @@
 		5A54E722208139EE00C32356 /* PORActivity+Mocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PORActivity+Mocks.m"; sourceTree = "<group>"; };
 		5A5676E9207E8710002656F8 /* PORItinerarySummaryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryView.h; sourceTree = "<group>"; };
 		5A5676EA207E8710002656F8 /* PORItinerarySummaryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItinerarySummaryView.m; sourceTree = "<group>"; };
-		5A5676EF207E8777002656F8 /* PORImageCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselView.h; sourceTree = "<group>"; };
-		5A5676F0207E8777002656F8 /* PORImageCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselView.m; sourceTree = "<group>"; };
 		5A5676F2207E87B8002656F8 /* PORItinerarySummaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORItinerarySummaryView.xib; sourceTree = "<group>"; };
 		5A5676FE207EB46E002656F8 /* PORItinerarySummaryCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORItinerarySummaryCellView.m; sourceTree = "<group>"; };
 		5A5676FF207EB46E002656F8 /* PORItinerarySummaryCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryCellView.h; sourceTree = "<group>"; };
@@ -120,9 +117,9 @@
 		5AA9491C20755A6000060FE8 /* PORTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORTabBarView.h; sourceTree = "<group>"; };
 		5AA9491D20755A6000060FE8 /* PORTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORTabBarView.m; sourceTree = "<group>"; };
 		5AA9491F20755A6D00060FE8 /* PORTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORTabBarView.xib; sourceTree = "<group>"; };
-		5AC2A8F2207BE8FF003B2AD5 /* PORImageCarouselImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselImageView.h; sourceTree = "<group>"; };
-		5AC2A8F3207BE8FF003B2AD5 /* PORImageCarouselImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselImageView.m; sourceTree = "<group>"; };
-		5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORImageCarouselImageView.xib; sourceTree = "<group>"; };
+		5AB7EAF72087F7D10087B7DB /* PORImageCarouselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselView.h; sourceTree = "<group>"; };
+		5AB7EAF82087F7D10087B7DB /* PORImageCarouselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselView.m; sourceTree = "<group>"; };
+		5AB7EAFA2087F82C0087B7DB /* PORImageCarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORImageCarouselView.xib; sourceTree = "<group>"; };
 		5AC2A8FA207BEB65003B2AD5 /* PORImageCarouselDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORImageCarouselDemoViewController.h; sourceTree = "<group>"; };
 		5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselDemoViewController.m; sourceTree = "<group>"; };
 		5AD02B09207D3FB800E48C9B /* PORFloatingActionButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORFloatingActionButtonView.m; sourceTree = "<group>"; };
@@ -256,8 +253,7 @@
 				5A0DCCCF208039EB000FCAAC /* ActivityCellView */,
 				5AD02B08207D3FB800E48C9B /* FloatingActionButtonView */,
 				5A7D9A322077FFB100EF6D73 /* ImageCardView */,
-				5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */,
-				5A5676EE207E8777002656F8 /* ImageCarouselView */,
+				5AB7EAF62087F7B70087B7DB /* ImageCarouselView */,
 				5A5932FD2087D0DA003A1751 /* ItineraryHeaderCellView */,
 				5A5676EC207E8721002656F8 /* ItinerarySummaryView */,
 				5A5676FD207EB46E002656F8 /* ItinerarySummaryCellView */,
@@ -322,15 +318,6 @@
 				5A5676EA207E8710002656F8 /* PORItinerarySummaryView.m */,
 			);
 			path = ItinerarySummaryView;
-			sourceTree = "<group>";
-		};
-		5A5676EE207E8777002656F8 /* ImageCarouselView */ = {
-			isa = PBXGroup;
-			children = (
-				5A5676EF207E8777002656F8 /* PORImageCarouselView.h */,
-				5A5676F0207E8777002656F8 /* PORImageCarouselView.m */,
-			);
-			path = ImageCarouselView;
 			sourceTree = "<group>";
 		};
 		5A5676FD207EB46E002656F8 /* ItinerarySummaryCellView */ = {
@@ -404,14 +391,14 @@
 			path = ImageCardView;
 			sourceTree = "<group>";
 		};
-		5AC2A8F7207BE906003B2AD5 /* ImageCarouselImageView */ = {
+		5AB7EAF62087F7B70087B7DB /* ImageCarouselView */ = {
 			isa = PBXGroup;
 			children = (
-				5AC2A8F2207BE8FF003B2AD5 /* PORImageCarouselImageView.h */,
-				5AC2A8F3207BE8FF003B2AD5 /* PORImageCarouselImageView.m */,
-				5AC2A8F4207BE8FF003B2AD5 /* PORImageCarouselImageView.xib */,
+				5AB7EAF72087F7D10087B7DB /* PORImageCarouselView.h */,
+				5AB7EAF82087F7D10087B7DB /* PORImageCarouselView.m */,
+				5AB7EAFA2087F82C0087B7DB /* PORImageCarouselView.xib */,
 			);
-			path = ImageCarouselImageView;
+			path = ImageCarouselView;
 			sourceTree = "<group>";
 		};
 		5AC2A8F8207BEB2C003B2AD5 /* ActionButton */ = {
@@ -539,10 +526,10 @@
 				5A5676F3207E87B8002656F8 /* PORItinerarySummaryView.xib in Resources */,
 				5A445F1920729AAF009497B0 /* LaunchScreen.storyboard in Resources */,
 				5AF738D9207408EC00B8E75C /* PORActionButtonView.xib in Resources */,
+				5AB7EAFB2087F82C0087B7DB /* PORImageCarouselView.xib in Resources */,
 				5A445F1620729AAF009497B0 /* Assets.xcassets in Resources */,
 				5A445F1420729AAE009497B0 /* Main.storyboard in Resources */,
 				5A445F292072B790009497B0 /* Demo.storyboard in Resources */,
-				5AC2A8F6207BE8FF003B2AD5 /* PORImageCarouselImageView.xib in Resources */,
 				5A0DCCD420803BC1000FCAAC /* PORActivityCellView.xib in Resources */,
 				5A0DCCDA208048B8000FCAAC /* PORLabeledIconView.xib in Resources */,
 				5A7D9A342077FFE300EF6D73 /* PORImageCardView.xib in Resources */,
@@ -560,6 +547,7 @@
 			files = (
 				5A7B6B9F207FF6E700C99AA0 /* NSString+Random.m in Sources */,
 				5A445F1120729AAE009497B0 /* ViewController.m in Sources */,
+				5AB7EAF92087F7D10087B7DB /* PORImageCarouselView.m in Sources */,
 				5A7B6B82207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m in Sources */,
 				5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */,
 				5A7B6B96207FEF6A00C99AA0 /* PORItinerary+Mocks.m in Sources */,
@@ -568,8 +556,6 @@
 				5AF738DF20740F0B00B8E75C /* PORActionButtonDemoViewController.m in Sources */,
 				5A54E723208139EE00C32356 /* PORActivity+Mocks.m in Sources */,
 				5AF738D32073FD6700B8E75C /* PORTypeLibraryDemoViewController.m in Sources */,
-				5A5676F1207E8778002656F8 /* PORImageCarouselView.m in Sources */,
-				5AC2A8F5207BE8FF003B2AD5 /* PORImageCarouselImageView.m in Sources */,
 				5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
 				5A5933062087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m in Sources */,

@@ -6,7 +6,6 @@
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "PORImageCarouselView.h"
 #import "PORItinerary.h"
 #import "PORLabeledIconView.h"
 #import "PORPalette.h"
@@ -16,7 +15,6 @@
 @interface PORItineraryHeaderCellView : UITableViewCell
 
 @property (nonatomic) PORItinerary * itinerary;
-@property (nonatomic) PORImageCarouselView * viewImageCarousel;
 
 + (NSString *) reuseIdentifier;
 + (NSString *) nibName;

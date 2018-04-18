@@ -2,13 +2,20 @@
 //  PORImageCarouselView.m
 //  Portland Rose
 //
-//  Created by Hunter Ford on 09/04/2018.
+//  Created by Hunter Ford on 18/04/2018.
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
 #import "PORImageCarouselView.h"
 
-@interface PORImageCarouselView ()
+static NSString * const NAME_NIB = @"PORImageCarouselView";
+static CGFloat const PADDING_HORIZONTAL = 32.0;
+
+@interface PORImageCarouselView()
+
+@property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UIStackView *viewStack;
+@property (weak, nonatomic) IBOutlet UIScrollView *viewScroll;
 
 @end
 
@@ -16,75 +23,94 @@
 
 #pragma mark - lifecycle
 
-- (instancetype) init{
-  // Always initialize with the correct settings (e.g. scroll transition)
-  return [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation: UIPageViewControllerNavigationOrientationHorizontal options: nil];
+- (instancetype) initWithCoder:(NSCoder *)aDecoder{
+  if (self = [super initWithCoder:aDecoder]){
+    [self loadNib];
+  }
+  return self;
 }
 
-- (instancetype) initWithCoder:(NSCoder *)coder{
-  // Always initialize with the correct settings (e.g. scroll transition)
-  return [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation: UIPageViewControllerNavigationOrientationHorizontal options: nil];
+- (instancetype) initWithFrame:(CGRect)frame{
+  if (self = [super initWithFrame:frame]){
+    [self loadNib];
+  }
+  return self;
 }
 
-#pragma mark - getters / setters
+#pragma mark - setters
 
-- (void) setImages:(NSMutableArray *)images {
-  // Update `_images`
+- (void) setImages:(NSArray<UIImage *> *)images{
   _images = images;
-  
-  // Display the new first image and reset the data source
-  PORImageCarouselImageView * iv = [self viewAtIndex:0];
-  [self setViewControllers:@[iv] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-  self.dataSource = self;
+  [self clearImages];
+  for (UIImage * image in _images){
+    [self addImage:image];
+  }
+}
+
+- (void) setIndex:(NSUInteger)index{
+  _index = index;
+  if (_delegate){
+    [_delegate imageCarouselView:self didChangeIndex:_index];
+  }
+}
+
+#pragma mark - <UIScrollViewDelegate>
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+  if (!decelerate){
+    [self setIndex: [self calculateIndex]];
+  }
+}
+
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+  [self setIndex: [self calculateIndex]];
 }
 
 #pragma mark - helpers
 
+- (NSUInteger) calculateIndex {
+  CGFloat f;
+  NSUInteger i;
+  f = round(_viewScroll.contentOffset.x / _view.bounds.size.width);
+  i = (NSUInteger)f;
+  return i;
+}
+
+- (void) clearImages{
+  for (UIView * view in _viewStack.arrangedSubviews){
+    [view removeFromSuperview];
+  }
+}
+                                    
+- (void) addImage: (UIImage *) image{
+  PORImageCardView * viewImage;
+  
+  viewImage = [[PORImageCardView alloc] init];
+  [viewImage setImage:image];
+  [_viewStack addArrangedSubview:viewImage];
+  [[viewImage.heightAnchor constraintEqualToAnchor:viewImage.widthAnchor multiplier:1] setActive:YES];
+  [[viewImage.widthAnchor constraintEqualToAnchor:_view.widthAnchor multiplier:1 constant:PADDING_HORIZONTAL * -2] setActive: YES];
+}
+
+- (void) loadNib {
+  [[NSBundle bundleForClass:self.class] loadNibNamed:NAME_NIB owner:self options:nil];
+  [_view setFrame: self.bounds];
+  [self addSubview: _view];
+  [self nibDidLoad];
+}
+
 /**
- * Returns a `PORImageCarouselImageView` whose image is `_images[index]`
- * and whose `index` is `index`
+ * Initial setup. Called after the NIB loads.
  */
-- (PORImageCarouselImageView *) viewAtIndex: (NSUInteger) index{
+- (void) nibDidLoad {
+  // Set initial index property
+  _index = 0;
   
-  // Handle index out of bounds
-  if (index > _images.count - 1){
-    return nil;
-  }
+  // Configure scroll view delegate
+  [_viewScroll setDelegate:self];
   
-  // Initialize, configure, and return the `PORImageCarouselImageView` instance
-  PORImageCarouselImageView * iciv;
-  iciv = [[PORImageCarouselImageView alloc] init];
-  [iciv setImage: _images[index]];
-  [iciv setIndex:index];
-  return iciv;
-}
-
-#pragma mark - UIPageControllerDataSource
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController{
-  NSUInteger index;
-  
-  index = ((PORImageCarouselImageView *) viewController).index;
-  
-  if (index >= _images.count){
-    return nil;
-  }
-  
-  index++;
-  return [self viewAtIndex: index];
-}
-
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-  NSUInteger index;
-  
-  index = ((PORImageCarouselImageView *) viewController).index;
-  
-  if (index == 0){
-    return nil;
-  }
-  
-  index--;
-  return [self viewAtIndex: index];
+  // Set background color
+  [self setBackgroundColor:UIColor.clearColor];
 }
 
 @end

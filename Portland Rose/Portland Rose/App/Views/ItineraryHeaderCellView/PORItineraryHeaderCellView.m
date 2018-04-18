@@ -45,14 +45,6 @@ static NSString * const TITLE_CELL = @"Itinerary";
   [self refresh];
 }
 
-- (void)setViewImageCarousel:(PORImageCarouselView *)viewImageCarousel{
-  if (!_viewImageCarousel){
-    _viewImageCarousel = viewImageCarousel;
-    [_viewImageCarousel.view setFrame: _viewWrapperImageCarousel.bounds];
-    [_viewWrapperImageCarousel addSubview:_viewImageCarousel.view];
-  }
-}
-
 #pragma mark - helpers
 - (void) refresh{
   NSAssert(_itinerary, @"Missing itinerary.");
@@ -72,10 +64,6 @@ static NSString * const TITLE_CELL = @"Itinerary";
     [_viewPageControl setNumberOfPages: 1];
   }
 
-  // Update image carousel
-  if (_viewImageCarousel){
-    [_viewImageCarousel setImages: (NSMutableArray *)_itinerary.allImages];
-  }
 }
 
 - (void) setUp{

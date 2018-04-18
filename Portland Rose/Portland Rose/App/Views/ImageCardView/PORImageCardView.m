@@ -11,11 +11,11 @@
 /// Name of NIB file
 static NSString * const NAME_NIB = @"PORImageCardView";
 /// Default blur vertical offset
-static CGFloat const OFFSET_Y_BLUR = 10.0;
+static CGFloat const OFFSET_Y_BLUR = 20.0;
 /// Default blur radius
-static CGFloat const RADIUS_BLUR = 50.0;
+static CGFloat const RADIUS_BLUR = 40.0;
 /// Default image card corner radius
-static CGFloat const RADIUS_CORNER = 10.0;
+static CGFloat const RADIUS_CORNER = 40.0;
 
 @interface PORImageCardView()
 

@@ -6,10 +6,10 @@
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "PORImageCarouselView.h"
 #import "PORActionButtonView.h"
+#import "PORImageCarouselView.h"
+#import <UIKit/UIKit.h>
 
-@interface PORImageCarouselDemoViewController : UIViewController
+@interface PORImageCarouselDemoViewController : UIViewController <PORImageCarouselDelegate>
 
 @end
