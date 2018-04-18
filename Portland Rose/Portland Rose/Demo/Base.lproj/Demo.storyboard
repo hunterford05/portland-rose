@@ -474,10 +474,10 @@
             </objects>
             <point key="canvasLocation" x="3185" y="1533"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Itinerary Header Cell Demo View Controller-->
         <scene sceneID="mIl-Zd-Vwl">
             <objects>
-                <tableViewController id="zm8-pe-owX" sceneMemberID="viewController">
+                <tableViewController id="zm8-pe-owX" customClass="PORItineraryHeaderCellDemoViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="500" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zc1-6p-mI4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
