@@ -35,8 +35,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPc-en-X50" customClass="PORLabeledIconView">
-                                <rect key="frame" x="0.0" y="70" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPc-en-X50" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="70" width="201.5" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Grundarfjörður, Snæfellsness"/>
@@ -46,8 +46,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBc-1p-TUW" customClass="PORLabeledIconView">
-                                <rect key="frame" x="0.0" y="129" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBc-1p-TUW" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="129" width="69" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="0 to 50"/>
@@ -57,8 +57,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mm-vC-2aa" customClass="PORLabeledIconView">
-                                <rect key="frame" x="0.0" y="188" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mm-vC-2aa" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="188" width="75" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="30 mins"/>
@@ -68,8 +68,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WhA-Fl-aoD" customClass="PORLabeledIconView">
-                                <rect key="frame" x="0.0" y="247" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhA-Fl-aoD" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="247" width="165.5" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-warning-50"/>
@@ -79,8 +79,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Don't scare the puffins!"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZx-oK-osE" customClass="PORLabeledIconView">
-                                <rect key="frame" x="0.0" y="306" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZx-oK-osE" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="306" width="117.5" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Puffin costume"/>
@@ -90,8 +90,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3gz-bW-yT4" customClass="PORLabeledIconView">
-                                <rect key="frame" x="0.0" y="365" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gz-bW-yT4" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="365" width="138" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-briefcase-50"/>
@@ -101,8 +101,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bring hiking shoes"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qjn-he-hpy" customClass="PORLabeledIconView">
-                                <rect key="frame" x="0.0" y="424" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjn-he-hpy" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="424" width="218.5" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Go late in the evening, if you can"/>
@@ -112,8 +112,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-kn-CY7" customClass="PORLabeledIconView">
-                                <rect key="frame" x="0.0" y="483" width="50" height="54.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-kn-CY7" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="483" width="156" height="54.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-phone-50"/>
@@ -141,7 +141,7 @@
                     <constraint firstItem="gYd-l6-150" firstAttribute="leading" secondItem="j8F-dl-UNX" secondAttribute="trailing" constant="20" id="r47-jb-VIG"/>
                     <constraint firstItem="gYd-l6-150" firstAttribute="top" secondItem="9Ab-Vr-le9" secondAttribute="bottom" constant="15" id="ucz-Gy-Coi"/>
                     <constraint firstItem="9Ab-Vr-le9" firstAttribute="top" secondItem="LTS-Sw-VdQ" secondAttribute="top" constant="20" id="v5v-wg-Irp"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="gYd-l6-150" secondAttribute="bottom" constant="20" id="vi1-Ih-fnc"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="gYd-l6-150" secondAttribute="bottom" priority="250" constant="20" id="vi1-Ih-fnc"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

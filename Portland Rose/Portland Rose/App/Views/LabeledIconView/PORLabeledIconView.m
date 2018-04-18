@@ -80,7 +80,6 @@ static NSString * const NAME_NIB = @"PORLabeledIconView";
 }
 
 - (void) refresh{
-  [self setHidden: [self shouldBeHidden]];
   
   [_viewLabel setText: _text];
   [_viewLabel setTextColor: _color];
@@ -90,12 +89,14 @@ static NSString * const NAME_NIB = @"PORLabeledIconView";
   [_viewIcon setTintColor:_color];
   
   [_viewStack setSpacing: _spacingStack];
+  [self setHidden: [self shouldBeHidden]];
 }
 
 - (BOOL) shouldBeHidden {
   NSCharacterSet *set;
   
   set = [NSCharacterSet whitespaceCharacterSet];
+
   return  (!_text || [[_text stringByTrimmingCharactersInSet: set] length] == 0);
 }
 

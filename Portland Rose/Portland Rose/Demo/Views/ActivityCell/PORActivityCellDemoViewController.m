@@ -9,7 +9,7 @@
 #import "PORActivityCellDemoViewController.h"
 
 /// Number of activities to display
-static NSUInteger const COUNT_ROWS = 5;
+static NSUInteger const COUNT_ROWS = 25;
 
 @interface PORActivityCellDemoViewController ()
 
@@ -39,12 +39,10 @@ static NSUInteger const COUNT_ROWS = 5;
     cell = [tableView dequeueReusableCellWithIdentifier:[PORActivityCellView reuseIdentifier]];
   }
   [((PORActivityCellView *) cell) setActivity: _activities[indexPath.row]];
+
   return cell;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-  [((PORActivityCellView *) cell) setActivity: _activities[indexPath.row]];
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_activities count];

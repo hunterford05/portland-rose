@@ -45,7 +45,6 @@ static NSString * const REUSE_IDENTIFIER = @"ActivityCell";
 }
 
 - (void) layoutSubviews{
-  [self refresh];
   [super layoutSubviews];
 }
 
@@ -59,10 +58,12 @@ static NSString * const REUSE_IDENTIFIER = @"ActivityCell";
 #pragma mark - helpers
 
 - (void) refresh {
+  // Configure icon, title, and subtitle
   [_viewLabelTitle setText: _activity.title];
   [_viewLabelDescription setText: _activity.subtitle];
   [_viewImageIcon setImage: _activity.icon];
   
+  // Configure labeled icons
   [_viewLabeledIconRecommendations setText: _activity.recommendations];
   [_viewLabeledIconLocation setText: _activity.location.title];
   [_viewLabeledIconWhatToWear setText: _activity.whatToWear];
