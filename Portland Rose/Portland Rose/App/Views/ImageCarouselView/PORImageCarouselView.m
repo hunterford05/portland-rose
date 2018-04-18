@@ -16,6 +16,11 @@
 
 #pragma mark - lifecycle
 
+- (instancetype) init{
+  // Always initialize with the correct settings (e.g. scroll transition)
+  return [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation: UIPageViewControllerNavigationOrientationHorizontal options: nil];
+}
+
 - (instancetype) initWithCoder:(NSCoder *)coder{
   // Always initialize with the correct settings (e.g. scroll transition)
   return [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation: UIPageViewControllerNavigationOrientationHorizontal options: nil];

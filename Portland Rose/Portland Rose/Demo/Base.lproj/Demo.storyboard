@@ -477,6 +477,7 @@
         <!--Itinerary Header Cell Demo View Controller-->
         <scene sceneID="mIl-Zd-Vwl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rk3-Eb-ynH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zm8-pe-owX" customClass="PORItineraryHeaderCellDemoViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="500" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zc1-6p-mI4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
@@ -489,7 +490,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rk3-Eb-ynH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2846" y="75"/>
         </scene>

@@ -35,4 +35,10 @@
  */
 - (NSArray *) badgeIcons;
 
+/**
+ * Returns an array containing the itinerary's primary *and* secondary images.
+ */
+- (NSArray <UIImage *> *) allImages;
+
+
 @end

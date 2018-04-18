@@ -23,4 +23,17 @@
   return [[NSArray alloc] initWithArray: a];
 }
 
+- (NSArray <UIImage *> *) allImages {
+  NSUInteger count;
+  NSMutableArray <UIImage *> * images;
+  
+  count = _imagesSecondary ? [_imagesSecondary count] + 1 : 1;
+  images = [[NSMutableArray alloc] initWithCapacity:count];
+  [images addObject: _imageMain];
+  for (int i = 0; i < count - 1; i++){
+    [images addObject: _imagesSecondary[i]];
+  }
+  return [[NSArray <UIImage *> alloc] initWithArray:images];
+}
+
 @end
