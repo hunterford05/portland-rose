@@ -6,21 +6,99 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="PORItineraryHeaderCellView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="995" id="KGk-i7-Jjw" customClass="PORItineraryHeaderCellView">
+            <rect key="frame" x="0.0" y="0.0" width="767" height="995"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="767" height="994.5"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <color key="backgroundColor" red="0.12941176469999999" green="0.82745098039999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OTR-sp-ro8">
+                        <rect key="frame" x="32" y="32" width="703" height="930.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-fu-Uf6">
+                                <rect key="frame" x="0.0" y="0.0" width="703" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6c-6L-UEI">
+                                <rect key="frame" x="0.0" y="0.0" width="703" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSL-Tu-Gec">
+                                <rect key="frame" x="0.0" y="0.0" width="703" height="703"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FSL-Tu-Gec" secondAttribute="height" multiplier="1:1" id="vVo-sr-KvJ"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wDa-Dd-Ugr">
+                                <rect key="frame" x="0.0" y="703" width="703" height="227.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHe-r7-Oja" customClass="PORLabeledIconView">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="227.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-clock-50"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="3 hr"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mCI-s9-3eV">
+                                        <rect key="frame" x="53" y="0.0" width="573.5" height="227.5"/>
+                                        <color key="pageIndicatorTintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.12941176469999999" green="0.82745098039999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </pageControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUI-Ez-aBR" customClass="PORLabeledIconView">
+                                        <rect key="frame" x="626.5" y="0.0" width="76.5" height="227.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="O4X-sk-bpj"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-dollar-50"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="5 to 500"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="OTR-sp-ro8" secondAttribute="bottom" constant="32" id="VVD-t7-s7a"/>
+                    <constraint firstItem="OTR-sp-ro8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="eo6-G7-3So"/>
+                    <constraint firstItem="OTR-sp-ro8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="gpK-px-txc"/>
+                    <constraint firstAttribute="trailing" secondItem="OTR-sp-ro8" secondAttribute="trailing" constant="32" id="wPJ-zO-n5L"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="viewLabelSubtitle" destination="b6c-6L-UEI" id="yvg-Oy-0dW"/>
+                <outlet property="viewLabelTitle" destination="tPc-fu-Uf6" id="CQs-nC-HSX"/>
+                <outlet property="viewLabeledIconCost" destination="sUI-Ez-aBR" id="IBW-tp-Axs"/>
+                <outlet property="viewLabeledIconDuration" destination="lHe-r7-Oja" id="LyG-3Z-Alf"/>
+                <outlet property="viewPageControl" destination="mCI-s9-3eV" id="RDf-uV-kZs"/>
+                <outlet property="viewWrapperImageCarousel" destination="FSL-Tu-Gec" id="Gz0-He-jzr"/>
+            </connections>
+            <point key="canvasLocation" x="257.5" y="529.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icon-clock-50" width="50" height="50"/>
+        <image name="icon-dollar-50" width="50" height="50"/>
+    </resources>
 </document>

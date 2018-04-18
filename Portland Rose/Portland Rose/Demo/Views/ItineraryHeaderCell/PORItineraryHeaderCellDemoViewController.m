@@ -39,6 +39,8 @@ static NSUInteger const COUNT_ROWS = 25;
     cell = [tableView dequeueReusableCellWithIdentifier: [PORItineraryHeaderCellView reuseIdentifier]];
   }
   
+  [((PORItineraryHeaderCellView *) cell) setItinerary: _itineraries[indexPath.row]];
+  
   return cell;
 }
 
