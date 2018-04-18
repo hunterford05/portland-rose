@@ -14,10 +14,15 @@ IB_DESIGNABLE
 
 @interface PORLabeledIconView : UIView
 
+/// The color of the text and the tint of the icon. Optional.
 @property IBInspectable UIColor * color;
-@property (nonatomic) IBInspectable NSString * text;
-@property IBInspectable UIImage * icon;
-@property IBInspectable CGFloat spacingStack;
+/// The text label's font. Optional.
 @property UIFont * font;
+/// The image icon to display.
+@property IBInspectable UIImage * icon;
+/// The spacing between the icon and its label.
+@property IBInspectable CGFloat spacingStack;
+/// The text to display.
+@property (nonatomic) IBInspectable NSString * text;
 
 @end
