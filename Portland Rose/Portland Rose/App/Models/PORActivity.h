@@ -12,15 +12,31 @@
 
 @interface PORActivity : NSObject
 
-/// Minimum price estimate (cents)
-@property NSUInteger amountMin;
-/// Maximum price estimate (cents)
-@property NSUInteger amountMax;
+/// Minimum price estimate (dollars)
+@property NSUInteger costLower;
+/// Maximum price estimate (dollars)
+@property NSUInteger costUpper;
+/// Duration (minutes, lower estimate)
+@property NSUInteger durationLower;
+/// Duration (minutes, upper estimate)
+@property NSUInteger durationUpper;
 /// Activity icon
 @property UIImage * icon;
-/// Activity title
-@property NSString * title;
+/// Is a reservation required?
+@property BOOL isReservationRequired;
 /// Location
 @property PORLocation * location;
+/// Notes
+@property NSString * notes;
+/// Subtitle
+@property NSString * subtitle;
+/// Activity title
+@property NSString * title;
+/// Recommendations
+@property NSString * recommendations;
+/// Dress code
+@property NSString * whatToWear;
+/// Things to bring
+@property NSString * whatToBring;
 
 @end

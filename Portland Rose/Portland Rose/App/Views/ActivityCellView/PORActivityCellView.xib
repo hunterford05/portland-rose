@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="ActivityCell" rowHeight="624" id="dcd-hU-HyT" customClass="PORActivityCellView">
+            <rect key="frame" x="0.0" y="0.0" width="519" height="624"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dcd-hU-HyT" id="LTS-Sw-VdQ">
+                <rect key="frame" x="0.0" y="0.0" width="519" height="623.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puffin Watching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-Vr-le9">
+                        <rect key="frame" x="60" y="20" width="121.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gYd-l6-150">
+                        <rect key="frame" x="60" y="55.5" width="439" height="537.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Puffin-watching cruise is kind of like an ocean-going treasure hunt… you just never know what's going to show up!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrC-cY-unp">
+                                <rect key="frame" x="0.0" y="0.0" width="439" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPc-en-X50" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="70" width="201.5" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Grundarfjörður, Snæfellsness"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-location-50"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBc-1p-TUW" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="129" width="69" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="0 to 50"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-dollar-50"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mm-vC-2aa" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="188" width="75" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="30 mins"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-clock-50"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhA-Fl-aoD" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="247" width="165.5" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-warning-50"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Don't scare the puffins!"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZx-oK-osE" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="306" width="117.5" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Puffin costume"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-hanger-50"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3gz-bW-yT4" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="365" width="138" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-briefcase-50"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Bring hiking shoes"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjn-he-hpy" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="424" width="218.5" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Go late in the evening, if you can"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-star-50"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-kn-CY7" customClass="PORLabeledIconView">
+                                <rect key="frame" x="0.0" y="483" width="156" height="54.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="icon" value="icon-phone-50"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Reservation required."/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingStack">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                    </stackView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demo-icon-2" translatesAutoresizingMaskIntoConstraints="NO" id="j8F-dl-UNX">
+                        <rect key="frame" x="20" y="20" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="j8F-dl-UNX" secondAttribute="height" multiplier="1:1" id="DjK-Jd-e2P"/>
+                            <constraint firstAttribute="width" constant="20" id="Zxa-3w-3zo"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="j8F-dl-UNX" firstAttribute="top" secondItem="LTS-Sw-VdQ" secondAttribute="top" constant="20" id="6bg-l0-e4P"/>
+                    <constraint firstItem="9Ab-Vr-le9" firstAttribute="leading" secondItem="j8F-dl-UNX" secondAttribute="trailing" constant="20" id="Rbw-Tt-f5k"/>
+                    <constraint firstAttribute="trailing" secondItem="gYd-l6-150" secondAttribute="trailing" constant="20" id="VJx-2b-nkH"/>
+                    <constraint firstItem="j8F-dl-UNX" firstAttribute="leading" secondItem="LTS-Sw-VdQ" secondAttribute="leading" constant="20" id="jut-qT-6mt"/>
+                    <constraint firstItem="gYd-l6-150" firstAttribute="leading" secondItem="j8F-dl-UNX" secondAttribute="trailing" constant="20" id="r47-jb-VIG"/>
+                    <constraint firstItem="gYd-l6-150" firstAttribute="top" secondItem="9Ab-Vr-le9" secondAttribute="bottom" constant="15" id="ucz-Gy-Coi"/>
+                    <constraint firstItem="9Ab-Vr-le9" firstAttribute="top" secondItem="LTS-Sw-VdQ" secondAttribute="top" constant="20" id="v5v-wg-Irp"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="gYd-l6-150" secondAttribute="bottom" priority="250" constant="20" id="vi1-Ih-fnc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="viewImageIcon" destination="j8F-dl-UNX" id="u3e-Qy-ZT3"/>
+                <outlet property="viewLabelDescription" destination="vrC-cY-unp" id="FJJ-Do-uBd"/>
+                <outlet property="viewLabelTitle" destination="9Ab-Vr-le9" id="Ef4-n9-hlD"/>
+                <outlet property="viewLabeledIconCost" destination="QBc-1p-TUW" id="xSx-Wi-zcA"/>
+                <outlet property="viewLabeledIconDuration" destination="5mm-vC-2aa" id="kth-Rb-P4C"/>
+                <outlet property="viewLabeledIconIsReservationRequired" destination="d4f-kn-CY7" id="Juu-AP-4zH"/>
+                <outlet property="viewLabeledIconLocation" destination="SPc-en-X50" id="AvR-BF-2jv"/>
+                <outlet property="viewLabeledIconNotes" destination="WhA-Fl-aoD" id="qNW-QL-x4G"/>
+                <outlet property="viewLabeledIconRecommendations" destination="Qjn-he-hpy" id="PJT-Iq-WgN"/>
+                <outlet property="viewLabeledIconWhatToBring" destination="3gz-bW-yT4" id="oEn-Wm-eq7"/>
+                <outlet property="viewLabeledIconWhatToWear" destination="dZx-oK-osE" id="ktO-ex-pl8"/>
+            </connections>
+            <point key="canvasLocation" x="475.5" y="256"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="demo-icon-2" width="50" height="50"/>
+        <image name="icon-briefcase-50" width="208" height="208"/>
+        <image name="icon-clock-50" width="50" height="50"/>
+        <image name="icon-dollar-50" width="50" height="50"/>
+        <image name="icon-hanger-50" width="48" height="48"/>
+        <image name="icon-location-50" width="50" height="50"/>
+        <image name="icon-phone-50" width="50" height="50"/>
+        <image name="icon-star-50" width="50" height="50"/>
+        <image name="icon-warning-50" width="45" height="45"/>
+    </resources>
+</document>

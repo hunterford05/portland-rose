@@ -211,6 +211,32 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 * **Label Color** — `colorLabel` sets the color of the button's label
 * **text** — `text` sets the button's label text
 
+## ActivityCellView
+
+`PORActivityCellView` displays an activity outline.
+
+### Usage
+
+1. Ensure the parent `UITAbleView` has automatic cell sizing enabled. For better performance, also ensure that its row height estimate is ~300.
+2. Update the `UITableView`'s data source methods. In the below example, `_activities` is an `NSArray <PORActivity *> *`.:
+```objective-c
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  UITableViewCell * cell;
+ 
+  // Dequeue a reusable cell 
+  cell = [tableView dequeueReusableCellWithIdentifier:[PORActivityCellView reuseIdentifier]];
+  // if necessary, register the nib and try to dequeue again 
+  if (!cell){
+    [tableView registerNib:[UINib nibWithNibName: [PORActivityCellView nibName] bundle: nil] forCellReuseIdentifier:[PORActivityCellView reuseIdentifier]];
+    cell = [tableView dequeueReusableCellWithIdentifier:[PORActivityCellView reuseIdentifier]];
+  }
+  // configure the cell by setting its `activity` property
+  [((PORActivityCellView *) cell) setActivity: _activities[indexPath.row]];
+
+  return cell;
+}
+```
+
 ## Floating Action Button View
 
 `PORFloatingActionButtonView` renders a button with an icon image and a 1:1 aspect ratio.
@@ -288,6 +314,26 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
      [carousel setImages: imgs];
    }
    ```
+
+## LabeledIconView
+
+The `PORLabeledIconView` displays a horizontal stack containing a single image icon and a text label.
+
+### Usage
+
+A `PORLabeledIconView` can be added directly to the interface builder by adding a `UIView` and setting its class to `PORLabeledIconView`.
+
+* **Icon** — `icon` sets the icon.
+* **Text** — `text` sets the label's text. *Note: If `text` is not given, or if it contains only whitespace characters, the `PORLabeledIconView` will not be displayed at all (`hidden == YES`)*.
+
+### Customization
+
+The `PORLabeledIconView` class can be customized in these ways:
+
+* **Color** — `color` sets the text color and icon tint color. `color` defaults to the `PORPalette`'s default text color.
+* **Font** — `font` sets the label's font; it defaults to `PORTypeLibrary`'s default body font.
+* **Stack Spacing** – `spacingStack` sets the spacing between the icon and its label.
+
 
 ## TabBarView
 
