@@ -319,7 +319,7 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 
 The `PORLabeledIconView` displays a horizontal stack containing a single image icon and a text label.
 
-### usage
+### Usage
 
 A `PORLabeledIconView` can be added directly to the interface builder by adding a `UIView` and setting its class to `PORLabeledIconView`.
 
