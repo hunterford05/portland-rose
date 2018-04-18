@@ -54,6 +54,7 @@
                         <segue destination="M0W-Qd-mSn" kind="show" identifier="FromDemosToFloatingActionButtonViewDemo" id="tZT-Nt-Wpg"/>
                         <segue destination="cfq-lj-ElT" kind="show" identifier="FromDemosToItinerarySummaryViewDemo" id="RC2-jJ-Kcq"/>
                         <segue destination="iXV-9q-s6Z" kind="show" identifier="FromDemosToActivityCellViewDemo" id="30Y-t0-9YZ"/>
+                        <segue destination="zm8-pe-owX" kind="show" identifier="FromDemosToItineraryHeaderCellViewDemo" id="9hh-ac-4BY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -472,6 +473,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5x-1j-A0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3185" y="1533"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="mIl-Zd-Vwl">
+            <objects>
+                <tableViewController id="zm8-pe-owX" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="500" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zc1-6p-mI4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="zm8-pe-owX" id="1Wv-oE-48r"/>
+                            <outlet property="delegate" destination="zm8-pe-owX" id="Dt2-u3-iQm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rk3-Eb-ynH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2846" y="75"/>
         </scene>
     </scenes>
     <resources>
