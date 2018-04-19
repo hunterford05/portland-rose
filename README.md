@@ -285,35 +285,71 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 
 ### Usage
 
-1. First, drag a container view onto the interface builder
-   ![](docs/figs/1804091345.png)
-2. Next, set its child view controller's class to 
-   `PORImageCarouselView` 
-   ![](docs/figs/1804091347.png)
-3. Create a reference outlet for the **container view**, e.g:
+1. Add a `UIView` to the interface builder and set its class to `PORImageCarouselView`.
+2. Create a reference outlet for it.
    ```objective-c
-   @property (weak, nonatomic) IBOutlet UIView *container;
+   @property (weak, nonatomic) IBOutlet PORImageCarouselView *carousel;
    ```
-4. create a reference to the `PORImageCarouselView` by accessing
-   the view controller's `childViewControllers` property, e.g:
+3. set the carousel's images: 
    ```objective-c
    // ExampleViewController.m
    // ...
    - (void) viewDidLoad{
      [super viewDidLoad];
-     PORImageCarouselView * carousel = self.view.childViewControllers.firstObject;
+     NSArray <UIImage *> * images = @[[UIImage imageNamed: @"example-image"]];
+     [_carousel setImages: images];
    }
    ```
-5. Set the carousel's image(s) by calling `setImages:`, e.g:
-   ```
-   // ExampleViewController.m
-   // ...
-   - (void) viewDidLoad{
-     // ...
-     NSMutableArray * imgs = (NSMutableArray *) @[[UIImage imageNamed: @"example"]];
-     [carousel setImages: imgs];
-   }
-   ```
+4. when a user changes the current image displayed in the carousel, the carousel notifies its delegate using the `imageCarouselView:didChangeIndex:` protocol method. To handle this, first ensure that the parent view or view controller conforms to the `PORImageCarouselViewDelegate` protocol:
+```objective-c
+// ExampleViewController.h
+// ...
+@interface ExampleViewController : UIViewController <PORImageCarouselDelegate> 
+// ...
+```
+```objective-c
+// ExampleViewController.m
+// ...
+- (void) imageCarouselView: (PORImageCarouselView *) carouselView didChangeIndex: (NSUInteger) index{
+  NSLog(@"%lu", index);
+}
+// ...
+``` 
+Next, set the `PORImageCarouselView`'s `delegate` property:
+```objective-c
+// ExampleViewController.m
+// ...
+- (void) viewDidLoad {
+  [super viewDidLoad];
+  [_carousel setDelegate: self];
+  // ...
+}
+```
+
+## ItineraryHeaderCellView
+
+The `PORItineraryHeaderCellView` class displays an itinerary title along with cost / duration estimates and a carousel of itinerary images.
+
+### Usage
+
+1. Configure the parent table view or table view controller's `cellForRowAtIndexPath:` method:
+```objective-c
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  UITableViewCell * cell;
+  
+  // Try to dequeue the cell without registering a nib / reuse id 
+  cell = [tableView dequeueReusableCellWithIdentifier: [PORItineraryHeaderCellView reuseIdentifier]];
+  // If that fails, register the nib / reuse id and try again
+  if (!cell){
+    [tableView registerNib:[UINib nibWithNibName:[PORItineraryHeaderCellView nibName] bundle:nil] forCellReuseIdentifier:[PORItineraryHeaderCellView reuseIdentifier]];
+    cell = [tableView dequeueReusableCellWithIdentifier: [PORItineraryHeaderCellView reuseIdentifier]];
+  }
+  // Set the cell's `_itinerary` property 
+  [((PORItineraryHeaderCellView *) cell) setItinerary: _itineraries[indexPath.row]];
+  
+  return cell;
+}
+```
 
 ## LabeledIconView
 
