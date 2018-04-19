@@ -54,6 +54,7 @@
 		5AF738D9207408EC00B8E75C /* PORActionButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF738D8207408EC00B8E75C /* PORActionButtonView.xib */; };
 		5AF738DC207408F600B8E75C /* PORActionButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738DB207408F600B8E75C /* PORActionButtonView.m */; };
 		5AF738DF20740F0B00B8E75C /* PORActionButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */; };
+		5AFD5CA820890C6C009D2908 /* PORNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD5CA720890C6C009D2908 /* PORNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,8 @@
 		5AF738DB207408F600B8E75C /* PORActionButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORActionButtonView.m; sourceTree = "<group>"; };
 		5AF738DD20740F0B00B8E75C /* PORActionButtonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PORActionButtonDemoViewController.h; path = "Portland Rose/Demo/Views/ActionButton/PORActionButtonDemoViewController.h"; sourceTree = SOURCE_ROOT; };
 		5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PORActionButtonDemoViewController.m; path = "Portland Rose/Demo/Views/ActionButton/PORActionButtonDemoViewController.m"; sourceTree = SOURCE_ROOT; };
+		5AFD5CA620890C6C009D2908 /* PORNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORNavigationController.h; sourceTree = "<group>"; };
+		5AFD5CA720890C6C009D2908 /* PORNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,8 +241,8 @@
 		5A445F2320729F1E009497B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5AA949172075589B00060FE8 /* PORTabBarController.h */,
-				5AA949182075589B00060FE8 /* PORTabBarController.m */,
+				5AFD5CA520890C4F009D2908 /* NavigationController */,
+				5AFD5CA420890C31009D2908 /* TabBarController */,
 				5A445F0F20729AAE009497B0 /* ViewController.h */,
 				5A445F1020729AAE009497B0 /* ViewController.m */,
 			);
@@ -465,6 +468,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5AFD5CA420890C31009D2908 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				5AA949172075589B00060FE8 /* PORTabBarController.h */,
+				5AA949182075589B00060FE8 /* PORTabBarController.m */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		5AFD5CA520890C4F009D2908 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				5AFD5CA620890C6C009D2908 /* PORNavigationController.h */,
+				5AFD5CA720890C6C009D2908 /* PORNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -545,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFD5CA820890C6C009D2908 /* PORNavigationController.m in Sources */,
 				5A7B6B9F207FF6E700C99AA0 /* NSString+Random.m in Sources */,
 				5A445F1120729AAE009497B0 /* ViewController.m in Sources */,
 				5AB7EAF92087F7D10087B7DB /* PORImageCarouselView.m in Sources */,
