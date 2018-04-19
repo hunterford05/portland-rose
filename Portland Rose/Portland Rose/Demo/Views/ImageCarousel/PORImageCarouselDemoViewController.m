@@ -17,8 +17,7 @@ static NSString * const NAME_IMAGE_INITIAL = @"image-lg-1";
 
 /// Container holding the `PORImageCarouselView`
 @property (weak, nonatomic) IBOutlet UIView *viewContainerCarousel;
-/// `PORImageCarouselView` instance
-@property PORImageCarouselView * viewImageCarousel;
+@property (weak, nonatomic) IBOutlet PORImageCarouselView *viewImageCarousel;
 
 @end
 
@@ -28,9 +27,7 @@ static NSString * const NAME_IMAGE_INITIAL = @"image-lg-1";
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  _viewImageCarousel = self.childViewControllers.firstObject;
-  // Set initial image
-  [_viewImageCarousel setImages: (NSMutableArray *)@[[UIImage imageNamed:NAME_IMAGE_INITIAL]]];
+  [_viewImageCarousel setDelegate: self];
 }
 
 #pragma mark - event handlers
@@ -55,7 +52,14 @@ static NSString * const NAME_IMAGE_INITIAL = @"image-lg-1";
     [imgs addObject: [UIImage imageNamed:name]];
   }
   
-  [_viewImageCarousel setImages: imgs];
+  [_viewImageCarousel setImages:imgs];
+  
+}
+
+#pragma mark - <PORImageCarouselDelegate>
+
+- (void)imageCarouselView:(PORImageCarouselView *)carouselView didChangeIndex:(NSUInteger)index {
+  NSLog(@"Image Carousel View Index: %lu", index);
 }
 
 @end

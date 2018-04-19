@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,6 +55,7 @@
                         <segue destination="M0W-Qd-mSn" kind="show" identifier="FromDemosToFloatingActionButtonViewDemo" id="tZT-Nt-Wpg"/>
                         <segue destination="cfq-lj-ElT" kind="show" identifier="FromDemosToItinerarySummaryViewDemo" id="RC2-jJ-Kcq"/>
                         <segue destination="iXV-9q-s6Z" kind="show" identifier="FromDemosToActivityCellViewDemo" id="30Y-t0-9YZ"/>
+                        <segue destination="zm8-pe-owX" kind="show" identifier="FromDemosToItineraryHeaderCellViewDemo" id="9hh-ac-4BY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -290,19 +292,10 @@
         <scene sceneID="JPc-ZT-SYz">
             <objects>
                 <viewController id="UJV-wZ-3Zi" customClass="PORImageCarouselDemoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IdK-Sj-khi">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="IdK-Sj-khi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIq-RD-ODC">
-                                <rect key="frame" x="0.0" y="101" width="375" height="400"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="Z5J-qw-g6D"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="4Rw-hT-NuU" kind="embed" id="wxs-ov-kT2"/>
-                                </connections>
-                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0t-68-bhB" customClass="PORActionButtonView">
                                 <rect key="frame" x="128.5" y="545" width="117" height="38"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -313,20 +306,26 @@
                                     <action selector="touchUpInsideButton:" destination="UJV-wZ-3Zi" eventType="touchUpInside" id="JyH-KG-l35"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYa-qC-BbT" customClass="PORImageCarouselView">
+                                <rect key="frame" x="0.0" y="32" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RYa-qC-BbT" secondAttribute="height" id="dTR-MF-Z5N"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="c7g-9e-Wgj" firstAttribute="trailing" secondItem="RYa-qC-BbT" secondAttribute="trailing" id="3ow-FE-bHc"/>
                             <constraint firstItem="q0t-68-bhB" firstAttribute="centerX" secondItem="IdK-Sj-khi" secondAttribute="centerX" id="97Y-aq-0OJ"/>
-                            <constraint firstItem="ZIq-RD-ODC" firstAttribute="centerX" secondItem="IdK-Sj-khi" secondAttribute="centerX" id="T3Z-Fs-Xq1"/>
-                            <constraint firstItem="ZIq-RD-ODC" firstAttribute="leading" secondItem="c7g-9e-Wgj" secondAttribute="leading" id="ZqB-Zd-qdn"/>
-                            <constraint firstItem="c7g-9e-Wgj" firstAttribute="trailing" secondItem="ZIq-RD-ODC" secondAttribute="trailing" id="gro-M3-Q43"/>
-                            <constraint firstItem="ZIq-RD-ODC" firstAttribute="centerY" secondItem="IdK-Sj-khi" secondAttribute="centerY" id="rlc-Ua-cek"/>
+                            <constraint firstItem="RYa-qC-BbT" firstAttribute="leading" secondItem="c7g-9e-Wgj" secondAttribute="leading" id="BIO-RX-RwZ"/>
+                            <constraint firstItem="RYa-qC-BbT" firstAttribute="top" secondItem="c7g-9e-Wgj" secondAttribute="top" constant="32" id="Pyi-uq-Daw"/>
                             <constraint firstItem="c7g-9e-Wgj" firstAttribute="bottom" secondItem="q0t-68-bhB" secondAttribute="bottom" constant="20" id="uyp-OV-nBp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c7g-9e-Wgj"/>
                     </view>
                     <connections>
-                        <outlet property="viewContainerCarousel" destination="ZIq-RD-ODC" id="uCN-eY-9To"/>
+                        <outlet property="viewImageCarousel" destination="RYa-qC-BbT" id="FKI-7i-Paw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwt-MQ-6XZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,19 +458,24 @@
             </objects>
             <point key="canvasLocation" x="1346" y="-847"/>
         </scene>
-        <!--Image Carousel View-->
-        <scene sceneID="XFc-9Z-hxg">
+        <!--Itinerary Header Cell Demo View Controller-->
+        <scene sceneID="mIl-Zd-Vwl">
             <objects>
-                <viewController id="4Rw-hT-NuU" customClass="PORImageCarouselView" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gcd-E8-qYY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                <tableViewController id="zm8-pe-owX" customClass="PORItineraryHeaderCellDemoViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="500" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zc1-6p-mI4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0gt-V0-SCt"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e5x-1j-A0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="zm8-pe-owX" id="1Wv-oE-48r"/>
+                            <outlet property="delegate" destination="zm8-pe-owX" id="Dt2-u3-iQm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rk3-Eb-ynH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3185" y="1533"/>
+            <point key="canvasLocation" x="2846" y="75"/>
         </scene>
     </scenes>
     <resources>
