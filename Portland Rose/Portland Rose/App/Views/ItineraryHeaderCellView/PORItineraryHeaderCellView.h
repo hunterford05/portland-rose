@@ -17,7 +17,13 @@
 
 @property (nonatomic) PORItinerary * itinerary;
 
+/**
+ * This class' reuse identifier.
+ */
 + (NSString *) reuseIdentifier;
+/**
+ * This class' nib name.
+ */
 + (NSString *) nibName;
 
 @end

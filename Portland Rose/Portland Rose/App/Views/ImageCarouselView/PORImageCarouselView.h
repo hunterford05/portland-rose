@@ -14,7 +14,11 @@ IB_DESIGNABLE
 @class PORImageCarouselView;
 
 @protocol PORImageCarouselDelegate
+/**
+ * Handle index changes here (e.g. update a `UIPageControl`'s current index).
+ */
 - (void) imageCarouselView: (PORImageCarouselView *) carouselView didChangeIndex: (NSUInteger) index;
+
 @end
 
 @interface PORImageCarouselView : UIView <UIScrollViewDelegate>

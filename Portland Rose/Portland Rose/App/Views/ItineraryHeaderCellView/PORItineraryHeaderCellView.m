@@ -8,24 +8,33 @@
 
 #import "PORItineraryHeaderCellView.h"
 
-
+/// Display format for estimated cost range
 static NSString * const FORMAT_COST = @"%lu to %lu";
-static NSString * const FORMAT_DURATION_MINS = @"%lu min";
+/// Display format for estimated duration (in hours)
 static NSString * const FORMAT_DURATION_HOURS = @"%lu hr";
-
+/// Display format for estimated duration (in minutes)
+static NSString * const FORMAT_DURATION_MINS = @"%lu min";
+/// The name of the nib file to load
 static NSString * const NAME_NIB = @"PORItineraryHeaderCellView";
+/// The reuse identifier for this cell
 static NSString * const REUSE_IDENTIFIER = @"ItineraryHeaderCell";
+/// The display title for this cell
 static NSString * const TITLE_CELL = @"Itinerary";
 
 @interface PORItineraryHeaderCellView()
 
+/// Subtitle label
 @property (weak, nonatomic) IBOutlet UILabel *viewLabelSubtitle;
+/// Title label
 @property (weak, nonatomic) IBOutlet UILabel *viewLabelTitle;
-@property (weak, nonatomic) IBOutlet UIView *viewWrapperImageCarousel;
+/// Page control (the current index dots)
 @property (weak, nonatomic) IBOutlet UIPageControl *viewPageControl;
-@property (weak, nonatomic) IBOutlet PORLabeledIconView *viewLabeledIconDuration;
-@property (weak, nonatomic) IBOutlet PORLabeledIconView *viewLabeledIconCost;
+/// Image carousel view
 @property (weak, nonatomic) IBOutlet PORImageCarouselView *viewImageCarousel;
+/// Labeled icon for the estimated duration
+@property (weak, nonatomic) IBOutlet PORLabeledIconView *viewLabeledIconDuration;
+/// Labeled icon for the estimated cost
+@property (weak, nonatomic) IBOutlet PORLabeledIconView *viewLabeledIconCost;
 
 
 @end
@@ -41,12 +50,20 @@ static NSString * const TITLE_CELL = @"Itinerary";
 
 #pragma mark - setters
 
+/**
+ * `setItinerary:` is the setter for the `itinerary` property. This triggers a
+ *  refresh of subviews.
+ */
 - (void) setItinerary:(PORItinerary *)itinerary{
   _itinerary = itinerary;
   [self refresh];
 }
 
 #pragma mark - helpers
+
+/**
+ * `refresh` refreshes subview properties.
+ */
 - (void) refresh{
   NSAssert(_itinerary, @"Missing itinerary.");
   
@@ -69,6 +86,9 @@ static NSString * const TITLE_CELL = @"Itinerary";
   [_viewImageCarousel setImages: [_itinerary allImages]];
 }
 
+/**
+ * `setUp` performs initial setup.
+ */
 - (void) setUp{
   PORPalette * palette;
   PORTypeLibrary * typeLibrary;
@@ -115,7 +135,11 @@ static NSString * const TITLE_CELL = @"Itinerary";
 
 #pragma mark - <PORImageCarouselViewDelegate>
 
+/**
+ * Handle image carousel index changes.
+ */
 - (void)imageCarouselView:(PORImageCarouselView *)carouselView didChangeIndex:(NSUInteger)index{
+  // Update the page control's `currentPage` index
   [_viewPageControl setCurrentPage: index];
 }
 

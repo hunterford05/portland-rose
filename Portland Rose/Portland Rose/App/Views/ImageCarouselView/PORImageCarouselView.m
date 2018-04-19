@@ -13,9 +13,12 @@ static CGFloat const PADDING_HORIZONTAL = 32.0;
 
 @interface PORImageCarouselView()
 
+/// Main view
 @property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UIStackView *viewStack;
+/// Scroll view that contains stack view and all image cards
 @property (weak, nonatomic) IBOutlet UIScrollView *viewScroll;
+/// Stack view embedded in the scroll view; contains image cards
+@property (weak, nonatomic) IBOutlet UIStackView *viewStack;
 
 @end
 
@@ -39,6 +42,11 @@ static CGFloat const PADDING_HORIZONTAL = 32.0;
 
 #pragma mark - setters
 
+/**
+ * Setter for `images` property. Removes `PORImageCard` subviews before
+ * generating new ones for each `UIImage *` in `images` and adding them
+ * to the stack view.
+ */
 - (void) setImages:(NSArray<UIImage *> *)images{
   _images = images;
   [self clearImages];
@@ -47,6 +55,9 @@ static CGFloat const PADDING_HORIZONTAL = 32.0;
   }
 }
 
+/**
+ * Updates the `index` property and notifies the `delegate`.
+ */
 - (void) setIndex:(NSUInteger)index{
   _index = index;
   if (_delegate){
@@ -56,32 +67,22 @@ static CGFloat const PADDING_HORIZONTAL = 32.0;
 
 #pragma mark - <UIScrollViewDelegate>
 
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+  [self setIndex: [self calculateIndex]];
+}
+
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
   if (!decelerate){
     [self setIndex: [self calculateIndex]];
   }
 }
 
-- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-  [self setIndex: [self calculateIndex]];
-}
-
 #pragma mark - helpers
 
-- (NSUInteger) calculateIndex {
-  CGFloat f;
-  NSUInteger i;
-  f = round(_viewScroll.contentOffset.x / _view.bounds.size.width);
-  i = (NSUInteger)f;
-  return i;
-}
-
-- (void) clearImages{
-  for (UIView * view in _viewStack.arrangedSubviews){
-    [view removeFromSuperview];
-  }
-}
-                                    
+/**
+ * `addImage:` generates a `PORImageCardView` instance with the given `image`
+ * and adds it to the stack view.
+ */
 - (void) addImage: (UIImage *) image{
   PORImageCardView * viewImage;
   
@@ -92,6 +93,29 @@ static CGFloat const PADDING_HORIZONTAL = 32.0;
   [[viewImage.widthAnchor constraintEqualToAnchor:_view.widthAnchor multiplier:1 constant:PADDING_HORIZONTAL * -2] setActive: YES];
 }
 
+/**
+ * Calculate the index of the current image card based on the content offset.
+ */
+- (NSUInteger) calculateIndex {
+  CGFloat f;
+  NSUInteger i;
+  f = round(_viewScroll.contentOffset.x / _view.bounds.size.width);
+  i = (NSUInteger)f;
+  return i;
+}
+
+/**
+ * `clearImages` removes all arranged subviews from the stack view.
+ */
+- (void) clearImages{
+  for (UIView * view in _viewStack.arrangedSubviews){
+    [view removeFromSuperview];
+  }
+}
+
+/**
+ * Load the nib file associated with this view, then call `nibDidLoad`.
+ */
 - (void) loadNib {
   [[NSBundle bundleForClass:self.class] loadNibNamed:NAME_NIB owner:self options:nil];
   [_view setFrame: self.bounds];

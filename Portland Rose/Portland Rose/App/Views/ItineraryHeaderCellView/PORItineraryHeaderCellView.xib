@@ -102,7 +102,6 @@
                 <outlet property="viewLabeledIconCost" destination="sUI-Ez-aBR" id="IBW-tp-Axs"/>
                 <outlet property="viewLabeledIconDuration" destination="lHe-r7-Oja" id="LyG-3Z-Alf"/>
                 <outlet property="viewPageControl" destination="mCI-s9-3eV" id="RDf-uV-kZs"/>
-                <outlet property="viewWrapperImageCarousel" destination="FSL-Tu-Gec" id="Gz0-He-jzr"/>
             </connections>
             <point key="canvasLocation" x="257.5" y="492"/>
         </tableViewCell>
