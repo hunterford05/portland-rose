@@ -13,7 +13,6 @@
 		5A0DCCD8208048A9000FCAAC /* PORLabeledIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCCD7208048A9000FCAAC /* PORLabeledIconView.m */; };
 		5A0DCCDA208048B8000FCAAC /* PORLabeledIconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCCD9208048B8000FCAAC /* PORLabeledIconView.xib */; };
 		5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F0D20729AAE009497B0 /* AppDelegate.m */; };
-		5A445F1120729AAE009497B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F1020729AAE009497B0 /* ViewController.m */; };
 		5A445F1420729AAE009497B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F1220729AAE009497B0 /* Main.storyboard */; };
 		5A445F1620729AAF009497B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F1520729AAF009497B0 /* Assets.xcassets */; };
 		5A445F1920729AAF009497B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */; };
@@ -69,8 +68,6 @@
 		5A445F0920729AAE009497B0 /* Portland Rose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Portland Rose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A445F0C20729AAE009497B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A445F0D20729AAE009497B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5A445F0F20729AAE009497B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5A445F1020729AAE009497B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5A445F1320729AAE009497B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A445F1520729AAF009497B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A445F1820729AAF009497B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -241,10 +238,9 @@
 		5A445F2320729F1E009497B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5AFD5CB7208933CD009D2908 /* IndexItinerariesController */,
 				5AFD5CA520890C4F009D2908 /* NavigationController */,
 				5AFD5CA420890C31009D2908 /* TabBarController */,
-				5A445F0F20729AAE009497B0 /* ViewController.h */,
-				5A445F1020729AAE009497B0 /* ViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -486,6 +482,13 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		5AFD5CB7208933CD009D2908 /* IndexItinerariesController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IndexItinerariesController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -568,7 +571,6 @@
 			files = (
 				5AFD5CA820890C6C009D2908 /* PORNavigationController.m in Sources */,
 				5A7B6B9F207FF6E700C99AA0 /* NSString+Random.m in Sources */,
-				5A445F1120729AAE009497B0 /* ViewController.m in Sources */,
 				5AB7EAF92087F7D10087B7DB /* PORImageCarouselView.m in Sources */,
 				5A7B6B82207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m in Sources */,
 				5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */,
