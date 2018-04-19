@@ -8,6 +8,9 @@
 
 #import "PORNavigationController.h"
 
+/// Thickness of nav bar divider
+static CGFloat const HEIGHT_NAV_BAR_DIVIDER = 1.0;
+
 @interface PORNavigationController ()
 
 @end
@@ -24,6 +27,9 @@
 
 #pragma mark - helpers
 
+/**
+ * Style the navigation controller's navigation bar.
+ */
 - (void)styleNavigationBar{
   PORPalette * palette;
   PORTypeLibrary * typeLibrary;
@@ -35,18 +41,49 @@
   NSAssert(navBar, @"`PORNavigationController`'s `navigationBar` is nil.");
   
   // Style the navigation bar
+  [self styleNavigationBar:navBar WithPalette:palette andTypeLibrary:typeLibrary];
+  
+  // Style bar button items
+  [self styleBarButtonItemsWithPalette:palette andTypeLibrary: typeLibrary];
+  
+  // Style navigation bar border
+  [self styleNavigationBar: navBar borderWithPalette: palette];
+}
+
+/**
+ * Style the given `UINavigationBar` instance.
+ */
+- (void)styleNavigationBar: (UINavigationBar *) navBar WithPalette: (PORPalette *) palette andTypeLibrary: (PORTypeLibrary *) typeLibrary{
   [navBar setBackgroundColor:palette.colorBackground];
   [navBar setBarTintColor:palette.colorBackground];
   [navBar setTitleTextAttributes:
    @{NSForegroundColorAttributeName: palette.colorTextLoud,
      NSFontAttributeName: typeLibrary.fontHeadline}];
-  
-  // Style bar button items
+}
+
+/**
+ * Style all bar button items added to an instance of the `PORNavigationController`
+ * class.
+ */
+- (void)styleBarButtonItemsWithPalette: (PORPalette *) palette andTypeLibrary: (PORTypeLibrary *) typeLibrary{
   [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[self class]]]
    setTitleTextAttributes:@{NSForegroundColorAttributeName: palette.colorTextLoud,
                             NSFontAttributeName: typeLibrary.fontHeadline} forState:UIControlStateNormal];
   [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[self class]]]
    setTintColor: palette.colorTextLoud];
+}
+
+/**
+ * Add a bottom border to the given navigation bar and style it.
+ */
+- (void)styleNavigationBar: (UINavigationBar *) navBar borderWithPalette: (PORPalette *) palette{
+  UIView * border;
+  CGRect frame;
+  
+  frame = CGRectMake(0, navBar.frame.size.height - HEIGHT_NAV_BAR_DIVIDER, navBar.frame.size.width, HEIGHT_NAV_BAR_DIVIDER);
+  border = [[UIView alloc] initWithFrame: frame];
+  [border setBackgroundColor: palette.colorDivider];
+  [navBar addSubview:border];
 }
 
 
