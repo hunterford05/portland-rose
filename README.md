@@ -56,6 +56,19 @@ Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Ga
 
 `Config` contains app configuration and build files, such as `info.plist`.
 
+## Building
+
+### Preprocessor Macros
+
+* **Demo** — the `DEMO` preprocessor macro indicates whether or not the app should run in "Demo" mode. In "Demo" mode, `Demo.storyboard` is the root storyboard.
+
+### Schemes
+
+Portland Rose can be built using one of three different "schemes": Development, Staging, and Production. 
+
+* **Development** — This scheme is used for building and testing individual application components. The `DEMO` preprocessor macro is set to `1`.
+* **Staging** — this scheme is used for staging the application.
+* **Production** — this scheme is used to build production-ready releases.
 
 # Models
 
