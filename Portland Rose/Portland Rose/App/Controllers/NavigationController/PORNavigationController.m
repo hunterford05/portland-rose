@@ -14,24 +14,40 @@
 
 @implementation PORNavigationController
 
+#pragma mark - lifecycle
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  [self styleNavigationBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - helpers
+
+- (void)styleNavigationBar{
+  PORPalette * palette;
+  PORTypeLibrary * typeLibrary;
+  UINavigationBar * navBar;
+
+  navBar = self.navigationBar;
+  palette = [PORPalette sharedPalette];
+  typeLibrary = [PORTypeLibrary sharedTypeLibrary];
+  NSAssert(navBar, @"`PORNavigationController`'s `navigationBar` is nil.");
+  
+  // Style the navigation bar
+  [navBar setBackgroundColor:palette.colorBackground];
+  [navBar setBarTintColor:palette.colorBackground];
+  [navBar setTitleTextAttributes:
+   @{NSForegroundColorAttributeName: palette.colorTextLoud,
+     NSFontAttributeName: typeLibrary.fontHeadline}];
+  
+  // Style bar button items
+  [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[self class]]]
+   setTitleTextAttributes:@{NSForegroundColorAttributeName: palette.colorTextLoud,
+                            NSFontAttributeName: typeLibrary.fontHeadline} forState:UIControlStateNormal];
+  [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[self class]]]
+   setTintColor: palette.colorTextLoud];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
