@@ -54,6 +54,7 @@
 		5AF738DC207408F600B8E75C /* PORActionButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738DB207408F600B8E75C /* PORActionButtonView.m */; };
 		5AF738DF20740F0B00B8E75C /* PORActionButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */; };
 		5AFD5CA820890C6C009D2908 /* PORNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD5CA720890C6C009D2908 /* PORNavigationController.m */; };
+		5AFD5CBA20893432009D2908 /* PORIndexItinerariesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD5CB920893432009D2908 /* PORIndexItinerariesController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,8 @@
 		5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PORActionButtonDemoViewController.m; path = "Portland Rose/Demo/Views/ActionButton/PORActionButtonDemoViewController.m"; sourceTree = SOURCE_ROOT; };
 		5AFD5CA620890C6C009D2908 /* PORNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORNavigationController.h; sourceTree = "<group>"; };
 		5AFD5CA720890C6C009D2908 /* PORNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORNavigationController.m; sourceTree = "<group>"; };
+		5AFD5CB820893432009D2908 /* PORIndexItinerariesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORIndexItinerariesController.h; sourceTree = "<group>"; };
+		5AFD5CB920893432009D2908 /* PORIndexItinerariesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORIndexItinerariesController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +488,8 @@
 		5AFD5CB7208933CD009D2908 /* IndexItinerariesController */ = {
 			isa = PBXGroup;
 			children = (
+				5AFD5CB820893432009D2908 /* PORIndexItinerariesController.h */,
+				5AFD5CB920893432009D2908 /* PORIndexItinerariesController.m */,
 			);
 			path = IndexItinerariesController;
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 				5A7B6B9C207FF67E00C99AA0 /* PORBadge+Mocks.m in Sources */,
 				5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */,
 				5A5933012087D106003A1751 /* PORItineraryHeaderCellView.m in Sources */,
+				5AFD5CBA20893432009D2908 /* PORIndexItinerariesController.m in Sources */,
 				5A7B6B8C207FD88E00C99AA0 /* PORBadge.m in Sources */,
 				5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */,
 				5AF738CE2073D8E100B8E75C /* PORPalette.m in Sources */,
