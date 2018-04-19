@@ -8,22 +8,24 @@
 
 #import "AppDelegate.h"
 
+#if DEMO
+static NSString * const NAME_STORYBOARD = @"Demo";
+#else
+static NSString * const NAME_STORYBOARD = @"Main";
+#endif
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-NSString * const NAME_STORYBOARD_DEMO = @"Demo";
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   
   UIStoryboard * sb;
   UIViewController * vc;
   
-  // Use the DEMO storyboard by default
-  sb = [UIStoryboard storyboardWithName: NAME_STORYBOARD_DEMO bundle:nil];
+  sb = [UIStoryboard storyboardWithName: NAME_STORYBOARD bundle:[NSBundle mainBundle]];
   vc = [sb instantiateInitialViewController];
   [self.window setRootViewController:vc];
   [self.window makeKeyAndVisible];
