@@ -13,7 +13,7 @@
 #import "PORTypeLibrary.h"
 #import <UIKit/UIKit.h>
 
-@interface PORItineraryHeaderCellView : UITableViewCell
+@interface PORItineraryHeaderCellView : UITableViewCell <PORImageCarouselDelegate>
 
 @property (nonatomic) PORItinerary * itinerary;
 

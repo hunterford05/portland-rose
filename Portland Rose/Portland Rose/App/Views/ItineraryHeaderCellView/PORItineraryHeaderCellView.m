@@ -88,6 +88,9 @@ static NSString * const TITLE_CELL = @"Itinerary";
   // Configure page control
   [_viewPageControl setCurrentPageIndicatorTintColor: palette.colorPrimary];
   [_viewPageControl setPageIndicatorTintColor:palette.colorTextMuted];
+  
+  // Configure image carousel view
+  [_viewImageCarousel setDelegate:self];
 }
 
 /**
@@ -108,6 +111,12 @@ static NSString * const TITLE_CELL = @"Itinerary";
   } else {
     return [NSString stringWithFormat:FORMAT_DURATION_MINS, _itinerary.duration];
   }
+}
+
+#pragma mark - <PORImageCarouselViewDelegate>
+
+- (void)imageCarouselView:(PORImageCarouselView *)carouselView didChangeIndex:(NSUInteger)index{
+  [_viewPageControl setCurrentPage: index];
 }
 
 #pragma mark - class
