@@ -37,7 +37,7 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSL-Tu-Gec">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSL-Tu-Gec" customClass="PORImageCarouselView">
                         <rect key="frame" x="0.0" y="73" width="767" height="767"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -96,6 +96,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="viewImageCarousel" destination="FSL-Tu-Gec" id="SgN-wp-Kqm"/>
                 <outlet property="viewLabelSubtitle" destination="b6c-6L-UEI" id="yvg-Oy-0dW"/>
                 <outlet property="viewLabelTitle" destination="tPc-fu-Uf6" id="CQs-nC-HSX"/>
                 <outlet property="viewLabeledIconCost" destination="sUI-Ez-aBR" id="IBW-tp-Axs"/>

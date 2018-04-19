@@ -25,6 +25,7 @@ static NSString * const TITLE_CELL = @"Itinerary";
 @property (weak, nonatomic) IBOutlet UIPageControl *viewPageControl;
 @property (weak, nonatomic) IBOutlet PORLabeledIconView *viewLabeledIconDuration;
 @property (weak, nonatomic) IBOutlet PORLabeledIconView *viewLabeledIconCost;
+@property (weak, nonatomic) IBOutlet PORImageCarouselView *viewImageCarousel;
 
 
 @end
@@ -63,7 +64,9 @@ static NSString * const TITLE_CELL = @"Itinerary";
   } else {
     [_viewPageControl setNumberOfPages: 1];
   }
-
+  
+  // Update image carousel
+  [_viewImageCarousel setImages: [_itinerary allImages]];
 }
 
 - (void) setUp{
@@ -85,9 +88,6 @@ static NSString * const TITLE_CELL = @"Itinerary";
   // Configure page control
   [_viewPageControl setCurrentPageIndicatorTintColor: palette.colorPrimary];
   [_viewPageControl setPageIndicatorTintColor:palette.colorTextMuted];
-  
-  // Initialize image carousel
-
 }
 
 /**

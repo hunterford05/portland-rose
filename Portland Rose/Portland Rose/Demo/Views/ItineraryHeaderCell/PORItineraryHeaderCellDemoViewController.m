@@ -8,7 +8,7 @@
 
 #import "PORItineraryHeaderCellDemoViewController.h"
 
-static NSUInteger const COUNT_ROWS = 1;
+static NSUInteger const COUNT_ROWS = 25;
 
 @interface PORItineraryHeaderCellDemoViewController ()
 
