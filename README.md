@@ -371,6 +371,14 @@ The `PORLabeledIconView` class can be customized in these ways:
 * **Stack Spacing** – `spacingStack` sets the spacing between the icon and its label.
 
 
+## NavigationController
+
+The `PORNavigationController` class renders a customized navigation bar.
+
+### Usage
+
+In the interface builder, set the navigation controller's class to `PORNavigationController`; all child view controllers will display the customized navigation bar.
+
 ## TabBarView
 
 `PORTabBarView` renders a custom tab bar control that can be used with a `UITabBarController`. 
