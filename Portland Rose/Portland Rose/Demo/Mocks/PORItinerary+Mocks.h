@@ -6,6 +6,7 @@
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
+#import "PORActivity+Mocks.h"
 #import "PORBadge+Mocks.h"
 #import "PORItinerary.h"
 #import "NSNumber+Random.h"

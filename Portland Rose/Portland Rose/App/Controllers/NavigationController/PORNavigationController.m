@@ -77,13 +77,6 @@ static CGFloat const HEIGHT_NAV_BAR_DIVIDER = 1.0;
  * Add a bottom border to the given navigation bar and style it.
  */
 - (void)styleNavigationBar: (UINavigationBar *) navBar borderWithPalette: (PORPalette *) palette{
-  UIView * border;
-  CGRect frame;
-  
-  frame = CGRectMake(0, navBar.frame.size.height - HEIGHT_NAV_BAR_DIVIDER, navBar.frame.size.width, HEIGHT_NAV_BAR_DIVIDER);
-  border = [[UIView alloc] initWithFrame: frame];
-  [border setBackgroundColor: palette.colorDivider];
-  [navBar addSubview:border];
 }
 
 
