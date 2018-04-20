@@ -10,8 +10,8 @@
 #import "PORPalette.h"
 #import "PORTypeLibrary.h"
 
-static CGFloat const INSET_IMAGE = 19.0;
-static CGFloat const RADIUS = 32.0;
+static CGFloat const INSET_IMAGE = 13.0;
+static CGFloat const RADIUS = 28.0;
 
 @interface PORFloatingActionButtonView()
 

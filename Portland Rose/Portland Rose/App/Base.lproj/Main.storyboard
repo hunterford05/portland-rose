@@ -104,10 +104,22 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDW-ct-FWQ" customClass="PORFloatingActionButtonView">
+                                <rect key="frame" x="295" y="474" width="64" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon-pin-50"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTint">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ef7-qq-vrL" firstAttribute="bottom" secondItem="SDW-ct-FWQ" secondAttribute="bottom" constant="16" id="0QP-ui-LBl"/>
                             <constraint firstItem="zWF-nM-03r" firstAttribute="top" secondItem="Ef7-qq-vrL" secondAttribute="top" id="Anc-kp-jbt"/>
+                            <constraint firstItem="Ef7-qq-vrL" firstAttribute="trailing" secondItem="SDW-ct-FWQ" secondAttribute="trailing" constant="16" id="No1-WO-8Eh"/>
                             <constraint firstItem="Ef7-qq-vrL" firstAttribute="bottom" secondItem="zWF-nM-03r" secondAttribute="bottom" id="ahX-mS-xIz"/>
                             <constraint firstItem="Ef7-qq-vrL" firstAttribute="trailing" secondItem="zWF-nM-03r" secondAttribute="trailing" id="w0Q-WR-3rt"/>
                             <constraint firstItem="zWF-nM-03r" firstAttribute="leading" secondItem="Ef7-qq-vrL" secondAttribute="leading" id="y8m-rM-Tcs"/>
@@ -263,10 +275,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-pin-50" width="50" height="50"/>
         <image name="image-lg-1" width="1500" height="1000"/>
         <image name="image-lg-2" width="2000" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dnI-5T-Yzn"/>
+        <segue reference="INm-V3-vOy"/>
     </inferredMetricsTieBreakers>
 </document>
