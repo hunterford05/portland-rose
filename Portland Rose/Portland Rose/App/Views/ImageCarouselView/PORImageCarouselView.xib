@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PORImageCarouselView">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="YZp-s3-GvQ"/>
+                <outlet property="viewScroll" destination="gVA-9i-DIO" id="ujI-03-LdX"/>
+                <outlet property="viewStack" destination="zSR-4q-BBN" id="iJR-fG-uwV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="625" height="625"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVA-9i-DIO">
+                    <rect key="frame" x="0.0" y="0.0" width="625" height="625"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="zSR-4q-BBN">
+                            <rect key="frame" x="32" y="0.0" width="1130" height="625"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sop-7t-tQa" customClass="PORImageCardView">
+                                    <rect key="frame" x="0.0" y="32" width="561" height="561"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="sop-7t-tQa" secondAttribute="height" id="Wyl-2u-6Fc"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="image-lg-0"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="radiusBlur">
+                                            <real key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                            <real key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="offsetYBlur">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="md9-wj-WAe" customClass="PORImageCardView">
+                                    <rect key="frame" x="593" y="32" width="561" height="561"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="image-lg-1"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="radiusBlur">
+                                            <real key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                            <real key="value" value="40"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="offsetYBlur">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="md9-wj-WAe" firstAttribute="height" secondItem="sop-7t-tQa" secondAttribute="height" id="E1Z-Rh-x3c"/>
+                                <constraint firstAttribute="width" constant="1130" placeholder="YES" id="EDD-e2-K5U"/>
+                                <constraint firstAttribute="height" constant="625" placeholder="YES" id="GfP-OD-axs"/>
+                                <constraint firstItem="md9-wj-WAe" firstAttribute="width" secondItem="sop-7t-tQa" secondAttribute="width" id="m8R-eZ-4nH"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="sop-7t-tQa"/>
+                                    <exclude reference="md9-wj-WAe"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="E1Z-Rh-x3c"/>
+                                    <exclude reference="m8R-eZ-4nH"/>
+                                </mask>
+                            </variation>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="zSR-4q-BBN" secondAttribute="bottom" id="8JZ-DA-QoJ"/>
+                        <constraint firstItem="zSR-4q-BBN" firstAttribute="top" secondItem="gVA-9i-DIO" secondAttribute="top" id="EC1-61-mzG"/>
+                        <constraint firstItem="zSR-4q-BBN" firstAttribute="leading" secondItem="gVA-9i-DIO" secondAttribute="leading" constant="32" id="GbS-t8-aTp"/>
+                        <constraint firstItem="zSR-4q-BBN" firstAttribute="height" secondItem="gVA-9i-DIO" secondAttribute="height" id="mCf-2L-KnJ"/>
+                        <constraint firstAttribute="trailing" secondItem="zSR-4q-BBN" secondAttribute="trailing" constant="32" id="tnk-GO-xFa"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gVA-9i-DIO" secondAttribute="trailing" id="8uq-OA-s4n"/>
+                <constraint firstItem="gVA-9i-DIO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RNA-bE-G4d"/>
+                <constraint firstItem="sop-7t-tQa" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-64" id="Vnq-Wo-dJl"/>
+                <constraint firstItem="gVA-9i-DIO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hjX-W6-v7x"/>
+                <constraint firstAttribute="bottom" secondItem="gVA-9i-DIO" secondAttribute="bottom" id="rHk-YU-4nA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Vnq-Wo-dJl"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-81.5" y="122.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="image-lg-0" width="2000" height="1333"/>
+        <image name="image-lg-1" width="1500" height="1000"/>
+    </resources>
+</document>
