@@ -15,6 +15,7 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
 @interface PORIndexItinerariesController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *viewTable;
+@property PORItinerary * selectedItinerary;
 
 @end
 
@@ -24,6 +25,16 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
   [super viewDidLoad];  
   [self loadItineraries];
   [self setUpViewTable];
+}
+
+#pragma mark - navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+  if ([segue.identifier isEqualToString:NAME_SEGUE_SHOW_ITINERARY]){
+    PORShowItineraryController * sic;
+    sic = (PORShowItineraryController *)segue.destinationViewController;
+    [sic setItinerary: _selectedItinerary];
+  }
 }
 
 #pragma mark - helpers
@@ -64,6 +75,7 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
 #pragma mark - <PORItinerarySummaryCellViewDelegate>
 
 - (void)didSelectItineraryAtIndex:(NSUInteger)index{
+  [self setSelectedItinerary: _itineraries[index]];
   [self performSegueWithIdentifier:NAME_SEGUE_SHOW_ITINERARY sender:self];
 }
 

@@ -10,6 +10,8 @@
 
 /// Maximum random cost (dollars)
 static NSUInteger const COST_MAX = 250;
+/// Maximum number of random activities
+static NSUInteger const COUNT_ACTIVITIES_MAX = 5;
 /// Maximum number of random badges
 static NSUInteger const COUNT_BADGES_MAX = 5;
 /// Maximum number of images
@@ -35,6 +37,7 @@ static NSString * const TITLES_MOCK = @"Puffin Watching In Snæfellsness,Puffin 
   itinerary.costUpper = [itinerary getRandomCostUpper];
   itinerary.duration = [itinerary getRandomDuration];
   itinerary.badges = [itinerary getRandomBadges];
+  itinerary.activities = [itinerary getRandomActivities];
   
   return itinerary;
 }
@@ -51,6 +54,10 @@ static NSString * const TITLES_MOCK = @"Puffin Watching In Snæfellsness,Puffin 
 }
 
 #pragma mark - helpers
+
+- (NSArray <PORActivity *> *)getRandomActivities{
+  return [PORActivity mocks: [NSNumber getRandomUnsignedIntegerLessThan:COUNT_ACTIVITIES_MAX] + 1];
+}
 
 
 - (NSArray <PORBadge *> *) getRandomBadges{

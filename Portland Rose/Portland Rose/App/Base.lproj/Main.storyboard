@@ -39,6 +39,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KXU-ZU-Jx9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItineraryCell" rowHeight="253" id="GO8-Wt-iu5" customClass="PORItinerarySummaryCellView">
                                         <rect key="frame" x="0.0" y="28" width="375" height="253"/>
@@ -71,20 +72,36 @@
             </objects>
             <point key="canvasLocation" x="-1218" y="1568"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Itinerary Controller-->
         <scene sceneID="ch6-4Q-iR1">
             <objects>
-                <viewController id="fCj-gW-mmA" sceneMemberID="viewController">
+                <viewController id="fCj-gW-mmA" customClass="PORShowItineraryController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GL5-y1-DD7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-nM-03r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zWF-nM-03r" firstAttribute="top" secondItem="Ef7-qq-vrL" secondAttribute="top" id="Anc-kp-jbt"/>
+                            <constraint firstItem="Ef7-qq-vrL" firstAttribute="bottom" secondItem="zWF-nM-03r" secondAttribute="bottom" constant="32" id="ahX-mS-xIz"/>
+                            <constraint firstItem="Ef7-qq-vrL" firstAttribute="trailing" secondItem="zWF-nM-03r" secondAttribute="trailing" id="w0Q-WR-3rt"/>
+                            <constraint firstItem="zWF-nM-03r" firstAttribute="leading" secondItem="Ef7-qq-vrL" secondAttribute="leading" id="y8m-rM-Tcs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ef7-qq-vrL"/>
                     </view>
+                    <connections>
+                        <outlet property="viewTable" destination="zWF-nM-03r" id="bdl-1d-FTw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0l2-Kk-lE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1218" y="2359"/>
+            <point key="canvasLocation" x="-1218.4000000000001" y="2358.170914542729"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eHa-yO-aMD">

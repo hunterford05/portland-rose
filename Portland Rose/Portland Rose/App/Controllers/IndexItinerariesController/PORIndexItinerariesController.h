@@ -11,6 +11,7 @@
 #import "PORItinerarySummaryCellView.h"
 #warning Remove mocks
 #import "PORItinerary+Mocks.h"
+#import "PORShowItineraryController.h"
 
 
 @interface PORIndexItinerariesController : UIViewController <UITableViewDataSource, PORItinerarySummaryCellViewDelegate>

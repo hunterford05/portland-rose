@@ -55,6 +55,7 @@
 		5AF738DF20740F0B00B8E75C /* PORActionButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738DE20740F0B00B8E75C /* PORActionButtonDemoViewController.m */; };
 		5AFD5CA820890C6C009D2908 /* PORNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD5CA720890C6C009D2908 /* PORNavigationController.m */; };
 		5AFD5CBA20893432009D2908 /* PORIndexItinerariesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD5CB920893432009D2908 /* PORIndexItinerariesController.m */; };
+		5AFD5CBE20893D9B009D2908 /* PORShowItineraryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD5CBD20893D9B009D2908 /* PORShowItineraryController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,8 @@
 		5AFD5CA720890C6C009D2908 /* PORNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORNavigationController.m; sourceTree = "<group>"; };
 		5AFD5CB820893432009D2908 /* PORIndexItinerariesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORIndexItinerariesController.h; sourceTree = "<group>"; };
 		5AFD5CB920893432009D2908 /* PORIndexItinerariesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORIndexItinerariesController.m; sourceTree = "<group>"; };
+		5AFD5CBC20893D9B009D2908 /* PORShowItineraryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORShowItineraryController.h; sourceTree = "<group>"; };
+		5AFD5CBD20893D9B009D2908 /* PORShowItineraryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORShowItineraryController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,7 @@
 			children = (
 				5AFD5CB7208933CD009D2908 /* IndexItinerariesController */,
 				5AFD5CA520890C4F009D2908 /* NavigationController */,
+				5AFD5CBB20893D80009D2908 /* ShowItineraryController */,
 				5AFD5CA420890C31009D2908 /* TabBarController */,
 			);
 			path = Controllers;
@@ -494,6 +498,15 @@
 			path = IndexItinerariesController;
 			sourceTree = "<group>";
 		};
+		5AFD5CBB20893D80009D2908 /* ShowItineraryController */ = {
+			isa = PBXGroup;
+			children = (
+				5AFD5CBC20893D9B009D2908 /* PORShowItineraryController.h */,
+				5AFD5CBD20893D9B009D2908 /* PORShowItineraryController.m */,
+			);
+			path = ShowItineraryController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -590,6 +603,7 @@
 				5A5933062087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m in Sources */,
 				5A0DCCD8208048A9000FCAAC /* PORLabeledIconView.m in Sources */,
 				5A0DCCD220803AFF000FCAAC /* PORActivityCellView.m in Sources */,
+				5AFD5CBE20893D9B009D2908 /* PORShowItineraryController.m in Sources */,
 				5AA9491A2075589B00060FE8 /* PORTabBarController.m in Sources */,
 				5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */,
 				5A4ABF372072C36400349DBB /* PORDemosViewController.m in Sources */,
