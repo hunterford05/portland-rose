@@ -20,8 +20,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="519" height="623.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puffin Watching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-Vr-le9">
-                        <rect key="frame" x="60" y="20" width="121.5" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puffin Watching" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-Vr-le9">
+                        <rect key="frame" x="60" y="20" width="439" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -137,6 +137,7 @@
                     <constraint firstItem="j8F-dl-UNX" firstAttribute="top" secondItem="LTS-Sw-VdQ" secondAttribute="top" constant="20" id="6bg-l0-e4P"/>
                     <constraint firstItem="9Ab-Vr-le9" firstAttribute="leading" secondItem="j8F-dl-UNX" secondAttribute="trailing" constant="20" id="Rbw-Tt-f5k"/>
                     <constraint firstAttribute="trailing" secondItem="gYd-l6-150" secondAttribute="trailing" constant="20" id="VJx-2b-nkH"/>
+                    <constraint firstAttribute="trailing" secondItem="9Ab-Vr-le9" secondAttribute="trailing" constant="20" id="iyo-hL-EvW"/>
                     <constraint firstItem="j8F-dl-UNX" firstAttribute="leading" secondItem="LTS-Sw-VdQ" secondAttribute="leading" constant="20" id="jut-qT-6mt"/>
                     <constraint firstItem="gYd-l6-150" firstAttribute="leading" secondItem="j8F-dl-UNX" secondAttribute="trailing" constant="20" id="r47-jb-VIG"/>
                     <constraint firstItem="gYd-l6-150" firstAttribute="top" secondItem="9Ab-Vr-le9" secondAttribute="bottom" constant="15" id="ucz-Gy-Coi"/>

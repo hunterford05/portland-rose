@@ -9,7 +9,7 @@
 #import "PORBadge+Mocks.h"
 
 static NSString * const TITLES_BADGE = @"Romantic,Outdoors,Artsy";
-static NSString * const NAMES_IMAGE = @"demo-icon-0,demo-icon-1,demo-icon-2";
+static NSString * const NAMES_IMAGE = @"demo-icon-0,demo-icon-1,demo-icon-2,demo-icon-3,demo-icon-4,demo-icon-5,demo-icon-6";
 
 @implementation PORBadge (Mocks)
 

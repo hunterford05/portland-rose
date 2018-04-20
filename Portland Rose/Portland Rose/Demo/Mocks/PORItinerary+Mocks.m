@@ -19,9 +19,9 @@ static NSUInteger const COUNT_IMAGES_MAX = 5;
 /// Maximum random duration (minutes)
 static NSUInteger const DURATION_MAX = 300;
 /// Comma-delimted list of possible mock image filenames
-static NSString * const NAMES_IMAGE_MOCK = @"image-lg-0,image-lg-1,image-lg-2";
+static NSString * const NAMES_IMAGE_MOCK = @"image-demo-0,image-demo-1,image-demo-2,image-demo-3,image-demo-4,image-demo-5,image-demo-6,image-demo-7,image-demo-8,image-demo-9,image-demo-10,image-demo-11,image-demo-12";
 /// Comma-delimited list of possible mock titles
-static NSString * const TITLES_MOCK = @"Puffin Watching In Snæfellsness,Puffin Petting Zoo,Puffinpalooza Music Festival,Puffins Up Close,Puffin Tour: Westman Islands";
+static NSString * const TITLES_MOCK = @"Picnic On Roosevelt Island,Midtown Sights And Bites,Night At The Museum,Breakfast At Tiffany's,A Night To Remember,Blue Champagne,Tuxedo Junction,Moonlight Cocktail,Rhapsody In Blue,Begin The Beguine,Brooklyn Beer Binging,Soju Shots in SoHo,Whiskey in Whitehall,Meatpacking Mezcal Meetup,Tequila Time in Tribeca,Champagne in Chinatown,Hamilton Heights Hennessy";
 
 
 @implementation PORItinerary (Mocks)
