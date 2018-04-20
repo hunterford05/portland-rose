@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -137,14 +139,60 @@
         <!--C-->
         <scene sceneID="M8n-vX-Def">
             <objects>
-                <viewController title="C" id="IpD-i6-QbW" sceneMemberID="viewController">
+                <viewController title="C" id="IpD-i6-QbW" customClass="PORShowUserController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zi4-eB-LQX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.82745098039999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-lg-2" translatesAutoresizingMaskIntoConstraints="NO" id="Xvj-MN-5zG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="234.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xvj-MN-5zG" secondAttribute="height" multiplier="16:10" id="dNQ-A5-9Tr"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-lg-1" translatesAutoresizingMaskIntoConstraints="NO" id="0zK-Pm-LMI">
+                                <rect key="frame" x="123" y="190.5" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="0bJ-79-fGZ"/>
+                                    <constraint firstAttribute="width" secondItem="0zK-Pm-LMI" secondAttribute="height" multiplier="1:1" id="Dbb-uK-Nbe"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QTv-FB-eVf">
+                                <rect key="frame" x="110" y="338.5" width="154.5" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pufflavík Lundason" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMz-eV-gS3">
+                                        <rect key="frame" x="4.5" y="0.0" width="145.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member For 5 Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO6-LF-qYc">
+                                        <rect key="frame" x="0.0" y="30.5" width="154.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Xvj-MN-5zG" firstAttribute="leading" secondItem="YGR-PQ-Gj5" secondAttribute="leading" id="5J2-o4-0g0"/>
+                            <constraint firstItem="QTv-FB-eVf" firstAttribute="centerX" secondItem="0zK-Pm-LMI" secondAttribute="centerX" id="ILV-B1-57t"/>
+                            <constraint firstItem="QTv-FB-eVf" firstAttribute="top" secondItem="0zK-Pm-LMI" secondAttribute="bottom" constant="20" id="JYe-gb-fZ2"/>
+                            <constraint firstItem="0zK-Pm-LMI" firstAttribute="centerX" secondItem="zi4-eB-LQX" secondAttribute="centerX" id="LVx-Yp-pNs"/>
+                            <constraint firstItem="YGR-PQ-Gj5" firstAttribute="trailing" secondItem="Xvj-MN-5zG" secondAttribute="trailing" id="rlM-KE-7Gg"/>
+                            <constraint firstItem="0zK-Pm-LMI" firstAttribute="centerY" secondItem="Xvj-MN-5zG" secondAttribute="bottom" id="tAe-Kb-ZDS"/>
+                            <constraint firstItem="Xvj-MN-5zG" firstAttribute="top" secondItem="YGR-PQ-Gj5" secondAttribute="top" id="yfb-1L-jNq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YGR-PQ-Gj5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="MaX-pq-992"/>
+                    <connections>
+                        <outlet property="viewImageCover" destination="Xvj-MN-5zG" id="Lrn-Lp-eZ6"/>
+                        <outlet property="viewImageProfile" destination="0zK-Pm-LMI" id="rvZ-lB-Ryi"/>
+                        <outlet property="viewLabelDurationMembership" destination="cO6-LF-qYc" id="1Nz-kw-Bkh"/>
+                        <outlet property="viewLabelName" destination="qMz-eV-gS3" id="tnk-A4-gec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b58-t4-G9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,4 +215,8 @@
             <point key="canvasLocation" x="73" y="781"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image-lg-1" width="1500" height="1000"/>
+        <image name="image-lg-2" width="2000" height="1334"/>
+    </resources>
 </document>
