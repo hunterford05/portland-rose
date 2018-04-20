@@ -15,7 +15,7 @@ static CGFloat const OFFSET_X_SHADOW_PROFILE = 0;
 /// Vertical offset for profile picture shadow
 static CGFloat const OFFSET_Y_SHADOW_PROFILE = 5;
 /// Ratio between the size of the cover mask and the cover photo itself. Larger values reduce the mask's curvature.
-static CGFloat const RATIO_RADIUS_MASK_COVER = 3;
+static CGFloat const RATIO_RADIUS_MASK_COVER = 1;
 /// Shadow radius for profile picture
 static CGFloat const RADIUS_SHADOW_PROFILE = 12;
 /// Border width for profile picture
@@ -83,12 +83,14 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
   maskFrame.size.height = maskFrame.size.width;
   maskFrame.origin.y = cover.bounds.size.height - maskFrame.size.height;
   maskLayer = [CALayer layer];
+  [maskLayer setBackgroundColor:UIColor.clearColor.CGColor];
   [maskLayer setFrame: maskFrame];
+  [maskLayer setShadowPath: CGPathCreateWithRoundedRect(maskLayer.bounds, maskFrame.size.width / 2, maskFrame.size.height / 2, nil)];
+
   [maskLayer setShadowRadius:0];
   [maskLayer setShadowOffset:CGSizeMake(0,0)];
   [maskLayer setShadowColor:UIColor.whiteColor.CGColor];
   [maskLayer setShadowOpacity:1];
-  [maskLayer setShadowPath: CGPathCreateWithRoundedRect(maskLayer.bounds, maskFrame.size.width / 2, maskFrame.size.height / 2, nil)];
   [cover.layer setMask: maskLayer];
 }
 
