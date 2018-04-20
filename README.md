@@ -1,10 +1,46 @@
 # Portland Rose
 
-![](https://img.shields.io/badge/version-1.0.0-red.svg)
+![](https://img.shields.io/badge/version-0.0.0-green.svg)
 
 ## Introduction
 
 Portland Rose, named for the **[portland class](https://en.wikipedia.org/wiki/Garden_roses#Portland)** of rose, is the native iOS app for Compass Rose.
+
+## Release Notes
+
+### 0.0.0
+
+Version `0.0.0` of Portland Rose is the first release. It adds an interactive mockup / prototype that allows users to navigate through the application and view randomly generated mock content.
+
+**Features**
+
+* **Demo Setup** (#AI038D) — Add a separate demo storyboard.
+* **Palette** (#AI038B) — `PORPalette` stores Portland Rose's U.I. colors.
+* **Type Library** (#AI038C) — `PORTypeLibrary` stores Portland Rose's U.I. fonts.
+* **Action Button View** (#AI038A) — `PORActionButtonView` renders a pill-shaped action button with a gradient background.
+* **Temporary App Icon** (#AI041B) — Add a temporary app icon.
+* **Divider Color** (#AI042B) — Add a new palette color for dividers.
+* **Tab Bar View** (#AI041A) — `PORTabBarView` renders a custom tab bar with an animated highlight bar.
+* **Palette Documentation** (#AI045A) — Add documentation for `PORPalette` class.
+* **Type Library Documentation** (#AI045B) — Add documentation for `PORTypeLibrary` class.
+* **POR Prefix** (#AI048A) — Add `POR` prefix to all source files and classes.
+* **Image Card Carousel** (#AI045C) — Add `PORImageCardView` (renders an image card with rounded corners and a blurred drop shadow), `PORImageCarouselView` (renders a carousel of image cards), and `PORImageCarouselImageView`. 
+* **Floating Action Button** (#AI058A) — `PORFloatingActionButtonView` renders a circular button with a gradient background and a centered icon.
+* **Muted Text Color** (#AI060A) — Add a color for muted text to the palette.
+* **Itinerary Model** (#AI058C) — `PORItinerary` models date itineraries.
+* **Itinerary Summary View** (#AI059A) — `PORItinerarySummaryCellView` renders an itinerary summary. Add mocks for itineraries and itinerary badges.
+* **Activity Cell View** (#AI061A) — `PORActivityCellView` renders an activity summary cell. `PORLabeledIconView` renders an icon and a label. Add mocks for activities.
+* **Itinerary Header Cell View** (#AI083A) — `PORItineraryHeaderCellView` renders an itinerary header cell containing the itinerary title, estimated duration, estimated cost, and a carousel of itinerary images. Rebuild `PORImageCarouselView` as a `UIView` subclass instead of a `UIPageViewController` subclass. Remove the `PORImageCarouselImageView` class.
+* **Navigation Bar** (#AI083B) — `PORNavigationController` renders a custom navigation bar.
+* **Multiple Build Schemes** (#AI085A) — Add new build configurations for development, staging, and production.
+* **Prototype View Controllers** (#AI085B) — Add prototype view controllers and storyboard scenes. 
+
+
+**Fixes**
+
+* **Constants Scope** (#AI042A) — Fix global constant scope.
+* **Xcode Warnings** (#AI056A) — Fix misc. Xcode warnings.
+* **View Background Colors** (#AI065A) — Fix white background color on views.
 
 ## Xcode Project Structure
 
@@ -90,7 +126,7 @@ Badges provide an at-a-glance summary of an itinerary.
 ## Itinerary
 
 * **Activities** — `activities` is a list of all activities that are a part of this itinerary. See `PORActivity` for more information.
-* **badges** — `badges` is a list of all badges associated with this itinerary. See `PORBadge` for more information.
+* **Badges** — `badges` is a list of all badges associated with this itinerary. See `PORBadge` for more information.
 * **Cost (Lower Estimate)** — `costLower` is the lower estimate for the itinerary's total cost.
 * **Cost (Upper Estimate)** — `costUpper` is the upper estimate for the itinerary's total cost. 
 * **duration** — `duration` is the duration estimate for the itinerary *in minutes*.
@@ -209,9 +245,7 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
    ![](docs/figs/1804091632.png)
 2. set the view's *position* constraints (do not set size constraints, as 
    `PORActionButtonView` uses intrinsic size).
-   ![](docs/figs/Screen\ Shot\ 2018-04-10\ at\ 16.33.36.png)
 3. Set the view's class to `PORActionButtonView`.
-   ![](docs/figs/Screen\ Shot\ 2018-04-10\ at\ 16.35.22.png)
 4. To handle user taps, create an outlet for the "Touch Up Inside" event
 
 ### Customization
@@ -222,7 +256,7 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 * **Background Color One** — `colorBackgroundOne` sets the first background gradient color
 * **Background Color Two** — `colorbackgroundTwo` sets the second background gradient color
 * **Label Color** — `colorLabel` sets the color of the button's label
-* **text** — `text` sets the button's label text
+* **Text** — `text` sets the button's label text
 
 ## ActivityCellView
 
@@ -263,7 +297,7 @@ The `PORTypeLibrary` model organizes the application's fonts by function.
 * **Label Color** — `colorLabel` sets the color of the button's label
 * **Tint Color** — `colorTint` sets the tint color of the button's image
 * **Image** — `image` is the image to be displayed.
-* **radius** — `radius` sets the button's intrinsic size
+* **Radius** — `radius` sets the button's intrinsic size
 
 ## ImageCardView
 
@@ -396,8 +430,6 @@ In the interface builder, set the navigation controller's class to `PORNavigatio
 
 `PORTabBarView` renders a custom tab bar control that can be used with a `UITabBarController`. 
 
-![](docs/figs/1804051558.png)
-
 ### Usage
 
 1. in the storyboard, drag a `UIView` onto the bar above a tab bar controller scene.
@@ -491,6 +523,6 @@ These attributes may be customized:
 * **Cost (Lower Bound)** — `costLower` is the lower bound of the itinerary's total cost estimate
 * **cost (upper bound)** — `costUpper` is the upper bound of the itinerary's total cost estimate
 * **Duration** — `curation` is the estimated itinerary duration *in minutes*.
-* **icson** — `icons` is an array of icon images to display
+* **Icons** — `icons` is an array of icon images to display
 * **Image** — `image` is the itinerary's primary image
 * **Title** — `title` is the itinerary title
