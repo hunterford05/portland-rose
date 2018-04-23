@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A03266A208E3F790031150D /* PORRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A032669208E3F790031150D /* PORRecord.m */; };
 		5A0DCCCE208038F6000FCAAC /* PORActivityCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCCCD208038F6000FCAAC /* PORActivityCellDemoViewController.m */; };
 		5A0DCCD220803AFF000FCAAC /* PORActivityCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DCCD120803AFF000FCAAC /* PORActivityCellView.m */; };
 		5A0DCCD420803BC1000FCAAC /* PORActivityCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DCCD320803BC1000FCAAC /* PORActivityCellView.xib */; };
@@ -60,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A032668208E3F790031150D /* PORRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORRecord.h; sourceTree = "<group>"; };
+		5A032669208E3F790031150D /* PORRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORRecord.m; sourceTree = "<group>"; };
 		5A0DCCCC208038F6000FCAAC /* PORActivityCellDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORActivityCellDemoViewController.h; sourceTree = "<group>"; };
 		5A0DCCCD208038F6000FCAAC /* PORActivityCellDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORActivityCellDemoViewController.m; sourceTree = "<group>"; };
 		5A0DCCD020803AFF000FCAAC /* PORActivityCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORActivityCellView.h; sourceTree = "<group>"; };
@@ -294,6 +297,8 @@
 				5A7B6B88207FD77200C99AA0 /* PORItinerary.m */,
 				5A7B6B84207FD67700C99AA0 /* PORLocation.h */,
 				5A7B6B85207FD67700C99AA0 /* PORLocation.m */,
+				5A032668208E3F790031150D /* PORRecord.h */,
+				5A032669208E3F790031150D /* PORRecord.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -602,6 +607,7 @@
 			files = (
 				5AFD5CA820890C6C009D2908 /* PORNavigationController.m in Sources */,
 				5A7B6B9F207FF6E700C99AA0 /* NSString+Random.m in Sources */,
+				5A03266A208E3F790031150D /* PORRecord.m in Sources */,
 				5AB7EAF92087F7D10087B7DB /* PORImageCarouselView.m in Sources */,
 				5A7B6B82207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m in Sources */,
 				5AF738C82073D41B00B8E75C /* UIColor+Hex.m in Sources */,
