@@ -1,5 +1,14 @@
 # Portland Rose Changelog 
 
+## [0.0.1] — Apr 24, 2018
+
+Version `0.0.1` is a trivial update to Portland Rose's documentation.
+
+**Improvements**
+
+* **Refactor Documentation** (#AI099A) — Split `README.md` into 
+`README.md`, `docs/DOCS.md`, and `docs/CHANGELOG.md`. 
+
 ## [0.0.0] — Apr 20, 2018
 
 Version `0.0.0` of Portland Rose is the first release. It adds an 

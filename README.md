@@ -1,6 +1,6 @@
 # Portland Rose
 
-![](https://img.shields.io/badge/version-0.0.0-green.svg)
+![](https://img.shields.io/badge/version-0.0.1-green.svg)
 
 ## Introduction
 
