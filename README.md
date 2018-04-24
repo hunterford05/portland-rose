@@ -9,8 +9,8 @@ https://en.wikipedia.org/wiki/Garden_roses#Portland)** of rose, is the
 native iOS app for **[Compass Rose](
 https://github.com/nggonzalez/Compass-Rose)**.
 
-* Changelog: **[CHANGELOG.md](/CHANGELOG.md)**
-* Documentation: **[DOCS.md](/DOCS.md)**
+* Changelog: **[CHANGELOG.md](/docs/CHANGELOG.md)**
+* Documentation: **[DOCS.md](/docs/DOCS.md)**
 
 ## Project Setup
 

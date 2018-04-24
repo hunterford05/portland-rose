@@ -273,7 +273,7 @@ and drop shadow.
 #### Usage
 
 1. First, drag a `UIView` to the interface builder.
-   ![](docs/figs/1804091632.png)
+   ![](figs/1804091632.png)
 2. set the view's *position* constraints (do not set size constraints, 
    as `PORActionButtonView` uses intrinsic size).
 3. Set the view's class to `PORActionButtonView`.
@@ -352,12 +352,12 @@ via the interface builder.
    a storyboard interface builder.
 2. Select the `UIView` instance and Set the `UIView`'s class to 
    `PORImageCardView` in the Identity Inspector 
-   ![](docs/figs/1804091339.png)
+   ![](figs/1804091339.png)
 3. Set the `PORImageCardView`'s "Image" property in the Attributesi
    Inspector, or set the image at runtime by creating a reference
    outlet for the `PORImageCardView` instance and calling 
    `setImage:`
-   ![](docs/figs/1804091340.png)
+   ![](figs/1804091340.png)
 
 #### Customization
 
@@ -499,7 +499,7 @@ a `UITabBarController`.
 
 1. In the storyboard, drag a `UIView` onto the bar above a tab bar 
    controller scene.
-  ![](docs/figs/1804051533.png)
+  ![](figs/1804051533.png)
 2. Set the `UIView`'s class to `PORTabBarView`.
 3. Create reference outlets in the tab bar controller `.m` file for 
    this `PORTabBarView` *as well as* for the built-in `UITabBar` .
