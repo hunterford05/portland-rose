@@ -4,9 +4,10 @@
 
 ## Introduction
 
-Portland Rose, named for the **[portland class](https://
-en.wikipedia.org/wiki/Garden_roses#Portland)** of rose, is the native 
-iOS app for Compass Rose.
+Portland Rose, named for the **[portland class](
+https://en.wikipedia.org/wiki/Garden_roses#Portland)** of rose, is the 
+native iOS app for **[Compass Rose](
+https://github.com/nggonzalez/Compass-Rose)**.
 
 * Changelog: **[CHANGELOG.md](/CHANGELOG.md)**
 * Documentation: **[DOCS.md](/DOCS.md)**

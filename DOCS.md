@@ -1,8 +1,8 @@
 # Portland Rose Docs
 
-* [Models](#Models)
-* [Views](#Views)
-* [Helpers](#Helpers)
+* [Helpers](#helpers)
+* [Models](#models)
+* [Views](#views)
 
 ## Models
 
@@ -469,10 +469,8 @@ for notifying its delegate of user interactions with the same.
 Follow the same steps you would follow to use any other custom 
 `UITableCellView` subclass, then:
 
-1. Ensure that the table view uses **[self-sizing table view cells]
-(https://developer.apple.com/library/content/documentation/
-UserExperience/Conceptual/AutolayoutPG/
-WorkingwithSelf-SizingTableViewCells.html)**.
+1. Ensure that the table view uses 
+   **[self-sizing table view cells][1]**.
 2. Set the table view's `tableView:cellForRowAtIndexPath:` method:
 ```objective-c
 ((PORItinerarySummaryCellView *) cell).index = indexPath.row;
@@ -526,3 +524,6 @@ These attributes may be customized:
 * **Icons** — `icons` is an array of icon images to display
 * **Image** — `image` is the itinerary's primary image
 * **Title** — `title` is the itinerary title
+
+
+[1]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html
