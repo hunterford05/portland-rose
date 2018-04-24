@@ -30,5 +30,10 @@ individual application components.
 * **Production** — this scheme is used to build production-ready 
 releases.
 
+## Releasing A New Version
+
+1. Update `docs/CHANGELOG.md`.
+2. Update the current version number in `README.md`.
+3. Update the version number and build number in `Info.plist`.
 
 [1]: https://developer.apple.com/xcode/
