@@ -10,13 +10,25 @@
 
 @interface PORLibraryDemoViewController ()
 
+@property PORLibrary * library;
+
 @end
 
 @implementation PORLibraryDemoViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
   [self setTitle: @"Library Demo"];
+  [self loadLibrary];
+}
+
+#pragma mark - helpers
+
+- (void) loadLibrary {
+  [self.tableView setBackgroundColor:UIColor.redColor];
+  _library = [[PORLibrary alloc] initWithCompletionBlock:^{
+    [self.tableView setBackgroundColor:UIColor.greenColor];
+  }];
 }
 
 #pragma mark - Table view data source

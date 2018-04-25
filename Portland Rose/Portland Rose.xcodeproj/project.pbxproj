@@ -25,6 +25,7 @@
 		5A4F8B1520911C48006AE5E3 /* PORPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B0F20911C48006AE5E3 /* PORPalette.m */; };
 		5A4F8B1D20912897006AE5E3 /* PORLibraryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B1C20912897006AE5E3 /* PORLibraryDemoViewController.m */; };
 		5A4F8B2020912973006AE5E3 /* PORLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B1F20912973006AE5E3 /* PORLibrary.m */; };
+		5A4F8B2320912A7F006AE5E3 /* PORData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B2120912A7F006AE5E3 /* PORData.xcdatamodeld */; };
 		5A54E723208139EE00C32356 /* PORActivity+Mocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54E722208139EE00C32356 /* PORActivity+Mocks.m */; };
 		5A5676EB207E8710002656F8 /* PORItinerarySummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676EA207E8710002656F8 /* PORItinerarySummaryView.m */; };
 		5A5676F3207E87B8002656F8 /* PORItinerarySummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5676F2207E87B8002656F8 /* PORItinerarySummaryView.xib */; };
@@ -93,6 +94,7 @@
 		5A4F8B1C20912897006AE5E3 /* PORLibraryDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORLibraryDemoViewController.m; sourceTree = "<group>"; };
 		5A4F8B1E20912973006AE5E3 /* PORLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLibrary.h; sourceTree = "<group>"; };
 		5A4F8B1F20912973006AE5E3 /* PORLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORLibrary.m; sourceTree = "<group>"; };
+		5A4F8B2220912A7F006AE5E3 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		5A54E721208139EE00C32356 /* PORActivity+Mocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PORActivity+Mocks.h"; sourceTree = "<group>"; };
 		5A54E722208139EE00C32356 /* PORActivity+Mocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PORActivity+Mocks.m"; sourceTree = "<group>"; };
 		5A5676E9207E8710002656F8 /* PORItinerarySummaryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryView.h; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 		5A445F2520729F2E009497B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5A4F8B2120912A7F006AE5E3 /* PORData.xcdatamodeld */,
 				5A9333BD207D690B003F7217 /* PORActivity.h */,
 				5A9333BE207D690B003F7217 /* PORActivity.m */,
 				5A7B6B8A207FD88E00C99AA0 /* PORBadge.h */,
@@ -640,6 +643,7 @@
 				5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */,
 				5A5933012087D106003A1751 /* PORItineraryHeaderCellView.m in Sources */,
 				5AFD5CBA20893432009D2908 /* PORIndexItinerariesController.m in Sources */,
+				5A4F8B2320912A7F006AE5E3 /* PORData.xcdatamodeld in Sources */,
 				5A7B6B8C207FD88E00C99AA0 /* PORBadge.m in Sources */,
 				5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */,
 				5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */,
@@ -1310,6 +1314,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A4F8B2120912A7F006AE5E3 /* PORData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A4F8B2220912A7F006AE5E3 /* Data.xcdatamodel */,
+			);
+			currentVersion = 5A4F8B2220912A7F006AE5E3 /* Data.xcdatamodel */;
+			path = PORData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5A445F0120729AAD009497B0 /* Project object */;
 }
