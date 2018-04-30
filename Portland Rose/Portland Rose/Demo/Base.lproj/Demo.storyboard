@@ -56,7 +56,7 @@
                         <segue destination="cfq-lj-ElT" kind="show" identifier="FromDemosToItinerarySummaryViewDemo" id="RC2-jJ-Kcq"/>
                         <segue destination="iXV-9q-s6Z" kind="show" identifier="FromDemosToActivityCellViewDemo" id="30Y-t0-9YZ"/>
                         <segue destination="zm8-pe-owX" kind="show" identifier="FromDemosToItineraryHeaderCellViewDemo" id="9hh-ac-4BY"/>
-                        <segue destination="N7l-ce-Eb4" kind="show" identifier="FromDemosToLibraryDemo" id="Auy-jY-UFt"/>
+                        <segue destination="N7l-ce-Eb4" kind="show" identifier="FromDemosToRecordBookDemo" id="Auy-jY-UFt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -478,10 +478,10 @@
             </objects>
             <point key="canvasLocation" x="2846" y="75"/>
         </scene>
-        <!--Library Demo View Controller-->
+        <!--Record Book Demo View Controller-->
         <scene sceneID="5Zq-Jt-wPx">
             <objects>
-                <tableViewController id="N7l-ce-Eb4" customClass="PORLibraryDemoViewController" sceneMemberID="viewController">
+                <tableViewController id="N7l-ce-Eb4" customClass="PORRecordBookDemoViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Hr-iY-wn2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
