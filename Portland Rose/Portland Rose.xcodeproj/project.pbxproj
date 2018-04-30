@@ -24,7 +24,6 @@
 		5A4F8B1320911C48006AE5E3 /* PORTypeLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B0C20911C48006AE5E3 /* PORTypeLibrary.m */; };
 		5A4F8B1520911C48006AE5E3 /* PORPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B0F20911C48006AE5E3 /* PORPalette.m */; };
 		5A4F8B1D20912897006AE5E3 /* PORLibraryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B1C20912897006AE5E3 /* PORLibraryDemoViewController.m */; };
-		5A4F8B2020912973006AE5E3 /* PORLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B1F20912973006AE5E3 /* PORLibrary.m */; };
 		5A54E723208139EE00C32356 /* PORActivity+Mocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54E722208139EE00C32356 /* PORActivity+Mocks.m */; };
 		5A5676EB207E8710002656F8 /* PORItinerarySummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5676EA207E8710002656F8 /* PORItinerarySummaryView.m */; };
 		5A5676F3207E87B8002656F8 /* PORItinerarySummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5676F2207E87B8002656F8 /* PORItinerarySummaryView.xib */; };
@@ -91,8 +90,6 @@
 		5A4F8B1720911D16006AE5E3 /* PORTypeLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORTypeLibrary.h; sourceTree = "<group>"; };
 		5A4F8B1B20912897006AE5E3 /* PORLibraryDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLibraryDemoViewController.h; sourceTree = "<group>"; };
 		5A4F8B1C20912897006AE5E3 /* PORLibraryDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORLibraryDemoViewController.m; sourceTree = "<group>"; };
-		5A4F8B1E20912973006AE5E3 /* PORLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLibrary.h; sourceTree = "<group>"; };
-		5A4F8B1F20912973006AE5E3 /* PORLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORLibrary.m; sourceTree = "<group>"; };
 		5A54E721208139EE00C32356 /* PORActivity+Mocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PORActivity+Mocks.h"; sourceTree = "<group>"; };
 		5A54E722208139EE00C32356 /* PORActivity+Mocks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PORActivity+Mocks.m"; sourceTree = "<group>"; };
 		5A5676E9207E8710002656F8 /* PORItinerarySummaryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryView.h; sourceTree = "<group>"; };
@@ -300,8 +297,6 @@
 				5A7B6B88207FD77200C99AA0 /* PORItinerary.m */,
 				5A7B6B84207FD67700C99AA0 /* PORLocation.h */,
 				5A7B6B85207FD67700C99AA0 /* PORLocation.m */,
-				5A4F8B1E20912973006AE5E3 /* PORLibrary.h */,
-				5A4F8B1F20912973006AE5E3 /* PORLibrary.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -619,7 +614,6 @@
 				5AD02B0C207D3FB800E48C9B /* PORFloatingActionButtonView.m in Sources */,
 				5AF738DF20740F0B00B8E75C /* PORActionButtonDemoViewController.m in Sources */,
 				5A54E723208139EE00C32356 /* PORActivity+Mocks.m in Sources */,
-				5A4F8B2020912973006AE5E3 /* PORLibrary.m in Sources */,
 				5AF738D32073FD6700B8E75C /* PORTypeLibraryDemoViewController.m in Sources */,
 				5A4F8B1320911C48006AE5E3 /* PORTypeLibrary.m in Sources */,
 				5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */,
