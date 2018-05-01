@@ -10,6 +10,6 @@
 
 @interface PORRecord : NSObject
 
-@property NSNumber * identifier;
+@property NSUInteger identifier;
 
 @end

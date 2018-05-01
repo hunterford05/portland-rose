@@ -228,12 +228,9 @@
 		5A200B3620979201008AB019 /* Model Demos */ = {
 			isa = PBXGroup;
 			children = (
-				5A4F8B1B20912897006AE5E3 /* PORRecordBookDemoViewController.h */,
-				5A4F8B1C20912897006AE5E3 /* PORRecordBookDemoViewController.m */,
-				5AF738C92073D7CB00B8E75C /* PORPaletteDemoViewController.h */,
-				5AF738CA2073D7CB00B8E75C /* PORPaletteDemoViewController.m */,
-				5AF738D42073FD6E00B8E75C /* PORTypeLibraryDemoViewController.h */,
-				5AF738D22073FD6700B8E75C /* PORTypeLibraryDemoViewController.m */,
+				5A200B462098F6ED008AB019 /* Palette */,
+				5A200B452098F6E2008AB019 /* Record Book */,
+				5A200B472098F6F6008AB019 /* Type Library */,
 			);
 			path = "Model Demos";
 			sourceTree = "<group>";
@@ -245,6 +242,33 @@
 				5A200B432097939F008AB019 /* PORActionButtonDemoViewController.h */,
 			);
 			path = ActionButton;
+			sourceTree = "<group>";
+		};
+		5A200B452098F6E2008AB019 /* Record Book */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F8B1B20912897006AE5E3 /* PORRecordBookDemoViewController.h */,
+				5A4F8B1C20912897006AE5E3 /* PORRecordBookDemoViewController.m */,
+			);
+			path = "Record Book";
+			sourceTree = "<group>";
+		};
+		5A200B462098F6ED008AB019 /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				5AF738C92073D7CB00B8E75C /* PORPaletteDemoViewController.h */,
+				5AF738CA2073D7CB00B8E75C /* PORPaletteDemoViewController.m */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
+		5A200B472098F6F6008AB019 /* Type Library */ = {
+			isa = PBXGroup;
+			children = (
+				5AF738D42073FD6E00B8E75C /* PORTypeLibraryDemoViewController.h */,
+				5AF738D22073FD6700B8E75C /* PORTypeLibraryDemoViewController.m */,
+			);
+			path = "Type Library";
 			sourceTree = "<group>";
 		};
 		5A3A99FB2076A6FB00191EEF /* ActionButtonView */ = {

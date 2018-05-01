@@ -18,13 +18,13 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
 
 @implementation PORRecordBook
 
-+ (instancetype) sharedInstance {
-  static PORRecordBook * sharedInstance = nil;
++ (instancetype) sharedRecordBook {
+  static PORRecordBook * sharedRecordBook = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    sharedInstance = [[self alloc] init];
+    sharedRecordBook = [[self alloc] init];
   });
-  return sharedInstance;
+  return sharedRecordBook;
 }
 
 - (instancetype) init {
@@ -33,6 +33,17 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
     _ledger = [[PORLedger alloc] init];
   }
   return self;
+}
+
+- (PORRecord *) createRecord:(PORRecord *)record{
+  [self.ledger setObject:record forKey:[NSNumber numberWithUnsignedInteger:record.identifier]];
+  return record;
+}
+
+- (NSArray<PORRecord *> *)allRecords{
+  NSArray <PORRecord *> * a;
+  a = _ledger ? _ledger.allValues : @[];
+  return a;
 }
 
 @end

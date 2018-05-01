@@ -10,4 +10,8 @@
 
 @implementation PORPuffins
 
+- (PORPuffin *) build{
+  return [[PORPuffin alloc] init];
+}
+
 @end

@@ -11,6 +11,13 @@
 
 @interface PORRecordBook : NSObject
 
-+ (instancetype) sharedInstance;
++ (instancetype) sharedRecordBook;
+
+- (PORRecord *) findRecordById: (NSNumber *) id;
+- (NSArray <PORRecord *> *) allRecords;
+- (PORRecord *) saveRecord: (PORRecord *) record;
+- (PORRecord *) createRecord: (PORRecord *) record;
+- (PORRecord *) updateRecord: (PORRecord *) record;
+- (PORRecord *) destroyRecord: (PORRecord *) record;
 
 @end
