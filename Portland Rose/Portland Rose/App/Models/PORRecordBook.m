@@ -36,7 +36,7 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
 }
 
 - (PORRecord *) createRecord:(PORRecord *)record{
-  [self.ledger setObject:record forKey:[NSNumber numberWithUnsignedInteger:record.identifier]];
+  [self insertRecord:record];
   return record;
 }
 
@@ -44,6 +44,13 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
   NSArray <PORRecord *> * a;
   a = _ledger ? _ledger.allValues : @[];
   return a;
+}
+
+#pragma mark - helpers
+
+- (void) insertRecord:(PORRecord *) record{
+  [self.ledger setObject:record forKey:[NSNumber numberWithUnsignedInteger:record.identifier]];
+  [self.delegate didUpdateRecordBook:self];
 }
 
 @end

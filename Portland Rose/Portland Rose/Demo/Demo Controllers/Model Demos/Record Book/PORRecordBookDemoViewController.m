@@ -49,7 +49,6 @@ static NSString * const TEXT_ALERT_CREATE_PUFFIN_PLACEHOLDER_NAME = @"Puffin Nam
   puffin.identifier = i;
   puffin.name = name;
   [_puffins createRecord: puffin];
-  [self loadPuffins];
 }
 
 - (void) addAddButton{
@@ -61,6 +60,11 @@ static NSString * const TEXT_ALERT_CREATE_PUFFIN_PLACEHOLDER_NAME = @"Puffin Nam
 
 - (void) loadPuffins{
   _puffins = [PORPuffins sharedRecordBook];
+  [_puffins setDelegate:self];
+  [self refresh];
+}
+
+- (void) refresh{
   _data = (NSArray <PORPuffin *> *)[_puffins allRecords];
   [self.tableView reloadData];
 }
@@ -123,6 +127,12 @@ static NSString * const TEXT_ALERT_CREATE_PUFFIN_PLACEHOLDER_NAME = @"Puffin Nam
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_data count];
+}
+
+#pragma mark - <PORRecordBookDelegate>
+
+- (void)didUpdateRecordBook:(PORRecordBook *)recordBook{
+  [self refresh];
 }
 
 

@@ -9,6 +9,6 @@
 #import "PORPuffins.h"
 #import <UIKit/UIKit.h>
 
-@interface PORRecordBookDemoViewController : UITableViewController
+@interface PORRecordBookDemoViewController : UITableViewController <PORRecordBookDelegate>
 
 @end

@@ -9,15 +9,19 @@
 #import "PORRecord.h"
 #import <Foundation/Foundation.h>
 
+@class PORRecordBook;
+
+@protocol PORRecordBookDelegate
+- (void) didUpdateRecordBook:(PORRecordBook *)recordBook;
+@end
+
 @interface PORRecordBook : NSObject
+
+@property id <PORRecordBookDelegate> delegate;
 
 + (instancetype) sharedRecordBook;
 
-- (PORRecord *) findRecordById: (NSNumber *) id;
 - (NSArray <PORRecord *> *) allRecords;
-- (PORRecord *) saveRecord: (PORRecord *) record;
 - (PORRecord *) createRecord: (PORRecord *) record;
-- (PORRecord *) updateRecord: (PORRecord *) record;
-- (PORRecord *) destroyRecord: (PORRecord *) record;
 
 @end
