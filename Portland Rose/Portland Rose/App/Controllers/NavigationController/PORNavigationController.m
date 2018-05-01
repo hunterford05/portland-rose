@@ -8,9 +8,6 @@
 
 #import "PORNavigationController.h"
 
-/// Thickness of nav bar divider
-static CGFloat const HEIGHT_NAV_BAR_DIVIDER = 1.0;
-
 @interface PORNavigationController ()
 
 @end

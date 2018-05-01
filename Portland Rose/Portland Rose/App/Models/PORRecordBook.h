@@ -12,16 +12,31 @@
 @class PORRecordBook;
 
 @protocol PORRecordBookDelegate
+/**
+ * Handle record book updates.
+ */
 - (void) didUpdateRecordBook:(PORRecordBook *)recordBook;
 @end
 
 @interface PORRecordBook : NSObject
 
+/// The `delegate` is informed when: (1) new record(s) are added
 @property id <PORRecordBookDelegate> delegate;
 
+/**
+ * Initialize the singleton instance of this record book
+ */
 + (instancetype) sharedRecordBook;
 
+/**
+ * Return an array containing all `PORRecord`s stored in this record book
+ */
 - (NSArray <PORRecord *> *) allRecords;
+
+/**
+ * Adds the provided `record` to this record book.  The `delegate` will
+ * be informed of the update.
+ */
 - (PORRecord *) createRecord: (PORRecord *) record;
 
 @end

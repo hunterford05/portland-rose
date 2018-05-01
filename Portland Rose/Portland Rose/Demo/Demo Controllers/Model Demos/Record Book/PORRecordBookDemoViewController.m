@@ -8,19 +8,29 @@
 
 #import "PORRecordBookDemoViewController.h"
 
+/// Reuse identifier
 static NSString * const REUSE_IDENTIFIER_CELL = @"PuffinCell";
-static NSString * const TEXT_BUTTON_ADD = @"Add";
-static NSString * const TEXT_ALERT_CREATE_PUFFIN_TITLE = @"Add A Puffin";
-static NSString * const TEXT_ALERT_CREATE_PUFFIN_SUBTITLE = @"Create your very own puffin!  Please give your puffin an I.D. and a name.";
+/// Text to display on the cancel button of the create puffin alert
 static NSString * const TEXT_ALERT_CREATE_PUFFIN_CANCEL = @"Cancel";
+/// Text to display on the submit button of the create puffin alert
 static NSString * const TEXT_ALERT_CREATE_PUFFIN_CONFIRM = @"O.K.";
+/// Subtitle text for the create puffin alert
+static NSString * const TEXT_ALERT_CREATE_PUFFIN_SUBTITLE = @"Create your very own puffin!  Please give your puffin an I.D. and a name.";
+/// Title text for the create puffin alert
+static NSString * const TEXT_ALERT_CREATE_PUFFIN_TITLE = @"Add A Puffin";
+/// Placeholder text for the I.D. field of the create puffin alert
 static NSString * const TEXT_ALERT_CREATE_PUFFIN_PLACEHOLDER_ID = @"I.D.";
+/// Name text for the I.D. field of the create puffin alert
 static NSString * const TEXT_ALERT_CREATE_PUFFIN_PLACEHOLDER_NAME = @"Puffin Name";
+/// Text to display on the add puffin button
+static NSString * const TEXT_BUTTON_ADD = @"Add";
 
 
 @interface PORRecordBookDemoViewController ()
 
+/// Array of puffins to display
 @property NSArray <PORPuffin *> * data;
+/// Puffin record book
 @property PORPuffins * puffins;
 
 @end
@@ -36,6 +46,19 @@ static NSString * const TEXT_ALERT_CREATE_PUFFIN_PLACEHOLDER_NAME = @"Puffin Nam
 
 #pragma mark - helpers
 
+/**
+ * Add an "Add" button to the U.I. and set its target / action.
+ */
+- (void) addAddButton{
+  UIBarButtonItem * addButton;
+  
+  addButton = [[UIBarButtonItem alloc] initWithTitle:TEXT_BUTTON_ADD style:UIBarButtonItemStylePlain target:self action:@selector(didTapAdd:)];
+  self.navigationItem.rightBarButtonItem = addButton;
+}
+
+/**
+ * Adds a new puffin entry to the puffin record book.
+ */
 - (void) createPuffinWithId: (NSString *) identifier andName: (NSString *) name{
   NSNumberFormatter * f;
   PORPuffin * puffin;
@@ -51,30 +74,35 @@ static NSString * const TEXT_ALERT_CREATE_PUFFIN_PLACEHOLDER_NAME = @"Puffin Nam
   [_puffins createRecord: puffin];
 }
 
-- (void) addAddButton{
-  UIBarButtonItem * addButton;
-  
-  addButton = [[UIBarButtonItem alloc] initWithTitle:TEXT_BUTTON_ADD style:UIBarButtonItemStylePlain target:self action:@selector(didTapAdd:)];
-  self.navigationItem.rightBarButtonItem = addButton;
-}
 
+/**
+ * Initialize `self.puffins` and set its delegate; refresh data.
+ */
 - (void) loadPuffins{
   _puffins = [PORPuffins sharedRecordBook];
   [_puffins setDelegate:self];
   [self refresh];
 }
 
+/**
+ * Refresh displayed puffins by first refreshing `data` and then
+ * reloading `self.tableView`.
+ */
 - (void) refresh{
   _data = (NSArray <PORPuffin *> *)[_puffins allRecords];
   [self.tableView reloadData];
 }
 
+/**
+ * Show an alert that allows the user to create a new `PORPuffin`
+ * record.  The alert has a field for the new puffin's I.D. and name.
+ */
 - (void) showCreatePuffinAlert{
-  UIAlertController *alert= [UIAlertController alertControllerWithTitle:TEXT_ALERT_CREATE_PUFFIN_TITLE
+  UIAlertController * alert = [UIAlertController alertControllerWithTitle:TEXT_ALERT_CREATE_PUFFIN_TITLE
                              message:TEXT_ALERT_CREATE_PUFFIN_SUBTITLE
                              preferredStyle:UIAlertControllerStyleAlert];
   
-  UIAlertAction* ok = [UIAlertAction actionWithTitle:TEXT_ALERT_CREATE_PUFFIN_CONFIRM style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+  UIAlertAction * ok = [UIAlertAction actionWithTitle:TEXT_ALERT_CREATE_PUFFIN_CONFIRM style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
     UITextField * idField;
     UITextField * nameField;
     
@@ -82,12 +110,11 @@ static NSString * const TEXT_ALERT_CREATE_PUFFIN_PLACEHOLDER_NAME = @"Puffin Nam
     nameField = alert.textFields[1];
     [self createPuffinWithId:idField.text andName:nameField.text];
   }];
-  UIAlertAction* cancel = [UIAlertAction actionWithTitle:TEXT_ALERT_CREATE_PUFFIN_CANCEL style:UIAlertActionStyleDefault
-                                                 handler:^(UIAlertAction * action) {
-                                                   
-                                                   [alert dismissViewControllerAnimated:YES completion:nil];
-                                                   
-                                                 }];
+  
+  UIAlertAction * cancel = [UIAlertAction actionWithTitle:TEXT_ALERT_CREATE_PUFFIN_CANCEL style:UIAlertActionStyleDefault
+      handler:^(UIAlertAction * action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+      }];
   
   [alert addAction:ok];
   [alert addAction:cancel];

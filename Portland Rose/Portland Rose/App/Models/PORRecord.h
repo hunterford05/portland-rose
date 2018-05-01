@@ -10,6 +10,7 @@
 
 @interface PORRecord : NSObject
 
+/// Identifier for this record
 @property NSUInteger identifier;
 
 @end

@@ -12,11 +12,14 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
 
 @interface PORRecordBook()
 
+/// Dictionary containing `PORRecord` instances; the keys are their `identifier`s
 @property PORLedger * ledger;
 
 @end
 
 @implementation PORRecordBook
+
+#pragma mark - lifecycle
 
 + (instancetype) sharedRecordBook {
   static PORRecordBook * sharedRecordBook = nil;
@@ -35,10 +38,7 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
   return self;
 }
 
-- (PORRecord *) createRecord:(PORRecord *)record{
-  [self insertRecord:record];
-  return record;
-}
+#pragma mark - A.P.I.
 
 - (NSArray<PORRecord *> *)allRecords{
   NSArray <PORRecord *> * a;
@@ -46,11 +46,22 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
   return a;
 }
 
+- (PORRecord *) createRecord:(PORRecord *)record{
+  [self insertRecord:record];
+  return record;
+}
+
 #pragma mark - helpers
 
+/**
+ * Inserts `record` into the ledger, then informs this record book's
+ * `delegate` (if any) that an update has occurred.
+ */
 - (void) insertRecord:(PORRecord *) record{
   [self.ledger setObject:record forKey:[NSNumber numberWithUnsignedInteger:record.identifier]];
-  [self.delegate didUpdateRecordBook:self];
+  if (self.delegate){
+    [self.delegate didUpdateRecordBook:self];
+  }
 }
 
 @end
