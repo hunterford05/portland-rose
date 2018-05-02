@@ -7,7 +7,7 @@
 //
 #pragma mark MOCKS
 #import "PORItinerary+Mocks.h"
-#import "PORItinerariesFeed.h"
+#import "PORLibrary.h"
 #import "PORIndexItinerariesController.h"
 
 @interface PORIndexItinerariesFeedController : PORIndexItinerariesController

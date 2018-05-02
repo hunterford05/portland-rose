@@ -23,10 +23,6 @@
 /// The `delegate` is informed when: (1) new record(s) are added
 @property id <PORRecordBookDelegate> delegate;
 
-/**
- * Initialize the singleton instance of this record book
- */
-+ (instancetype) sharedRecordBook;
 
 /**
  * Return an array containing all `PORRecord`s stored in this record book

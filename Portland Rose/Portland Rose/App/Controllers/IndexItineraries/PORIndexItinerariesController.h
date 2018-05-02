@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PORItinerary.h"
-#import "PORItineraries.h"
+#import "PORLibrary.h"
 #import "PORItinerarySummaryCellView.h"
 #warning Remove mocks
 #import "PORItinerary+Mocks.h"

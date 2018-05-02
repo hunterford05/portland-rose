@@ -79,7 +79,7 @@ static NSString * const TEXT_BUTTON_ADD = @"Add";
  * Initialize `self.puffins` and set its delegate; refresh data.
  */
 - (void) loadPuffins{
-  _puffins = [PORPuffins sharedRecordBook];
+  _puffins = [PORPuffins new];
   [_puffins setDelegate:self];
   [self refresh];
 }

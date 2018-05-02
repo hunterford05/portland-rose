@@ -41,6 +41,7 @@
 		5A5933012087D106003A1751 /* PORItineraryHeaderCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5932FF2087D106003A1751 /* PORItineraryHeaderCellView.m */; };
 		5A5933022087D106003A1751 /* PORItineraryHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5933002087D106003A1751 /* PORItineraryHeaderCellView.xib */; };
 		5A5933062087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5933052087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m */; };
+		5A69998E209A3FE5001B909B /* PORLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A69998D209A3FE5001B909B /* PORLibrary.m */; };
 		5A7B6B82207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B81207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m */; };
 		5A7B6B86207FD67700C99AA0 /* PORLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B85207FD67700C99AA0 /* PORLocation.m */; };
 		5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B88207FD77200C99AA0 /* PORItinerary.m */; };
@@ -131,6 +132,8 @@
 		5A5933002087D106003A1751 /* PORItineraryHeaderCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PORItineraryHeaderCellView.xib; sourceTree = "<group>"; };
 		5A5933042087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItineraryHeaderCellDemoViewController.h; sourceTree = "<group>"; };
 		5A5933052087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItineraryHeaderCellDemoViewController.m; sourceTree = "<group>"; };
+		5A69998C209A3FE5001B909B /* PORLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLibrary.h; sourceTree = "<group>"; };
+		5A69998D209A3FE5001B909B /* PORLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORLibrary.m; sourceTree = "<group>"; };
 		5A7B6B80207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryDemoViewController.h; sourceTree = "<group>"; };
 		5A7B6B81207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItinerarySummaryDemoViewController.m; sourceTree = "<group>"; };
 		5A7B6B84207FD67700C99AA0 /* PORLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLocation.h; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				5A200B3320978EFF008AB019 /* PORRecordBook.m */,
 				5A200B2F20978C4B008AB019 /* PORRecord.h */,
 				5A200B3020978C4B008AB019 /* PORRecord.m */,
+				5A69998C209A3FE5001B909B /* PORLibrary.h */,
+				5A69998D209A3FE5001B909B /* PORLibrary.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -718,6 +723,7 @@
 				5A200B5720991C0B008AB019 /* PORIndexItinerariesPinnedController.m in Sources */,
 				5A4F8B1320911C48006AE5E3 /* PORTypeLibrary.m in Sources */,
 				5A200B4D209914E2008AB019 /* PORItineraries.m in Sources */,
+				5A69998E209A3FE5001B909B /* PORLibrary.m in Sources */,
 				5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */,
 				5A200B5020991590008AB019 /* PORItinerariesPinned.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,

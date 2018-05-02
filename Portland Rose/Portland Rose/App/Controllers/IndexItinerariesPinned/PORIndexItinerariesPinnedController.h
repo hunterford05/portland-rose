@@ -6,7 +6,7 @@
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "PORItinerariesPinned.h"
+#import "PORLibrary.h"
 #import "PORIndexItinerariesController.h"
 
 @interface PORIndexItinerariesPinnedController : PORIndexItinerariesController

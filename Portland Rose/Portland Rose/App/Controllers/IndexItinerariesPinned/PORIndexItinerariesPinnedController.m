@@ -15,7 +15,7 @@
 @implementation PORIndexItinerariesPinnedController
 
 - (void)viewDidLoad {
-  self.dataSource = [PORItinerariesPinned sharedRecordBook];
+  self.dataSource = [[PORLibrary sharedLibrary] itinerariesPinned];
   [super viewDidLoad];
 }
 

@@ -21,15 +21,6 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
 
 #pragma mark - lifecycle
 
-+ (instancetype) sharedRecordBook {
-  static PORRecordBook * sharedRecordBook = nil;
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    sharedRecordBook = [[self alloc] init];
-  });
-  return sharedRecordBook;
-}
-
 - (instancetype) init {
   self = [super init];
   if (self){
