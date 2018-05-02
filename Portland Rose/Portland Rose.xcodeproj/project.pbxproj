@@ -42,6 +42,7 @@
 		5A5933022087D106003A1751 /* PORItineraryHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A5933002087D106003A1751 /* PORItineraryHeaderCellView.xib */; };
 		5A5933062087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5933052087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m */; };
 		5A69998E209A3FE5001B909B /* PORLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A69998D209A3FE5001B909B /* PORLibrary.m */; };
+		5A699991209A4B64001B909B /* PORShowItineraryPinnedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A699990209A4B64001B909B /* PORShowItineraryPinnedController.m */; };
 		5A7B6B82207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B81207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m */; };
 		5A7B6B86207FD67700C99AA0 /* PORLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B85207FD67700C99AA0 /* PORLocation.m */; };
 		5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7B6B88207FD77200C99AA0 /* PORItinerary.m */; };
@@ -134,6 +135,8 @@
 		5A5933052087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItineraryHeaderCellDemoViewController.m; sourceTree = "<group>"; };
 		5A69998C209A3FE5001B909B /* PORLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLibrary.h; sourceTree = "<group>"; };
 		5A69998D209A3FE5001B909B /* PORLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORLibrary.m; sourceTree = "<group>"; };
+		5A69998F209A4B64001B909B /* PORShowItineraryPinnedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORShowItineraryPinnedController.h; sourceTree = "<group>"; };
+		5A699990209A4B64001B909B /* PORShowItineraryPinnedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORShowItineraryPinnedController.m; sourceTree = "<group>"; };
 		5A7B6B80207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItinerarySummaryDemoViewController.h; sourceTree = "<group>"; };
 		5A7B6B81207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItinerarySummaryDemoViewController.m; sourceTree = "<group>"; };
 		5A7B6B84207FD67700C99AA0 /* PORLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORLocation.h; sourceTree = "<group>"; };
@@ -371,6 +374,7 @@
 				5AFD5CBB20893D80009D2908 /* ShowItinerary */,
 				5AFD5CA420890C31009D2908 /* TabBar */,
 				5A200B5820991C0F008AB019 /* IndexItinerariesPinned */,
+				5A699992209A4B67001B909B /* ShowItineraryPinned */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -498,6 +502,15 @@
 				5A5933052087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m */,
 			);
 			path = ItineraryHeaderCell;
+			sourceTree = "<group>";
+		};
+		5A699992209A4B67001B909B /* ShowItineraryPinned */ = {
+			isa = PBXGroup;
+			children = (
+				5A69998F209A4B64001B909B /* PORShowItineraryPinnedController.h */,
+				5A699990209A4B64001B909B /* PORShowItineraryPinnedController.m */,
+			);
+			path = ShowItineraryPinned;
 			sourceTree = "<group>";
 		};
 		5A7B6B83207FB1B600C99AA0 /* ItinerarySummary */ = {
@@ -754,6 +767,7 @@
 				5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */,
 				5A7B6BA3207FF9C100C99AA0 /* NSNumber+Random.m in Sources */,
 				5A200B4A209914A0008AB019 /* PORItinerariesFeed.m in Sources */,
+				5A699991209A4B64001B909B /* PORShowItineraryPinnedController.m in Sources */,
 				5A0DCCCE208038F6000FCAAC /* PORActivityCellDemoViewController.m in Sources */,
 				5A200B442097939F008AB019 /* PORActionButtonDemoViewController.m in Sources */,
 				5AF738DC207408F600B8E75C /* PORActionButtonView.m in Sources */,

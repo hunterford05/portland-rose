@@ -47,6 +47,10 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
   return records;
 }
 
+- (PORRecord *) destroyRecordWithIdentifier: (NSUInteger) identifier{
+  return [self removeRecordWithIdentifier:identifier];
+}
+
 
 #pragma mark - helpers
 
@@ -73,5 +77,19 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
     [self.delegate didUpdateRecordBook:self];
   }
 }
+
+- (PORRecord *) removeRecordWithIdentifier: (NSUInteger) identifier{
+  NSNumber * key;
+  PORRecord * record;
+  
+  key = [NSNumber numberWithUnsignedInteger:identifier];
+  record = [self.ledger objectForKey:key];
+  [self.ledger removeObjectForKey:key];
+  [self.delegate didUpdateRecordBook:self];
+  
+  return record;
+};
+
+
 
 @end

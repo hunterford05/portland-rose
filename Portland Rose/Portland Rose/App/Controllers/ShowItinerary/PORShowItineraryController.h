@@ -15,5 +15,7 @@
 @interface PORShowItineraryController : UIViewController <UITableViewDataSource>
 
 @property (nonatomic) PORItinerary * itinerary;
+- (IBAction)didTapFloatingActionButton:(id)sender;
+
 
 @end

@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0l2-Kk-lE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-569" y="2443"/>
+            <point key="canvasLocation" x="-1218" y="2364"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="eHa-yO-aMD">
@@ -250,9 +250,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="252.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="fCj-gW-mmA" kind="show" identifier="FromIndexItinerariesToShowItinerary" id="dnI-5T-Yzn"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -270,19 +267,64 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="viewTable" destination="QZH-aD-olX" id="V1b-iN-YRj"/>
+                        <segue destination="W5T-TS-4K2" kind="show" identifier="FromIndexItinerariesToShowItinerary" id="58K-Vm-g5W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKu-GK-f7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73" y="1567"/>
         </scene>
+        <!--Show Itinerary Pinned Controller-->
+        <scene sceneID="8vN-Zm-Mzx">
+            <objects>
+                <viewController id="W5T-TS-4K2" customClass="PORShowItineraryPinnedController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cpe-mr-Fem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiF-p8-fvG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0d-z2-yKD" customClass="PORFloatingActionButtonView">
+                                <rect key="frame" x="303" y="482" width="56" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon-unpin-50"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="colorTint">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapFloatingActionButton:" destination="W5T-TS-4K2" eventType="touchUpInside" id="6dR-9a-BqU"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hiF-p8-fvG" firstAttribute="top" secondItem="TW0-fm-LU7" secondAttribute="top" id="7aI-og-FCw"/>
+                            <constraint firstItem="TW0-fm-LU7" firstAttribute="trailing" secondItem="hiF-p8-fvG" secondAttribute="trailing" id="KFG-6U-NtF"/>
+                            <constraint firstItem="TW0-fm-LU7" firstAttribute="bottom" secondItem="hiF-p8-fvG" secondAttribute="bottom" id="ZWX-s2-qZK"/>
+                            <constraint firstItem="hiF-p8-fvG" firstAttribute="leading" secondItem="TW0-fm-LU7" secondAttribute="leading" id="Zmk-nP-REr"/>
+                            <constraint firstItem="TW0-fm-LU7" firstAttribute="bottom" secondItem="x0d-z2-yKD" secondAttribute="bottom" constant="16" id="fJz-v5-jx7"/>
+                            <constraint firstItem="TW0-fm-LU7" firstAttribute="trailing" secondItem="x0d-z2-yKD" secondAttribute="trailing" constant="16" id="zD7-Gb-2a3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TW0-fm-LU7"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewTable" destination="hiF-p8-fvG" id="99q-7s-jiX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4D8-sW-Bbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="2364"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon-pin-50" width="50" height="50"/>
+        <image name="icon-unpin-50" width="50" height="50"/>
         <image name="image-lg-1" width="1500" height="1000"/>
         <image name="image-lg-2" width="2000" height="1334"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="dnI-5T-Yzn"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -41,4 +41,10 @@
  */
 - (NSArray <PORRecord *> *) createRecords: (NSArray <PORRecord *> *) records;
 
+/**
+ * Removes the record with the given `identifier` from this record book.
+ * the `delegate` will be informed of the update.
+ */
+- (PORRecord *) destroyRecordWithIdentifier: (NSUInteger) identifier;
+
 @end
