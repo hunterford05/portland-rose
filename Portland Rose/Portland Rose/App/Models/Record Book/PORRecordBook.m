@@ -8,12 +8,12 @@
 
 #import "PORRecordBook.h"
 
-typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
+typedef NSArray<PORRecord *> PORRecords;
 
 @interface PORRecordBook()
 
 /// Dictionary containing `PORRecord` instances; the keys are their `identifier`s
-@property PORLedger * ledger;
+@property NSMutableDictionary <NSNumber *, PORRecord *> * ledger;
 
 @end
 
@@ -24,7 +24,7 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
 - (instancetype) init {
   self = [super init];
   if (self){
-    _ledger = [[PORLedger alloc] init];
+    _ledger = [[NSMutableDictionary <NSNumber *, PORRecord *> alloc] init];
   }
   return self;
 }

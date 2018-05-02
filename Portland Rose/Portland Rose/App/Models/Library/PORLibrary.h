@@ -6,16 +6,16 @@
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
-#import "PORItineraryFeedRecordBook.h"
-#import "PORItineraryPinnedRecordBook.h"
+#import "PORItinerary.h"
+#import "PORRecordBook.h"
 #import <Foundation/Foundation.h>
 
 @interface PORLibrary : NSObject
 
 /// A record book containing itineraries in the user's feed
-@property PORItineraryFeedRecordBook * itinerariesFeed;
+@property PORRecordBook<PORItinerary *> * itinerariesFeed;
 /// A record book containing itineraries that the user has pinned
-@property PORItineraryPinnedRecordBook * itinerariesPinned;
+@property PORRecordBook<PORItinerary *> * itinerariesPinned;
 
 /// Singleton library instance
 + (instancetype) sharedLibrary;

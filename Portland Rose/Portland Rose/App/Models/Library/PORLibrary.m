@@ -7,6 +7,8 @@
 //
 
 #import "PORLibrary.h"
+#pragma warning MOCKS
+#import "PORItinerary+Mocks.h"
 
 @implementation PORLibrary
 
@@ -39,8 +41,10 @@
  * Initialize the library's record books.
  */
 - (void) loadRecordBooks{
-  self.itinerariesFeed = [[PORItineraryFeedRecordBook alloc]  init];
-  self.itinerariesPinned = [[PORItineraryPinnedRecordBook alloc]  init];
+  self.itinerariesFeed = [[PORRecordBook<PORItinerary *> alloc]  init];
+  self.itinerariesPinned = [[PORRecordBook<PORItinerary *> alloc]  init];
+#pragma warning MOCKS
+  [self.itinerariesFeed createRecords:[PORItinerary mocks: 25]];
 }
 
 @end

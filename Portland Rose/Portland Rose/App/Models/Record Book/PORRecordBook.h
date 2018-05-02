@@ -11,8 +11,6 @@
 
 @class PORRecordBook;
 
-typedef NSArray <PORRecord *> PORRecords;
-
 @protocol PORRecordBookDelegate
 /**
  * Handle record book updates.
@@ -20,7 +18,7 @@ typedef NSArray <PORRecord *> PORRecords;
 - (void) didUpdateRecordBook:(PORRecordBook *)recordBook;
 @end
 
-@interface PORRecordBook : NSObject
+@interface PORRecordBook<__covariant PORRecordType:PORRecord *> : NSObject
 
 /// The `delegate` is informed when: (1) new record(s) are added
 @property id <PORRecordBookDelegate> delegate;
@@ -29,24 +27,24 @@ typedef NSArray <PORRecord *> PORRecords;
 /**
  * Return an array containing all `PORRecord`s stored in this record book
  */
-- (PORRecords *) allRecords;
+- (NSArray<PORRecordType> *) allRecords;
 
 /**
  * Adds the provided `record` to this record book.  The `delegate` will
  * be informed of the update.
  */
-- (PORRecord *) createRecord: (PORRecord *) record;
+- (PORRecordType) createRecord: (PORRecordType) record;
 
 /**
  * Adds the provided `records` to this record book.  The `delegate` will
  * be informed of the update.
  */
-- (PORRecords *) createRecords: (PORRecords *) records;
+- (NSArray<PORRecordType> *) createRecords: (NSArray<PORRecordType> *) records;
 
 /**
  * Removes the record with the given `identifier` from this record book.
  * the `delegate` will be informed of the update.
  */
-- (PORRecord *) destroyRecordWithIdentifier: (NSUInteger) identifier;
+- (PORRecordType) destroyRecordWithIdentifier: (NSUInteger) identifier;
 
 @end

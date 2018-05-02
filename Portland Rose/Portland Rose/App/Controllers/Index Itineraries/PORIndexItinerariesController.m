@@ -55,7 +55,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_CELL = @"ItineraryCell";
  * Load itineraries from data source
  */
 - (void)loadItineraries{
-  _itineraries = [_dataSource allItineraries];
+  _itineraries = [_dataSource allRecords];
 }
 
 /**

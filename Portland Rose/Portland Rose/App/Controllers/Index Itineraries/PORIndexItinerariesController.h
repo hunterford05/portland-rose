@@ -16,6 +16,6 @@
 @interface PORIndexItinerariesController : UIViewController <UITableViewDataSource, PORItinerarySummaryCellViewDelegate, PORRecordBookDelegate>
 
 /// Record book containing the itineraries to display
-@property PORItineraryRecordBook * dataSource;
+@property PORRecordBook<PORItinerary *> * dataSource;
 
 @end

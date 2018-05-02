@@ -18,9 +18,6 @@
 		5A200B3920979259008AB019 /* PORPuffin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B3820979259008AB019 /* PORPuffin.m */; };
 		5A200B3C2097926A008AB019 /* PORPuffins.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B3B2097926A008AB019 /* PORPuffins.m */; };
 		5A200B442097939F008AB019 /* PORActionButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B422097939F008AB019 /* PORActionButtonDemoViewController.m */; };
-		5A200B4A209914A0008AB019 /* PORItineraryFeedRecordBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B49209914A0008AB019 /* PORItineraryFeedRecordBook.m */; };
-		5A200B4D209914E2008AB019 /* PORItineraryRecordBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B4C209914E2008AB019 /* PORItineraryRecordBook.m */; };
-		5A200B5020991590008AB019 /* PORItineraryPinnedRecordBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B4F20991590008AB019 /* PORItineraryPinnedRecordBook.m */; };
 		5A200B5320991A9D008AB019 /* PORIndexItinerariesFeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B5220991A9D008AB019 /* PORIndexItinerariesFeedController.m */; };
 		5A200B5720991C0B008AB019 /* PORIndexItinerariesPinnedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B5620991C0B008AB019 /* PORIndexItinerariesPinnedController.m */; };
 		5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F0D20729AAE009497B0 /* AppDelegate.m */; };
@@ -92,12 +89,6 @@
 		5A200B3B2097926A008AB019 /* PORPuffins.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORPuffins.m; sourceTree = "<group>"; };
 		5A200B422097939F008AB019 /* PORActionButtonDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORActionButtonDemoViewController.m; sourceTree = "<group>"; };
 		5A200B432097939F008AB019 /* PORActionButtonDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORActionButtonDemoViewController.h; sourceTree = "<group>"; };
-		5A200B48209914A0008AB019 /* PORItineraryFeedRecordBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItineraryFeedRecordBook.h; sourceTree = "<group>"; };
-		5A200B49209914A0008AB019 /* PORItineraryFeedRecordBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItineraryFeedRecordBook.m; sourceTree = "<group>"; };
-		5A200B4B209914E2008AB019 /* PORItineraryRecordBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItineraryRecordBook.h; sourceTree = "<group>"; };
-		5A200B4C209914E2008AB019 /* PORItineraryRecordBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItineraryRecordBook.m; sourceTree = "<group>"; };
-		5A200B4E20991590008AB019 /* PORItineraryPinnedRecordBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORItineraryPinnedRecordBook.h; sourceTree = "<group>"; };
-		5A200B4F20991590008AB019 /* PORItineraryPinnedRecordBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORItineraryPinnedRecordBook.m; sourceTree = "<group>"; };
 		5A200B5120991A9D008AB019 /* PORIndexItinerariesFeedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORIndexItinerariesFeedController.h; sourceTree = "<group>"; };
 		5A200B5220991A9D008AB019 /* PORIndexItinerariesFeedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORIndexItinerariesFeedController.m; sourceTree = "<group>"; };
 		5A200B5520991C0B008AB019 /* PORIndexItinerariesPinnedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORIndexItinerariesPinnedController.h; sourceTree = "<group>"; };
@@ -403,9 +394,6 @@
 				5A699993209A53DE001B909B /* Activity */,
 				5A699994209A53E6001B909B /* Badge */,
 				5A699995209A53F3001B909B /* Itinerary */,
-				5A699997209A5401001B909B /* Itinerary Feed Record Book */,
-				5A699998209A5409001B909B /* Itinerary Pinned Record Book */,
-				5A699996209A53F9001B909B /* Itinerary Record Book */,
 				5A69999C209A542F001B909B /* Library */,
 				5A699999209A5411001B909B /* Location */,
 				5A69999B209A5429001B909B /* Record */,
@@ -525,33 +513,6 @@
 				5A7B6B88207FD77200C99AA0 /* PORItinerary.m */,
 			);
 			path = Itinerary;
-			sourceTree = "<group>";
-		};
-		5A699996209A53F9001B909B /* Itinerary Record Book */ = {
-			isa = PBXGroup;
-			children = (
-				5A200B4B209914E2008AB019 /* PORItineraryRecordBook.h */,
-				5A200B4C209914E2008AB019 /* PORItineraryRecordBook.m */,
-			);
-			path = "Itinerary Record Book";
-			sourceTree = "<group>";
-		};
-		5A699997209A5401001B909B /* Itinerary Feed Record Book */ = {
-			isa = PBXGroup;
-			children = (
-				5A200B48209914A0008AB019 /* PORItineraryFeedRecordBook.h */,
-				5A200B49209914A0008AB019 /* PORItineraryFeedRecordBook.m */,
-			);
-			path = "Itinerary Feed Record Book";
-			sourceTree = "<group>";
-		};
-		5A699998209A5409001B909B /* Itinerary Pinned Record Book */ = {
-			isa = PBXGroup;
-			children = (
-				5A200B4E20991590008AB019 /* PORItineraryPinnedRecordBook.h */,
-				5A200B4F20991590008AB019 /* PORItineraryPinnedRecordBook.m */,
-			);
-			path = "Itinerary Pinned Record Book";
 			sourceTree = "<group>";
 		};
 		5A699999209A5411001B909B /* Location */ = {
@@ -879,10 +840,8 @@
 				5AF738D32073FD6700B8E75C /* PORTypeLibraryDemoViewController.m in Sources */,
 				5A200B5720991C0B008AB019 /* PORIndexItinerariesPinnedController.m in Sources */,
 				5A4F8B1320911C48006AE5E3 /* PORTypeLibrary.m in Sources */,
-				5A200B4D209914E2008AB019 /* PORItineraryRecordBook.m in Sources */,
 				5A69998E209A3FE5001B909B /* PORLibrary.m in Sources */,
 				5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */,
-				5A200B5020991590008AB019 /* PORItineraryPinnedRecordBook.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
 				5A4F8B1220911C48006AE5E3 /* UIColor+Hex.m in Sources */,
 				5A5933062087D17F003A1751 /* PORItineraryHeaderCellDemoViewController.m in Sources */,
@@ -910,7 +869,6 @@
 				5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */,
 				5A567700207EB46E002656F8 /* PORItinerarySummaryCellView.m in Sources */,
 				5A7B6BA3207FF9C100C99AA0 /* NSNumber+Random.m in Sources */,
-				5A200B4A209914A0008AB019 /* PORItineraryFeedRecordBook.m in Sources */,
 				5A699991209A4B64001B909B /* PORShowItineraryPinnedController.m in Sources */,
 				5A0DCCCE208038F6000FCAAC /* PORActivityCellDemoViewController.m in Sources */,
 				5A200B442097939F008AB019 /* PORActionButtonDemoViewController.m in Sources */,
