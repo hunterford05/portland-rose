@@ -15,7 +15,9 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
 @interface PORIndexItinerariesController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *viewTable;
+
 @property PORItinerary * selectedItinerary;
+@property NSArray <PORItinerary *> * itineraries;
 
 @end
 
@@ -40,8 +42,12 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
 #pragma mark - helpers
 
 - (void)loadItineraries{
-  #warning Mocks
-  _itineraries = [PORItinerary mocks: 25];
+  _itineraries = [_dataSource allItineraries];
+}
+
+- (void)refresh{
+  [self loadItineraries];
+  [_viewTable reloadData];
 }
 
 - (void)setUpViewTable{

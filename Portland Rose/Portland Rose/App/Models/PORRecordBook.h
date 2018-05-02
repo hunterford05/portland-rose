@@ -39,4 +39,10 @@
  */
 - (PORRecord *) createRecord: (PORRecord *) record;
 
+/**
+ * Adds the provided `records` to this record book.  The `delegate` will
+ * be informed of the update.
+ */
+- (NSArray <PORRecord *> *) createRecords: (NSArray <PORRecord *> *) records;
+
 @end

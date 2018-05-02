@@ -33,7 +33,7 @@
         <!--Explore-->
         <scene sceneID="9Xs-ad-ISC">
             <objects>
-                <viewController title="Explore" id="m7r-tW-xeC" customClass="PORIndexItinerariesController" sceneMemberID="viewController">
+                <viewController title="Explore" id="m7r-tW-xeC" customClass="PORIndexItinerariesFeedController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jpw-9Y-81A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,7 +230,7 @@
         <!--Explore-->
         <scene sceneID="EJa-bT-Kr0">
             <objects>
-                <viewController title="Explore" id="nxm-Bb-oyY" customClass="PORIndexItinerariesController" sceneMemberID="viewController">
+                <viewController title="Explore" id="nxm-Bb-oyY" customClass="PORIndexItinerariesPinnedController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7WV-Kg-rje">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,6 +280,6 @@
         <image name="image-lg-2" width="2000" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="INm-V3-vOy"/>
+        <segue reference="dnI-5T-Yzn"/>
     </inferredMetricsTieBreakers>
 </document>

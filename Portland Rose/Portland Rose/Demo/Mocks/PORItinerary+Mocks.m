@@ -18,6 +18,8 @@ static NSUInteger const COUNT_BADGES_MAX = 5;
 static NSUInteger const COUNT_IMAGES_MAX = 5;
 /// Maximum random duration (minutes)
 static NSUInteger const DURATION_MAX = 300;
+/// Maximum random identifier
+static NSUInteger const IDENTIFIER_MAX = 9999;
 /// Comma-delimted list of possible mock image filenames
 static NSString * const NAMES_IMAGE_MOCK = @"image-demo-0,image-demo-1,image-demo-2,image-demo-3,image-demo-4,image-demo-5,image-demo-6,image-demo-7,image-demo-8,image-demo-9,image-demo-10,image-demo-11,image-demo-12";
 /// Comma-delimited list of possible mock titles
@@ -30,6 +32,7 @@ static NSString * const TITLES_MOCK = @"Picnic On Roosevelt Island,Midtown Sight
   PORItinerary * itinerary;
   
   itinerary = [[PORItinerary alloc] init];
+  itinerary.identifier = [NSNumber getRandomUnsignedIntegerLessThan:IDENTIFIER_MAX];
   itinerary.title = [itinerary getRandomTitle];
   itinerary.imageMain = [itinerary getRandomImage];
   itinerary.imagesSecondary = [itinerary getRandomSecondaryImages];

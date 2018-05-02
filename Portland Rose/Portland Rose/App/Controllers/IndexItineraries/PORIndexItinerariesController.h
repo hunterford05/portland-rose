@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PORItinerary.h"
+#import "PORItineraries.h"
 #import "PORItinerarySummaryCellView.h"
 #warning Remove mocks
 #import "PORItinerary+Mocks.h"
@@ -16,6 +17,6 @@
 
 @interface PORIndexItinerariesController : UIViewController <UITableViewDataSource, PORItinerarySummaryCellViewDelegate>
 
-@property (nonatomic) NSArray <PORItinerary *> * itineraries;
+@property PORItineraries * dataSource;
 
 @end

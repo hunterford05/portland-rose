@@ -51,6 +51,12 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
   return record;
 }
 
+- (NSArray <PORRecord *> *) createRecords: (NSArray <PORRecord *> *) records {
+  [self insertRecords:records];
+  return records;
+}
+
+
 #pragma mark - helpers
 
 /**
@@ -59,6 +65,19 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
  */
 - (void) insertRecord:(PORRecord *) record{
   [self.ledger setObject:record forKey:[NSNumber numberWithUnsignedInteger:record.identifier]];
+  if (self.delegate){
+    [self.delegate didUpdateRecordBook:self];
+  }
+}
+
+/**
+ * Inserts `records` into the ledger, then informs this record book's
+ * `delegate` (if any) that an update has occurred.
+ */
+- (void) insertRecords:(NSArray <PORRecord *> *) records{
+  for (PORRecord * record in records){
+    [self.ledger setObject:record forKey:[NSNumber numberWithUnsignedInteger:record.identifier]];
+  }
   if (self.delegate){
     [self.delegate didUpdateRecordBook:self];
   }
