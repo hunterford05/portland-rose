@@ -15,7 +15,7 @@
 #import "PORShowItineraryController.h"
 
 
-@interface PORIndexItinerariesController : UIViewController <UITableViewDataSource, PORItinerarySummaryCellViewDelegate>
+@interface PORIndexItinerariesController : UIViewController <UITableViewDataSource, PORItinerarySummaryCellViewDelegate, PORRecordBookDelegate>
 
 @property PORItineraries * dataSource;
 

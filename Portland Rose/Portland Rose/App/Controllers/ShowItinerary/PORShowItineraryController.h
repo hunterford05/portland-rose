@@ -8,6 +8,7 @@
 
 #import "PORActivityCellView.h"
 #import "PORItinerary.h"
+#import "PORLibrary.h"
 #import "PORItineraryHeaderCellView.h"
 #import <UIKit/UIKit.h>
 

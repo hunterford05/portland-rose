@@ -29,6 +29,12 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
   [self setUpViewTable];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+  [super viewWillAppear:animated];
+  [_dataSource setDelegate:self];
+  [self refresh];
+}
+
 #pragma mark - navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -83,6 +89,12 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
 - (void)didSelectItineraryAtIndex:(NSUInteger)index{
   [self setSelectedItinerary: _itineraries[index]];
   [self performSegueWithIdentifier:NAME_SEGUE_SHOW_ITINERARY sender:self];
+}
+
+#pragma mark - <PORRecordBookDelegate>
+
+- (void)didUpdateRecordBook:(PORRecordBook *)recordBook{
+  [self refresh];
 }
 
 

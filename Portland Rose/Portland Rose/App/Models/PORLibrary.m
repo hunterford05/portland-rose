@@ -13,10 +13,9 @@
 #pragma mark - lifecycle
 
 + (instancetype) sharedLibrary{
-  static PORLibrary * sharedLibrary;
+  static PORLibrary * sharedLibrary = nil;
   static dispatch_once_t token;
   
-  sharedLibrary = nil;
   dispatch_once(&token, ^{
     sharedLibrary = [[self alloc] init];
   });
