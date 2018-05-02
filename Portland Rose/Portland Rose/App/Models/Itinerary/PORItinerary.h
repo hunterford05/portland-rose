@@ -12,6 +12,10 @@
 #import "PORRecord.h"
 #import <UIKit/UIKit.h>
 
+@class PORItinerary;
+
+typedef NSArray <PORItinerary *> PORItineraries;
+
 @interface PORItinerary : PORRecord
 
 /// The activities in this itinerary

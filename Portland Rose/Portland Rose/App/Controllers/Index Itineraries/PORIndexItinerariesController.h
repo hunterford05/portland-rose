@@ -10,13 +10,12 @@
 #import "PORItinerary.h"
 #import "PORLibrary.h"
 #import "PORItinerarySummaryCellView.h"
-#warning Remove mocks
-#import "PORItinerary+Mocks.h"
 #import "PORShowItineraryController.h"
 
 
 @interface PORIndexItinerariesController : UIViewController <UITableViewDataSource, PORItinerarySummaryCellViewDelegate, PORRecordBookDelegate>
 
-@property PORItineraries * dataSource;
+/// Record book containing the itineraries to display
+@property PORItineraryRecordBook * dataSource;
 
 @end

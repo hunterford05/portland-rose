@@ -11,6 +11,8 @@
 
 @class PORRecordBook;
 
+typedef NSArray <PORRecord *> PORRecords;
+
 @protocol PORRecordBookDelegate
 /**
  * Handle record book updates.
@@ -27,7 +29,7 @@
 /**
  * Return an array containing all `PORRecord`s stored in this record book
  */
-- (NSArray <PORRecord *> *) allRecords;
+- (PORRecords *) allRecords;
 
 /**
  * Adds the provided `record` to this record book.  The `delegate` will
@@ -39,7 +41,7 @@
  * Adds the provided `records` to this record book.  The `delegate` will
  * be informed of the update.
  */
-- (NSArray <PORRecord *> *) createRecords: (NSArray <PORRecord *> *) records;
+- (PORRecords *) createRecords: (PORRecords *) records;
 
 /**
  * Removes the record with the given `identifier` from this record book.

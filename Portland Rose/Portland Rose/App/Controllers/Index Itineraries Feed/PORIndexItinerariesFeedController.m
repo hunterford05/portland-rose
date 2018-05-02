@@ -15,9 +15,8 @@
 @implementation PORIndexItinerariesFeedController
 
 - (void)viewDidLoad {
+  // Set the data source to the shared library's feed itineraries record book
   self.dataSource = [[PORLibrary sharedLibrary] itinerariesFeed];
-#pragma warning MOCKS
-  [self.dataSource createItineraries:[PORItinerary mocks:25]];
   [super viewDidLoad];
 }
 

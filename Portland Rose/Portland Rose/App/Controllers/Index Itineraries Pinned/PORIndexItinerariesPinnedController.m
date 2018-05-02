@@ -15,6 +15,7 @@
 @implementation PORIndexItinerariesPinnedController
 
 - (void)viewDidLoad {
+  // Set data source to the pinned itineraries record book stored in the shared library
   self.dataSource = [[PORLibrary sharedLibrary] itinerariesPinned];
   [super viewDidLoad];
 }

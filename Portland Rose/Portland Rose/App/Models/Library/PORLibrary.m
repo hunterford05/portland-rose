@@ -35,9 +35,12 @@
 
 #pragma mark - helpers
 
+/**
+ * Initialize the library's record books.
+ */
 - (void) loadRecordBooks{
-  self.itinerariesFeed = [[PORItinerariesFeed alloc]  init];
-  self.itinerariesPinned = [[PORItinerariesPinned alloc]  init];
+  self.itinerariesFeed = [[PORItineraryFeedRecordBook alloc]  init];
+  self.itinerariesPinned = [[PORItineraryPinnedRecordBook alloc]  init];
 }
 
 @end

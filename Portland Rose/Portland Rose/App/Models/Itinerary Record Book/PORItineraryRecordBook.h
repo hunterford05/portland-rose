@@ -1,5 +1,5 @@
 //
-//  PORItineraries.h
+//  PORItineraryRecordBook.h
 //  Portland Rose
 //
 //  Created by Hunter Ford on 01/05/2018.
@@ -9,7 +9,7 @@
 #import "PORItinerary.h"
 #import "PORRecordBook.h"
 
-@interface PORItineraries : PORRecordBook
+@interface PORItineraryRecordBook : PORRecordBook
 
 /**
  * Return array containing all itineraries stored here.

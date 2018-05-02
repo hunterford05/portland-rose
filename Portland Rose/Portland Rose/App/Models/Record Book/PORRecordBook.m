@@ -31,8 +31,8 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
 
 #pragma mark - A.P.I.
 
-- (NSArray<PORRecord *> *)allRecords{
-  NSArray <PORRecord *> * a;
+- (PORRecords *)allRecords{
+  PORRecords * a;
   a = _ledger ? _ledger.allValues : @[];
   return a;
 }
@@ -42,7 +42,7 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
   return record;
 }
 
-- (NSArray <PORRecord *> *) createRecords: (NSArray <PORRecord *> *) records {
+- (PORRecords *) createRecords: (PORRecords *) records {
   [self insertRecords:records];
   return records;
 }
@@ -69,7 +69,7 @@ typedef NSMutableDictionary <NSNumber *, PORRecord *> PORLedger;
  * Inserts `records` into the ledger, then informs this record book's
  * `delegate` (if any) that an update has occurred.
  */
-- (void) insertRecords:(NSArray <PORRecord *> *) records{
+- (void) insertRecords:(PORRecords *) records{
   for (PORRecord * record in records){
     [self.ledger setObject:record forKey:[NSNumber numberWithUnsignedInteger:record.identifier]];
   }

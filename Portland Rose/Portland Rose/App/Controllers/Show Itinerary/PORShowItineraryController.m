@@ -31,7 +31,7 @@ static NSInteger const NUMBER_SECTIONS = 2;
 #pragma mark - events
 
 - (IBAction)didTapFloatingActionButton:(id)sender {
-  PORItinerariesPinned * itinerariesPinned;
+  PORItineraryPinnedRecordBook * itinerariesPinned;
   
   itinerariesPinned = [[PORLibrary sharedLibrary] itinerariesPinned];
   [itinerariesPinned createItinerary:_itinerary];

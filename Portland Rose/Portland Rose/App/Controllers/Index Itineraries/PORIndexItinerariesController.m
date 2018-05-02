@@ -9,15 +9,18 @@
 #import "PORIndexItinerariesController.h"
 
 static NSInteger const NUMBER_SECTIONS = 1;
-static NSString * const REUSE_IDENTIFIER_ITINERARY_CELL = @"ItineraryCell";
 static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShowItinerary";
+static NSString * const REUSE_IDENTIFIER_ITINERARY_CELL = @"ItineraryCell";
 
 @interface PORIndexItinerariesController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *viewTable;
 
+/// Itineraries to display
+@property PORItineraries * itineraries;
+/// The currently-selected itinerary (if any)
 @property PORItinerary * selectedItinerary;
-@property NSArray <PORItinerary *> * itineraries;
+/// Table view for displaying itineraries
+@property (weak, nonatomic) IBOutlet UITableView *viewTable;
 
 @end
 
@@ -38,6 +41,7 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
 #pragma mark - navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+  // Set the `itinerary` property of the destination `PORShowItineraryController`
   if ([segue.identifier isEqualToString:NAME_SEGUE_SHOW_ITINERARY]){
     PORShowItineraryController * sic;
     sic = (PORShowItineraryController *)segue.destinationViewController;
@@ -47,15 +51,25 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
 
 #pragma mark - helpers
 
+/**
+ * Load itineraries from data source
+ */
 - (void)loadItineraries{
   _itineraries = [_dataSource allItineraries];
 }
 
+/**
+ * Reload itineraries from data source, then refresh the
+ * table view.
+ */
 - (void)refresh{
   [self loadItineraries];
   [_viewTable reloadData];
 }
 
+/**
+ * Perform intial table view configuration
+ */
 - (void)setUpViewTable{
   [_viewTable setDataSource: self];
 }
@@ -96,6 +110,5 @@ static NSString * const NAME_SEGUE_SHOW_ITINERARY = @"FromIndexItinerariesToShow
 - (void)didUpdateRecordBook:(PORRecordBook *)recordBook{
   [self refresh];
 }
-
 
 @end
