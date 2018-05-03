@@ -19,7 +19,7 @@ static CGFloat const OPACITY_FAINT = 0.25;
 
 /// Shared singleton `Palette` instance
 + (id) sharedPalette{
-  static PORPalette *sharedPalette = nil;
+  static PORPalette * sharedPalette = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     sharedPalette = [[self alloc] init];

@@ -9,9 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "PORActivity.h"
 #import "PORBadge.h"
+#import "PORRecord.h"
 #import <UIKit/UIKit.h>
 
-@interface PORItinerary : NSObject
+@class PORItinerary;
+
+typedef NSArray <PORItinerary *> PORItineraries;
+
+@interface PORItinerary : PORRecord
 
 /// The activities in this itinerary
 @property NSArray * activities;

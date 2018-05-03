@@ -28,6 +28,13 @@ static NSInteger const NUMBER_SECTIONS = 2;
   [self setUpViewTable];
 }
 
+#pragma mark - events
+
+- (IBAction)didTapFloatingActionButton:(id)sender {
+  [[[PORLibrary sharedLibrary] itinerariesPinned] createRecord:_itinerary];
+}
+
+
 #pragma mark - helpers
 
 - (void)setUpViewTable{

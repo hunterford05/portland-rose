@@ -56,6 +56,7 @@
                         <segue destination="cfq-lj-ElT" kind="show" identifier="FromDemosToItinerarySummaryViewDemo" id="RC2-jJ-Kcq"/>
                         <segue destination="iXV-9q-s6Z" kind="show" identifier="FromDemosToActivityCellViewDemo" id="30Y-t0-9YZ"/>
                         <segue destination="zm8-pe-owX" kind="show" identifier="FromDemosToItineraryHeaderCellViewDemo" id="9hh-ac-4BY"/>
+                        <segue destination="N7l-ce-Eb4" kind="show" identifier="FromDemosToRecordBookDemo" id="Auy-jY-UFt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -476,6 +477,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rk3-Eb-ynH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2846" y="75"/>
+        </scene>
+        <!--Record Book Demo View Controller-->
+        <scene sceneID="5Zq-Jt-wPx">
+            <objects>
+                <tableViewController id="N7l-ce-Eb4" customClass="PORRecordBookDemoViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Hr-iY-wn2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PuffinCell" id="HqT-R8-lla">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HqT-R8-lla" id="cdj-7R-QaI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="N7l-ce-Eb4" id="hoq-A8-LkC"/>
+                            <outlet property="delegate" destination="N7l-ce-Eb4" id="QVC-v9-teY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vB-8f-WXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3489" y="75"/>
         </scene>
     </scenes>
     <resources>

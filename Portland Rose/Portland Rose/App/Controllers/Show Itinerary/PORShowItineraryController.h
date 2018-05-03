@@ -8,11 +8,14 @@
 
 #import "PORActivityCellView.h"
 #import "PORItinerary.h"
+#import "PORLibrary.h"
 #import "PORItineraryHeaderCellView.h"
 #import <UIKit/UIKit.h>
 
 @interface PORShowItineraryController : UIViewController <UITableViewDataSource>
 
 @property (nonatomic) PORItinerary * itinerary;
+- (IBAction)didTapFloatingActionButton:(id)sender;
+
 
 @end

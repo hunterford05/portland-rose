@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "PORItinerary.h"
+#import "PORLibrary.h"
 #import "PORItinerarySummaryCellView.h"
-#warning Remove mocks
-#import "PORItinerary+Mocks.h"
 #import "PORShowItineraryController.h"
 
 
-@interface PORIndexItinerariesController : UIViewController <UITableViewDataSource, PORItinerarySummaryCellViewDelegate>
+@interface PORIndexItinerariesController : UIViewController <UITableViewDataSource, PORItinerarySummaryCellViewDelegate, PORRecordBookDelegate>
 
-@property (nonatomic) NSArray <PORItinerary *> * itineraries;
+/// Record book containing the itineraries to display
+@property PORRecordBook<PORItinerary *> * dataSource;
 
 @end
