@@ -15,7 +15,7 @@ static CGFloat const OFFSET_X_SHADOW_PROFILE = 0;
 /// Vertical offset for profile picture shadow
 static CGFloat const OFFSET_Y_SHADOW_PROFILE = 5;
 /// Ratio between the size of the cover mask and the cover photo itself. Larger values reduce the mask's curvature.
-static CGFloat const RATIO_RADIUS_MASK_COVER = 1;
+static CGFloat const RATIO_RADIUS_MASK_COVER = 3;
 /// Shadow radius for profile picture
 static CGFloat const RADIUS_SHADOW_PROFILE = 12;
 /// Border width for profile picture
@@ -45,10 +45,15 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
   [self setUp];
 }
 
+- (void)viewDidAppear:(BOOL) animated{
+  [super viewDidAppear:animated];
+  [self setUpCover];
+}
+
 #pragma mark - helpers
 
 /**
- * `setUp` configures the controller's subviews and initializes its
+ * `setUp`configures the controller's subviews and initializes its
  * data properties. It is during `viewDidLoad`.
  */
 - (void)setUp{
@@ -69,7 +74,7 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
 }
 
 /**
- * `setUpCover` sets up the user's cover picture subview.
+ * `setUpCover`sets up the user's cover picture subview.
  */
 - (void)setUpCover{
   UIImageView * cover;
@@ -95,7 +100,7 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
 }
 
 /**
- * `setUpProfilePictureWithPalette:` sets up the user's profile picture subview.
+ * `setUpProfilePictureWithPalette:`sets up the user's profile picture subview.
  */
 - (void)setUpProfileWithPalette: (PORPalette *) palette{
   UIImageView * profile;
@@ -126,7 +131,7 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
 
 
 /**
- * `setUpLabelsWithPalette:andTypeLibrary:` configures all `UILabel` subviews.
+ * `setUpLabelsWithPalette:andTypeLibrary:`configures all `UILabel` subviews.
  */
 - (void)setUpLabelsWithPalette:(PORPalette *)palette andTypeLibrary:(PORTypeLibrary*) typeLibrary{
   [_viewLabelName setFont:typeLibrary.fontSubtitle];
