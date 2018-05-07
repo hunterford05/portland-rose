@@ -15,8 +15,15 @@ IB_DESIGNABLE
 
 @interface POREmptyStateView : UIView
 
+/// Display a button?
+@property IBInspectable BOOL interactive;
+/// Text to display on the button (if any)
+@property IBInspectable NSString * textButton;
+/// Title text
 @property IBInspectable NSString * title;
+/// Subtitle text
 @property IBInspectable NSString * subtitle;
+
 
 @end
 
