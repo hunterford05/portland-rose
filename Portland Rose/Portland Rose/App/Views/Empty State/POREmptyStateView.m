@@ -19,6 +19,8 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
 @property (weak, nonatomic) IBOutlet UILabel *viewLabelHeadline;
 /// Subheader view
 @property (weak, nonatomic) IBOutlet UILabel *viewLabelSubhead;
+/// Action button view (displayed if the user can interact with this empty state).
+@property (weak, nonatomic) IBOutlet PORActionButtonView *viewButtonAction;
 
 @end
 

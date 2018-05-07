@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="POREmptyStateView">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="i9u-fW-eg8"/>
+                <outlet property="viewButtonAction" destination="i9J-fz-jNH" id="SxB-nt-3Z7"/>
                 <outlet property="viewLabelHeadline" destination="wqd-ZW-Lfc" id="S5o-I5-9CW"/>
                 <outlet property="viewLabelSubhead" destination="6wL-1N-DTZ" id="hUj-Ss-oIn"/>
             </connections>
@@ -23,20 +24,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Mlh-0p-vAo">
-                    <rect key="frame" x="40" y="247.5" width="295" height="63"/>
+                    <rect key="frame" x="40" y="187" width="295" height="184"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-ZW-Lfc">
-                            <rect key="frame" x="126.5" y="0.0" width="42" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Puffins!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-ZW-Lfc">
+                            <rect key="frame" x="94.5" y="0.0" width="106.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wL-1N-DTZ">
-                            <rect key="frame" x="126.5" y="42.5" width="42" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wL-1N-DTZ">
+                            <rect key="frame" x="1.5" y="42.5" width="292.5" height="81.5"/>
+                            <string key="text">Puffins rule — it's a scientific fact.  Much like the speed of light, the awesomeness of puffins is a universal constant that nothing may exceed.</string>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9J-fz-jNH" customClass="PORActionButtonView">
+                            <rect key="frame" x="96" y="146" width="103" height="38"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Try Again"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                 </stackView>
             </subviews>
