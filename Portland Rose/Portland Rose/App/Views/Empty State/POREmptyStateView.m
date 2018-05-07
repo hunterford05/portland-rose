@@ -15,6 +15,10 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
 
 /// Main view
 @property (strong, nonatomic) IBOutlet UIView *view;
+/// Headline view
+@property (weak, nonatomic) IBOutlet UILabel *viewLabelHeadline;
+/// Subheader view
+@property (weak, nonatomic) IBOutlet UILabel *viewLabelSubhead;
 
 @end
 
@@ -56,8 +60,15 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
   
   // Set background
   [self setBackgroundColor:UIColor.clearColor];
-  [self.view setBackgroundColor: palette.colorDivider];
+  [self.view setBackgroundColor:palette.colorDivider];
   
+  // Set label fonts
+  [self.viewLabelHeadline setFont:typeLibrary.fontSubtitle];
+  [self.viewLabelSubhead setFont:typeLibrary.fontHeadline];
+  
+  // Set label colors
+  [self.viewLabelHeadline setTextColor:palette.colorText];
+  [self.viewLabelSubhead setTextColor:palette.colorText];
 }
 
 @end
