@@ -78,6 +78,9 @@ static NSString * const NAME_NIB = @"PORLabeledIconView";
   palette = [PORPalette sharedPalette];
   typeLibrary = [PORTypeLibrary sharedTypeLibrary];
   
+  [self setBackgroundColor:UIColor.clearColor];
+
+  
   // Set color
   if (!_color){
     _color = palette.colorText;
