@@ -45,6 +45,9 @@
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="text" value="I Agree"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapActionButton:" destination="-1" eventType="touchUpInside" id="Yo3-5a-l7T"/>
+                            </connections>
                         </view>
                     </subviews>
                 </stackView>

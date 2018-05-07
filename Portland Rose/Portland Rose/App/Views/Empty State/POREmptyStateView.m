@@ -44,10 +44,34 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
   return self;
 }
 
-- (void)layoutSubviews{
+- (void)drawRect:(CGRect)rect{
   [self refresh];
-  [super layoutSubviews];
+  [super drawRect:rect];
 }
+
+
+#pragma mark - setters
+
+- (void)setActionable:(BOOL)actionable{
+  _actionable = actionable;
+  [self setNeedsDisplay];
+}
+
+- (void)setHeadline:(NSString *)headline{
+  _headline = headline;
+  [self setNeedsDisplay];
+}
+
+- (void)setSubhead:(NSString *)subhead{
+  _subhead = subhead;
+  [self setNeedsDisplay];
+}
+
+- (void)setTextButton:(NSString *)textButton{
+  _textButton = textButton;
+  [self setNeedsDisplay];
+}
+
 
 #pragma mark - helpers
 
@@ -95,5 +119,14 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
   [self.viewLabelHeadline setText:self.headline];
   [self.viewLabelSubhead setText:self.subhead];
 }
+
+#pragma mark - events
+
+- (IBAction)didTapActionButton:(id)sender {
+  if (self.delegate){
+    [self.delegate didSelectEmptyStateView:self];
+  }
+}
+
 
 @end

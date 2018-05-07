@@ -12,17 +12,26 @@
 #import <UIKit/UIKit.h>
 
 IB_DESIGNABLE
+@class POREmptyStateView;
+
+@protocol POREmptyStateViewDelegate
+
+- (void)didSelectEmptyStateView:(POREmptyStateView *)emptyStateView;
+
+@end
 
 @interface POREmptyStateView : UIView
 
 /// Display a button?
-@property IBInspectable BOOL actionable;
+@property (nonatomic) IBInspectable BOOL actionable;
+/// Delegate
+@property id<POREmptyStateViewDelegate> delegate;
 /// Title text
-@property IBInspectable NSString * headline;
+@property (nonatomic) IBInspectable NSString * headline;
 /// Subtitle text
-@property IBInspectable NSString * subhead;
+@property (nonatomic) IBInspectable NSString * subhead;
 /// Text to display on the button (if any)
-@property IBInspectable NSString * textButton;
+@property (nonatomic) IBInspectable NSString * textButton;
 
 
 @end
