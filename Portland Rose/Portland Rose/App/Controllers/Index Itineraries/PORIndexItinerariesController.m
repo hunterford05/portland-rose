@@ -65,6 +65,7 @@ static NSString * const REUSE_IDENTIFIER_ITINERARY_CELL = @"ItineraryCell";
 - (void)refresh{
   [self loadItineraries];
   [_viewTable reloadData];
+  [_viewTable setHidden: _itineraries.count == 0];
 }
 
 /**
