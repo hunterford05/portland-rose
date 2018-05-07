@@ -78,22 +78,22 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
   [self.viewLabelSubhead setTextColor:palette.colorText];
   
   // Set default properties
-  self.interactive = NO;
-  self.subtitle = self.viewLabelSubhead.text;
+  self.actionable = NO;
+  self.subhead = self.viewLabelSubhead.text;
   self.textButton = self.viewButtonAction.text;
-  self.title = self.viewLabelHeadline.text;
+  self.headline = self.viewLabelHeadline.text;
 }
 
 - (void)refresh{
   // Configure button visibility
-  [self.viewButtonAction setHidden:!self.interactive];
+  [self.viewButtonAction setHidden:!self.actionable];
   
   // Configure button text
   [self.viewButtonAction setText:self.textButton];
   
   // Configure label text
-  [self.viewLabelHeadline setText:self.title];
-  [self.viewLabelSubhead setText:self.subtitle];
+  [self.viewLabelHeadline setText:self.headline];
+  [self.viewLabelSubhead setText:self.subhead];
 }
 
 @end

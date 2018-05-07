@@ -40,10 +40,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9J-fz-jNH" customClass="PORActionButtonView">
-                            <rect key="frame" x="96" y="146" width="103" height="38"/>
+                            <rect key="frame" x="102.5" y="146" width="90" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Try Again"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="I Agree"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
