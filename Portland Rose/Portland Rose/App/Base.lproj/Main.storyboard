@@ -238,6 +238,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGq-Lv-0WH" customClass="POREmptyStateView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="actionable" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="subhead" value="Your pinned itineraries will appear here, so you can quickly access your favorite ones."/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="headline" value="Nothing Pinned"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QZH-aD-olX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -254,11 +263,16 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QZH-aD-olX" firstAttribute="leading" secondItem="xJF-AN-1ip" secondAttribute="leading" id="3tb-WW-WUH"/>
                             <constraint firstItem="xJF-AN-1ip" firstAttribute="bottom" secondItem="QZH-aD-olX" secondAttribute="bottom" id="9Oq-dV-Evh"/>
+                            <constraint firstItem="OGq-Lv-0WH" firstAttribute="leading" secondItem="xJF-AN-1ip" secondAttribute="leading" id="A1g-51-Xrd"/>
+                            <constraint firstItem="OGq-Lv-0WH" firstAttribute="top" secondItem="xJF-AN-1ip" secondAttribute="top" id="Csb-H2-jBQ"/>
+                            <constraint firstItem="xJF-AN-1ip" firstAttribute="bottom" secondItem="OGq-Lv-0WH" secondAttribute="bottom" id="Oc1-vR-hF6"/>
                             <constraint firstItem="xJF-AN-1ip" firstAttribute="trailing" secondItem="QZH-aD-olX" secondAttribute="trailing" id="ZwN-Qk-ctD"/>
                             <constraint firstItem="QZH-aD-olX" firstAttribute="top" secondItem="xJF-AN-1ip" secondAttribute="top" id="g3Y-Wv-Art"/>
+                            <constraint firstItem="xJF-AN-1ip" firstAttribute="trailing" secondItem="OGq-Lv-0WH" secondAttribute="trailing" id="w2Q-JY-wEm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xJF-AN-1ip"/>
                     </view>
