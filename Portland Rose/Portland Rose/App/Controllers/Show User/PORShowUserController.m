@@ -82,7 +82,6 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
   CGFloat inset;
   CGRect maskFrame;
   CGFloat contentScale;
-  CGFloat s;
   
   contentScale = [[UIScreen mainScreen] scale];
   cover = _viewImageCover;
