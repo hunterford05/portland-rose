@@ -1,6 +1,13 @@
+<!-- 
+  vim:textwidth=72:bk
+-->
+
 # Portland Rose Docs
 
+## Table of Contents
+
 * **[Xcode Project Structure](#xcode-project-structure)**
+* **[Build Configurations](#build-configurations)**
 * **[Helpers](#helpers)**
 * **[Models](#models)**
 * **[Views](#views)**
@@ -20,13 +27,15 @@
 |   |-- AppDelegate.m
 |   |-- Assets.xcassets
 |   |-- Main.storyboard
-|-- demo
-|   |-- Helpers
+|-- Demo
+|   |-- Demo Controllers
+|   |   |-- Model Demos
+|   |   |-- View Demos
+|   |   |-- PORDemosViewController.h
+|   |   |-- PORDemosViewController.m
+|   |-- Helpers  
 |   |-- Mocks
 |   |-- Models
-|   |-- Views
-|   |-- PORDemosViewController.h
-|   |-- PORDemosViewController.m
 |   |-- Demo.storyboard
 |-- Config
 |   |-- Info.plist
@@ -51,16 +60,16 @@
 `Demo` contains view controllers and other components used to demo 
 application components outside of the context of the app itself.
 
-* **Helpers** - the `Helpers`subdirectory contains helper classes used
+* **Demo Controllers** — the `Demo Controllers` subdirectory contains 
+  view controllers for demo scenes. These controllers are organized into
+  `Model Demos` and `View Demos`. The root demo view controllers are
+  `PORDemosViewController.m` and `PORDemosViewController.h`.
+* **Helpers** - the `Helpers` subdirectory contains helper classes used
   for testing purposes
 * **Mocks** - The `Mocks` subdirectory contains categories used to 
   generate randomized instances of models for testing purposes
-* **Models** — The `Models` subdirectory contains view controller 
-  classes designed to demo model classes.
-* **Views** — The `Views` subdirectory contains view controller 
-  classes designed to demo specific view classes.
-* **PORDemosViewController.m** and **PORDemosViewController.h** — 
-  These are the source files for the demo index scene.
+* **Models** — The `Models` subdirectory contains models used by demo
+  view controllers that are not used by the main application.
 * **Demo.storyboard** — `Demo.storyboard` is the interface builder for 
   demo view controllers.
 
@@ -79,74 +88,19 @@ application components outside of the context of the app itself.
 
 ### Schemes
 
-Portland Rose can be built using one of three different "schemes": 
-Development, Staging, and Production. 
+Portland Rose can be built using one of four different "schemes": 
+Demo, Development, Staging, and Production. 
 
-* **Development** — This scheme is used for building and testing 
-  individual application components. The `DEMO` preprocessor macro is 
-  set to `1`.
-* **Staging** — this scheme is used for staging the application.
-* **Production** — this scheme is used to build production-ready 
-  releases.
-
-## Models
-
-### Activity
-
-* **Amount (Minimum Estimate)** — `costLower` is the minimum estimated 
-  price for the activity.
-* **Amount (Maximum Estimate)** — `costUpper` is the maximum estimated 
-  price for the activity.
-* **Duration (Minimum Estimate)** — `durationLower` is lower 
-  estimate for the activity's duration.
-* **Duration (Maximum Estimate)** — `durationUpper` is the upper 
-  estimate for the activity's duration.
-* **Icon** – `icon` is an icon used to represent the activity.
-* **Location** — `location` is the activity's general location. See 
-  `PORLocation` documentation.
-* **Notes** — `notes` is string of text containing important notes
-  from the itinerary creator (e.g. "Watch for pickpockets!").
-* **Recommendations** — `recommendations` recommendations from the 
-  creator of the itinerary (e.g. "Try the truffle fries!").
-* **Reservation Requirement** — `isReservationRequired` denotes 
-  whether or not a reservation is required.
-* **Subtitle** — `subtitle` is the activity's description.
-* **Title** — `title` is a descriptive title for the activity.
-* **What To Wear** — `whatToWear` is a description of recommended
-  attire.
-* **What To Bring** — `whatToBring` is a description of recommended
-  things to bring (e.g. sunblock).
-
-### Badge
-
-Badges provide an at-a-glance summary of an itinerary.
-
-* **Icon** — `icon` is the badge's visual representation.
-* **Title** — `title` is the name of the badge.
-
-### Itinerary
-
-* **Activities** — `activities` is a list of all activities that are a 
-  part of this itinerary. See `PORActivity` for more information.
-* **Badges** — `badges` is a list of all badges associated with this 
-  itinerary. See `PORBadge` for more information.
-* **Cost (Lower Estimate)** — `costLower` is the lower estimate for the 
-  itinerary's total cost.
-* **Cost (Upper Estimate)** — `costUpper` is the upper estimate for the 
-  itinerary's total cost. 
-* **Duration** — `duration` is the duration estimate for the 
-  itinerary *in minutes*.
-* **Main Image** — `imageMain` is the primary image associated with the 
-  itinerary. 
-* **Secondary Images** – `imagesSecondary` is a list of secondary 
-  images associated with the itinerary.
-* **Title** — `title` is this itinerary's display title. 
-
-
-### Location
-
-* **Title** — `title` is the name of the location, e.g. "Puffin Cafe" 
-  or "505 College Street".
+* **Demo** — this scheme is used for building and testing  
+  individual application components.  The app will use `Demo.storyboard`
+  instead of `Main.storyboard`. The `DEMO` preprocessor macro is set to
+  `1`.
+* **Development** — this scheme is for integration work. A.P.I. 
+  requests will return mock objects.
+* **Staging** — this scheme is for testing integration work.  A.P.I.
+  requests are directed to a staging endpoint.
+* **Production** — this scheme is used to create release-ready 
+  archives for distribution on the app store. 
 
 ## Helpers
 
@@ -263,6 +217,126 @@ PORTypeLibrary * typeLibrary = PORTypeLibrary.sharedTypeLibrary;
 UIFont * font = typeLibrary.fontBody;
 ```
 
+## Models
+
+### Activity
+
+* **Amount (Minimum Estimate)** — `costLower` is the minimum estimated 
+  price for the activity.
+* **Amount (Maximum Estimate)** — `costUpper` is the maximum estimated 
+  price for the activity.
+* **Duration (Minimum Estimate)** — `durationLower` is lower 
+  estimate for the activity's duration.
+* **Duration (Maximum Estimate)** — `durationUpper` is the upper 
+  estimate for the activity's duration.
+* **Icon** – `icon` is an icon used to represent the activity.
+* **Location** — `location` is the activity's general location. See 
+  `PORLocation` documentation.
+* **Notes** — `notes` is string of text containing important notes
+  from the itinerary creator (e.g. "Watch for pickpockets!").
+* **Recommendations** — `recommendations` recommendations from the 
+  creator of the itinerary (e.g. "Try the truffle fries!").
+* **Reservation Requirement** — `isReservationRequired` denotes 
+  whether or not a reservation is required.
+* **Subtitle** — `subtitle` is the activity's description.
+* **Title** — `title` is a descriptive title for the activity.
+* **What To Wear** — `whatToWear` is a description of recommended
+  attire.
+* **What To Bring** — `whatToBring` is a description of recommended
+  things to bring (e.g. sunblock).
+
+### Badge
+
+Badges provide an at-a-glance summary of an itinerary.
+
+* **Icon** — `icon` is the badge's visual representation.
+* **Title** — `title` is the name of the badge.
+
+### Itinerary
+
+`PORItinerary` is a subclass of `PORRecord` (see [record](#record)).
+
+* **Activities** — `activities` is a list of all activities that are a 
+  part of this itinerary. See `PORActivity` for more information.
+* **Badges** — `badges` is a list of all badges associated with this 
+  itinerary. See `PORBadge` for more information.
+* **Cost (Lower Estimate)** — `costLower` is the lower estimate for the 
+  itinerary's total cost.
+* **Cost (Upper Estimate)** — `costUpper` is the upper estimate for the 
+  itinerary's total cost. 
+* **Duration** — `duration` is the duration estimate for the 
+  itinerary *in minutes*.
+* **Main Image** — `imageMain` is the primary image associated with the 
+  itinerary. 
+* **Secondary Images** – `imagesSecondary` is a list of secondary 
+  images associated with the itinerary.
+* **Title** — `title` is this itinerary's display title. 
+
+### Library
+
+The `PORLibrary` class is a singleton responsible for maintaining the
+application's [record books](#record-book).
+
+**Properties**
+
+* **Itineraries Feed** — `itinerariesFeed` is a record book containing
+[itineraries](#itinerary) in the user's feed.
+* **Itineraries Pinned** — `itinerariesPinned` is a record book
+containing itineraries that the user has pinned.
+
+### Location
+
+* **Title** — `title` is the name of the location, e.g. "Puffin Cafe" 
+  or "505 College Street".
+
+### Record
+
+The `PORRecord` class is the base class for models that may be stored in
+a `PORRecordBook` (and by extension, into the `PORLibrary` singleton).
+
+* **I.D.** — `identifier` is the identifier for the record object.  The
+  identifier must be unique among all record objects stored in the same 
+  [record book](#record-book)
+
+
+### Record Book
+
+The `PORRecordBook` class stores [record](#record) objects; it supports
+simple insertion, deletion, and listing. 
+
+**Initialization**
+
+`PORRecordBook` uses generic types:
+
+```objective-c
+typedef SomePORRecordSublcass ObjectType; 
+PORRecordBook<ObjectType *> * recordBook;
+``` 
+
+**Record Book Delegate Protocol**
+
+The `PORRecordBookDelegate` protocol defines a delegate method called
+whenever the record book is updated.
+
+* **Did Update** – `didUpdateRecordBook:` is called whenevever the
+record book is updated.
+
+**Methods**
+
+* **All Records** — `allRecords` returns an array of all
+currently-stored records.
+* **Create Record** — `createRecord:` stores the given record.
+* **Create Records** — `createRecords:` stores the given records.
+* **Destroy Record** — `destroyRecordWithIdentifier:` removes the
+record with the given `identifier`.
+
+**Properties**
+
+* **Delegate** — `delegate` is informed of all record book updates.
+
+
+
+
 ## Views
 
 ### ActionButtonView
@@ -319,6 +393,44 @@ interface builder.
   [((PORActivityCellView *) cell) setActivity: _activities[indexPath.row]];
 
   return cell;
+}
+```
+
+### Empty State View
+
+`POREmptyStateView` renders an empty state view.  The most common
+applications for an empty state are:
+
+* First use (when a collection is empty by default)
+* When a user clears a collection
+* Error populating collection items
+
+`POREmptyStateView` displays a short header / subheader to describe why
+the user is seeing the view.  If the user can perform an action (e.g.
+"Try Again" on an empty state view displayed on a network error), a
+`POREmptyStateView` can be configured to display an action button and
+respond to taps on it.
+
+#### Usage
+
+**Properties**
+
+* **Actionable** — `actionable` indicates whether or not the user can
+  perform an action.  If `actionable` is `YES`, a button will be
+  added to the view. 
+* **Button Text** — `textButton` determines the text to display on the
+  view's action button.
+* **Header** — `header` is the header text to display.
+* **Subheader** — `subhead` is the subheader text to display.
+
+**Handling Events**
+
+To handle user taps on the action button, implement the
+`POREmptyStateViewDelegate` protocol:
+
+```objective-c
+- (void)didSelectEmptyStateView:(POREmptyStateView *)emptyStateView{
+  NSLog(@"Hello, Puffins!");
 }
 ```
 

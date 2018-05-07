@@ -1,5 +1,8 @@
 # macOs
 .DS_Store
 
+# vim
+**/*.*~
+
 # User settings
 xcuserdata/
