@@ -392,6 +392,44 @@ interface builder.
 }
 ```
 
+### Empty State View
+
+`POREmptyStateView` renders an empty state view.  The most common
+applications for an empty state are:
+
+* First use (when a collection is empty by default)
+* When a user clears a collection
+* Error populating collection items
+
+`POREmptyStateView` displays a short header / subheader to describe why
+the user is seeing the view.  If the user can perform an action (e.g.
+"Try Again" on an empty state view displayed on a network error), a
+`POREmptyStateView` can be configured to display an action button and
+respond to taps on it.
+
+#### Usage
+
+**Properties**
+
+* **Actionable** — `actionable` indicates whether or not the user can
+  perform an action.  If `actionable` is `YES`, a button will be
+  added to the view. 
+* **Button Text** — `textButton` determines the text to display on the
+  view's action button.
+* **Header** — `header` is the header text to display.
+* **Subheader** — `subhead` is the subheader text to display.
+
+**Handling Events**
+
+To handle user taps on the action button, implement the
+`POREmptyStateViewDelegate` protocol:
+
+```objective-c
+- (void)didSelectEmptyStateView:(POREmptyStateView *)emptyStateView{
+  NSLog(@"Hello, Puffins!");
+}
+```
+
 ### Floating Action Button View
 
 `PORFloatingActionButtonView` renders a button with an icon image and a 
