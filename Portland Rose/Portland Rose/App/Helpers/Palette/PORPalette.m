@@ -13,7 +13,7 @@ static NSString * const HEX_COMET = @"#59617E";
 static NSString * const HEX_FROLY = @"#F4727E";
 static NSString * const HEX_THULIAN_PINK = @"#EC6AA0";
 static NSString * const HEX_WHITE = @"#FFFFFF";
-static CGFloat const OPACITY_FAINT = 0.25;
+static CGFloat const OPACITY_FAINT = 0.12;
 
 @implementation PORPalette
 
