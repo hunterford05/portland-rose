@@ -514,7 +514,19 @@
                     <view key="view" contentMode="scaleToFill" id="dYw-2x-v9z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gu4-Fl-xwc" customClass="POREmptyStateView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KVr-fq-oLp" firstAttribute="bottom" secondItem="Gu4-Fl-xwc" secondAttribute="bottom" id="5jc-R7-yPs"/>
+                            <constraint firstItem="KVr-fq-oLp" firstAttribute="trailing" secondItem="Gu4-Fl-xwc" secondAttribute="trailing" id="EsY-c7-NHS"/>
+                            <constraint firstItem="Gu4-Fl-xwc" firstAttribute="leading" secondItem="KVr-fq-oLp" secondAttribute="leading" id="XZK-qk-Pup"/>
+                            <constraint firstItem="Gu4-Fl-xwc" firstAttribute="top" secondItem="KVr-fq-oLp" secondAttribute="top" id="hB0-yi-BVV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KVr-fq-oLp"/>
                     </view>
                 </viewController>
