@@ -20,6 +20,8 @@
 		5A200B442097939F008AB019 /* PORActionButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B422097939F008AB019 /* PORActionButtonDemoViewController.m */; };
 		5A200B5320991A9D008AB019 /* PORIndexItinerariesFeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B5220991A9D008AB019 /* PORIndexItinerariesFeedController.m */; };
 		5A200B5720991C0B008AB019 /* PORIndexItinerariesPinnedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A200B5620991C0B008AB019 /* PORIndexItinerariesPinnedController.m */; };
+		5A25865220A0DDBC00DB3C5F /* POREmptyStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A25865120A0DDBC00DB3C5F /* POREmptyStateView.m */; };
+		5A25865420A0DDC600DB3C5F /* POREmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A25865320A0DDC600DB3C5F /* POREmptyStateView.xib */; };
 		5A445F0E20729AAE009497B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F0D20729AAE009497B0 /* AppDelegate.m */; };
 		5A445F1420729AAE009497B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F1220729AAE009497B0 /* Main.storyboard */; };
 		5A445F1620729AAF009497B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F1520729AAF009497B0 /* Assets.xcassets */; };
@@ -93,6 +95,9 @@
 		5A200B5220991A9D008AB019 /* PORIndexItinerariesFeedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORIndexItinerariesFeedController.m; sourceTree = "<group>"; };
 		5A200B5520991C0B008AB019 /* PORIndexItinerariesPinnedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORIndexItinerariesPinnedController.h; sourceTree = "<group>"; };
 		5A200B5620991C0B008AB019 /* PORIndexItinerariesPinnedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORIndexItinerariesPinnedController.m; sourceTree = "<group>"; };
+		5A25865020A0DDBC00DB3C5F /* POREmptyStateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POREmptyStateView.h; sourceTree = "<group>"; };
+		5A25865120A0DDBC00DB3C5F /* POREmptyStateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POREmptyStateView.m; sourceTree = "<group>"; };
+		5A25865320A0DDC600DB3C5F /* POREmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = POREmptyStateView.xib; sourceTree = "<group>"; };
 		5A445F0920729AAE009497B0 /* Portland Rose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Portland Rose.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A445F0C20729AAE009497B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A445F0D20729AAE009497B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -301,6 +306,16 @@
 			path = "Index Itineraries Pinned";
 			sourceTree = "<group>";
 		};
+		5A25864F20A0DD9E00DB3C5F /* Empty State */ = {
+			isa = PBXGroup;
+			children = (
+				5A25865020A0DDBC00DB3C5F /* POREmptyStateView.h */,
+				5A25865120A0DDBC00DB3C5F /* POREmptyStateView.m */,
+				5A25865320A0DDC600DB3C5F /* POREmptyStateView.xib */,
+			);
+			path = "Empty State";
+			sourceTree = "<group>";
+		};
 		5A3A99FB2076A6FB00191EEF /* Action Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +390,7 @@
 			children = (
 				5A3A99FB2076A6FB00191EEF /* Action Button */,
 				5A0DCCCF208039EB000FCAAC /* Activity Cell */,
+				5A25864F20A0DD9E00DB3C5F /* Empty State */,
 				5AD02B08207D3FB800E48C9B /* Floating Action Button */,
 				5A7D9A322077FFB100EF6D73 /* Image Card */,
 				5AB7EAF62087F7B70087B7DB /* Image Carousel */,
@@ -813,6 +829,7 @@
 				5A445F1620729AAF009497B0 /* Assets.xcassets in Resources */,
 				5A445F1420729AAE009497B0 /* Main.storyboard in Resources */,
 				5A445F292072B790009497B0 /* Demo.storyboard in Resources */,
+				5A25865420A0DDC600DB3C5F /* POREmptyStateView.xib in Resources */,
 				5A0DCCD420803BC1000FCAAC /* PORActivityCellView.xib in Resources */,
 				5A0DCCDA208048B8000FCAAC /* PORLabeledIconView.xib in Resources */,
 				5A7D9A342077FFE300EF6D73 /* PORImageCardView.xib in Resources */,
@@ -831,6 +848,7 @@
 				5AFD5CA820890C6C009D2908 /* PORNavigationController.m in Sources */,
 				5A7B6B9F207FF6E700C99AA0 /* NSString+Random.m in Sources */,
 				5AB7EAF92087F7D10087B7DB /* PORImageCarouselView.m in Sources */,
+				5A25865220A0DDBC00DB3C5F /* POREmptyStateView.m in Sources */,
 				5A7B6B82207FB1A600C99AA0 /* PORItinerarySummaryDemoViewController.m in Sources */,
 				5A4F8B1520911C48006AE5E3 /* PORPalette.m in Sources */,
 				5A7B6B96207FEF6A00C99AA0 /* PORItinerary+Mocks.m in Sources */,
