@@ -57,6 +57,7 @@
                         <segue destination="iXV-9q-s6Z" kind="show" identifier="FromDemosToActivityCellViewDemo" id="30Y-t0-9YZ"/>
                         <segue destination="zm8-pe-owX" kind="show" identifier="FromDemosToItineraryHeaderCellViewDemo" id="9hh-ac-4BY"/>
                         <segue destination="N7l-ce-Eb4" kind="show" identifier="FromDemosToRecordBookDemo" id="Auy-jY-UFt"/>
+                        <segue destination="o4R-0n-ykr" kind="show" identifier="FromDemosToEmptyStateViewDemo" id="ZR2-Av-Kqc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMO-4V-ueg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -505,6 +506,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vB-8f-WXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3489" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3MO-HI-1ue">
+            <objects>
+                <viewController id="o4R-0n-ykr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dYw-2x-v9z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KVr-fq-oLp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeW-33-H0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4159" y="75"/>
         </scene>
     </scenes>
     <resources>
