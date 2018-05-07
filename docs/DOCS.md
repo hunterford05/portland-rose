@@ -88,15 +88,19 @@ application components outside of the context of the app itself.
 
 ### Schemes
 
-Portland Rose can be built using one of three different "schemes": 
-Development, Staging, and Production. 
+Portland Rose can be built using one of four different "schemes": 
+Demo, Development, Staging, and Production. 
 
-* **Development** — This scheme is used for building and testing 
-  individual application components. The `DEMO` preprocessor macro is 
-  set to `1`.
-* **Staging** — this scheme is used for staging the application.
-* **Production** — this scheme is used to build production-ready 
-  releases.
+* **Demo** — this scheme is used for building and testing  
+  individual application components.  The app will use `Demo.storyboard`
+  instead of `Main.storyboard`. The `DEMO` preprocessor macro is set to
+  `1`.
+* **Development** — this scheme is for integration work. A.P.I. 
+  requests will return mock objects.
+* **Staging** — this scheme is for testing integration work.  A.P.I.
+  requests are directed to a staging endpoint.
+* **Production** — this scheme is used to create release-ready 
+  archives for distribution on the app store. 
 
 ## Helpers
 
