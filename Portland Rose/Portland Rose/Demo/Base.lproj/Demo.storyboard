@@ -520,7 +520,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Hello, Puffins!"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="Puffins are the best."/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="Puffins are the best. No, seriously. They are like the best things ever. Period. Full stop."/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
