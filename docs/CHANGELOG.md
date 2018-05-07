@@ -1,5 +1,36 @@
 # Portland Rose Changelog 
 
+## [0.1.0] — May 07, 2018
+
+Version `0.1.0` applies minor fixes and 
+
+**Features**
+
+* **Add Data Manager** (#AI100A) — Create `PORLibrary`, `PORRecordBook`,
+  and `PORRecord` classes to organize model data into collections that 
+  can be accessed and modified by other classes, such as view
+  controllers.  Integrate this new data management pattern with existing
+  view controllers.  Users can now pin and unpin itineraries in the 
+  show itinerary scene, causing those itineraries to appear / disappear
+  from the pinned itineraries scene.
+* **Add Empty State View** (#AJ010B) — Create a new `POREmptyStateView`
+  class for rendering empty state views (e.g. for empty collections).
+* **Integrate Empty State View With Pinned Itineraries** (#AJ010C) — 
+  add a first-use empty state view to the pinned itineraries scene.
+* **Demo Build Scheme** (#AJ010D) — Split "Development" build scheme
+  into "Demo" and "Development" build schemes.
+
+**Fixes**
+
+* **Tab Bar Icon Sizes** (#AI100D) — Fix tab bar icon size 
+  inconsistencies.
+* **Cover Photo Curvature** (#AI100B) – Fix cover photo edge curvature
+  in the show user scene.
+* **Cover Photo Pixelation** (#AJ010A) — Fix cover photo edge
+  pixelation in the show user scene.
+* **Labeled Icon View Background** (#AI090A) — Fix the background color
+  of `PORLabeledIconView`s.
+
 ## [0.0.1] — Apr 24, 2018
 
 Version `0.0.1` is a trivial update to Portland Rose's documentation.
