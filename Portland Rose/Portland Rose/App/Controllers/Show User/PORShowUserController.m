@@ -15,7 +15,7 @@ static CGFloat const OFFSET_X_SHADOW_PROFILE = 0;
 /// Vertical offset for profile picture shadow
 static CGFloat const OFFSET_Y_SHADOW_PROFILE = 5;
 /// Ratio between the size of the cover mask and the cover photo itself. Larger values reduce the mask's curvature.
-static CGFloat const RATIO_RADIUS_MASK_COVER = 3;
+static CGFloat const RATIO_RADIUS_MASK_COVER = 1;
 /// Shadow radius for profile picture
 static CGFloat const RADIUS_SHADOW_PROFILE = 12;
 /// Border width for profile picture
@@ -81,7 +81,10 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
   CALayer * maskLayer;
   CGFloat inset;
   CGRect maskFrame;
+  CGFloat contentScale;
+  CGFloat s;
   
+  contentScale = [[UIScreen mainScreen] scale];
   cover = _viewImageCover;
   inset = cover.frame.size.width * -RATIO_RADIUS_MASK_COVER;
   maskFrame = CGRectInset(cover.frame, inset, inset);
@@ -90,6 +93,7 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
   maskLayer = [CALayer layer];
   [maskLayer setBackgroundColor:UIColor.clearColor.CGColor];
   [maskLayer setFrame: maskFrame];
+  [maskLayer setContentsScale: contentScale];
   [maskLayer setShadowPath: CGPathCreateWithRoundedRect(maskLayer.bounds, maskFrame.size.width / 2, maskFrame.size.height / 2, nil)];
 
   [maskLayer setShadowRadius:0];
@@ -110,7 +114,7 @@ static CGFloat const WIDTH_BORDER_PROFILE = 5;
   // Add corner radius and border
   profile = _viewImageProfile;
   cornerRadius = profile.frame.size.width / 2;
-  [profile.layer setCornerRadius: cornerRadius];
+  [profile.layer setCornerRadius:cornerRadius];
   [profile.layer setBorderColor:palette.colorBackground.CGColor];
   [profile.layer setBorderWidth:WIDTH_BORDER_PROFILE];
   
