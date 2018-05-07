@@ -42,6 +42,11 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
   return self;
 }
 
+- (void)layoutSubviews{
+  [self refresh];
+  [super layoutSubviews];
+}
+
 #pragma mark - helpers
 
 - (void)loadNib{
@@ -69,6 +74,11 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
   // Set label colors
   [self.viewLabelHeadline setTextColor:palette.colorText];
   [self.viewLabelSubhead setTextColor:palette.colorText];
+}
+
+- (void)refresh{
+  [self.viewLabelHeadline setText:self.title];
+  [self.viewLabelSubhead setText:self.subtitle];
 }
 
 @end

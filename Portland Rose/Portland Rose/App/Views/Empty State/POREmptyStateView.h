@@ -14,6 +14,9 @@ IB_DESIGNABLE
 
 @interface POREmptyStateView : UIView
 
+@property IBInspectable NSString * title;
+@property IBInspectable NSString * subtitle;
+
 @end
 
 
