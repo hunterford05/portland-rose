@@ -48,6 +48,15 @@ static NSString * const NAME_NIB = @"POREmptyStateView";
 }
 
 - (void)nibDidLoad{
+  PORPalette * palette;
+  PORTypeLibrary * typeLibrary;
+  
+  palette = [PORPalette sharedPalette];
+  typeLibrary = [PORTypeLibrary sharedTypeLibrary];
+  
+  // Set background
+  [self setBackgroundColor:UIColor.clearColor];
+  [self.view setBackgroundColor: palette.colorDivider];
   
 }
 

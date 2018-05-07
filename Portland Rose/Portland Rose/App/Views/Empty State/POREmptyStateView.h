@@ -6,7 +6,10 @@
 //  Copyright © 2018 Useless Corporation. All rights reserved.
 //
 
+#import "PORPalette.h"
+#import "PORTypeLibrary.h"
 #import <UIKit/UIKit.h>
+
 IB_DESIGNABLE
 
 @interface POREmptyStateView : UIView
