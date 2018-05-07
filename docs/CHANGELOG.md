@@ -2,7 +2,11 @@
 
 ## [0.1.0] — May 07, 2018
 
-Version `0.1.0` applies minor fixes and 
+Version `0.1.0` applies minor fixes and adds additional functionality.  
+Users may now pin and unpin mock itineraries, which will cause them to 
+be added or removed from the pinned itineraries scene.  When the 
+pinned itineraries scene is empty, a new empty state view will display
+explanatory text to the user.
 
 **Features**
 
