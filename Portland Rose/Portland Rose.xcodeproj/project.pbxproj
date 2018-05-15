@@ -803,6 +803,7 @@
 		5A445F0120729AAD009497B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = POR;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Useless Corporation";
 				TargetAttributes = {
