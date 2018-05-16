@@ -29,6 +29,7 @@
 		5A445F1920729AAF009497B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F1720729AAF009497B0 /* LaunchScreen.storyboard */; };
 		5A445F1C20729AAF009497B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A445F1B20729AAF009497B0 /* main.m */; };
 		5A445F292072B790009497B0 /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A445F272072B790009497B0 /* Demo.storyboard */; };
+		5A45B11C20AB84C90040E2DB /* PORItinerary+Samples.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A45B11B20AB84C90040E2DB /* PORItinerary+Samples.m */; };
 		5A4ABF372072C36400349DBB /* PORDemosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4ABF362072C36400349DBB /* PORDemosViewController.m */; };
 		5A4F8B1220911C48006AE5E3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B0920911C48006AE5E3 /* UIColor+Hex.m */; };
 		5A4F8B1320911C48006AE5E3 /* PORTypeLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F8B0C20911C48006AE5E3 /* PORTypeLibrary.m */; };
@@ -62,6 +63,8 @@
 		5AB7EAFB2087F82C0087B7DB /* PORImageCarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7EAFA2087F82C0087B7DB /* PORImageCarouselView.xib */; };
 		5AC2A8FC207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */; };
 		5AD02B0C207D3FB800E48C9B /* PORFloatingActionButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD02B09207D3FB800E48C9B /* PORFloatingActionButtonView.m */; };
+		5AEED99820AC8EBB00234400 /* PORActivity+Samples.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEED99720AC8EBB00234400 /* PORActivity+Samples.m */; };
+		5AEED99B20AC999A00234400 /* PORBadge+Samples.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEED99A20AC999A00234400 /* PORBadge+Samples.m */; };
 		5AF738CB2073D7CB00B8E75C /* PORPaletteDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738CA2073D7CB00B8E75C /* PORPaletteDemoViewController.m */; };
 		5AF738D32073FD6700B8E75C /* PORTypeLibraryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF738D22073FD6700B8E75C /* PORTypeLibraryDemoViewController.m */; };
 		5AF738D9207408EC00B8E75C /* PORActionButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF738D8207408EC00B8E75C /* PORActionButtonView.xib */; };
@@ -110,6 +113,8 @@
 		5A445F1A20729AAF009497B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A445F1B20729AAF009497B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A445F282072B790009497B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Demo.storyboard; sourceTree = "<group>"; };
+		5A45B11A20AB84C90040E2DB /* PORItinerary+Samples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PORItinerary+Samples.h"; sourceTree = "<group>"; };
+		5A45B11B20AB84C90040E2DB /* PORItinerary+Samples.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PORItinerary+Samples.m"; sourceTree = "<group>"; };
 		5A4ABF352072C36400349DBB /* PORDemosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PORDemosViewController.h; path = "Portland Rose/Demo/Demo Controllers/PORDemosViewController.h"; sourceTree = SOURCE_ROOT; };
 		5A4ABF362072C36400349DBB /* PORDemosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PORDemosViewController.m; path = "Portland Rose/Demo/Demo Controllers/PORDemosViewController.m"; sourceTree = SOURCE_ROOT; };
 		5A4F8B0920911C48006AE5E3 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -170,6 +175,10 @@
 		5AC2A8FB207BEB65003B2AD5 /* PORImageCarouselDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORImageCarouselDemoViewController.m; sourceTree = "<group>"; };
 		5AD02B09207D3FB800E48C9B /* PORFloatingActionButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORFloatingActionButtonView.m; sourceTree = "<group>"; };
 		5AD02B0B207D3FB800E48C9B /* PORFloatingActionButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PORFloatingActionButtonView.h; sourceTree = "<group>"; };
+		5AEED99620AC8EBB00234400 /* PORActivity+Samples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PORActivity+Samples.h"; sourceTree = "<group>"; };
+		5AEED99720AC8EBB00234400 /* PORActivity+Samples.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PORActivity+Samples.m"; sourceTree = "<group>"; };
+		5AEED99920AC999A00234400 /* PORBadge+Samples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PORBadge+Samples.h"; sourceTree = "<group>"; };
+		5AEED99A20AC999A00234400 /* PORBadge+Samples.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PORBadge+Samples.m"; sourceTree = "<group>"; };
 		5AF738C92073D7CB00B8E75C /* PORPaletteDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PORPaletteDemoViewController.h; sourceTree = "<group>"; };
 		5AF738CA2073D7CB00B8E75C /* PORPaletteDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PORPaletteDemoViewController.m; sourceTree = "<group>"; };
 		5AF738D22073FD6700B8E75C /* PORTypeLibraryDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PORTypeLibraryDemoViewController.m; sourceTree = "<group>"; };
@@ -611,6 +620,8 @@
 			children = (
 				5A54E721208139EE00C32356 /* PORActivity+Mocks.h */,
 				5A54E722208139EE00C32356 /* PORActivity+Mocks.m */,
+				5AEED99620AC8EBB00234400 /* PORActivity+Samples.h */,
+				5AEED99720AC8EBB00234400 /* PORActivity+Samples.m */,
 			);
 			path = "Activity+";
 			sourceTree = "<group>";
@@ -620,6 +631,8 @@
 			children = (
 				5A7B6B9A207FF67E00C99AA0 /* PORBadge+Mocks.h */,
 				5A7B6B9B207FF67E00C99AA0 /* PORBadge+Mocks.m */,
+				5AEED99920AC999A00234400 /* PORBadge+Samples.h */,
+				5AEED99A20AC999A00234400 /* PORBadge+Samples.m */,
 			);
 			path = "Badge+";
 			sourceTree = "<group>";
@@ -629,6 +642,8 @@
 			children = (
 				5A7B6B94207FEF6A00C99AA0 /* PORItinerary+Mocks.h */,
 				5A7B6B95207FEF6A00C99AA0 /* PORItinerary+Mocks.m */,
+				5A45B11A20AB84C90040E2DB /* PORItinerary+Samples.h */,
+				5A45B11B20AB84C90040E2DB /* PORItinerary+Samples.m */,
 			);
 			path = "Itinerary+";
 			sourceTree = "<group>";
@@ -803,6 +818,7 @@
 		5A445F0120729AAD009497B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = POR;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Useless Corporation";
 				TargetAttributes = {
@@ -871,6 +887,7 @@
 				5AF738D32073FD6700B8E75C /* PORTypeLibraryDemoViewController.m in Sources */,
 				5A200B5720991C0B008AB019 /* PORIndexItinerariesPinnedController.m in Sources */,
 				5A4F8B1320911C48006AE5E3 /* PORTypeLibrary.m in Sources */,
+				5AEED99B20AC999A00234400 /* PORBadge+Samples.m in Sources */,
 				5A69998E209A3FE5001B909B /* PORLibrary.m in Sources */,
 				5A7B6B89207FD77200C99AA0 /* PORItinerary.m in Sources */,
 				5A445F1C20729AAF009497B0 /* main.m in Sources */,
@@ -891,8 +908,10 @@
 				5A9333BF207D690B003F7217 /* PORActivity.m in Sources */,
 				5A7B6B9C207FF67E00C99AA0 /* PORBadge+Mocks.m in Sources */,
 				5AA9491E20755A6000060FE8 /* PORTabBarView.m in Sources */,
+				5A45B11C20AB84C90040E2DB /* PORItinerary+Samples.m in Sources */,
 				5A5933012087D106003A1751 /* PORItineraryHeaderCellView.m in Sources */,
 				5AFD5CBA20893432009D2908 /* PORIndexItinerariesController.m in Sources */,
+				5AEED99820AC8EBB00234400 /* PORActivity+Samples.m in Sources */,
 				5A25865820A0F12300DB3C5F /* POREmptyStateDemoViewController.m in Sources */,
 				5A7B6B8C207FD88E00C99AA0 /* PORBadge.m in Sources */,
 				5A200B3120978C4B008AB019 /* PORRecord.m in Sources */,
